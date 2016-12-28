@@ -1,3 +1,138 @@
-h1{
-  color: lightblue;
+html,body{
+  background-color: #b3e5f2;
+  height: 100%;
+}
+.menu{
+  margin-top: 3%;
+  display: inline-block;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 10px 16px;
+  text-decoration: none !important;
+}
+.menu:hover{
+  background: #0288d1;
+  border: 1px solid #0288d1;
+  color:#fff;
+}
+.sponsor-logo{
+  margin: 0px auto;
+  width: 30em;
+  z-index: 10;
+}
+.wave{
+  width:100%;
+  height: 3em;
+}
+.wave1{
+  background-image: url('../img/wave1.svg');
+  background-repeat: repeat-x;
+  position: absolute;
+  bottom: 1.5em;
+  left: 0;
+  z-index: 2;
+}
+.wave2{
+  background-image: url('../img/wave2.svg');
+  background-repeat: repeat-x;
+  background-position: -42px 0;
+  position: absolute;
+  bottom: 1em;
+  left:0;
+  z-index: 4;
+}
+.wave3{
+  background-image: url('../img/wave3.svg');
+  background-repeat: repeat-x;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}
+@media (max-width: 768px) {
+  #logo{
+    position: relative;
+    top:10%;
+  }
+  #sponsor{
+    position: relative;
+    top:10%;
+  }
+  .island{
+    position: absolute;
+    bottom: 1em;
+    z-index: 1;
+  }
+  .ship{
+    height: 12em;
+    position: absolute;
+    bottom: .9em;
+    right:0px;
+    z-index: 3;
+  }
+}
+@media (min-width: 768px){
+  #logo{
+    position: relative;
+    top:10%;
+  }
+  #sponsor{
+    position: relative;
+    top:10%;
+  }
+  .sponsor-logo{
+    margin: 0px auto;
+    width: 35em;
+    z-index: 10;
+  }
+  .island{
+    width: 60%;
+    height: 40%;
+    position: absolute;
+    bottom: 1em;
+    z-index: 1;
+  }
+  .ship{
+
+    height: 14em;
+    position: absolute;
+    bottom: .9em;
+    left: 50%;
+    z-index: 3;
+  }
+}
+@media (min-width: 992px){
+  .island{
+    width: 65%;
+    height: 45%;
+    position: absolute;
+    bottom: 1em;
+    z-index: 1;
+  }
+  .ship{
+
+    height: 16em;
+    position: absolute;
+    bottom: .9em;
+    left: 50%;
+    z-index: 3;
+  }
+}
+@media (min-width: 1200px){
+  .island{
+    width: 42%;
+    height: 42%;
+    position: absolute;
+    bottom: 1em;
+    z-index: 1;
+  }
+  .ship{
+    width: 22%;
+    height: 35%;
+    position: absolute;
+    bottom: .9em;
+    left: 50%;
+    z-index: 3;
+  }
 }
