@@ -1,13 +1,15 @@
 $(document).ready(function(){
   $('div.back').click(function(event) {
     $(event.target).parent().removeClass('active');
+    $(event.target).parent().css({"transform": "perspective(100px) translate3d(0, 0, -50px)"});
     event.stopPropagation();
   });
 
   $('div.slide').click(function(event) {
     if(parseInt(getTransform(event.target)[0]) == 0){  console.log("Hello");
       $(event.target).addClass('active');
-      $(event.target).removeAttr('style');
+      $(event.target).css({"transform": "perspective(100px) translate3d(0, 0, 0)"});
+      //$(event.target).removeAttr('style');
     }
   });
 
