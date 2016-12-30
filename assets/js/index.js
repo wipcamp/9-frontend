@@ -20,7 +20,7 @@ $(document).ready(function(){
       var five = getTransform("div.five")[0]-1500;
       var six = getTransform("div.six")[0]-1500;
       var seven = getTransform("div.seven")[0]-1500;
-      if(seven != 0){
+      if(getTransform("div.seven")[0] != 0){
         $("div.one").css({"transform": "perspective(100px) translate3d("+one+"px, 0, -50px)"});
         $("div.two").css({"transform": "perspective(100px) translate3d("+two+"px, 0, -50px)"});
         $("div.three").css({"transform": "perspective(100px) translate3d("+three+"px, 0, -50px)"});
@@ -38,7 +38,7 @@ $(document).ready(function(){
       var five = parseInt(getTransform("div.five")[0])+1500;
       var six = parseInt(getTransform("div.six")[0])+1500;
       var seven = parseInt(getTransform("div.seven")[0])+1500;
-      if(one != 0){
+      if(getTransform("div.one")[0] != 0){
         $("div.one").css({"transform": "perspective(100px) translate3d("+one+"px, 0, -50px)"});
         $("div.two").css({"transform": "perspective(100px) translate3d("+two+"px, 0, -50px)"});
         $("div.three").css({"transform": "perspective(100px) translate3d("+three+"px, 0, -50px)"});
