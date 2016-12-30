@@ -1,13 +1,13 @@
 $(document).ready(function(){
-  $('div.getstart').click(function(event) {
+  $('div.back').click(function(event) {
     $(event.target).parent().removeClass('active');
     event.stopPropagation();
   });
 
-  $('div.one').click(function() {
-    if(parseInt(getTransform(this)[0]) == 0){  //console.log("Hello");
-      $(this).addClass('active');
-      $(this).removeAttr('style');
+  $('div.slide').click(function(event) {
+    if(parseInt(getTransform(event.target)[0]) == 0){  console.log("Hello");
+      $(event.target).addClass('active');
+      $(event.target).removeAttr('style');
     }
   });
 
