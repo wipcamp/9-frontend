@@ -6,10 +6,9 @@ $(document).ready(function(){
   });
 
   $('div.slide').click(function(event) {
-    if(parseInt(getTransform(event.target)[0]) == 0){  console.log("Hello");
+    if(parseInt(getTransform(event.target)[0]) == 0){
       $(event.target).addClass('active');
       $(event.target).css({"transform": "perspective(100px) translate3d(0, 0, 0)"});
-      //$(event.target).removeAttr('style');
     }
   });
 
