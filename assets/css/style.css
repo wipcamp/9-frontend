@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
-html,body{
+
+html,
+body {
   background-color: #1f3d5b;
   height: 100%;
   color: white;
   font-family: 'Lato', sans-serif;
 }
-.menu{
+
+.menu {
   margin:5% 5%;
   display: inline-block;
   color: #fff;
@@ -13,20 +16,24 @@ html,body{
   padding: 1em 4em 1em 4em;
   text-decoration: none !important;
 }
-.menu:hover{
+
+.menu:hover {
   background: #0288d1;
   border: 1px solid #0288d1;
   color:#fff;
 }
+
 .sponsor-logo{
   margin: 0px auto;
   width: 30em;
   z-index: 10;
 }
+
 .wave{
   width:100%;
   height: 3em;
 }
+
 .wave1{
   background-image: url('../img/wave1.svg');
   background-repeat: repeat-x;
@@ -107,6 +114,7 @@ html,body{
     z-index: 1;
   }*/
 }
+
 /*###Desktops, big landscape tablets and laptops(Large, Extra large)####*/
 @media screen and (min-width: 1024px){
   .wave{
@@ -144,6 +152,7 @@ html,body{
   top:20%;
   z-index: 99;
 }
+
 .card-menu{
   text-decoration: none;
   color: #000;
@@ -153,9 +162,15 @@ html,body{
 }
 
 .cisland{
-  position: relative;
-  right: -5em;
-  bottom: 3em;
+  position: absolute;
+  top:0;
+  bottom: 0;
   z-index: 0;
-  overflow:  !important;
+  overflow: hidden;
+}
+
+.cisland img {
+  position: absolute;
+  top: 0;
+  right: -5em;
 }
