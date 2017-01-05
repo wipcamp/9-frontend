@@ -17,7 +17,7 @@ body {
 }
 
 .slide.active {
-  transform: perspective(100px) translate3d(0, 0, 0);
+  transform: perspective(100px) translate3d(0, 0, 0) !important;
   z-index: 10;
 }
 .one {
