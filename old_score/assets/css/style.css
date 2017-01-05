@@ -1,0 +1,44 @@
+body{
+  background-image: url('../../img/gamescore-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color:#fff;
+}
+h1 {
+  font-size: 50px;
+}
+.atHead {
+  text-align: center;
+}
+.rounded-circle {
+  width: auto;
+  height: 60px;
+}
+.forBorder {
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 20px;
+}
+
+.table {
+  margin-top: -2px;
+}
+
+.font{
+  font-size: 30px;
+}
+.font2{
+  font-size: 20px;
+}
+.forCenter{
+  text-align: center;
+}
+th {
+  text-align: center;
+}
+.forMargin {
+  margin: 10px;
+  padding: 15px;
+}
