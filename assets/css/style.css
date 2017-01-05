@@ -164,6 +164,7 @@ body {
 .cisland{
   position: absolute;
   top:0;
+  width: 100%;
   bottom: 0;
   z-index: 0;
   overflow: hidden;
@@ -171,6 +172,6 @@ body {
 
 .cisland img {
   position: absolute;
-  top: 0;
+  bottom: 2.5em;
   right: -5em;
 }
