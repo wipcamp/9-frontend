@@ -1,12 +1,4 @@
 $(document).ready(function(){
-  /*$('div.one').css({"transform": "perspective(100px) translate3d(0, 0, -50px)"});
-  $('div.two').css({"transform": "perspective(100px) translate3d(1850px, 0, -50px)"});
-  $('div.three').css({"transform": "perspective(100px) translate3d(3000px, 0, -50px)"});
-  $('div.four').css({"transform": "perspective(100px) translate3d(4500px, 0, -50px)"});
-  $('div.five').css({"transform": "perspective(100px) translate3d(6000px, 0, -50px)"});
-  $('div.six').css({"transform": "perspective(100px) translate3d(7500px, 0, -50px)"});
-  $('div.seven').css({"transform": "perspective(100px) translate3d(9000px, 0, -50px)"});*/
-
   initSlide();
 
   $('div.back').click(function(event) {
@@ -24,10 +16,10 @@ $(document).ready(function(){
   });
 
   $(document).keydown(function(event) {
-    if(event.which == 39) {
+    if(event.which == 39 && getTransform("div.slide")[2] == -50) {
       slideRight();
     }
-    if(event.which == 37) {
+    if(event.which == 37 && getTransform("div.slide")[2] == -50) {
       slideLeft();
     }
   });
@@ -57,23 +49,25 @@ function initSlide() {
   });
 }
 
-function  getLeftDistance(elEach, elAll) {
+function getLeftDistance(elEach, elAll) {
   var windowWidth = $(window).width();
   var index = $(elAll).index(elEach);
-  //var transformWidth = elEach.getBoundingClientRect().width;
-  //var spaceWidth = (windowWidth - transformWidth) / 2;
-  //return index * (1.5 * spaceWidth + transformWidth);
   return index * (windowWidth * 1.15625);
 }
 
+function diffSlide(){
+  var windowWidth = $(window).width();
+  return windowWidth * 1.15625;
+}
+
 function slideRight(){
-  var one = getTransform("div.one")[0]-getLeftDistance($('.one')[0], $('.slide'));
-  var two = getTransform("div.two")[0]-getLeftDistance($('.two')[0], $('.slide'));
-  var three = getTransform("div.three")[0]-getLeftDistance($('.three')[0], $('.slide'));
-  var four = getTransform("div.four")[0]-getLeftDistance($('.four')[0], $('.slide'));
-  var five = getTransform("div.five")[0]-getLeftDistance($('.five')[0], $('.slide'));
-  var six = getTransform("div.six")[0]-getLeftDistance($('.six')[0], $('.slide'));
-  var seven = getTransform("div.seven")[0]-getLeftDistance($('.seven')[0], $('.slide'));
+  var one = getTransform("div.one")[0]-diffSlide();
+  var two = getTransform("div.two")[0]-diffSlide();
+  var three = getTransform("div.three")[0]-diffSlide();
+  var four = getTransform("div.four")[0]-diffSlide();
+  var five = getTransform("div.five")[0]-diffSlide();
+  var six = getTransform("div.six")[0]-diffSlide();
+  var seven = getTransform("div.seven")[0]-diffSlide();
   if(getTransform("div.seven")[0] != 0){
     $("div.one").css({"transform": "perspective(100px) translate3d("+one+"px, 0, -50px)"});
     $("div.two").css({"transform": "perspective(100px) translate3d("+two+"px, 0, -50px)"});
@@ -86,13 +80,13 @@ function slideRight(){
 }
 
 function slideLeft(){
-  var one = parseInt(getTransform("div.one")[0])+getLeftDistance($('.one')[0], $('.slide'));
-  var two = parseInt(getTransform("div.two")[0])+getLeftDistance($('.two')[0], $('.slide'));
-  var three = parseInt(getTransform("div.three")[0])+getLeftDistance($('.three')[0], $('.slide'));
-  var four = parseInt(getTransform("div.four")[0])+getLeftDistance($('.four')[0], $('.slide'));
-  var five = parseInt(getTransform("div.five")[0])+getLeftDistance($('.five')[0], $('.slide'));
-  var six = parseInt(getTransform("div.six")[0])+getLeftDistance($('.six')[0], $('.slide'));
-  var seven = parseInt(getTransform("div.seven")[0])+getLeftDistance($('.seven')[0], $('.slide'));
+  var one = parseInt(getTransform("div.one")[0])+diffSlide();
+  var two = parseInt(getTransform("div.two")[0])+diffSlide();
+  var three = parseInt(getTransform("div.three")[0])+diffSlide();
+  var four = parseInt(getTransform("div.four")[0])+diffSlide();
+  var five = parseInt(getTransform("div.five")[0])+diffSlide();
+  var six = parseInt(getTransform("div.six")[0])+diffSlide();
+  var seven = parseInt(getTransform("div.seven")[0])+diffSlide();
   if(getTransform("div.one")[0] != 0){
     $("div.one").css({"transform": "perspective(100px) translate3d("+one+"px, 0, -50px)"});
     $("div.two").css({"transform": "perspective(100px) translate3d("+two+"px, 0, -50px)"});
