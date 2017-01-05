@@ -142,6 +142,7 @@ html,body{
 .card-content{
   position: absolute;
   top:20%;
+  z-index: 99;
 }
 .card-menu{
   text-decoration: none;
@@ -150,9 +151,11 @@ html,body{
   display: inline-block;
   padding: 0.5em;
 }
-.card-island{
-  position: absolute;
-  right: 0em;
-  bottom: 8em;
-  z-index: 3;
+
+.cisland{
+  position: relative;
+  right: -5em;
+  bottom: 3em;
+  z-index: 0;
+  overflow:  !important;
 }
