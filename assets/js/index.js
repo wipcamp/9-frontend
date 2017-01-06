@@ -97,8 +97,3 @@ function slideLeft(){
     $("div.seven").css({"transform": "perspective(100px) translate3d("+seven+"px, 0, -50px)"});
   }
 }
-/*
-Key code
-right == 39
-left == 37
-*/
