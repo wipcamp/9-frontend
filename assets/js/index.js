@@ -23,6 +23,20 @@ $(document).ready(function(){
       slideLeft();
     }
   });
+
+  $(function(){
+    var slide = document.getElementById("con");
+    Hammer(slide).on("swipeleft", function() {
+      if(getTransform("div.slide")[2] == -50) {
+        slideRight();
+      }
+    });
+    Hammer(slide).on("swiperight", function() {
+      if(getTransform("div.slide")[2] == -50) {
+        slideLeft();
+      }
+    });
+  })
 });
 
 function getTransform(el) {
