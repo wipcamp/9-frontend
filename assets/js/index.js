@@ -58,7 +58,7 @@ function initSlide() {
 function getLeftDistance(elEach, elAll) {
   var windowWidth = $(window).width();
   var index = $(elAll).index(elEach);
-  return index * (windowWidth * 1.15625);
+  return index * diffSlide();
 }
 
 function diffSlide(){
