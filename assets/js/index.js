@@ -4,7 +4,7 @@ $(document).ready(function(){
   $('div.back').click(function(event) {
     if(getTransform($(event.target).parent())[0] == 0){
       $(event.target).parent().removeClass('active');
-      $(event.target).parent().css({"transform": "perspective(100px) translate3d(0, 0, -50px)"});
+      $(event.target).parent().css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
     }
   });
 
@@ -51,7 +51,7 @@ function getTransform(el) {
 function initSlide() {
   var items = $('.slide');
   $.each(items, function(idx, val) {
-      $(val).css('transform', 'perspective(100px) translate3d('+ getLeftDistance(val, items) +'px, 0, -50px)');
+      $(val).css('transform', 'perspective(100px) translate3d('+ getLeftDistance(val, items) +'px, -100px, -50px)');
   });
 }
 
@@ -84,7 +84,7 @@ function slide(direction) {
   if (getTransform(elementFocused)[0] != 0) {
     $.each(elementsAll, function(idx, val) {
       var axisX = parseInt(getTransform(val)[0]) + diffSlide() * direction;
-      $(val).css({"transform": "perspective(100px) translate3d(" + axisX + "px, 0, -50px)"});
+      $(val).css({"transform": "perspective(100px) translate3d(" + axisX + "px, -100px, -50px)"});
     });
   }
 }
