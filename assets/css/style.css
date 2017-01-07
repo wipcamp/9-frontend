@@ -44,3 +44,12 @@ body {
 .eight {
   background-color: rgb(200, 0, 0);
 }
+.register {
+  position: fixed;
+  width: 20%;
+  height: 10%;
+  z-index: 1;
+  background-color: white;
+  bottom: 2%;
+  margin: 0 40%;
+}
