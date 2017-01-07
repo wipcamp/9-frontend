@@ -5,14 +5,14 @@ $(document).ready(function(){
     if(getTransform($(event.target).parents().filter('.slide'))[0] == 0){
       $(event.target).parents().filter('.slide').removeClass('active');
       $(event.target).parents().filter('.slide').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
+      event.stopPropagation();
     }
   });
 
   $('div.slide').click(function(event) {
-    console.log("Happy");
-    if(parseInt(getTransform(event.target)[0]) == 0){
-      $(event.target).addClass('active');
-      $(event.target).css({"transform": "perspective(100px) translate3d(0, 0, 0)"});
+    if(getTransform($(event.target).parents().filter('.slide'))[0] == 0){ console.log("Happy");
+      $(event.target).parents().filter('.slide').addClass('active');
+      $(event.target).parents().filter('.slide').css({"transform": "perspective(100px) translate3d(0, 0, 0)"});
     }
   });
 
