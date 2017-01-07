@@ -230,3 +230,12 @@ html, body {
   position: absolute;
   bottom: 2.5em;
   right: -5em;
+}
+
+/*----------------------------- Welcome Screen ------------------------------*/
+.logo-wipcamp--full {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 600px;
+}
