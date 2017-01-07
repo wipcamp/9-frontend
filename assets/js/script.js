@@ -1,14 +1,15 @@
 $(document).ready(function(){
   initSlide();
 
-  $('div.back').click(function(event) {
-    if(getTransform($(event.target).parent())[0] == 0){
-      $(event.target).parent().removeClass('active');
-      $(event.target).parent().css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
+  $('div.menu').click(function(event) {
+    if(getTransform($(event.target).parents().filter('.slide'))[0] == 0){
+      $(event.target).parents().filter('.slide').removeClass('active');
+      $(event.target).parents().filter('.slide').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
     }
   });
 
   $('div.slide').click(function(event) {
+    console.log("Happy");
     if(parseInt(getTransform(event.target)[0]) == 0){
       $(event.target).addClass('active');
       $(event.target).css({"transform": "perspective(100px) translate3d(0, 0, 0)"});
