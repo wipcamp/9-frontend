@@ -10,29 +10,3 @@ body {
   text-align: center;
   height: 800px;
 }
-
-.bodyWhat {
-  background-color: green;
-  height: 1300px;
-  width: cover;
-  padding-top: 100px;
-  margin-left: 100px;
-  margin-right: 100px;
-}
-
-.whatBody {
-  font-size: 50px;
-  text-align: center;
-}
-.whatHead {
-  font-size: 150px;
-  text-align: center;
-  padding-top: 120px;
-  background-color: red;
-}
-.whatIsland {
-  width: cover;
-  height: 300px;
-  background-color: rgb(187, 196, 214);
-  margin-top:70%;
-}
