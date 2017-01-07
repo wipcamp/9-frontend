@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<h1 id="test"></h1>
+
+<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCRBB-Tk41WvH96-DRCBqZXH8ZRoaetwdc",
+    authDomain: "test-f013f.firebaseapp.com",
+    databaseURL: "https://test-f013f.firebaseio.com",
+    storageBucket: "test-f013f.appspot.com",
+    messagingSenderId: "907496327231"
+  };
+  firebase.initializeApp(config);
+
+  var test = document.getElementById('test');
+  var dbRef = firebase.database().ref().child('users');
+  dbRef.on('value', snap => test.innerText = JSON.stringify(snap.val(), null, 3));
+</script>
+
+</body>
+</html>
