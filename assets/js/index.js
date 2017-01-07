@@ -17,10 +17,10 @@ $(document).ready(function(){
 
   $(document).keydown(function(event) {
     if(event.which == 39 && getTransform("div.slide")[2] == -50) {
-      slidePageRight();
+      slide(1);
     }
     if(event.which == 37 && getTransform("div.slide")[2] == -50) {
-      slidePageLeft();
+      slide(-1);
     }
   });
 
@@ -28,12 +28,12 @@ $(document).ready(function(){
     var slideContainer = $("#con")[0];
     Hammer(slideContainer).on("swipeleft", function() {
       if(getTransform("div.slide")[2] == -50) {
-        slidePageRight();
+        slide(1);
       }
     });
     Hammer(slideContainer).on("swiperight", function() {
       if(getTransform("div.slide")[2] == -50) {
-        slidePageLeft();
+        slide(-1);
       }
     });
   })
@@ -72,31 +72,15 @@ for(var i = -7; i < 8; i++){
   pageTransform[i] = i*diffSlide();
 }
 
-function slidePageRight(){
-  if(page != -7){
+function slide(direction) {
+  if (direction === 1 && page != -7) {
     page--;
-    var temp = page+8;
-    $('.one').css({"transform": "perspective(100px) translate3d(" + pageTransform[temp-8] + "px, -100px, -50px)"});
-    $('.two').css({"transform": "perspective(100px) translate3d(" + pageTransform[temp-7] + "px, -100px, -50px)"});
-    $('.three').css({"transform": "perspective(100px) translate3d(" + pageTransform[temp-6] + "px, -100px, -50px)"});
-    $('.four').css({"transform": "perspective(100px) translate3d(" + pageTransform[temp-5] + "px, -100px, -50px)"});
-    $('.five').css({"transform": "perspective(100px) translate3d(" + pageTransform[temp-4] + "px, -100px, -50px)"});
-    $('.six').css({"transform": "perspective(100px) translate3d(" + pageTransform[temp-3] + "px, -100px, -50px)"});
-    $('.seven').css({"transform": "perspective(100px) translate3d(" + pageTransform[temp-2] + "px, -100px, -50px)"});
-    $('.eight').css({"transform": "perspective(100px) translate3d(" + pageTransform[temp-1] + "px, -100px, -50px)"});
-  }
-}
-function slidePageLeft(){
-  if(page != 0){
+  } else if (direction === -1 && page != 0) {
     page++;
-    var temp = page+8;
-    $('.one').css({"transform": "perspective(100px) translate3d(" + pageTransform[temp-8] + "px, -100px, -50px)"});
-    $('.two').css({"transform": "perspective(100px) translate3d(" + pageTransform[temp-7] + "px, -100px, -50px)"});
-    $('.three').css({"transform": "perspective(100px) translate3d(" + pageTransform[temp-6] + "px, -100px, -50px)"});
-    $('.four').css({"transform": "perspective(100px) translate3d(" + pageTransform[temp-5] + "px, -100px, -50px)"});
-    $('.five').css({"transform": "perspective(100px) translate3d(" + pageTransform[temp-4] + "px, -100px, -50px)"});
-    $('.six').css({"transform": "perspective(100px) translate3d(" + pageTransform[temp-3] + "px, -100px, -50px)"});
-    $('.seven').css({"transform": "perspective(100px) translate3d(" + pageTransform[temp-2] + "px, -100px, -50px)"});
-    $('.eight').css({"transform": "perspective(100px) translate3d(" + pageTransform[temp-1] + "px, -100px, -50px)"});
   }
+
+  var temp = page + 8;
+  $.each($('div.slide'), function (idx, val) {
+    $(val).css({"transform": "perspective(100px) translate3d(" + pageTransform[temp - (8 - idx)] + "px, -100px, -50px)"});
+  });
 }
