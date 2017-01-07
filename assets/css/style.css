@@ -91,7 +91,7 @@ html, body {
 }
 
 .wave1{
-  background-image: url('../images/object/wave1.svg');
+  background-image: url('../img/object/wave1.svg');
   background-repeat: repeat-x;
   position: absolute;
   bottom: 1.5em;
@@ -99,7 +99,7 @@ html, body {
   z-index: 2;
 }
 .wave2{
-  background-image: url('../images/object/wave2.svg');
+  background-image: url('../img/object/wave2.svg');
   background-repeat: repeat-x;
   background-position: -42px 0;
   position: absolute;
@@ -108,7 +108,7 @@ html, body {
   z-index: 4;
 }
 .wave3{
-  background-image: url('../images/object/wave3.svg');
+  background-image: url('../img/object/wave3.svg');
   background-repeat: repeat-x;
   position: absolute;
   bottom: 0;
