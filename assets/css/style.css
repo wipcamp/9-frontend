@@ -1,48 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Itim');
+
+/*============================= Global Elements =============================*/
 body {
-  background-color: black;
+  background-color: #eeeeee;
+  font-family: 'Itim', sans-serif;
+  height: 100%;
   padding: 0;
   margin: 0;
 }
+
+/*=============================== Components ================================*/
+
+/*-------------- jQuery WIPCampCarousel3D ---------------*/
 .con {
   position: fixed;
   width: 100%;
   height: 100%;
 }
-.slide{
-  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  position: fixed;
-  width: 100%;
+.slide {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   height: 100%;
-  z-index: 1;
+  position: fixed;
   overflow: hidden;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 100%;
+  z-index: 1;
 }
 
 .slide.active {
   transform: perspective(100px) translate3d(0, 0, 0) !important;
   z-index: 10;
 }
-.one {
+.slide:nth-child(1) {
   background-color: #1f3d5b;
 }
-.two {
+.slide:nth-child(2) {
   background-color: green;
 }
-.three {
+.slide:nth-child(3) {
   background-color: blue;
 }
-.four {
+.slide:nth-child(4) {
   background-color: yellow;
 }
-.five {
+.slide:nth-child(5) {
   background-color: white;
 }
-.six {
+.slide:nth-child(6) {
   background-color: magenta;
 }
-.seven {
+.slide:nth-child(7) {
   background-color: gray;
 }
-.eight {
+.slide:nth-child(8) {
   background-color: rgb(200, 0, 0);
 }
 .register {
@@ -53,14 +64,6 @@ body {
   background-color: white;
   bottom: 2%;
   margin: 0 40%;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
-
-html, body {
-  height: 100%;
-  color: white;
-  font-family: 'Lato', sans-serif;
 }
 
 .menu {
@@ -79,6 +82,18 @@ html, body {
   cursor: pointer;
 }
 
+.slide.active .show--onActive {
+  opacity: 1;
+}
+
+.slide .show--onActive {
+  opacity: 0;
+  transition: opacity .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/*================================= Pages ===================================*/
+
+/*-------------------- Welcome Page ---------------------*/
 .sponsor-logo{
   margin: 0px auto;
   width: 30em;
@@ -232,7 +247,6 @@ html, body {
   right: -5em;
 }
 
-/*----------------------------- Welcome Screen ------------------------------*/
 .logo-wipcamp--full {
   margin: 0 auto;
   display: block;
