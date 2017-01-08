@@ -76,6 +76,7 @@ body {
 }
 
 .menu:hover {
+  cursor: pointer;
   background: #0288d1;
   border: 1px solid #0288d1;
   color:#fff;
@@ -171,9 +172,9 @@ body {
     z-index: 10;
   }
   .ship{
-    max-height: 90vh;
+    max-height: 100%;
     position: absolute;
-    bottom: 2em;
+    bottom: 0em;
     left:-25em;
     z-index: 3;
   }
