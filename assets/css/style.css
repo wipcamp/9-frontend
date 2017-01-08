@@ -92,6 +92,33 @@ body {
   transition: opacity .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+.slide-control {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 5px;
+  position: fixed;
+  bottom: 15%;
+}
+
+.slide-control .prev-container, .slide-control .bullet-container, .slide-control .next-container {
+  display: table-row;
+  float: left;
+}
+
+.slide-control .bullet-container .bullet {
+  background: url(../img/icon/shape-circle_outline.svg) no-repeat 50%;
+  display: table-cell;
+  height: 24px;
+  text-align: center;
+  vertical-align: middle;
+  width: 24px;
+}
+
+.slide-control .bullet-container .bullet.current {
+  background: url(../img/icon/shape-circle.svg) no-repeat 50%;
+  color: #ffffff;
+}
+
 /*================================= Pages ===================================*/
 
 /*-------------------- Welcome Page ---------------------*/
