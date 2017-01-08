@@ -7,9 +7,8 @@ body {
   color: white;
   font-family: 'Lato', sans-serif;
 }
-
 .menu {
-  margin:5% 5%;
+  margin-top: -100em;
   display: inline-block;
   color: #fff;
   border: 1px solid #fff;
@@ -81,6 +80,9 @@ body {
     bottom: 2em;
     left:-3em;
     z-index: 3;
+  }
+  .wipcamp-logo{
+    max-height: 15em;
   }
   /*.island{
     position: absolute;
