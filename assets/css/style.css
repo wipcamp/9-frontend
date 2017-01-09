@@ -1,18 +1,75 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Itim');
 
-html,
+/*============================= Global Elements =============================*/
 body {
-  background-color: #1f3d5b;
+  background-color: #eeeeee;
+  font-family: 'Itim', sans-serif;
   height: 100%;
-  color: white;
-  font-family: 'Lato', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/*=============================== Components ================================*/
+
+/*-------------- jQuery WIPCampCarousel3D ---------------*/
+.con {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.slide {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 100%;
+  z-index: 1;
+}
+
+.slide.active {
+  transform: perspective(100px) translate3d(0, 0, 0) !important;
+  z-index: 10;
+}
+.slide:nth-child(1) {
+  background-color: #1f3d5b;
+}
+.slide:nth-child(2) {
+  background-color: green;
+}
+.slide:nth-child(3) {
+  background-color: blue;
+}
+.slide:nth-child(4) {
+  background-color: yellow;
+}
+.slide:nth-child(5) {
+  background-color: white;
+}
+.slide:nth-child(6) {
+  background-color: magenta;
+}
+.slide:nth-child(7) {
+  background-color: gray;
+}
+.slide:nth-child(8) {
+  background-color: rgb(200, 0, 0);
+}
+.register {
+  position: fixed;
+  width: 20%;
+  height: 10%;
+  z-index: 1;
+  background-color: white;
+  bottom: 2%;
+  margin: 0 40%;
 }
 .menu {
-  margin-top: -100em;
   display: inline-block;
   color: #fff;
   border: 1px solid #fff;
-  padding: 1em 4em 1em 4em;
+  padding: 0.8em 2.8em 0.8em 2.8em;
   text-decoration: none !important;
 }
 
@@ -21,8 +78,48 @@ body {
   background: #0288d1;
   border: 1px solid #0288d1;
   color:#fff;
+  cursor: pointer;
 }
 
+.slide.active .show--onActive {
+  opacity: 1;
+}
+
+.slide .show--onActive {
+  opacity: 0;
+  transition: opacity .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.slide-control {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 5px;
+  position: fixed;
+  bottom: 15%;
+}
+
+.slide-control .prev-container, .slide-control .bullet-container, .slide-control .next-container {
+  display: table-row;
+  float: left;
+}
+
+.slide-control .bullet-container .bullet {
+  background: url(../img/icon/shape-circle_outline.svg) no-repeat 50%;
+  display: table-cell;
+  height: 24px;
+  text-align: center;
+  vertical-align: middle;
+  width: 24px;
+}
+
+.slide-control .bullet-container .bullet.current {
+  background: url(../img/icon/shape-circle.svg) no-repeat 50%;
+  color: #ffffff;
+}
+
+/*================================= Pages ===================================*/
+
+/*-------------------- Welcome Page ---------------------*/
 .sponsor-logo{
   margin: 0px auto;
   width: 30em;
@@ -35,7 +132,7 @@ body {
 }
 
 .wave1{
-  background-image: url('../img/wave1.svg');
+  background-image: url('../img/object/wave1.svg');
   background-repeat: repeat-x;
   position: absolute;
   bottom: 1.5em;
@@ -43,7 +140,7 @@ body {
   z-index: 2;
 }
 .wave2{
-  background-image: url('../img/wave2.svg');
+  background-image: url('../img/object/wave2.svg');
   background-repeat: repeat-x;
   background-position: -42px 0;
   position: absolute;
@@ -52,7 +149,7 @@ body {
   z-index: 4;
 }
 .wave3{
-  background-image: url('../img/wave3.svg');
+  background-image: url('../img/object/wave3.svg');
   background-repeat: repeat-x;
   position: absolute;
   bottom: 0;
@@ -66,6 +163,44 @@ body {
     transform: scaleX(-1);
     -ms-filter: fliph; /*IE*/
     filter: fliph; /*IE*/
+}
+.card-detail{
+  font-size: 1.1em;
+}
+.card-content{
+  position: absolute;
+  top:20%;
+  z-index: 99;
+}
+
+.card-menu{
+  text-decoration: none !important;
+  color: #000;
+  background-color: #fff;
+  display: inline-block;
+  padding: 0.5em;
+}
+
+.cisland{
+  position: absolute;
+  top:0;
+  width: 100%;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.cisland img {
+  position: absolute;
+  bottom: 2.5em;
+  right: -5em;
+}
+
+.logo-wipcamp--full {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 600px;
 }
 /*### Smartphones (portrait and landscape)(small)### */
 @media screen and (min-width : 0px) and (max-width : 767px){
@@ -109,13 +244,18 @@ body {
     left:-25em;
     z-index: 3;
   }
-  /*.island{
-    width: 60%;
-    height: 40%;
-    position: absolute;
-    bottom: 1em;
-    z-index: 1;
-  }*/
+  .card-detail{
+    font-size: 1.5em;
+  }
+  .cisland img {
+    max-height: 25em;
+  }
+  .card-menu{
+    font-size:1.5em;
+  }
+  h1{
+    font-size: 3em;
+  }
 }
 
 /*###Desktops, big landscape tablets and laptops(Large, Extra large)####*/
@@ -141,40 +281,21 @@ body {
     left:-20em;
     z-index: 3;
   }
-  /*.island{
-    width: 65%;
-    height: 45%;
+  .card-detail{
+    font-size: 2em;
+  }
+  .cisland img {
+    max-height: 30em;
+  }
+  .card-menu{
+    font-size: 2em;
+  }
+  h1{
+    font-size: 3em;
+  }
+  .card-content{
     position: absolute;
-    bottom: 1em;
-    z-index: 1;
-  }*/
-}
-
-.card-content{
-  position: absolute;
-  top:20%;
-  z-index: 99;
-}
-
-.card-menu{
-  text-decoration: none;
-  color: #000;
-  background-color: #fff;
-  display: inline-block;
-  padding: 0.5em;
-}
-
-.cisland{
-  position: absolute;
-  top:0;
-  width: 100%;
-  bottom: 0;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.cisland img {
-  position: absolute;
-  bottom: 2.5em;
-  right: -5em;
+    top:30%;
+    z-index: 99;
+  }
 }
