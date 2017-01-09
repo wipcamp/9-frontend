@@ -9,19 +9,45 @@ const config = {
 firebase.initializeApp(config);
 
 const test = document.getElementById('test');
+
+// get reference
 const dbRef = firebase.database().ref();
 
-
+// main function
 $(function() {
   const input = $('input');
   const button = $('a');
   const tbody = $('tbody');
   let i=0;
 
-  const usersRef = dbRef.child("users").orderByChild("score").on('value', snap => test.innerText = JSON.stringify(snap.val(), null, 3));
-  let getArrays = [];
-  getArrays = usersRef;
-  console.log(getArrays);
+// get data form database ( child - users )
+  const usersRef = dbRef.child("users").orderByChild("score").limitToLast(10);
+  const getUsers = usersRef.on('value', snap => test.innerText = JSON.stringify(snap.val(), null, 3));
+
+// get score < only > !
+let scores = [];
+let names = [];
+let urlpics = [];
+  usersRef.on("child_added", function(data) {
+
+    let users = data.val();
+    names.push(users.name);
+    scores.push(users.score);
+    urlpics.push(users.urlpic);
+    console.log(names);
+    console.log(scores);
+    console.log(urlpics);
+  });
+
+
+
+// json -> arrays
+
+
+
+
+  //-------------------------------------------//
+  // show in table
     button.click(function() {
       if (i<10) {
         for(i=0;i<10;i++) {
@@ -32,7 +58,7 @@ $(function() {
       }
     })
 
-
+  // add to table
   function addToList(text) {
     const tr ='<tr>' + '<td>'+ (i+1) + '</td>' + '<td class="hidden-sm-down">'+ "picurl" + '</td>' + '<td>'+ "Facebook Name"+ '</td>' + '<td>'+ "Score" + '</td>' + '</tr>';
     tbody.append(tr);
