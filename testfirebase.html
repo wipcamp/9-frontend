@@ -4,27 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+  <title>LeaderBoard</title>
 </head>
 <body>
-<h1 id="test"></h1>
+  <div>
+    <input type="text" class="form-control" name="" value="">
+    <a href="#" class="btn btn-botton">Submit</a>
+  </div>
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th >#</th>
+          <th class="hidden-sm-down">Picture</th>
+          <th >Facebook</th>
+          <th >Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<h4 id="test"></h4>
 
 <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCRBB-Tk41WvH96-DRCBqZXH8ZRoaetwdc",
-    authDomain: "test-f013f.firebaseapp.com",
-    databaseURL: "https://test-f013f.firebaseio.com",
-    storageBucket: "test-f013f.appspot.com",
-    messagingSenderId: "907496327231"
-  };
-  firebase.initializeApp(config);
-
-  var test = document.getElementById('test');
-  var dbRef = firebase.database().ref().child('users');
-  dbRef.on('value', snap => test.innerText = JSON.stringify(snap.val(), null, 3));
-</script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" charset="utf-8"></script>
+<script src="assets/js/leaderboard.js" charset="utf-8"></script>
 
 </body>
 </html>
