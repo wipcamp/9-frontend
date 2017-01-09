@@ -8,6 +8,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
+  color: white;
 }
 
 /*=============================== Components ================================*/
@@ -36,25 +37,25 @@ body {
   background-color: #1f3d5b;
 }
 .slide:nth-child(2) {
-  background-color: green;
+  background-color: #1f3d5b;
 }
 .slide:nth-child(3) {
-  background-color: blue;
+  background-color: #1f3d5b;
 }
 .slide:nth-child(4) {
-  background-color: yellow;
+  background-color: #1f3d5b;
 }
 .slide:nth-child(5) {
-  background-color: black;
+  background-color: #1f3d5b;
 }
 .slide:nth-child(6) {
-  background-color: magenta;
+  background-color: #1f3d5b;
 }
 .slide:nth-child(7) {
-  background-color: gray;
+  background-color: #1f3d5b;
 }
 .slide:nth-child(8) {
-  background-color: rgb(200, 0, 0);
+  background-color: #1f3d5b;
 }
 .register {
   position: fixed;
@@ -299,13 +300,3 @@ body {
     z-index: 99;
   }
 }
-<<<<<<< HEAD
-
-.logo-wipcamp--full {
-  margin: 0 auto;
-  display: block;
-  width: 100%;
-  max-width: 600px;
-}
-=======
->>>>>>> origin/First_Page
