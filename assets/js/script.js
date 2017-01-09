@@ -48,6 +48,8 @@ $(document).ready(function(){
     $('.bullet-container').append('<div class="bullet"></div>');
   }
 
+  marginSlideControl();
+
   $('.slide-control .bullet').on('click', function(event) {
     var diff =  $('.slide-control .bullet').index(event.target) - Math.abs(page);
     for(i = 0; i < Math.abs(diff); i++) {
@@ -116,4 +118,9 @@ function slide(direction) {
 
   $('.slide-control .bullet').removeClass('current').empty();
   $('.slide-control .bullet:eq(' + Math.abs(page) + ')').addClass('current').append(Math.abs(page) + 1);
+}
+
+function marginSlideControl(){
+  var dif = ($(window).width()-$('div.slide-control').width())/2;
+  $('.slide-control').css({"margin-left": + dif +"px"});
 }
