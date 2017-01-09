@@ -12,7 +12,7 @@ $(document).ready(function(){
   });
 
   $('div.slide').click(function(event) {
-    if(getTransform($(event.target).parents().filter('.slide'))[0] == 0){ console.log("Happy");
+    if(getTransform($(event.target).parents().filter('.slide'))[0] == 0){
       $(event.target).parents().filter('.slide').addClass('active');
       $(event.target).parents().filter('.slide').css({"transform": "perspective(100px) translate3d(0, 0, 0)"});
     }
@@ -41,9 +41,9 @@ $(document).ready(function(){
     });
   });
 
-  $('.slide-control').append('<div class="prev-container">prev</div>');
+  $('.slide-control').append('<div class="prev-container" style="color: black">prev</div>');
   $('.slide-control').append('<div class="bullet-container"></div>');
-  $('.slide-control').append('<div class="next-container">next</div>');
+  $('.slide-control').append('<div class="next-container" style="color: black">next</div>');
   for (i = 0; i < slideItems.length; i++) {
     $('.bullet-container').append('<div class="bullet"></div>');
   }
