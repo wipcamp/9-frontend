@@ -19,35 +19,25 @@ $(function() {
   const button = $('a');
   const tbody = $('tbody');
   let i=0;
+  let j=9;
 
 // get data form database ( child - users )
   const usersRef = dbRef.child("users").orderByChild("score").limitToLast(10);
-  const getUsers = usersRef.on('value', snap => test.innerText = JSON.stringify(snap.val(), null, 3));
+// const getUsers = usersRef.on('value', snap => test.innerText = JSON.stringify(snap.val(), null, 3));
 
 // get score < only > !
 let scores = [];
 let names = [];
 let urlpics = [];
   usersRef.on("child_added", function(data) {
-
     let users = data.val();
     names.push(users.name);
     scores.push(users.score);
     urlpics.push(users.urlpic);
-    console.log(names);
-    console.log(scores);
-    console.log(urlpics);
   });
 
-
-
-// json -> arrays
-
-
-
-
-  //-------------------------------------------//
-  // show in table
+//-------------------------------------------//
+// show in table [ array.length - > 0 ]
     button.click(function() {
       if (i<10) {
         for(i=0;i<10;i++) {
@@ -60,8 +50,12 @@ let urlpics = [];
 
   // add to table
   function addToList(text) {
-    const tr ='<tr>' + '<td>'+ (i+1) + '</td>' + '<td class="hidden-sm-down">'+ "picurl" + '</td>' + '<td>'+ "Facebook Name"+ '</td>' + '<td>'+ "Score" + '</td>' + '</tr>';
+    const tr ='<tr>' + '<td>'+ (i+1) + '</td>' + '<td class="hidden-sm-down">'+ "picurl" + '</td>' + '<td>'+ names[j] + '</td>' + '<td>'+ scores[j] + '</td>' + '</tr>';
     tbody.append(tr);
+    j--;
+    if(j===0){
+      j=0;
+    }
   }
 
 });
