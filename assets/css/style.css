@@ -1,12 +1,83 @@
 body {
   height: auto;
 }
+
+@media (min-width: 320px) {
+  .game-fontLeaderboard {
+    font-size: 46px;
+  }
+  .game-fontHeadTable{
+    font-size: 25px;
+    text-align: center;
+  }
+  .game-fontInTable{
+    font-size: 20px;
+    text-align: center;
+  }
+
+ }
+
+@media (min-width: 768px) {
+  .game-fontLeaderboard {
+    font-size: 80px;
+  }
+  .game-fontHeadTable{
+    font-size: 40px;
+    text-align: center;
+  }
+  .game-fontInTable{
+    font-size: 35px;
+    text-align: center;
+  }
+
+ }
+
+@media (min-width: 1025px) {
+  .game-fontLeaderboard {
+    font-size: 100px;
+  }
+  .game-fontHeadTable{
+    font-size: 30px;
+    text-align: center;
+  }
+  .game-fontInTable{
+    font-size: 28px;
+    text-align: center;
+  }
+
+ }
+
 .wipgamehead {
+  margin-top: 100px;
+  margin-bottom: 50px;
   text-align: center;
-  background-color: rgb(20, 221, 166);
 }
 .wipgamebody {
-  background-color: rgb(244, 72, 132);
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 20px;
   text-align: center;
-  height: 800px;
+  height: auto;
+}
+.rounded-circle {
+  width: 75px;
+  height: 75px;
+}
+.game-body{
+  background: url(http://nexceris.com/wp-content/uploads/2014/04/bokeh-cover-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color:#fff;
+}
+th {
+  text-align: center;
+}
+.table{
+  text-align: center;
+}
+.game-Table{
+  margin-top: -3.285px;
+  text-align: center;
 }

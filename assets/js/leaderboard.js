@@ -8,7 +8,8 @@ const config = {
 };
 firebase.initializeApp(config);
 
-const test = document.getElementById('test');
+// id test in testfirebase
+// const test = document.getElementById('test');
 
 // get reference
 const dbRef = firebase.database().ref();
@@ -21,14 +22,18 @@ $(function() {
   let i=0;
   let j=9;
 
+// timeout
+var delay=2250;
+
 // get data form database ( child - users )
+// 1000 = 1 second
   const usersRef = dbRef.child("users").orderByChild("score").limitToLast(10);
 // const getUsers = usersRef.on('value', snap => test.innerText = JSON.stringify(snap.val(), null, 3));
 
 // get score < only > !
-let scores = [];
-let names = [];
-let urlpics = [];
+  let scores = [];
+  let names = [];
+  let urlpics = [];
   usersRef.on("child_added", function(data) {
     let users = data.val();
     names.push(users.name);
@@ -36,26 +41,22 @@ let urlpics = [];
     urlpics.push(users.urlpic);
   });
 
-//-------------------------------------------//
-// show in table [ array.length - > 0 ]
-    button.click(function() {
+  $(document).ready(function() {
+    setTimeout(function() {
       if (i<10) {
         for(i=0;i<10;i++) {
-          const text = input.val();
           input.val();
-          addToList(text);
+          addToList();
         }
       }
-    })
+    }, delay);
+  });
 
   // add to table
   function addToList(text) {
-    const tr ='<tr>' + '<td>'+ (i+1) + '</td>' + '<td class="hidden-sm-down">'+ "picurl" + '</td>' + '<td>'+ names[j] + '</td>' + '<td>'+ scores[j] + '</td>' + '</tr>';
+    const tr ='<tr>' + '<th scope="row" class="game-forCenter" >'+ (i+1) + '</th>' + '<td class="hidden-sm-down game-forCenter">'+ '<img src="' + (urlpics[j]) + '" alt="' + (names[j]) + '" class="rounded-circle" />' + '</td>' + '<td class="game-forCenter">'+ names[j] + '</td>' + '<td>'+ scores[j] + '</td>' + '</tr>';
     tbody.append(tr);
     j--;
-    if(j===0){
-      j=0;
-    }
   }
 
 });
