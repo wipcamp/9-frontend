@@ -24,9 +24,12 @@ body {
   height: 100%;
   position: fixed;
   overflow: hidden;
-  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   width: 100%;
   z-index: 1;
+}
+
+.slide.animate{
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .slide.active {
