@@ -29,12 +29,17 @@ $(document).ready(function(){
 
   $(function(){
     var slideContainer = $("#con")[0];
-    Hammer(slideContainer).on("swipeleft", function() {
+    var mc = new Hammer.Manager(slideContainer, {
+        recognizers: [
+    	       [Hammer.Pan,{ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 50 }]
+        ]
+    });
+    mc.on("panleft", function(event) {
       if(getTransform("div.slide")[2] == -50) {
         slide(1);
       }
     });
-    Hammer(slideContainer).on("swiperight", function() {
+    mc.on("panright", function(event) {
       if(getTransform("div.slide")[2] == -50) {
         slide(-1);
       }
