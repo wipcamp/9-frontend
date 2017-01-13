@@ -1,7 +1,8 @@
 $(document).ready(function(){
   var slideItems = $('div.slide');
 
-  initSlide();
+  var carousel = new WipcampCarousel('.con');
+  carousel.init();
 
   $('span.menu').click(function(event) {
     if(getTransform($(event.target).parents().filter('.slide'))[0] == 0){
@@ -15,41 +16,29 @@ $(document).ready(function(){
 
   $('div.slide').click(function(event) {
     if(getTransform($(event.target).parents().filter('.slide'))[0] == 0){
-      $('.con').removeClass('idle');
-      $('.slide').removeClass('animate');
-      $(event.target).parents().filter('.slide').addClass('active');
-      $(event.target).parents().filter('.slide').css({"transform": "perspective(100px) translate3d(0, 0, 0)"});
+      var transitionTime = /((?:[0-9])+(?:\.(?:[0-9])+)?)(ms|s)/.exec($('.animate').css('transition-duration'));
+      transitionTime.shift();
+      transitionTime = transitionTime[1] == "s" ? transitionTime[0]*1000 : transitionTime[0];
+
+      var beforeAnimate = function() {
+        var r = $.Deferred();
+        $('.con').removeClass('idle');
+        $(event.target).parents().filter('.slide').addClass('active');
+        $(event.target).parents().filter('.slide').css({"transform": "perspective(100px) translate3d(0, 0, 0)"});
+        return r;
+      };
+
+      var afterAnimate = function() {
+        setTimeout(function() {
+          $('.slide').removeClass('animate');
+        }, transitionTime);
+      };
+
+      beforeAnimate().done(afterAnimate());
     }
   });
-
-  $('.slide-control').append('<div class="prev-container" style="color: black">prev</div>');
-  $('.slide-control').append('<div class="bullet-container"></div>');
-  $('.slide-control').append('<div class="next-container" style="color: black">next</div>');
-  for (i = 0; i < slideItems.length; i++) {
-    $('.bullet-container').append('<div class="bullet"></div>');
-  }
 
   marginSlideControl();
-
-  $('.slide-control .bullet').on('click', function(event) {
-    var diff =  $('.slide-control .bullet').index(event.target) - Math.abs(page);
-    for(i = 0; i < Math.abs(diff); i++) {
-      if (diff > 0) {
-        slide(1);
-      }
-      else if (diff < 0) {
-        slide(-1);
-      }
-    }
-  });
-
-  $('.slide-control .next-container').on('click', function() {
-    slide(1);
-  });
-
-  $('.slide-control .prev-container').on('click', function() {
-    slide(-1);
-  });
 });
 
 function getTransform(el) {
@@ -59,46 +48,6 @@ function getTransform(el) {
     resultTranform[resultTranform.length - 1] = resultTranform[resultTranform.length - 1].replace(")","");
     var xyz = [resultTranform[12], resultTranform[13], resultTranform[14]];
     return xyz;
-}
-
-function initSlide() {
-  var items = $('.slide');
-  $.each(items, function(idx, val) {
-    $(val).css('transform', 'perspective(100px) translate3d('+ getLeftDistance(val, items) +'px, -100px, -50px)');
-  });
-}
-
-function getLeftDistance(elEach, elAll) {
-  var windowWidth = $(window).width();
-  var index = $(elAll).index(elEach);
-  return index * diffSlide();
-}
-
-function diffSlide(){
-  var windowWidth = $(window).width();
-  return windowWidth * 1.15625;
-}
-
-var page = 0;
-var pageTransform = {};
-for(var i = -7; i < 8; i++){
-  pageTransform[i] = i*diffSlide();
-}
-
-function slide(direction) {
-  if (direction === 1 && page != -7) {
-    page--;
-  } else if (direction === -1 && page != 0) {
-    page++;
-  }
-
-  var temp = page + 8;
-  $.each($('div.slide'), function (idx, val) {
-    $(val).css({"transform": "perspective(100px) translate3d(" + pageTransform[temp - (8 - idx)] + "px, -100px, -50px)"});
-  });
-
-  $('.slide-control .bullet').removeClass('current').empty();
-  $('.slide-control .bullet:eq(' + Math.abs(page) + ')').addClass('current').append(Math.abs(page) + 1);
 }
 
 function marginSlideControl(){

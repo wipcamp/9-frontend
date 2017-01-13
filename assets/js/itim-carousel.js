@@ -3,20 +3,51 @@ function WipcampCarousel(element) {
   element = $(element);
 
   var slide = $(element).find('.slide');
+  var slideControl = $(element).find('.slide-control');
   var slideCount = slide.length;
   var currentSlide = 0;
   var pageTransform = {};
 
   this.init = function() {
+    slideControl.append('<div class="prev-container" style="color: black">prev</div>');
+    slideControl.append('<div class="bullet-container"></div>');
+    slideControl.append('<div class="next-container" style="color: black">next</div>');
+
+    for (i = 0; i < slideCount; i++) {
+      $('.bullet-container').append('<div class="bullet"></div>');
+    }
+
     $(window).on("load resize orientationchange", function () {
       setSlideDemensions();
-      this.showSlide(currentSlide);
+      self.showSlide(currentSlide);
+    });
+
+    $(document).keydown(function(event) {
+      if(event.which == 39 && element.hasClass('idle')) {
+        self.next();
+      }
+      if(event.which == 37 && element.hasClass('idle')) {
+        self.prev();
+      }
+    });
+
+    $('.slide-control .bullet').on('click', function(event) {
+      var idx =  $('.slide-control .bullet').index(event.target);
+      self.showSlide(idx, true);
+    });
+
+    $('.slide-control .next-container').on('click', function() {
+      self.next();
+    });
+
+    $('.slide-control .prev-container').on('click', function() {
+      self.prev();
     });
   };
 
   this.getCurrentSlide = function () {
     return this.currentSlide;
-  }
+  };
 
   function setSlideDemensions() {
     for (var i = - (slideCount - 1); i < slideCount; i++) {
@@ -41,6 +72,9 @@ function WipcampCarousel(element) {
   this.showSlide = function(skipto, animate) {
     skipto = Math.max(0, Math.min(skipto, slideCount-1));
     currentSlide = skipto;
+    $('.bullet-container').children().removeClass('current').empty();
+    $('.bullet-container').children().filter(':eq(' + currentSlide + ')').addClass('current').text(currentSlide + 1);
+
     animation(animate);
     setSlideDemensions();
   };
@@ -74,13 +108,4 @@ function WipcampCarousel(element) {
   }
 
   new Hammer(element[0], {dragLockToAxis: true}).on("swipeleft swiperight", eventDetection);
-
-  $(document).keydown(function(event) {
-    if(event.which == 39 && element.hasClass('idle')) {
-      self.next();
-    }
-    if(event.which == 37 && element.hasClass('idle')) {
-      self.prev();
-    }
-  });
 }
