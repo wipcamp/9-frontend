@@ -19,36 +19,15 @@ $(document).ready(function(){
   });
 
   $(document).keydown(function(event) {
-    if(event.which == 39 && getTransform("div.slide")[2] == -50) {
+    if(event.which == 39 && $('.slide.active').length == 0) {
       slide(1);
     }
-    if(event.which == 37 && getTransform("div.slide")[2] == -50) {
+    if(event.which == 37 && $('.slide.active').length == 0) {
       slide(-1);
     }
   });
 
   $(function(){
-    /*var slideContainer = $("#con")[0];
-    var mc = new Hammer.Manager(slideContainer, {
-        recognizers: [
-    	       [Hammer.Pan,{ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 10 }]
-        ]
-    });
-    mc.on("panleft", function(event) {
-      console.log(event.deltaX);
-      $.each($('div.slide'), function (idx, val) {
-        $(val).css({"transform": "perspective(100px) translate3d(" + getTransform($(val))[0] - Math.abs(event.deltaX) + "px, -100px, -50px)"});
-      });
-      if(getTransform("div.slide")[2] == -50) {
-        slide(1);
-      }
-    });
-    mc.on("panright", function(event) {
-      console.log(event.deltaX);
-      if(getTransform("div.slide")[2] == -50) {
-        slide(-1);
-      }
-    });*/
     var hammer = new Hammer($("#con")[0]).on('swipeleft swiperight panleft panright panend pancancel', handleHammer);
   });
 
@@ -157,15 +136,19 @@ function handleHammer(event) {
 function handleSwipe(event) {
   switch (event.direction) {
     case Hammer.DIRECTION_LEFT:
-      slide(1);
+      if($('.slide.active').length == 0) {
+        slide(1);
+      }
       break;
     case Hammer.DIRECTION_RIGHT:
-      slide(-1);
+      if($('.slide.active').length == 0) {
+        slide(-1);
+      }
       break;
   }
 }
 function outOfBound() {
-  var left = $con.position().left;
+  var left = $('.slide:eq('+ Math.abs(page)+')').position().left;
   return (page == 0 && left >= 0) ||
          (page == slideCount - 1 && left <= -slideWidth * (slideCount - 1));
 }
@@ -184,9 +167,13 @@ function handlePan(event) {
     case 'pancancel':
       if (Math.abs(event.deltaX) > slideWidth * panBoundary) {
         if (event.deltaX > 0) {
-          slide(-1);
+          if($('.slide.active').length == 0) {
+            slide(-1);
+          }
         } else {
-          slide(1);
+          if($('.slide.active').length == 0) {
+            slide(1);
+          }
         }
       } /*else {
         self.showPane(currentPane);
