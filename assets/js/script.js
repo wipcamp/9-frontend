@@ -118,7 +118,7 @@ function marginSlideControl(){
 var $con = $('.slide')[page];
 var slideWidth = 0;
 var slideCount = $('.slide').length;
-var panBoundary = .25;
+var panBoundary = 0.25;
 function handleHammer(event) {
   switch (event.type) {
     case 'swipeleft':
@@ -134,17 +134,15 @@ function handleHammer(event) {
   }
 }
 function handleSwipe(event) {
-  switch (event.direction) {
-    case Hammer.DIRECTION_LEFT:
-      if($('.slide.active').length == 0) {
+  if ($('.slide.active').length == 0) {
+    switch (event.direction) {
+      case Hammer.DIRECTION_LEFT:
         slide(1);
-      }
-      break;
-    case Hammer.DIRECTION_RIGHT:
-      if($('.slide.active').length == 0) {
+        break;
+      case Hammer.DIRECTION_RIGHT:
         slide(-1);
-      }
-      break;
+        break;
+    }
   }
 }
 function outOfBound() {
@@ -158,7 +156,7 @@ function handlePan(event) {
     case 'panright':
       // Slow down at the first and last pane.
       if (outOfBound()) {
-        event.deltaX *= .2;
+        event.deltaX *= 0.2;
       }
       setContainerOffsetX(-page * slideWidth + event.deltaX);
       console.log(-page * slideWidth + event.deltaX);
