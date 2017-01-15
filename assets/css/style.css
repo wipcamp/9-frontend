@@ -6,6 +6,9 @@ body {
   .game-fontLeaderboard {
     font-size: 46px;
   }
+  .game-fontGameName{
+    font-size: 25px;
+  }
   .game-fontHeadTable{
     font-size: 25px;
     text-align: center;
@@ -20,6 +23,9 @@ body {
 @media (min-width: 768px) {
   .game-fontLeaderboard {
     font-size: 80px;
+  }
+  .game-fontGameName{
+    font-size: 40px;
   }
   .game-fontHeadTable{
     font-size: 40px;
@@ -36,6 +42,9 @@ body {
   .game-fontLeaderboard {
     font-size: 100px;
   }
+  .game-fontGameName{
+    font-size: 50px;
+  }
   .game-fontHeadTable{
     font-size: 30px;
     text-align: center;
@@ -49,7 +58,11 @@ body {
 
 .wipgamehead {
   margin-top: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.wipgamename{
+  margin-bottom: 30px;
   text-align: center;
 }
 .wipgamebody {
@@ -74,10 +87,13 @@ body {
 th {
   text-align: center;
 }
-.table{
+.table,.game-forCenter{
   text-align: center;
 }
 .game-Table{
   margin-top: -3.285px;
   text-align: center;
+}
+.btn-width{
+  width: 140px;
 }
