@@ -24,21 +24,14 @@ body {
   height: 100%;
   position: fixed;
   overflow: hidden;
-<<<<<<< HEAD
-=======
-  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
->>>>>>> origin/front_game
   width: 100%;
   z-index: 1;
 }
 
-<<<<<<< HEAD
 .slide.animate{
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-=======
->>>>>>> origin/front_game
 .slide.active {
   transform: perspective(100px) translate3d(0, 0, 0) !important;
   z-index: 10;
@@ -137,10 +130,9 @@ body {
   z-index: 10;
 }
 
-.wave{
+.wave {
   width:100%;
   height: 3em;
-<<<<<<< HEAD
 }
 
 .wave1{
@@ -270,9 +262,6 @@ body {
   }
 }
 
-=======
-}
-
 .wave1{
   background-image: url('../img/object/wave1.svg');
   background-repeat: repeat-x;
@@ -400,7 +389,6 @@ body {
   }
 }
 
->>>>>>> origin/front_game
 /*###Desktops, big landscape tablets and laptops(Large, Extra large)####*/
 @media screen and (min-width: 1024px){
   .wave{
@@ -441,14 +429,11 @@ body {
     top:30%;
     z-index: 99;
   }
-<<<<<<< HEAD
-=======
 }
 
-/*========================================================================*/
-/* front_game */
-/* all in leaderboard */
+/*------------------- Game Score Page -------------------*/
 
+/* all in leaderboard */
 @media (min-width: 320px) {
   .game-fontLeaderboard {
     font-size: 46px;
@@ -549,7 +534,6 @@ th {
   padding: 0;
   margin: 0;
   color: white;
->>>>>>> origin/front_game
 }
 /* end of leaderboard */
 
