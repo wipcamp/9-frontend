@@ -303,7 +303,7 @@ body {
 
 /*========================================================================*/
 /* front_game */
-
+/* all in leaderboard */
 
 @media (min-width: 320px) {
   .game-fontLeaderboard {
@@ -406,6 +406,6 @@ th {
   margin: 0;
   color: white;
 }
-
+/* end of leaderboard */
 
 /*========================================================================*/
