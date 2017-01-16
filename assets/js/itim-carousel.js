@@ -49,15 +49,6 @@ function WipcampCarousel(element) {
     return currentSlide;
   };
 
-  this.getTransform = function (idx) {
-    var results = slide.filter(':eq(' + idx + ')').css('-webkit-transform');
-    var resultTranform = results.split(", ");
-    resultTranform[0] = resultTranform[0].replace("matrix3d(","");
-    resultTranform[resultTranform.length - 1] = resultTranform[resultTranform.length - 1].replace(")","");
-    var xyz = [parseFloat(resultTranform[12]), parseFloat(resultTranform[13]), parseFloat(resultTranform[14])];
-    return xyz;
-  }
-
   function setSlideDemensions() {
     for (var i = - (slideCount - 1); i < slideCount; i++) {
       pageTransform[i] = i * diffSlide();
@@ -104,43 +95,13 @@ function WipcampCarousel(element) {
      return this.showSlide(currentSlide - 1, true);
    };
 
-   function outOfBound() {
-     isLeftOut = currentSlide === 0 && self.getTransform(0)[0] > 0;
-     isRightOut = currentSlide === slideCount - 1 && self.getTransform(slideCount - 1)[0] < 0;
-     return isLeftOut || isRightOut;
-   }
-
   function eventDetection(e) {
     switch (e.type) {
-      case 'panleft':
-      case 'panright':
-        console.log(outOfBound());
-        if (outOfBound()) {
-          e.deltaX *= 0.2;
-        }
-        $.each($('div.slide'), function (idx, val) {
-          $(val).css({"transform": "perspective(100px) translate3d(" + (self.getTransform(idx)[0] + e.deltaX) + "px, -100px, -50px)"});
-        });
-        break;
-      case 'panend':
-      case 'pancancel':
-        if (Math.abs(e.deltaX) > $('.slide')[0] * 0.25) {
-          if (e.deltaX > 0) {
-            self.prev();
-          } else {
-            self.next();
-          }
-        }
-        else {
-          self.showSlide(currentSlide, true);
-        }
-        break;
       case 'swipeleft':
         if (element.hasClass('idle')) {
           self.next();
         }
         break;
-
       case 'swiperight':
         if (element.hasClass('idle')) {
           self.prev();
@@ -149,5 +110,5 @@ function WipcampCarousel(element) {
     }
   }
 
-  new Hammer(element[0], {dragLockToAxis: true}).on("panleft panright panend pancancel swipeleft swiperight", eventDetection);
+  new Hammer(element[0], {dragLockToAxis: true}).on("swipeleft swiperight", eventDetection);
 }
