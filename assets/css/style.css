@@ -24,14 +24,21 @@ body {
   height: 100%;
   position: fixed;
   overflow: hidden;
+<<<<<<< HEAD
+=======
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+>>>>>>> origin/front_game
   width: 100%;
   z-index: 1;
 }
 
+<<<<<<< HEAD
 .slide.animate{
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+=======
+>>>>>>> origin/front_game
 .slide.active {
   transform: perspective(100px) translate3d(0, 0, 0) !important;
   z-index: 10;
@@ -133,6 +140,7 @@ body {
 .wave{
   width:100%;
   height: 3em;
+<<<<<<< HEAD
 }
 
 .wave1{
@@ -262,6 +270,137 @@ body {
   }
 }
 
+=======
+}
+
+.wave1{
+  background-image: url('../img/object/wave1.svg');
+  background-repeat: repeat-x;
+  position: absolute;
+  bottom: 1.5em;
+  left: 0;
+  z-index: 2;
+}
+.wave2{
+  background-image: url('../img/object/wave2.svg');
+  background-repeat: repeat-x;
+  background-position: -42px 0;
+  position: absolute;
+  bottom: 1em;
+  left:0;
+  z-index: 4;
+}
+.wave3{
+  background-image: url('../img/object/wave3.svg');
+  background-repeat: repeat-x;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}
+.flip-horizontal, .x-grid-cell-inner, .x-column-header-text, .x-panel-header-text {
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: fliph; /*IE*/
+    filter: fliph; /*IE*/
+}
+.card-detail{
+  font-size: 1.1em;
+}
+.card-content{
+  position: absolute;
+  top:20%;
+  z-index: 99;
+}
+
+.card-menu{
+  text-decoration: none !important;
+  color: #000;
+  background-color: #fff;
+  display: inline-block;
+  padding: 0.5em;
+}
+
+.cisland{
+  position: absolute;
+  top:0;
+  width: 100%;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.cisland img {
+  position: absolute;
+  bottom: 2.5em;
+  right: -5em;
+}
+
+.logo-wipcamp--full {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 600px;
+}
+/*### Smartphones (portrait and landscape)(small)### */
+@media screen and (min-width : 0px) and (max-width : 767px){
+  #logo{
+    position: relative;
+    z-index: 99;
+    top:15vh;
+  }
+  .ship{
+    max-height: 35vh;
+    position: absolute;
+    bottom: 2em;
+    left:-3em;
+    z-index: 3;
+  }
+  .wipcamp-logo{
+    max-height: 15em;
+  }
+  /*.island{
+    position: absolute;
+    bottom: 1em;
+    z-index: 1;
+  }*/
+}
+/*###Tablet(medium)###*/
+@media screen and (min-width : 768px) and (max-width : 1023px){
+  #logo{
+    position: relative;
+    z-index: 99;
+    top:15vh;
+  }
+  .sponsor-logo{
+    margin: 0px auto;
+    width: 40em;
+    z-index: 10;
+  }
+  .ship{
+    max-height: 100%;
+    position: absolute;
+    bottom: 0em;
+    left:-25em;
+    z-index: 3;
+  }
+  .card-detail{
+    font-size: 1.5em;
+  }
+  .cisland img {
+    max-height: 25em;
+  }
+  .card-menu{
+    font-size:1.5em;
+  }
+  h1{
+    font-size: 3em;
+  }
+}
+
+>>>>>>> origin/front_game
 /*###Desktops, big landscape tablets and laptops(Large, Extra large)####*/
 @media screen and (min-width: 1024px){
   .wave{
@@ -302,4 +441,116 @@ body {
     top:30%;
     z-index: 99;
   }
+<<<<<<< HEAD
+=======
 }
+
+/*========================================================================*/
+/* front_game */
+/* all in leaderboard */
+
+@media (min-width: 320px) {
+  .game-fontLeaderboard {
+    font-size: 46px;
+  }
+  .game-fontGameName{
+    font-size: 25px;
+  }
+  .game-fontHeadTable{
+    font-size: 25px;
+    text-align: center;
+  }
+  .game-fontInTable{
+    font-size: 20px;
+    text-align: center;
+  }
+
+ }
+
+@media (min-width: 768px) {
+  .game-fontLeaderboard {
+    font-size: 80px;
+  }
+  .game-fontGameName{
+    font-size: 40px;
+  }
+  .game-fontHeadTable{
+    font-size: 40px;
+    text-align: center;
+  }
+  .game-fontInTable{
+    font-size: 35px;
+    text-align: center;
+  }
+
+ }
+
+@media (min-width: 1025px) {
+  .game-fontLeaderboard {
+    font-size: 100px;
+  }
+  .game-fontGameName{
+    font-size: 50px;
+  }
+  .game-fontHeadTable{
+    font-size: 30px;
+    text-align: center;
+  }
+  .game-fontInTable{
+    font-size: 28px;
+    text-align: center;
+  }
+
+ }
+
+.wipgamehead {
+  margin-top: 100px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.wipgamename{
+  margin-bottom: 30px;
+  text-align: center;
+}
+.wipgamebody {
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 20px;
+  text-align: center;
+  height: auto;
+}
+.rounded-circle {
+  width: 75px;
+  height: 75px;
+}
+.game-body{
+  background: url(http://nexceris.com/wp-content/uploads/2014/04/bokeh-cover-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color:#fff;
+}
+th {
+  text-align: center;
+}
+.table,.game-forCenter{
+  text-align: center;
+}
+.game-Table{
+  margin-top: -3.285px;
+  text-align: center;
+}
+.btn-width{
+  width: 140px;
+  background-color: #eeeeee;
+  font-family: 'Itim', sans-serif;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  color: white;
+>>>>>>> origin/front_game
+}
+/* end of leaderboard */
+
+/*========================================================================*/
