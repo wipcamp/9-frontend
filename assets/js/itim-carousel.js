@@ -9,14 +9,6 @@ function WipcampCarousel(element) {
   var pageTransform = {};
 
   this.init = function () {
-    /*slideControl.append('<div class="prev-container" style="color: black">prev</div>');
-    slideControl.append('<div class="bullet-container"></div>');
-    slideControl.append('<div class="next-container" style="color: black">next</div>');
-
-    for (i = 0; i < slideCount; i++) {
-      $('.bullet-container').append('<div class="bullet"></div>');
-    }*/
-
     $(window).on("load resize orientationchange", function () {
       setSlideDemensions();
       self.showSlide(currentSlide);
@@ -28,6 +20,19 @@ function WipcampCarousel(element) {
       }
       if(event.which == 37 && element.hasClass('idle')) {
         self.prev();
+      }
+    });
+
+    $(window).on('mousewheel DOMMouseScroll', function (e) {
+      var direction = (function () {
+        var delta = (e.type === 'DOMMouseScroll' ? e.originalEvent.detail * -40 : e.originalEvent.wheelDelta);
+        return delta > 0 ? 0 : 1;
+      }());
+      if(direction === 1 && element.hasClass('idle')) {
+          self.next();
+      }
+      if(direction === 0 && element.hasClass('idle')) {
+         self.prev();
       }
     });
 
