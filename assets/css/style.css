@@ -100,6 +100,7 @@ body {
   border-spacing: 5px;
   position: fixed;
   bottom: 15%;
+  cursor: pointer;
 }
 
 .slide-control .prev-container, .slide-control .bullet-container, .slide-control .next-container {

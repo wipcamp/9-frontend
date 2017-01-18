@@ -9,13 +9,13 @@ function WipcampCarousel(element) {
   var pageTransform = {};
 
   this.init = function () {
-    slideControl.append('<div class="prev-container" style="color: black">prev</div>');
+    /*slideControl.append('<div class="prev-container" style="color: black">prev</div>');
     slideControl.append('<div class="bullet-container"></div>');
     slideControl.append('<div class="next-container" style="color: black">next</div>');
 
     for (i = 0; i < slideCount; i++) {
       $('.bullet-container').append('<div class="bullet"></div>');
-    }
+    }*/
 
     $(window).on("load resize orientationchange", function () {
       setSlideDemensions();
