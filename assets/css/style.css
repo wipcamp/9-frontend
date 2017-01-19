@@ -19,6 +19,21 @@ body {
   width: 100%;
   height: 100%;
 }
+
+.prev{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+}
+
+.next{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+}
+
 .slide {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   height: 100%;
