@@ -44,7 +44,7 @@ body {
 }
 
 .slide.animate{
-  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .slide.active {
@@ -70,9 +70,6 @@ body {
   background-color: #1f3d5b;
 }
 .slide:nth-child(7) {
-  background-color: #1f3d5b;
-}
-.slide:nth-child(8) {
   background-color: #1f3d5b;
 }
 .register {
