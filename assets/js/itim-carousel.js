@@ -22,6 +22,7 @@ function WipcampCarousel(element) {
       self.showSlide(currentSlide);
       $('.next').css({"transform": "perspective(100px) translate3d(" + pageTransform[1] + "px, -100px, -50px)"});
       $('.prev').css({"transform": "perspective(100px) translate3d(" + pageTransform[-1] + "px, -100px, -50px)"});
+      marginSlideControl()
     });
 
     $(".next").click(function(){
@@ -142,5 +143,10 @@ function WipcampCarousel(element) {
       resultTranform[resultTranform.length - 1] = resultTranform[resultTranform.length - 1].replace(")","");
       var xyz = [resultTranform[12], resultTranform[13], resultTranform[14]];
       return xyz;
+  }
+
+  function marginSlideControl(){
+    var dif = ($(window).width()-$('div.slide-control').width())/2;
+    $('.slide-control').css({"margin-left": + dif +"px"});
   }
 }

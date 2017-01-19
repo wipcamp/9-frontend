@@ -41,8 +41,6 @@ $(document).ready(function(){
       beforeAnimate().done(afterAnimate());
     }
   });
-
-  marginSlideControl();
 });
 
 function getTransform(el) {
@@ -52,9 +50,4 @@ function getTransform(el) {
     resultTranform[resultTranform.length - 1] = resultTranform[resultTranform.length - 1].replace(")","");
     var xyz = [resultTranform[12], resultTranform[13], resultTranform[14]];
     return xyz;
-}
-
-function marginSlideControl(){
-  var dif = ($(window).width()-$('div.slide-control').width())/2;
-  $('.slide-control').css({"margin-left": + dif +"px"});
 }
