@@ -125,10 +125,31 @@ function WipcampCarousel(element) {
         if (element.hasClass('idle')) {
           self.next();
         }
+        else
+        {
+          $('.slide').addClass('animate');
+          $('.slide.active').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
+          $('.slide.active').removeClass('active');
+          $('.con').removeClass('idle');
+          setTimeout(function() { self.next(); }, 500);
+          setTimeout(function() { $('.slide:eq('+currentSlide+')').addClass('active'); }, 1000);
+          setTimeout(function() { $('.slide:eq('+currentSlide+')').css({"transform": "perspective(100px) translate3d(0, 0, 0)"}); }, 1500);
+          $('.slide').removeClass('animate');
+        }
         break;
       case 'swiperight':
         if (element.hasClass('idle')) {
           self.prev();
+        }
+        else{
+          $('.slide').addClass('animate');
+          $('.slide.active').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
+          $('.slide.active').removeClass('active');
+          $('.con').removeClass('idle');
+          setTimeout(function() { self.prev(); }, 500);
+          setTimeout(function() { $('.slide:eq('+currentSlide+')').addClass('active'); }, 1000);
+          setTimeout(function() { $('.slide:eq('+currentSlide+')').css({"transform": "perspective(100px) translate3d(0, 0, 0)"}); }, 1500);
+          $('.slide').removeClass('animate');
         }
         break;
     }
