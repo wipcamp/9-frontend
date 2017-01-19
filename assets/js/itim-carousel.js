@@ -20,6 +20,15 @@ function WipcampCarousel(element) {
     $(window).on("load resize orientationchange", function () {
       setSlideDemensions();
       self.showSlide(currentSlide);
+      $('.next').css({"transform": "perspective(100px) translate3d(" + pageTransform[1] + "px, -100px, -50px)"});
+      $('.prev').css({"transform": "perspective(100px) translate3d(" + pageTransform[-1] + "px, -100px, -50px)"});
+    });
+
+    $(".next").click(function(){
+      self.next();
+    });
+    $(".prev").click(function(){
+      self.prev();
     });
 
     $(document).keydown(function(event) {
@@ -125,4 +134,13 @@ function WipcampCarousel(element) {
   }
 
   new Hammer(element[0], {dragLockToAxis: true}).on("swipeleft swiperight", eventDetection);
+
+  function getTransform(el) {
+      var results = $(el).css('-webkit-transform');
+      var resultTranform = results.split(", ");
+      resultTranform[0] = resultTranform[0].replace("matrix3d(","");
+      resultTranform[resultTranform.length - 1] = resultTranform[resultTranform.length - 1].replace(")","");
+      var xyz = [resultTranform[12], resultTranform[13], resultTranform[14]];
+      return xyz;
+  }
 }
