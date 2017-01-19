@@ -11,7 +11,16 @@ body {
   margin: 0;
   color: white;
 }
-
+@keyframes wave {
+    0% {
+        -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+        transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg)
+    }
+    100% {
+        -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+        transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg)
+    }
+}
 /*=============================== Components ================================*/
 
 /*-------------- jQuery WIPCampCarousel3D ---------------*/
@@ -138,7 +147,6 @@ body {
   background-repeat: repeat-x;
   position: absolute;
   bottom: 1.5em;
-  left: 0;
   z-index: 2;
 }
 .wave2{
@@ -146,17 +154,22 @@ body {
   background-repeat: repeat-x;
   background-position: -42px 0;
   position: absolute;
+  width: 200%;
   bottom: 1em;
-  left:0;
+  left:-50%;
   z-index: 4;
+  animation: wave 3s .1s infinite linear;
 }
 .wave3{
   background-image: url('../img/object/wave3.svg');
   background-repeat: repeat-x;
   position: absolute;
   bottom: 0;
-  left: 0;
+  width: 200%;
+  left:-50%;
   z-index: 5;
+  animation: wave 2s .1s infinite linear;
+
 }
 .flip-horizontal, .x-grid-cell-inner, .x-column-header-text, .x-panel-header-text {
     -moz-transform: scaleX(-1);
@@ -166,23 +179,11 @@ body {
     -ms-filter: fliph; /*IE*/
     filter: fliph; /*IE*/
 }
-.slide1-detail{
-  font-size: 1.1em;
+#two p{
+  font-size: 1.0em;
 }
 .slide2-detail{
   font-size: 0.85em;
-}
-.slide3-detail{
-  font-size: 1.1em;
-}
-.slide4-detail{
-  font-size: 1.1em;
-}
-.slide5-detail{
-  font-size: 1.1em;
-}
-.slide6-detail{
-  font-size: 1.1em;
 }
 .card-content{
   margin-top: 4.5em;
@@ -194,9 +195,15 @@ body {
   color: #000;
   background-color: #fff;
   display: inline-block;
-  padding: 0.5em;
+  padding: 0.45em;
 }
-
+.ship{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 3;
+  left: -1em;
+}
 .cisland{
   position: absolute;
   top:0;
@@ -205,7 +212,6 @@ body {
   z-index: -1;
   overflow: hidden;
 }
-
 .cisland img {
   position: absolute;
   bottom: 2.5em;
@@ -218,28 +224,35 @@ body {
   width: 100%;
   max-width: 600px;
 }
+
 /*### Smartphones (portrait and landscape)(small)### */
 @media screen and (min-width : 0px) and (max-width : 767px){
-  .ship{
-    max-height: 35vh;
+  body,html{
+    font-size: 13px;
+  }
+  .ship img{
+    height: 15em;
     position: absolute;
     bottom: 2em;
     left:-3em;
     z-index: 3;
   }
+  .cisland img{
+    height: 13em;
+  }
   #logo{
     position: relative;
     z-index: 99;
-    top:15vh;
+    top:20%;
   }
   .wipcamp-logo{
-    max-height: 15em;
+    height: 15em;
   }
   .mountain{
     position: absolute;
     bottom: 2em;
     right: -5em;
-    max-height: 10em;
+    height: 7em;
   }
   .game-btn{
     position: absolute;
@@ -248,48 +261,67 @@ body {
     z-index: 2;
     width: 9em;
   }
+  #two h1{
+    margin-bottom: 0.35em;
+  }
+  #two span{
+    margin-top: 0.35em;
+  }
+  #two p{
+    font-size: 1em;
+  }
+  .wave3{
+    height: 4em;
+    bottom: -.5em;
+  }
 }
 /*###Tablet(medium)###*/
 @media screen and (min-width : 768px) and (max-width : 1023px){
-  .ship{
-    max-height: 100%;
+  body,html{
+    font-size: 15px;
+  }
+  .ship img{
+    height: 45em;
     position: absolute;
     bottom: 0em;
     left:-25em;
     z-index: 3;
   }
+  .cisland img{
+    height: 13em;
+  }
   #logo{
     position: relative;
     z-index: 99;
-    top:10vh;
+    top:10%;
   }
   .sponsor-logo{
     margin: 0px auto;
-    width: 40em;
     z-index: 10;
   }
-  .slide1-detail{
-    font-size: 1.1em;
+  #two p{
+    font-size: 0.9em;
   }
   .slide2-detail{
     font-size: 1.3em;
   }
   .cisland img {
-    max-height: 20em;
+    height: 20em;
     z-index: 2;
   }
   .card-menu{
-    margin: 0.4em;
-    font-size:1.25em;
+    margin-top: 0.2em;
+    padding: 0.2em;
+    font-size:1.15em;
   }
-  h1{
-    font-size: 3em;
+  #two h1{
+    font-size: 2.0em;
   }
   .mountain{
     position: absolute;
-    bottom: 2em;
+    bottom: 3em;
     right: -5em;
-    max-height: 10em;
+    height: 10em;
   }
   .game-btn{
     position: absolute;
@@ -298,10 +330,17 @@ body {
     z-index: 2;
     width: 9em;
   }
+  .wave3{
+    height: 4em;
+    bottom: -1em;
+  }
 }
 
 /*###Desktops, big landscape tablets and laptops(Large, Extra large)####*/
 @media screen and (min-width: 1024px){
+  body,html{
+    font-size: 18px;
+  }
   .wave{
     width:100%;
     height: 5em;
@@ -309,31 +348,30 @@ body {
   #logo{
     position: relative;
     z-index: 99;
-    top:14vh;
+    top:14%;
   }
   .sponsor-logo{
     margin: 0px auto;
-    width: 40em;
     z-index: 10;
   }
-  .ship{
-    max-height: 100%;
+  .ship img{
+    height: 50em;
     position: absolute;
     bottom: 3em;
     left:-20em;
     z-index: 3;
   }
-  .slide1-detail{
+  #two p{
     font-size: 1.3em;
   }
   .slide2-detail{
     font-size: 1.6em;
   }
   .cisland img {
-    max-height: 25em;
+    height: 25em;
   }
   .card-menu{
-    font-size: 1.65em;
+    font-size: 1.60em;
   }
   h1{
     font-size: 2.6em;
@@ -342,12 +380,23 @@ body {
     margin-top: 5em;
     z-index: 99;
   }
-}
-
-
-#two .slide-detial {
-
-}
-#three .slide-detial {
-
+  .mountain{
+    position: absolute;
+    bottom: 10em;
+    right: -5em;
+    height: 10em;
+  }
+  .game-btn{
+    position: absolute;
+    bottom: 3.6em;
+    right: 0;
+    z-index: 2;
+    width: 11em;
+  }
+  .wave{
+    width: 200%;
+  }
+  .wave3{
+    bottom: -1em;
+  }
 }
