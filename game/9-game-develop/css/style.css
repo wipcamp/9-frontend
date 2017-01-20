@@ -1,0 +1,14 @@
+body {
+    margin: 50px 0 0 0;
+    background: #ececec;
+}
+a {
+    color: #e25e5e;
+}
+.container {
+    text-align: center;
+    color: #fff;
+}
+#game canvas{
+    margin: 15px auto;
+}
