@@ -23,8 +23,8 @@ $(function() {
     let j = 9;
 
     // timeout
-    var delay = 2250;
-
+    let delay = 10000;
+console.log(delay);
     // get data form database ( child - users )
     // 1000 = 1 second
     const usersRef = dbRef.child("users").orderByChild("score").limitToLast(100);
@@ -32,28 +32,38 @@ $(function() {
 
     // get score < only > !
     let users = [];
-
+    let temp= [];
     usersRef.on("child_added", function(data) {
-        users.push(data.val());
+      // users.push(data.val());
+      users.push(data.val());
+    //   usersRef.on("value", function(data) {
+    //
+    // });
+
     });
+    $(document).ready(function() {
+      // New delay
+      if(users !== temp ) {
+        delay=2000;
+        setTimeout(function() {
+          $('.game-tbl').DataTable({
+            data: users,
+            responsive:true,
+            order: [[ 2 , 'desc' ]],
+            columns: [
+              // { data: 'uid'},
+              { data: 'urlpic',
+              render: function ( data , type  , row){
+                return '<img src="'+ data + '" class="rounded-circle">';
+              }
+            },
+            {  data: 'name'   },
+            {  data: 'score' }
+          ]
+        });
+      }, delay);
+      }
+  });
 
 // console.log(users);
-    $(document).ready(function() {
-        setTimeout(function() {
-            $('.game-tbl').DataTable({
-                data: users,
-                order: [[ 2 , 'desc' ]],
-                columns: [
-                    // { data: 'uid'},
-                    { data: 'urlpic',
-                    render: function ( data , type  , row){
-                      return '<img src="'+ data + '" class="rounded-circle">';
-                      }
-                    },
-                    {  data: 'name'   },
-                    {  data: 'score' }
-                ]
-            });
-        }, delay);
-    });
 });

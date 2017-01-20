@@ -429,6 +429,7 @@ body {
   text-align: center;
   height: auto;
   background-color: white;
+  opacity: .8;
 }
 .rounded-circle {
   width: 75px;
@@ -443,7 +444,7 @@ body {
   color:#fff;
 }
 th {
-  text-align: center;
+  text-align: center !important;
 }
 .table,.game-forCenter{
   text-align: center;
