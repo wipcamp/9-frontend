@@ -17,23 +17,19 @@ body {
   width: 100%;
   max-width: 600px;
 }
-img{
-    height: 100px;
-    width: 300px;
-}
 #imgside1{
   margin-top:100px;
 }
 #imgside2{
   margin-top:100px;
-  
+
 }
 .gamehead {
   text-align: center;
   color: #FDCE41;
   background: #016050;
 }
-.gamebody1{ 
+.gamebody1{
   height:600px;
   background: #016050;
 }
