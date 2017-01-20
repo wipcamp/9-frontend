@@ -8,6 +8,14 @@ const config = {
 };
 firebase.initializeApp(config);
 
+jQuery.fn.dataTableExt.oApi.fnDataUpdate = function ( oSettings, nRowObject, iRowIndex )
+{
+    jQuery(nRowObject).find("TD").each( function(i) {
+          var iColIndex = oSettings.oApi._fnVisibleToColumnIndex( oSettings, i );
+          oSettings.oApi._fnSetCellData( oSettings, iRowIndex, iColIndex, jQuery(this).html() );
+    } );
+};
+
 // id test in testfirebase
 // const test = document.getElementById('test');
 
@@ -24,7 +32,7 @@ $(function() {
 
     // timeout
     let delay = 10000;
-console.log(delay);
+// console.log(delay);
     // get data form database ( child - users )
     // 1000 = 1 second
     const usersRef = dbRef.child("users").orderByChild("score").limitToLast(100);
@@ -39,28 +47,46 @@ console.log(delay);
     //   usersRef.on("value", function(data) {
     //
     // });
-
+    var check = true;
+    console.log(check);
     });
     $(document).ready(function() {
       // New delay
       if(users !== temp ) {
-        delay=2000;
+        delay=2250;
         setTimeout(function() {
-          $('.game-tbl').DataTable({
+          var t = $('.game-tbl').DataTable({
             data: users,
-            responsive:true,
-            order: [[ 2 , 'desc' ]],
+            responsive: true,
+            columnDefs: [
+              {
+                  className: "hidden-xs-down",
+                  targets :[1]
+              },
+            ],
+            order: [[ 3 , 'desc' ]],
             columns: [
-              // { data: 'uid'},
+              { data: null,
+              render: function ( data , type , row){
+                return '<div '+ data +'>';
+              }
+            },
               { data: 'urlpic',
               render: function ( data , type  , row){
                 return '<img src="'+ data + '" class="rounded-circle">';
               }
             },
-            {  data: 'name'   },
+            {  data: 'name' },
             {  data: 'score' }
           ]
         });
+
+        t.on( 'order.dt search.dt', function () {
+          t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+            cell.innerHTML = i+1;
+          } );
+        } ).draw();
+
       }, delay);
       }
   });

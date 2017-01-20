@@ -307,13 +307,17 @@ body {
 
 @media (min-width: 320px) {
   .game-fontLeaderboard {
-    font-size: 46px;
+    margin: 50px 0 10px 0;
+    text-align: center;
+    font-size: 280% !important;
   }
   .game-fontGameName{
-    font-size: 25px;
+    text-align: center;
+    font-size: 170% !important;
+    margin-bottom: 50px;
   }
   .game-fontHeadTable{
-    font-size: 25px;
+    font-size: 15px;
     text-align: center;
   }
   .game-fontInTable{
@@ -334,18 +338,38 @@ body {
     /*background-color: #e7b850;*/
     padding: 60px 0 15px 0;
   }
-
+  .btn-width{
+    width: 40%;
+    background-color: #eeeeee;
+    font-family: 'Itim', sans-serif;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    color: white;
+  }
+  .rounded-circle{
+    height: 35px;
+    width: auto;
+  }
+  .iconGameMobile{
+    height: 100px;
+    width: auto;
+  }
  }
 
 @media (min-width: 768px) {
   .game-fontLeaderboard {
-    font-size: 80px;
+    margin: 50px 0 0 0;
+    text-align: center;
+    font-size: 100px !important;
   }
   .game-fontGameName{
-    font-size: 40px;
+    text-align: center;
+    font-size: 55px !important;
+    margin-bottom: 50px;
   }
   .game-fontHeadTable{
-    font-size: 40px;
+    font-size: 20px;
     text-align: center;
   }
   .game-fontInTable{
@@ -364,24 +388,38 @@ body {
   }
   .headGameCenter{
     /*background-color: #e7b850;*/
-    padding: 150px 0 15px 0;
+    padding: 50px 0 0px 0;
   }
-
+  .btn-width{
+    font-size: 30px !important;
+    width: 200px;
+    background-color: #eeeeee;
+    font-family: 'Itim', sans-serif;
+    height: 70px;
+    padding: 0;
+    margin: 0;
+    color: white;
+  }
+  .rounded-circle {
+    width: auto;;
+    height: 40px;
+  }
  }
 
 @media (min-width: 1024px) {
   .game-fontLeaderboard {
-    font-size: 100px;
+    font-size: 60px !important;
   }
   .game-fontGameName{
-    font-size: 50px;
+    font-size: 35px !important;
+    margin-bottom: 50px;
   }
   .game-fontHeadTable{
-    font-size: 30px;
+    font-size: 27px;
     text-align: center;
   }
   .game-fontInTable{
-    font-size: 28px;
+    font-size: 24px;
     text-align: center;
   }
   .circleIcon{
@@ -398,12 +436,25 @@ body {
   .headGameCenter{
     padding: 80px 0 0px 0;
   }
-
+  .btn-width{
+    width: 150px;
+    background-color: #eeeeee;
+    font-family: 'Itim', sans-serif;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 20px !important;
+  }
   #bgLine1 {
     width: 100%;
     height: 100%;
     background: url('../../game/img/line1v1.svg');
     background-size: cover;
+  }
+  .rounded-circle {
+    width: auto;
+    height: 75px;
   }
 
  }
@@ -413,34 +464,29 @@ body {
    max-width: 150px;
  }
 
-.wipgamehead {
-  margin-top: 100px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-.wipgamename{
-  margin-bottom: 30px;
-  text-align: center;
-}
+
 .wipgamebody {
+  min-width: 500px;
+  padding: 30px 0 30px 0;
   border-width: 5px;
   border-style: solid;
-  border-radius: 20px;
+  border-radius: 14px;
   text-align: center;
-  height: auto;
   background-color: white;
   opacity: .8;
 }
-.rounded-circle {
-  width: 75px;
-  height: 75px;
+.countTable {
+  padding: 0 0 0 0;
+}
+.fixTable{
+
 }
 .game-body{
-  background: url(http://nexceris.com/wp-content/uploads/2014/04/bokeh-cover-bg.jpg);
+  background: url('../../game/img/bg.jpg ');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
+  background-position: top;
   color:#fff;
 }
 th {
@@ -453,15 +499,7 @@ th {
   margin-top: -3.285px;
   text-align: center;
 }
-.btn-width{
-  width: 140px;
-  background-color: #eeeeee;
-  font-family: 'Itim', sans-serif;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  color: white;
-}
+
 .buttonButtom {
   margin: 50px 0 30px 0;
 }
@@ -473,7 +511,7 @@ th {
 
 .colorBody{
   /*background-color: #dfa21a;*/
-  padding: 50px 300px 50px 300px;
+  padding: 0px 300px 50px 300px;
 }
 
 .bodyGameCenter{
@@ -488,7 +526,6 @@ th {
 .game-tbl{
   color:black;
 }
-
 /* END GAMECENTER */
 
 /*========================================================================*/
