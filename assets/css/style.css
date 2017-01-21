@@ -273,9 +273,21 @@ body {
   #two p{
     font-size: 1em;
   }
+  #three h1{
+    margin-bottom: 0.35em;
+  }
+  #three p{
+    margin:0.9em;
+  }
+  #three span{
+    margin-top: 0.35em;
+  }
   .wave3{
     height: 4em;
     bottom: -.5em;
+  }
+  #four p{
+
   }
 }
 /*###Tablet(medium)###*/
@@ -309,7 +321,7 @@ body {
     font-size: 1.3em;
   }
   .cisland img {
-    height: 20em;
+    height: 16.5em;
     z-index: 2;
   }
   .card-menu{
@@ -336,6 +348,26 @@ body {
   .wave3{
     height: 4em;
     bottom: -1em;
+  }
+  #three p{
+    font-size:
+  }
+  #three span{
+    margin-top: 0.35em;
+    padding: 0.45em;
+    font-size: 1.15em;
+  }
+  #three p{
+    margin: 1em;
+    font-size: 1.15em;
+  }
+  #four p{
+    font-size: 1em;
+  }
+  #four span{
+    margin-top: 0.35em;
+    padding: 0.3em;
+    font-size: 1.1em;
   }
 }
 
@@ -371,7 +403,7 @@ body {
     font-size: 1.6em;
   }
   .cisland img {
-    height: 20em;
+    height: 18.5em;
   }
   .card-menu{
     margin-top: 0.2em;
@@ -387,7 +419,7 @@ body {
   }
   .mountain{
     position: absolute;
-    bottom: 10em;
+    bottom: 8em;
     right: -5em;
     height: 10em;
   }
@@ -404,112 +436,21 @@ body {
   .wave3{
     bottom: -1em;
   }
+  #three span{
+    margin-top: 0.35em;
+    padding: 0.45em;
+    font-size: 1.15em;
+  }
+  #three p{
+    margin: 1em;
+    font-size: 1.10em;
+  }
+  #four p{
+    font-size: 1.15em;
+  }
+  #four span{
+    margin-top: 0.35em;
+    padding: 0.3em;
+    font-size: 1.1em;
+  }
 }
-
-/*------------------- Game Score Page -------------------*/
-
-/* all in leaderboard */
-@media (min-width: 320px) {
-  .game-fontLeaderboard {
-    font-size: 46px;
-  }
-  .game-fontGameName{
-    font-size: 25px;
-  }
-  .game-fontHeadTable{
-    font-size: 25px;
-    text-align: center;
-  }
-  .game-fontInTable{
-    font-size: 20px;
-    text-align: center;
-  }
-
- }
-
-@media (min-width: 768px) {
-  .game-fontLeaderboard {
-    font-size: 80px;
-  }
-  .game-fontGameName{
-    font-size: 40px;
-  }
-  .game-fontHeadTable{
-    font-size: 40px;
-    text-align: center;
-  }
-  .game-fontInTable{
-    font-size: 35px;
-    text-align: center;
-  }
-
- }
-
-@media (min-width: 1025px) {
-  .game-fontLeaderboard {
-    font-size: 100px;
-  }
-  .game-fontGameName{
-    font-size: 50px;
-  }
-  .game-fontHeadTable{
-    font-size: 30px;
-    text-align: center;
-  }
-  .game-fontInTable{
-    font-size: 28px;
-    text-align: center;
-  }
-
- }
-
-.wipgamehead {
-  margin-top: 100px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-.wipgamename{
-  margin-bottom: 30px;
-  text-align: center;
-}
-.wipgamebody {
-  border-width: 5px;
-  border-style: solid;
-  border-radius: 20px;
-  text-align: center;
-  height: auto;
-}
-.rounded-circle {
-  width: 75px;
-  height: 75px;
-}
-.game-body{
-  background: url(http://nexceris.com/wp-content/uploads/2014/04/bokeh-cover-bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  color:#fff;
-}
-th {
-  text-align: center;
-}
-.table,.game-forCenter{
-  text-align: center;
-}
-.game-Table{
-  margin-top: -3.285px;
-  text-align: center;
-}
-.btn-width{
-  width: 140px;
-  background-color: #eeeeee;
-  font-family: 'Itim', sans-serif;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  color: white;
-}
-/* end of leaderboard */
-
-/*========================================================================*/
