@@ -13,6 +13,17 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style media="screen">
+      .topic{
+        cursor: pointer;
+        background-color: rgb(219, 219, 219);
+        padding: 0.5em;
+
+      }
+      .faq-detail{
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    </style>
   </head>
   <body>
     <div class="topic">Q: อยากเป็นส่วนหนึ่งของค่ายนี้มากๆ ต้องทำอย่างไร ?</div>
@@ -34,5 +45,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $(".topic").click(function(){
+              $(".faq-detail").hide();
+          });
+        });
+    </script>
   </body>
 </html>
