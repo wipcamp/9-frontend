@@ -8,6 +8,8 @@ $(document).ready(function(){
     e.preventDefault();
   });
 
+  $('[data-toggle="tooltip"]').tooltip();
+  
   $('span.menu').click(function (event) {
     if(getTransform($(event.target).parents().filter('.slide'))[0] == 0){
       $('.con').addClass('idle');
