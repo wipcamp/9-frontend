@@ -8,6 +8,9 @@ body {
   margin: 0;
   color: white;
 }
+h1 {
+  transition: font-size .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 .tooltip {
   font-family: 'thaisans_neueregular', sans-serif;
   font-weight: 200;
@@ -267,6 +270,14 @@ body {
   #two h1{
     margin-bottom: 0.35em;
   }
+  #two.active h1 {
+    font-size: 2em;
+    text-align: left;
+  }
+  #two h1 {
+    font-size: 5em;
+    text-align: center;
+  }
   #two span{
     margin-top: 0.35em;
   }
@@ -329,8 +340,13 @@ body {
     padding: 0.2em;
     font-size:1.15em;
   }
-  #two h1{
-    font-size: 2.0em;
+  #two.active h1 {
+    font-size: 2em;
+    text-align: left;
+  }
+  #two h1 {
+    font-size: 7em;
+    text-align: center;
   }
   .mountain{
     position: absolute;
@@ -412,6 +428,13 @@ body {
   }
   h1{
     font-size: 1.85em;
+  }
+  #two.active h1 {
+    font-size: 2em;
+  }
+
+  #two h1 {
+    font-size: 7em;
   }
   .card-content{
     margin-top: 5em;
