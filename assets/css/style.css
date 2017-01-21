@@ -8,6 +8,11 @@ body {
   margin: 0;
   color: white;
 }
+.tooltip {
+  font-family: 'thaisans_neueregular', sans-serif;
+  font-weight: 200;
+  white-space: nowrap;
+}
 @keyframes wave {
     0% {
         -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
@@ -94,9 +99,6 @@ body {
 }
 
 .slide-control {
-  display: table;
-  border-collapse: separate;
-  border-spacing: 5px;
   position: fixed;
   bottom: 15%;
   cursor: pointer;
@@ -107,13 +109,17 @@ body {
   float: left;
 }
 
-.slide-control .bullet-container .bullet {
-  display: table-cell;
+.slide-control .prev-container, .slide-control .next-container {
   height: 24px;
-  text-align: center;
-  vertical-align: middle;
   width: 24px;
-  overflow: hidden;
+  margin-right: 4px;
+}
+
+.slide-control .bullet-container .bullet {
+  height: 24px;
+  width: 24px;
+  float: left;
+  margin-right: 4px;
 }
 
 .bullet .life-ring{
