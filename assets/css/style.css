@@ -166,6 +166,8 @@ body {
   bottom: 1em;
   left: -50%;
   z-index: 4;
+}
+.wave2.animation{
   animation: wave 3s .1s infinite linear;
 }
 .wave3{
@@ -176,8 +178,9 @@ body {
   width: 200%;
   left: -50%;
   z-index: 5;
+}
+.wave3.animation{
   animation: wave 2s .1s infinite linear;
-
 }
 .flip-horizontal, .x-grid-cell-inner, .x-column-header-text, .x-panel-header-text {
     -moz-transform: scaleX(-1);
