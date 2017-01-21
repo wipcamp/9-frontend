@@ -8,10 +8,16 @@ body {
   margin: 0;
   color: white;
 }
+
 h1 {
   transition: font-size .5s cubic-bezier(0.075, 0.82, 0.165, 1);
   line-height: 1.5em;
 }
+
+h1, p {
+  cursor: default;
+}
+
 .tooltip {
   font-family: 'thaisans_neueregular', sans-serif;
   font-weight: 200;
@@ -77,21 +83,25 @@ h1 {
   bottom: 2%;
   margin: 0 40%;
 }
+
 .menu {
   display: inline-block;
   color: #fff;
   border: 1px solid #fff;
   padding: 0.8em 2.8em 0.8em 2.8em;
   text-decoration: none !important;
+  cursor: pointer;
 }
 
 .menu:hover {
-  cursor: pointer;
   background: #0288d1;
   border: 1px solid #0288d1;
-  color:#fff;
-  cursor: pointer;
 }
+
+.idle .menu {
+  cursor: default;
+}
+
 
 .slide.active .show--onActive {
   opacity: 1;
@@ -139,6 +149,14 @@ h1 {
 
 .bullet-container .bullet:last-child {
   border-radius: 0 12px 12px 0 !important;
+}
+
+.bullet-container .bullet:not(:last-child) {
+  border-right: 2px #463b6b solid; 
+}
+
+.bullet-container .bullet.step:not(:first-child) {
+  border-left: 2px #eeeeee solid;
 }
 /*================================= Pages ===================================*/
 

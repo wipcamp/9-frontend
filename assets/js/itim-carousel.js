@@ -48,7 +48,7 @@ function WipcampCarousel(element) {
     });
 
     $('.slide-control .bullet').on('click', function(event) {
-      var idx =  $('.slide-control .bullet .life-ring').index(event.target);
+      var idx =  $('.slide-control .bullet').index(event.target);
       self.showSlide(idx, true);
     });
 
@@ -93,6 +93,12 @@ function WipcampCarousel(element) {
     $('.bullet-container').children().removeClass('current');
     $('.bullet-container').children().filter(':eq(' + currentSlide + ')').addClass('current');
 
+    bullet = $('.bullet-container .bullet');
+    bulletDiff = slideCount - (currentSlide + 1);
+    bullet.removeClass('step');
+    bullet.splice(-bulletDiff, bulletDiff);
+    bullet.addClass('step');
+    
     animation(animate);
     setSlideDemensions();
   };
