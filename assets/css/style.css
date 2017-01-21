@@ -128,18 +128,24 @@ h1, p {
 }
 
 .slide-control .bullet-container {
-  width: calc(100% - 24px * 2 - 4px * 2);
+  width: calc(100% - 24px * 4 - 4px * 2);
   margin: 0px 4px;
 }
 
 .bullet-container .bullet {
   height: 24px;
-  width: calc(100% / 7);
+  width: calc((100% - 24px * 2) / 7);
   float: left;
+}
+
+.bullet-container .bullet, .bullet-container .bullet-gap:last-child {
   background: #969696;
 }
 
-.bullet-container .bullet.step {
+.bullet-container .bullet.step,
+.bullet-container .bullet-gap:not(:last-child),
+.bullet-container .bullet.step+.bullet-gap,
+.bullet-container .bullet.step+.tooltip+.bullet-gap  {
   background: #463b6b;
 }
 
@@ -151,13 +157,30 @@ h1, p {
   border-radius: 0 12px 12px 0 !important;
 }
 
-.bullet-container .bullet:not(:last-child) {
-  border-right: 2px #463b6b solid; 
+.bullet-container .bullet {
+  border-right: 2px #463b6b solid;
 }
 
-.bullet-container .bullet.step:not(:first-child) {
+.bullet-container .bullet.step,
+.bullet-container .bullet.step+.bullet-gap,
+.bullet-container .bullet.step+.tooltip+.bullet-gap {
   border-left: 2px #eeeeee solid;
 }
+
+.bullet-container .bullet-gap {
+  width: 24px;
+  height: 24px;
+  float: left;
+}
+
+.bullet-container .bullet-gap:first-child {
+  border-radius: 12px 0 0 12px;
+}
+
+.bullet-container .bullet-gap:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
 /*================================= Pages ===================================*/
 
 /*-------------------- Welcome Page ---------------------*/
