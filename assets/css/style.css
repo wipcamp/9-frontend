@@ -49,7 +49,7 @@ h1, p {
   z-index: 5;
 }
 
-.next{
+.next {
   height: 100%;
   width: 100%;
   position: fixed;
@@ -66,7 +66,7 @@ h1, p {
   background: linear-gradient(#141123, #2d214d, #463b6b);
 }
 
-.slide.animate{
+.slide.animate {
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -121,14 +121,21 @@ h1, p {
   margin: 0px 4px;
 }
 
-.slide-control .prev-container, .slide-control .bullet-container, .slide-control .next-container {
+.slide-control .prev-container,
+.slide-control .bullet-container,
+.slide-control .next-container {
   float: left;
   height: 24px;
   width: 24px;
 }
 
+.slide-control .prev-container img,
+.slide-control .next-container img {
+  vertical-align: baseline;
+}
+
 .slide-control .bullet-container {
-  width: calc(100% - 24px * 4 - 4px * 2);
+  width: calc(100% - 24px * 2 - 4px * 2);
   margin: 0px 4px;
 }
 
@@ -138,8 +145,10 @@ h1, p {
   float: left;
 }
 
-.bullet-container .bullet, .bullet-container .bullet-gap:last-child {
+.bullet-container .bullet,
+.bullet-container .bullet-gap:last-child {
   background: #969696;
+  transition: background 0.25s linear;
 }
 
 .bullet-container .bullet.step,
@@ -171,6 +180,7 @@ h1, p {
   width: 24px;
   height: 24px;
   float: left;
+  cursor: default;
 }
 
 .bullet-container .bullet-gap:first-child {
