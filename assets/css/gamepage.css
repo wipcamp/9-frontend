@@ -108,7 +108,7 @@ body {
     text-align: center;
   }
   .game-fontInTable{
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
   }
   .circleIcon{
@@ -145,6 +145,16 @@ body {
   .iconGameMobile{
     height: 100px;
     width: auto;
+  }
+  .wipgamebody {
+    min-width: 200px;
+    padding: 30px 0 30px 0;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 14px;
+    text-align: center;
+    background-color: white;
+    opacity: .8;
   }
  }
 
@@ -194,6 +204,16 @@ body {
   .rounded-circle {
     width: auto;;
     height: 45px;
+  }
+  .wipgamebody {
+    min-width: 300px;
+    padding: 30px 0 30px 0;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 14px;
+    text-align: center;
+    background-color: white;
+    opacity: .8;
   }
  }
 
@@ -247,7 +267,16 @@ body {
     width: auto;
     height: 60px;
   }
-
+  .wipgamebody {
+    min-width: 500px;
+    padding: 30px 0 30px 0;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 14px;
+    text-align: center;
+    background-color: white;
+    opacity: .8;
+  }
  }
 
  .gameMobile{
@@ -255,17 +284,6 @@ body {
    max-width: 150px;
  }
 
-
-.wipgamebody {
-  min-width: 500px;
-  padding: 30px 0 30px 0;
-  border-width: 5px;
-  border-style: solid;
-  border-radius: 14px;
-  text-align: center;
-  background-color: white;
-  opacity: .8;
-}
 .countTable {
   padding: 0 0 0 0;
 }
