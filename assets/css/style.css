@@ -121,17 +121,12 @@ body {
 }
 
 .slide-control .bullet-container .bullet {
-  background: url(../img/icon/shape-circle_outline.svg) no-repeat 50%;
   display: table-cell;
   height: 24px;
   text-align: center;
   vertical-align: middle;
   width: 24px;
-}
-
-.slide-control .bullet-container .bullet.current {
-  background: url(../img/icon/shape-circle.svg) no-repeat 50%;
-  color: #ffffff;
+  overflow: hidden;
 }
 
 /*================================= Pages ===================================*/
