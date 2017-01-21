@@ -14,7 +14,7 @@ function WipcampCarousel(element) {
       self.showSlide(currentSlide);
       $('.next').css({"transform": "perspective(100px) translate3d(" + pageTransform[1] + "px, -100px, -50px)"});
       $('.prev').css({"transform": "perspective(100px) translate3d(" + pageTransform[-1] + "px, -100px, -50px)"});
-      marginSlideControl()
+      marginSlideControl();
     });
 
     $(".next").click(function(){
@@ -98,7 +98,7 @@ function WipcampCarousel(element) {
     bullet.removeClass('step');
     bullet.splice(-bulletDiff, bulletDiff);
     bullet.addClass('step');
-    
+
     animation(animate);
     setSlideDemensions();
   };
