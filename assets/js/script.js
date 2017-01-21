@@ -4,9 +4,9 @@ $(document).ready(function(){
   var carousel = new WipcampCarousel('.con');
   carousel.init();
 
-  /*$('img').on('dragstart', function (e) {
+  $('img').on('dragstart', function (e) {
     e.preventDefault();
-  });*/
+  });
 
   $('span.menu').click(function (event) {
     if(getTransform($(event.target).parents().filter('.slide'))[0] == 0){
