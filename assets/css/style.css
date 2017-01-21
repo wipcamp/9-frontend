@@ -102,31 +102,39 @@ body {
   position: fixed;
   bottom: 15%;
   cursor: pointer;
-  height: auto;
+  width: 100%;
+  max-width: 480px;
+  margin: 0px 4px;
 }
 
 .slide-control .prev-container, .slide-control .bullet-container, .slide-control .next-container {
-  display: table-row;
   float: left;
-}
-
-.slide-control .prev-container, .slide-control .next-container {
   height: 24px;
   width: 24px;
-  margin-right: 4px;
 }
 
-.slide-control .bullet-container .bullet {
-  height: 24px;
-  width: 24px;
-  float: left;
-  margin-right: 4px;
-  background: url(../img/icon/object-life_ring.svg) no-repeat 50%;
+.slide-control .bullet-container {
+  width: calc(100% - 24px * 2 - 4px * 2);
+  margin: 0px 4px;
 }
-.bullet .wip-head{
-  width: 100%;
-  height: 100%;
-  opacity: 0;
+
+.bullet-container .bullet {
+  height: 24px;
+  width: calc(100% / 7);
+  float: left;
+  background: #969696;
+}
+
+.bullet-container .bullet.step {
+  background: #463b6b;
+}
+
+.bullet-container .bullet:first-child {
+  border-radius: 12px 0 0 12px !important;
+}
+
+.bullet-container .bullet:last-child {
+  border-radius: 0 12px 12px 0 !important;
 }
 /*================================= Pages ===================================*/
 
