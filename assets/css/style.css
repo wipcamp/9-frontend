@@ -48,6 +48,7 @@ body {
   overflow: hidden;
   width: 100%;
   z-index: 1;
+  background: linear-gradient(#141123, #2d214d, #463b6b);
 }
 
 .slide.animate{
@@ -57,27 +58,6 @@ body {
 .slide.active {
   transform: perspective(100px) translate3d(0, 0, 0) !important;
   z-index: 10;
-}
-.slide:nth-child(1) {
-  background-color: #1f3d5b;
-}
-.slide:nth-child(2) {
-  background-color: #1f3d5b;
-}
-.slide:nth-child(3) {
-  background-color: #1f3d5b;
-}
-.slide:nth-child(4) {
-  background-color: #1f3d5b;
-}
-.slide:nth-child(5) {
-  background-color: #1f3d5b;
-}
-.slide:nth-child(6) {
-  background-color: #1f3d5b;
-}
-.slide:nth-child(7) {
-  background-color: #1f3d5b;
 }
 .register {
   position: fixed;
