@@ -288,9 +288,17 @@ h1 {
     text-align: left;
   }
   #three h1 {
-    font-size: 7em;
+    font-size: 5em;
     text-align: center;
     margin-bottom: 0.35em;
+  }
+  #four.active h1 {
+    font-size: 2em;
+    text-align: left;
+  }
+  #four h1 {
+    font-size: 5em;
+    text-align: center;
   }
   #three p{
     margin:0.9em;
@@ -357,8 +365,15 @@ h1 {
     font-size: 2em;
     text-align: left;
   }
-
   #three h1 {
+    font-size: 7em;
+    text-align: center;
+  }
+  #four.active h1 {
+    font-size: 2em;
+    text-align: left;
+  }
+  #four h1 {
     font-size: 7em;
     text-align: center;
   }
@@ -453,9 +468,16 @@ h1 {
   #three.active h1 {
     font-size: 2em;
   }
-
   #three h1 {
     font-size: 7em;
+  }
+  #four.active h1 {
+    font-size: 2em;
+    text-align: left;
+  }
+  #four h1 {
+    font-size: 7em;
+    text-align: center;
   }
   .card-content{
     margin-top: 5em;
