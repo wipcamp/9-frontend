@@ -48,7 +48,7 @@ function WipcampCarousel(element) {
     });
 
     $('.slide-control .bullet').on('click', function(event) {
-      var idx =  $('.slide-control .bullet').index(event.target);
+      var idx =  $('.slide-control .bullet .life-ring').index(event.target);
       self.showSlide(idx, true);
     });
 
@@ -90,8 +90,8 @@ function WipcampCarousel(element) {
   this.showSlide = function(skipto, animate) {
     skipto = Math.max(0, Math.min(skipto, slideCount-1));
     currentSlide = skipto;
-    $('.bullet-container').children().removeClass('current').empty();
-    $('.bullet-container').children().filter(':eq(' + currentSlide + ')').addClass('current').text(currentSlide + 1);
+    $('.bullet-container').children().removeClass('current');
+    $('.bullet-container').children().filter(':eq(' + currentSlide + ')').addClass('current');
 
     animation(animate);
     setSlideDemensions();
