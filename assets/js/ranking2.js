@@ -32,10 +32,10 @@ $(function() {
 
     // timeout
     let delay = 10000;
-// console.log(delay);
+
     // get data form database ( child - users )
     // 1000 = 1 second
-    const usersRef = dbRef.child("users").orderByChild("score").limitToLast(100);
+    const usersRef = dbRef.child("game2");
     // const getUsers = usersRef.on('value', snap => test.innerText = JSON.stringify(snap.val(), null, 3));
 
     // get score < only > !
@@ -47,9 +47,8 @@ $(function() {
     //   usersRef.on("value", function(data) {
     //
     // });
-    var check = true;
-    console.log(check);
     });
+
     $(document).ready(function() {
       // New delay
       if(users !== temp ) {
@@ -90,6 +89,4 @@ $(function() {
       }, delay);
       }
   });
-
-// console.log(users);
 });

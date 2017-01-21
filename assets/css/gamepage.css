@@ -143,8 +143,11 @@ body {
     width: auto;
   }
   .iconGameMobile{
-    height: 100px;
+    height: 60px;
     width: auto;
+  }
+  .box4game{
+    margin-top: 70px;
   }
   .wipgamebody {
     min-width: 200px;
@@ -187,9 +190,16 @@ body {
   .buttonGame{
     margin: 0% 0 0% 0;
   }
+  .iconGameMobile{
+   height: 100px;
+   width: auto;
+ }
+ .box4game{
+   margin-top: 180px;
+ }
   .headGameCenter{
     /*background-color: #e7b850;*/
-    padding: 50px 0 0px 0;
+    padding: 50px 0 60px 0;
   }
   .btn-width{
     font-size: 22px !important;
@@ -325,7 +335,7 @@ th {
 }
 
 .gamecenterBg{
-  background-image: url('http://mapregions.com/wp-content/uploads/2016/07/treasure-aged-map-c-windows-temp-php-tmp-stock-photos-pictures-royalty-free-images-and-ruler-rope-old-brass-compass-still-life-photo.jpg');
+  background-image: url('https://www.ccmg.com/wp-content/uploads/2015/12/AntiqueNauticalCahrt.jpg');
   background-size: contain;
 }
 
