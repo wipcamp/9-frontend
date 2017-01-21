@@ -95,7 +95,7 @@ body {
 @media (min-width: 320px) {
   .game-fontLeaderboard {
     margin: 50px 0 10px 0;
-    text-align: center;
+    text-align: center  ;
     font-size: 280% !important;
   }
   .game-fontGameName{
@@ -133,6 +133,10 @@ body {
     padding: 0;
     margin: 0;
     color: white;
+    font-size: 20px !important;
+  }
+  .buttonButtom {
+    margin: 30px 0 30px 0 !important;
   }
   .rounded-circle{
     height: 35px;
@@ -146,21 +150,21 @@ body {
 
 @media (min-width: 768px) {
   .game-fontLeaderboard {
-    margin: 50px 0 0 0;
+    margin: 40px 0 0 0;
     text-align: center;
-    font-size: 100px !important;
+    font-size: 60px !important;
   }
   .game-fontGameName{
     text-align: center;
-    font-size: 55px !important;
-    margin-bottom: 50px;
+    font-size: 40px !important;
+    margin-bottom: 30px;
   }
   .game-fontHeadTable{
     font-size: 20px;
     text-align: center;
   }
   .game-fontInTable{
-    font-size: 35px;
+    font-size: 20px;
     text-align: center;
   }
   .circleIcon{
@@ -178,35 +182,35 @@ body {
     padding: 50px 0 0px 0;
   }
   .btn-width{
-    font-size: 30px !important;
-    width: 200px;
+    font-size: 22px !important;
+    width: 150px;
     background-color: #eeeeee;
     font-family: 'Itim', sans-serif;
-    height: 70px;
+    height: 50px;
     padding: 0;
     margin: 0;
     color: white;
   }
   .rounded-circle {
     width: auto;;
-    height: 40px;
+    height: 45px;
   }
  }
 
 @media (min-width: 1024px) {
   .game-fontLeaderboard {
-    font-size: 60px !important;
+    font-size: 80px !important;
   }
   .game-fontGameName{
-    font-size: 35px !important;
-    margin-bottom: 50px;
+    font-size: 45px !important;
+    margin-bottom: 40px;
   }
   .game-fontHeadTable{
     font-size: 27px;
     text-align: center;
   }
   .game-fontInTable{
-    font-size: 24px;
+    font-size: 30px;
     text-align: center;
   }
   .circleIcon{
@@ -224,14 +228,14 @@ body {
     padding: 80px 0 0px 0;
   }
   .btn-width{
-    width: 150px;
+    width: 200px;
     background-color: #eeeeee;
     font-family: 'Itim', sans-serif;
-    height: 50px;
+    height: 70px;
     padding: 0;
     margin: 0;
     color: white;
-    font-size: 20px !important;
+    font-size: 30px !important;
   }
   #bgLine1 {
     width: 100%;
@@ -241,7 +245,7 @@ body {
   }
   .rounded-circle {
     width: auto;
-    height: 75px;
+    height: 60px;
   }
 
  }
