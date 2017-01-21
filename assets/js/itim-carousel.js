@@ -9,14 +9,6 @@ function WipcampCarousel(element) {
   var pageTransform = {};
 
   this.init = function () {
-    /*slideControl.append('<div class="prev-container" style="color: black">prev</div>');
-    slideControl.append('<div class="bullet-container"></div>');
-    slideControl.append('<div class="next-container" style="color: black">next</div>');
-
-    for (i = 0; i < slideCount; i++) {
-      $('.bullet-container').append('<div class="bullet"></div>');
-    }*/
-
     $(window).on("load resize orientationchange", function () {
       setSlideDemensions();
       self.showSlide(currentSlide);
@@ -67,6 +59,8 @@ function WipcampCarousel(element) {
     $('.slide-control .prev-container').on('click', function() {
       self.prev();
     });
+
+    $('.wave2, .wave3').addClass('animation');
   };
 
   this.getCurrentSlide = function () {
@@ -128,12 +122,14 @@ function WipcampCarousel(element) {
         else
         {
           $('.slide').addClass('animate');
+          $('.wave2, .wave3').removeClass('animation');
           $('.slide.active').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
           $('.slide.active').removeClass('active');
           $('.con').removeClass('idle');
           setTimeout(function() { self.next(); }, 500);
           setTimeout(function() { $('.slide:eq('+currentSlide+')').addClass('active'); }, 1000);
           setTimeout(function() { $('.slide:eq('+currentSlide+')').css({"transform": "perspective(100px) translate3d(0, 0, 0)"}); }, 1500);
+          setTimeout(function() { $('.wave2, .wave3').addClass('animation'); }, 1500);
           $('.slide').removeClass('animate');
         }
         break;
@@ -143,12 +139,14 @@ function WipcampCarousel(element) {
         }
         else{
           $('.slide').addClass('animate');
+          $('.wave2, .wave3').removeClass('animation');
           $('.slide.active').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
           $('.slide.active').removeClass('active');
           $('.con').removeClass('idle');
           setTimeout(function() { self.prev(); }, 500);
           setTimeout(function() { $('.slide:eq('+currentSlide+')').addClass('active'); }, 1000);
           setTimeout(function() { $('.slide:eq('+currentSlide+')').css({"transform": "perspective(100px) translate3d(0, 0, 0)"}); }, 1500);
+          setTimeout(function() { $('.wave2, .wave3').addClass('animation'); }, 1500);
           $('.slide').removeClass('animate');
         }
         break;
