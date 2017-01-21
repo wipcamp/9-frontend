@@ -92,7 +92,9 @@ body {
 /* front_game */
 /* all in leaderboard */
 
-@media (min-width: 320px) {
+@media (min-width: 320px)
+and (max-width:568px)
+ {
   .game-fontLeaderboard {
     margin: 50px 0 10px 0;
     text-align: center  ;
@@ -147,7 +149,9 @@ body {
     width: auto;
   }
   .box4game{
-    margin-top: 70px;
+    margin-bottom: 30px;
+    /*padding: 0 50px 0 30px;*/
+    text-align: center;
   }
   .wipgamebody {
     min-width: 200px;
@@ -159,9 +163,89 @@ body {
     background-color: white;
     opacity: .8;
   }
+  .colorBody{
+    /*background-color: #dfa21a;*/
+    padding: 0px 300px 20px 300px;
+  }
  }
-
-@media (min-width: 768px) {
+@media (min-width: 375px)
+and (max-width: 736px)
+{
+  .game-fontLeaderboard {
+    margin: 50px 0 10px 0;
+    text-align: center  ;
+    font-size: 280% !important;
+  }
+  .game-fontGameName{
+    text-align: center;
+    font-size: 170% !important;
+    margin-bottom: 50px;
+  }
+  .game-fontHeadTable{
+    font-size: 15px;
+    text-align: center;
+  }
+  .game-fontInTable{
+    font-size: 15px;
+    text-align: center;
+  }
+  .circleIcon{
+    width: 0%;
+  }
+  .gameMobile{
+    width: 100%;
+    max-width: 180px;
+  }
+  .buttonGame{
+    margin: 0% 0 0% 0;
+  }
+  .headGameCenter{
+    /*background-color: #e7b850;*/
+    padding: 60px 0 15px 0;
+  }
+  .btn-width{
+    width: 40%;
+    background-color: #eeeeee;
+    font-family: 'Itim', sans-serif;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 20px !important;
+  }
+  .buttonButtom {
+    margin: 30px 0 30px 0 !important;
+  }
+  .rounded-circle{
+    height: 35px;
+    width: auto;
+  }
+  .iconGameMobile{
+    height: 60px;
+    width: auto;
+  }
+  .box4game{
+    margin-bottom: 50px;
+    /*padding: 0 50px 0 30px;*/
+    text-align: center;
+  }
+  .wipgamebody {
+    min-width: 200px;
+    padding: 30px 0 30px 0;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 14px;
+    text-align: center;
+    background-color: white;
+    opacity: .8;
+  }
+  .colorBody{
+    /*background-color: #dfa21a;*/
+    padding: 0px 300px 20px 300px;
+  }
+}
+@media (min-width: 768px)
+and (max-width: 1024px){
   .game-fontLeaderboard {
     margin: 40px 0 0 0;
     text-align: center;
@@ -184,8 +268,7 @@ body {
     width: 0%;
   }
   .gameMobile{
-    width: 100%;
-    min-width: 250px;
+    height: 280px;
   }
   .buttonGame{
     margin: 0% 0 0% 0;
@@ -195,7 +278,7 @@ body {
    width: auto;
  }
  .box4game{
-   margin-top: 180px;
+   margin-bottom: 50px;
  }
   .headGameCenter{
     /*background-color: #e7b850;*/
@@ -226,77 +309,231 @@ body {
     opacity: .8;
   }
  }
-
-@media (min-width: 1024px) {
-  .game-fontLeaderboard {
-    font-size: 80px !important;
-  }
-  .game-fontGameName{
-    font-size: 45px !important;
-    margin-bottom: 40px;
-  }
-  .game-fontHeadTable{
-    font-size: 27px;
-    text-align: center;
-  }
-  .game-fontInTable{
-    font-size: 30px;
-    text-align: center;
-  }
-  .circleIcon{
-    width: 70%;
-    max-width: 150px;
-  }
-  .gameMobile{
-    width: 70%;
-    max-width: 150px;
-  }
-  .buttonGame{
-    margin: 15% 0 5.5% 0;
-  }
-  .headGameCenter{
-    padding: 80px 0 0px 0;
-  }
-  .btn-width{
-    width: 200px;
-    background-color: #eeeeee;
-    font-family: 'Itim', sans-serif;
-    height: 70px;
-    padding: 0;
-    margin: 0;
-    color: white;
-    font-size: 30px !important;
-  }
-  #bgLine1 {
-    width: 100%;
-    height: 100%;
-    background: url('../../game/img/line1v1.svg');
-    background-size: cover;
-  }
-  .rounded-circle {
-    width: auto;
-    height: 60px;
-  }
-  .wipgamebody {
-    min-width: 500px;
-    padding: 30px 0 30px 0;
-    border-width: 5px;
-    border-style: solid;
-    border-radius: 14px;
-    text-align: center;
-    background-color: white;
-    opacity: .8;
-  }
+ @media only screen
+ and (min-device-width : 768px)
+ and (max-device-width : 1024px) {
+     .game-fontLeaderboard {
+       margin: 40px 0 0 0;
+       text-align: center;
+       font-size: 60px !important;
+     }
+     .game-fontGameName{
+       text-align: center;
+       font-size: 40px !important;
+       margin-bottom: 30px;
+     }
+     .game-fontHeadTable{
+       font-size: 20px;
+       text-align: center;
+     }
+     .game-fontInTable{
+       font-size: 20px;
+       text-align: center;
+     }
+     .circleIcon{
+       width: 0%;
+     }
+     .gameMobile{
+       width: 100%;
+       min-width: 270px;
+     }
+     .buttonGame{
+       margin: 0% 0 0% 0;
+     }
+     .iconGameMobile{
+      height: 100px;
+      width: auto;
+    }
+    .box4game{
+      margin-top: 0 !important;
+      text-align: center;
+    }
+    .IpadPro {
+      margin: 0px 0 0px 0;
+    }
+     .headGameCenter{
+       /*background-color: #e7b850;*/
+       padding: 50px 0 0px 0 !important;
+     }
+     .btn-width{
+       font-size: 22px !important;
+       width: 150px;
+       background-color: #eeeeee;
+       font-family: 'Itim', sans-serif;
+       height: 50px;
+       padding: 0;
+       margin: 0;
+       color: white;
+     }
+     .rounded-circle {
+       width: auto;;
+       height: 45px;
+     }
+     .wipgamebody {
+       min-width: 300px;
+       padding: 30px 0 30px 0;
+       border-width: 5px;
+       border-style: solid;
+       border-radius: 14px;
+       text-align: center;
+       background-color: white;
+       opacity: .8;
+     }
  }
-
+@media (min-width: 1025px) {
+ .game-fontLeaderboard {
+   margin: 40px 0 0 0;
+   text-align: center;
+   font-size: 60px !important;
+ }
+ .game-fontGameName{
+   text-align: center;
+   font-size: 40px !important;
+   margin-bottom: 30px;
+ }
+ .game-fontHeadTable{
+   font-size: 20px;
+   text-align: center;
+ }
+ .game-fontInTable{
+   font-size: 20px;
+   text-align: center;
+ }
+ .circleIcon{
+   width: 0%;
+ }
  .gameMobile{
+   width: 300px;
+ }
+ .buttonGame{
+   margin: 0% 0 0% 0;
+ }
+ .iconGameMobile{
+  height: 100px;
+  width: auto;
+}
+.box4game{
+  margin-top: 70px;
+  text-align: center;
+}
+.IpadPro {
+  margin: 0px 0 0px 0;
+}
+ .headGameCenter{
+   /*background-color: #e7b850;*/
+   padding: 50px 0 0px 0 !important;
+ }
+ .btn-width{
+   font-size: 22px !important;
+   width: 150px;
+   background-color: #eeeeee;
+   font-family: 'Itim', sans-serif;
+   height: 50px;
+   padding: 0;
+   margin: 0;
+   color: white;
+ }
+ .rounded-circle {
+   width: auto;;
+   height: 45px;
+ }
+ .wipgamebody {
+   min-width: 300px;
+   padding: 30px 0 30px 0;
+   border-width: 5px;
+   border-style: solid;
+   border-radius: 14px;
+   text-align: center;
+   background-color: white;
+   opacity: .8;
+ }
+ .fixForPic1{
    width: 70%;
    max-width: 150px;
+   float: left;
+ }
+ .fixForPic2{
+   width: 70%;
+   max-width: 150px;
+   float: left;
+ }
+ .fixForPic3{
+   width: 70%;
+   max-width: 150px;
+   float: left;
+ }
+ .fixForPic4{
+   width: 70%;
+   max-width: 150px;
+   float: left;
+ }
+}
+ }
+ @media (min-width: 1366px) {
+   .fixForPic{
+     width: 70%;
+     max-width: 150px;
+   }
+   .game-fontLeaderboard {
+     font-size: 60px !important;
+   }
+   .game-fontGameName{
+     font-size: 35px !important;
+     margin-bottom: 40px;
+   }
+   .game-fontHeadTable{
+     font-size: 27px;
+     text-align: center;
+   }
+   .game-fontInTable{
+     font-size: 20px;
+     text-align: center;
+   }
+   .gameMobile{
+     width: 70%;
+     max-width: 150px;
+   }
+   .buttonGame{
+     margin: 15% 0 5.5% 0;
+   }
+   .headGameCenter{
+     padding: 80px 0 0px 0;
+   }
+   .btn-width{
+     width: 200px;
+     background-color: #eeeeee;
+     font-family: 'Itim', sans-serif;
+     height: 70px;
+     padding: 0;
+     margin: 0;
+     color: white;
+     font-size: 30px !important;
+   }
+   #bgLine1 {
+     width: 100%;
+     height: 100%;
+     background: url('../../game/img/line1v1.svg');
+     background-size: cover;
+   }
+   .rounded-circle {
+     width: auto;
+     height: 60px;
+   }
+   .wipgamebody {
+     min-width: 500px;
+     padding: 30px 0 30px 0;
+     border-width: 5px;
+     border-style: solid;
+     border-radius: 14px;
+     text-align: center;
+     background-color: white;
+     opacity: .8;
+   }
+   .iconGameMobile {
+     width: 0px !important;
+   }
  }
 
-.countTable {
-  padding: 0 0 0 0;
-}
 .game-body{
   background: url('../../game/img/bg.jpg ');
   background-size: cover;
@@ -325,18 +562,16 @@ th {
 /* GAMECENTER */
 
 
-.colorBody{
-  /*background-color: #dfa21a;*/
-  padding: 0px 300px 50px 300px;
-}
+
 
 .bodyGameCenter{
   padding: 50px 270px 30px 270px;
 }
 
 .gamecenterBg{
-  background-image: url('https://www.ccmg.com/wp-content/uploads/2015/12/AntiqueNauticalCahrt.jpg');
-  background-size: contain;
+  background-color: rgba(213, 149, 7, 0.96);
+  /*background-image: url('');
+  background-size: contain;*/
 }
 
 .game-tbl{
