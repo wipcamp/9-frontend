@@ -362,19 +362,21 @@ body {
     z-index: 3;
   }
   #two p{
-    font-size: 1.3em;
+    font-size: 1em;
   }
   .slide2-detail{
     font-size: 1.6em;
   }
   .cisland img {
-    height: 25em;
+    height: 20em;
   }
   .card-menu{
-    font-size: 1.60em;
+    margin-top: 0.2em;
+    padding: 0.35em;
+    font-size:1.15em;
   }
   h1{
-    font-size: 2.6em;
+    font-size: 1.85em;
   }
   .card-content{
     margin-top: 5em;
