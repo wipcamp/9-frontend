@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Itim');
 
 body {
-  background-color: #eeeeee;
+  background-color: rgba(213, 149, 7, 0.96) !important;
   font-family: 'Itim', sans-serif;
   height: 100%;
   padding: 0;
@@ -278,7 +278,7 @@ and (max-width: 1024px){
    width: auto;
  }
  .box4game{
-   margin-bottom: 50px;
+   margin: 50px 0 50px 0 !important;
  }
   .headGameCenter{
     /*background-color: #e7b850;*/
@@ -345,7 +345,7 @@ and (max-width: 1024px){
       width: auto;
     }
     .box4game{
-      margin-top: 0 !important;
+      margin-top: 50px;
       text-align: center;
     }
     .IpadPro {
@@ -582,13 +582,11 @@ th {
 
 /* GAMECENTER */
 
-
 .gamecenterBg{
   background-color: rgba(213, 149, 7, 0.96);
   /*background-image: url('');
   background-size: contain;*/
 }
-
 .game-tbl{
   color:black;
 }
