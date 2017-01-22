@@ -230,7 +230,44 @@ h1 {
   width: 100%;
   max-width: 600px;
 }
-
+.faqblock{
+  width:100%;
+  position: relative;
+  z-index: 55;
+}
+#five span{
+  position: relative;
+  z-index: 9;
+}
+#five h4 a{
+  text-decoration: none !important;
+}
+#seven ul{
+  list-style-type: none;
+}
+#seven ul li{
+  display: inline;
+  background-color: white;
+}
+.fa-facebook{
+  color:black;
+  font-size: 1em;
+}
+.fa-twitter{
+  color:black;
+  font-size: 1em;
+}
+.fa-instagram{
+  font-size: 1em;
+  color:black;
+}
+.fa-youtube{
+  font-size: 1em;
+  color:black;
+}
+i.fa{
+  padding:0.4em;
+}
 /*### Smartphones (portrait and landscape)(small)### */
 @media screen and (min-width : 0px) and (max-width : 767px){
   body,html{
@@ -297,8 +334,18 @@ h1 {
     height: 4em;
     bottom: -.5em;
   }
-  #four p{
-
+  .panel-heading{
+    padding: 0.4em 0.6em;
+  }
+  .panel-title{
+    font-size: 0.9em;
+  }
+  .panel-body{
+    font-size: 0.80em;
+    padding: 0.8em;
+  }
+  #seven ul li img{
+    width: 4em;
   }
 }
 /*###Tablet(medium)###*/
@@ -384,6 +431,16 @@ h1 {
     margin-top: 0.35em;
     padding: 0.3em;
     font-size: 1.1em;
+  }
+  .panel-heading{
+    padding: 0.4em 0.6em;
+  }
+  .panel-title{
+    font-size: 0.9em;
+  }
+  .panel-body{
+    font-size: 0.80em;
+    padding: 0.8em;
   }
 }
 
@@ -475,5 +532,20 @@ h1 {
     margin-top: 0.35em;
     padding: 0.3em;
     font-size: 1.1em;
+  }
+  .panel-heading{
+    padding: 0.4em 0.6em;
+  }
+  .panel-title{
+    font-size: 0.8em;
+  }
+  .panel-body{
+    font-size: 0.65em;
+    padding: 0.8em;
+  }
+  #five span{
+    margin-top: 0.35em;
+    padding: 0.2em;
+    font-size: 0.9em;
   }
 }
