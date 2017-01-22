@@ -1,0 +1,33 @@
+body {
+  
+}
+@media (orientation: portrait){
+.forImg{
+  width: 100%;
+  height: cover;
+}
+}
+@media (orientation: landscape){
+.forImg{
+  max-width: 0px;
+  max-height: 0px;
+}
+}
+
+.container {
+    text-align: center;
+    color: #fff;
+}
+#game{
+  z-index: -1 !important;
+  margin-top : 5%;
+}
+#game canvas{
+    /*margin: 15px auto;*/
+    width: cover;
+    height: cover;
+}
+img{
+  z-index: 2;
+  position: absolute;
+}
