@@ -140,6 +140,9 @@ and (max-width:568px)
   .buttonButtom {
     margin: 30px 0 30px 0 !important;
   }
+  .game-forCenter{
+    text-align: center;
+  }
   .rounded-circle{
     height: 35px;
     width: auto;
@@ -216,6 +219,9 @@ and (max-width: 736px)
   .buttonButtom {
     margin: 30px 0 30px 0 !important;
   }
+  .game-forCenter{
+    text-align: center;
+  }
   .rounded-circle{
     height: 35px;
     width: auto;
@@ -262,6 +268,12 @@ and (max-width: 1024px){
   }
   .game-fontInTable{
     font-size: 20px;
+    text-align: center;
+  }
+  .buttonButtom {
+    margin: 30px 0 30px 0;
+  }
+  .game-forCenter{
     text-align: center;
   }
   .circleIcon{
@@ -328,6 +340,12 @@ and (max-width: 1024px){
      }
      .game-fontInTable{
        font-size: 20px;
+       text-align: center;
+     }
+     .buttonButtom {
+       margin: 30px 0 30px 0;
+     }
+     .game-forCenter{
        text-align: center;
      }
      .circleIcon{
@@ -397,6 +415,12 @@ and (max-width: 1024px){
  }
  .game-fontInTable{
    font-size: 20px;
+   text-align: center;
+ }
+ .buttonButtom {
+   margin: 30px 0 30px 0;
+ }
+ .game-forCenter{
    text-align: center;
  }
  .circleIcon{
@@ -495,6 +519,12 @@ and (max-width: 1024px){
      font-size: 20px;
      text-align: center;
    }
+   .buttonButtom {
+     margin: 30px 0 30px 0;
+   }
+   .game-forCenter{
+     text-align: center;
+   }
    .gameMobile{
      width: 70%;
      max-width: 150px;
@@ -566,7 +596,7 @@ and (max-width: 1024px){
 th {
   text-align: center !important;
 }
-.table,.game-forCenter{
+.table{
   text-align: center;
 }
 .game-Table{
@@ -574,9 +604,6 @@ th {
   text-align: center;
 }
 
-.buttonButtom {
-  margin: 50px 0 30px 0;
-}
 
 /* end of leaderboard */
 
