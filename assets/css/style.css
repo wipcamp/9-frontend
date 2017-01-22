@@ -8,9 +8,16 @@ body {
   margin: 0;
   color: white;
 }
+
 h1 {
   transition: font-size .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  line-height: 1.5em;
 }
+
+h1, p {
+  cursor: default;
+}
+
 .tooltip {
   font-family: 'thaisans_neueregular', sans-serif;
   font-weight: 200;
@@ -42,7 +49,7 @@ h1 {
   z-index: 5;
 }
 
-.next{
+.next {
   height: 100%;
   width: 100%;
   position: fixed;
@@ -59,7 +66,7 @@ h1 {
   background: linear-gradient(#141123, #2d214d, #463b6b);
 }
 
-.slide.animate{
+.slide.animate {
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -76,21 +83,25 @@ h1 {
   bottom: 2%;
   margin: 0 40%;
 }
+
 .menu {
   display: inline-block;
   color: #fff;
   border: 1px solid #fff;
   padding: 0.8em 2.8em 0.8em 2.8em;
   text-decoration: none !important;
+  cursor: pointer;
 }
 
 .menu:hover {
-  cursor: pointer;
   background: #0288d1;
   border: 1px solid #0288d1;
-  color:#fff;
-  cursor: pointer;
 }
+
+.idle .menu {
+  cursor: default;
+}
+
 
 .slide.active .show--onActive {
   opacity: 1;
@@ -105,32 +116,81 @@ h1 {
   position: fixed;
   bottom: 15%;
   cursor: pointer;
-  height: auto;
-}
-
-.slide-control .prev-container, .slide-control .bullet-container, .slide-control .next-container {
-  display: table-row;
-  float: left;
-}
-
-.slide-control .prev-container, .slide-control .next-container {
-  height: 24px;
-  width: 24px;
-  margin-right: 4px;
-}
-
-.slide-control .bullet-container .bullet {
-  height: 24px;
-  width: 24px;
-  float: left;
-  margin-right: 4px;
-  background: url(../img/icon/object-life_ring.svg) no-repeat 50%;
-}
-.bullet .wip-head{
   width: 100%;
-  height: 100%;
-  opacity: 0;
+  max-width: 480px;
+  margin: 0px 4px;
 }
+
+.slide-control .prev-container,
+.slide-control .bullet-container,
+.slide-control .next-container {
+  float: left;
+  height: 24px;
+  width: 24px;
+}
+
+.slide-control .prev-container img,
+.slide-control .next-container img {
+  vertical-align: baseline;
+}
+
+.slide-control .bullet-container {
+  width: calc(100% - 24px * 2 - 4px * 2);
+  margin: 0px 4px;
+}
+
+.bullet-container .bullet {
+  height: 24px;
+  width: calc((100% - 24px * 2) / 7);
+  float: left;
+}
+
+.bullet-container .bullet,
+.bullet-container .bullet-gap:last-child {
+  background: #969696;
+  transition: background 0.25s linear;
+}
+
+.bullet-container .bullet.step,
+.bullet-container .bullet-gap:not(:last-child),
+.bullet-container .bullet.step+.bullet-gap,
+.bullet-container .bullet.step+.tooltip+.bullet-gap  {
+  background: #463b6b;
+}
+
+.bullet-container .bullet:first-child {
+  border-radius: 12px 0 0 12px !important;
+}
+
+.bullet-container .bullet:last-child {
+  border-radius: 0 12px 12px 0 !important;
+}
+
+.bullet-container .bullet {
+  border-right: 2px #463b6b solid;
+}
+
+.bullet-container .bullet.step,
+.bullet-container .bullet.step+.bullet-gap,
+.bullet-container .bullet.step+.tooltip+.bullet-gap {
+  border-left: 2px #eeeeee solid;
+}
+
+.bullet-container .bullet-gap {
+  width: 24px;
+  height: 24px;
+  float: left;
+  cursor: default;
+}
+
+.bullet-container .bullet-gap:first-child {
+  border-radius: 12px 0 0 12px;
+}
+
+.bullet-container .bullet-gap:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
 /*================================= Pages ===================================*/
 
 /*-------------------- Welcome Page ---------------------*/
@@ -304,9 +364,6 @@ i.fa{
     z-index: 2;
     width: 9em;
   }
-  #two h1{
-    margin-bottom: 0.35em;
-  }
   #two.active h1 {
     font-size: 2em;
     text-align: left;
@@ -314,6 +371,7 @@ i.fa{
   #two h1 {
     font-size: 5em;
     text-align: center;
+    margin-bottom: 0.35em;
   }
   #two span{
     margin-top: 0.35em;
@@ -321,8 +379,22 @@ i.fa{
   #two p{
     font-size: 1em;
   }
-  #three h1{
+  #three.active h1 {
+    font-size: 2em;
+    text-align: left;
+  }
+  #three h1 {
+    font-size: 5em;
+    text-align: center;
     margin-bottom: 0.35em;
+  }
+  #four.active h1 {
+    font-size: 2em;
+    text-align: left;
+  }
+  #four h1 {
+    font-size: 5em;
+    text-align: center;
   }
   #three p{
     margin:0.9em;
@@ -392,6 +464,22 @@ i.fa{
     text-align: left;
   }
   #two h1 {
+    font-size: 7em;
+    text-align: center;
+  }
+  #three.active h1 {
+    font-size: 2em;
+    text-align: left;
+  }
+  #three h1 {
+    font-size: 7em;
+    text-align: center;
+  }
+  #four.active h1 {
+    font-size: 2em;
+    text-align: left;
+  }
+  #four h1 {
     font-size: 7em;
     text-align: center;
   }
@@ -492,6 +580,20 @@ i.fa{
 
   #two h1 {
     font-size: 7em;
+  }
+  #three.active h1 {
+    font-size: 2em;
+  }
+  #three h1 {
+    font-size: 7em;
+  }
+  #four.active h1 {
+    font-size: 2em;
+    text-align: left;
+  }
+  #four h1 {
+    font-size: 7em;
+    text-align: center;
   }
   .card-content{
     margin-top: 5em;
