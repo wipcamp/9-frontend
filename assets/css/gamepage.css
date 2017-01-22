@@ -117,8 +117,9 @@ and (max-width:568px)
     width: 0%;
   }
   .gameMobile{
+    padding: 10% 0 0 0;
     width: 100%;
-    max-width: 180px;
+    max-width: 135px;
   }
   .buttonGame{
     margin: 0% 0 0% 0;
@@ -152,7 +153,7 @@ and (max-width:568px)
     width: auto;
   }
   .box4game{
-    margin-bottom: 30px;
+    margin: 15% 0 30px 0;
     /*padding: 0 50px 0 30px;*/
     text-align: center;
   }
@@ -280,7 +281,7 @@ and (max-width: 1024px){
     width: 0%;
   }
   .gameMobile{
-    height: 280px;
+    height: 230px;
   }
   .buttonGame{
     margin: 0% 0 0% 0;
@@ -290,11 +291,11 @@ and (max-width: 1024px){
    width: auto;
  }
  .box4game{
-   margin: 50px 0 50px 0 !important;
+   margin: 135px 0 50px 0 !important;
  }
   .headGameCenter{
     /*background-color: #e7b850;*/
-    padding: 50px 0 60px 0;
+    padding: 13% 0 60px 0;
   }
   .btn-width{
     font-size: 22px !important;
@@ -321,84 +322,9 @@ and (max-width: 1024px){
     opacity: .8;
   }
  }
- @media only screen
- and (min-device-width : 768px)
- and (max-device-width : 1024px) {
-     .game-fontLeaderboard {
-       margin: 40px 0 0 0;
-       text-align: center;
-       font-size: 60px !important;
-     }
-     .game-fontGameName{
-       text-align: center;
-       font-size: 40px !important;
-       margin-bottom: 30px;
-     }
-     .game-fontHeadTable{
-       font-size: 20px;
-       text-align: center;
-     }
-     .game-fontInTable{
-       font-size: 20px;
-       text-align: center;
-     }
-     .buttonButtom {
-       margin: 30px 0 30px 0;
-     }
-     .game-forCenter{
-       text-align: center;
-     }
-     .circleIcon{
-       width: 0%;
-     }
-     .gameMobile{
-       width: 100%;
-       min-width: 270px;
-     }
-     .buttonGame{
-       margin: 0% 0 0% 0;
-     }
-     .iconGameMobile{
-      height: 100px;
-      width: auto;
-    }
-    .box4game{
-      margin-top: 50px;
-      text-align: center;
-    }
-    .IpadPro {
-      margin: 0px 0 0px 0;
-    }
-     .headGameCenter{
-       /*background-color: #e7b850;*/
-       padding: 50px 0 0px 0 !important;
-     }
-     .btn-width{
-       font-size: 22px !important;
-       width: 150px;
-       background-color: #eeeeee;
-       font-family: 'Itim', sans-serif;
-       height: 50px;
-       padding: 0;
-       margin: 0;
-       color: white;
-     }
-     .rounded-circle {
-       width: auto;;
-       height: 45px;
-     }
-     .wipgamebody {
-       min-width: 300px;
-       padding: 30px 0 30px 0;
-       border-width: 5px;
-       border-style: solid;
-       border-radius: 14px;
-       text-align: center;
-       background-color: white;
-       opacity: .8;
-     }
- }
-@media (min-width: 1025px) {
+
+@media (min-width: 1025px)
+and (max-width: 1199px){
  .game-fontLeaderboard {
    margin: 40px 0 0 0;
    text-align: center;
@@ -491,18 +417,28 @@ and (max-width: 1024px){
    max-width: 150px;
    float: left;
  }
- .bgLine1 {
-   width: 50%;
-   height: 50%;
-   background: url('../../game/img/line1v2.svg');
-   background-size: cover;
+
  }
-}
- }
- @media (min-width: 1366px) {
-   .fixForPic{
+ @media (min-width: 1200px) {
+   .fixForPic1{
      width: 70%;
      max-width: 150px;
+     float: left;
+   }
+   .fixForPic2{
+     width: 70%;
+     max-width: 150px;
+     float: left;
+   }
+   .fixForPic3{
+     width: 70%;
+     max-width: 150px;
+     float: left;
+   }
+   .fixForPic4{
+     width: 70%;
+     max-width: 150px;
+     float: left;
    }
    .game-fontLeaderboard {
      font-size: 60px !important;
@@ -529,9 +465,6 @@ and (max-width: 1024px){
      width: 70%;
      max-width: 150px;
    }
-   .buttonGame{
-     margin: 15% 0 5.5% 0;
-   }
    .headGameCenter{
      padding: 80px 0 0px 0;
    }
@@ -546,10 +479,10 @@ and (max-width: 1024px){
      font-size: 30px !important;
    }
    .bgLine1 {
-     width: 70%;
-     height: 70%;
+     width: 100%;
+     height: 100%;
      background: url('../../game/img/line1v2.svg');
-     background-size: cover;
+     background-size: 140% ;
    }
    .rounded-circle {
      width: auto;
@@ -569,14 +502,98 @@ and (max-width: 1024px){
      width: 0px !important;
    }
  }
- @media (min-width: 1600px) {
+ @media (min-width: 1260px) {
+   .fixForPic1{
+     width: 70%;
+     max-width: 150px;
+     float: left;
+   }
+   .fixForPic2{
+     width: 70%;
+     max-width: 150px;
+     float: left;
+   }
+   .fixForPic3{
+     width: 70%;
+     max-width: 150px;
+     float: left;
+   }
+   .fixForPic4{
+     width: 70%;
+     max-width: 150px;
+     float: left;
+   }
+   .game-fontLeaderboard {
+     font-size: 60px !important;
+   }
+   .game-fontGameName{
+     font-size: 35px !important;
+     margin-bottom: 40px;
+   }
+   .game-fontHeadTable{
+     font-size: 27px;
+     text-align: center;
+   }
+   .game-fontInTable{
+     font-size: 20px;
+     text-align: center;
+   }
+   .buttonButtom {
+     margin: 30px 0 30px 0;
+   }
+   .game-forCenter{
+     text-align: center;
+   }
+   .gameMobile{
+     width: 70%;
+     max-width: 150px;
+   }
+   .headGameCenter{
+     padding: 80px 0 0px 0;
+   }
+   .btn-width{
+     width: 200px;
+     background-color: #eeeeee;
+     font-family: 'Itim', sans-serif;
+     height: 70px;
+     padding: 0;
+     margin: 0;
+     color: white;
+     font-size: 30px !important;
+   }
+   .bgLine1 {
+     width: 100%;
+     height: 100%;
+     background: url('../../game/img/line1v1.svg');
+     background-size: 130% ;
+   }
+   .rounded-circle {
+     width: auto;
+     height: 60px;
+   }
+   .wipgamebody {
+     min-width: 500px;
+     padding: 30px 0 30px 0;
+     border-width: 5px;
+     border-style: solid;
+     border-radius: 14px;
+     text-align: center;
+     background-color: white;
+     opacity: .8;
+   }
+   .iconGameMobile {
+     width: 0px !important;
+   }
+ }
+ @media (min-width: 1460px) {
    .bgLine1 {
      width: 100% !important;
      height: 100% !important;
-     background: url('../../game/img/line1v3.svg');
+     background: url('../../game/img/line1v4.svg');
      background-size: 150%;
    }
- @media (min-width: 1920px) {
+}
+ @media (min-width: 1625px) {
    .bgLine1 {
      width: 100% !important;
      height: 100% !important;
