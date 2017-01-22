@@ -18,6 +18,8 @@ h1, p {
   cursor: default;
 }
 
+
+
 .tooltip {
   font-family: 'thaisans_neueregular', sans-serif;
   font-weight: 200;
@@ -42,18 +44,18 @@ h1, p {
   height: 100%;
 }
 
-.prev{
+.next, .prev {
   height: 100%;
   width: 100%;
   position: fixed;
   z-index: 5;
+  cursor: pointer;
 }
 
-.next {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 5;
+.idle .slide,
+.idle .slide h1,
+.idle .slide p {
+  cursor: pointer;
 }
 
 .slide {
@@ -299,8 +301,16 @@ h1, p {
   position: relative;
   z-index: 9;
 }
-#five h4 a{
+#five a,
+#five a:hover{
+  color: black !important;
   text-decoration: none !important;
+}
+#five.active a{
+  cursor: pointer;
+}
+#five a{
+  cursor: default;
 }
 #seven ul{
   list-style-type: none;
@@ -364,35 +374,17 @@ i.fa{
     z-index: 2;
     width: 9em;
   }
-  #two.active h1 {
-    font-size: 2em;
-    text-align: left;
-  }
-  #two h1 {
-    font-size: 5em;
-    text-align: center;
-    margin-bottom: 0.35em;
-  }
   #two span{
     margin-top: 0.35em;
   }
   #two p{
     font-size: 1em;
   }
-  #three.active h1 {
+  .slide.active h1 {
     font-size: 2em;
     text-align: left;
   }
-  #three h1 {
-    font-size: 5em;
-    text-align: center;
-    margin-bottom: 0.35em;
-  }
-  #four.active h1 {
-    font-size: 2em;
-    text-align: left;
-  }
-  #four h1 {
+  .slide h1 {
     font-size: 5em;
     text-align: center;
   }
@@ -459,27 +451,11 @@ i.fa{
     padding: 0.2em;
     font-size:1.15em;
   }
-  #two.active h1 {
+  .slide.active h1 {
     font-size: 2em;
     text-align: left;
   }
-  #two h1 {
-    font-size: 7em;
-    text-align: center;
-  }
-  #three.active h1 {
-    font-size: 2em;
-    text-align: left;
-  }
-  #three h1 {
-    font-size: 7em;
-    text-align: center;
-  }
-  #four.active h1 {
-    font-size: 2em;
-    text-align: left;
-  }
-  #four h1 {
+  .slide h1 {
     font-size: 7em;
     text-align: center;
   }
@@ -571,27 +547,11 @@ i.fa{
     padding: 0.35em;
     font-size:1.15em;
   }
-  h1{
-    font-size: 1.85em;
-  }
-  #two.active h1 {
-    font-size: 2em;
-  }
-
-  #two h1 {
-    font-size: 7em;
-  }
-  #three.active h1 {
-    font-size: 2em;
-  }
-  #three h1 {
-    font-size: 7em;
-  }
-  #four.active h1 {
+  .slide.active h1 {
     font-size: 2em;
     text-align: left;
   }
-  #four h1 {
+  .slide h1 {
     font-size: 7em;
     text-align: center;
   }
