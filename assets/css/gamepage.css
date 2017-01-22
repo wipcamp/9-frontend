@@ -420,6 +420,16 @@ and (max-width: 1199px){
 
  }
  @media (min-width: 1200px) {
+   .game-fontLeaderboard {
+     margin: 40px 0 0 0;
+     text-align: center;
+     font-size: 60px !important;
+   }
+   .game-fontGameName{
+     text-align: center;
+     font-size: 40px !important;
+     margin-bottom: 30px;
+   }
    .fixForPic1{
      width: 70%;
      max-width: 150px;
@@ -503,6 +513,16 @@ and (max-width: 1199px){
    }
  }
  @media (min-width: 1260px) {
+   .game-fontLeaderboard {
+     margin: 40px 0 0 0;
+     text-align: center;
+     font-size: 60px !important;
+   }
+   .game-fontGameName{
+     text-align: center;
+     font-size: 40px !important;
+     margin-bottom: 30px;
+   }
    .fixForPic1{
      width: 70%;
      max-width: 150px;
@@ -586,6 +606,16 @@ and (max-width: 1199px){
    }
  }
  @media (min-width: 1460px) {
+   .game-fontLeaderboard {
+     margin: 40px 0 0 0;
+     text-align: center;
+     font-size: 60px !important;
+   }
+   .game-fontGameName{
+     text-align: center;
+     font-size: 40px !important;
+     margin-bottom: 30px;
+   }
    .bgLine1 {
      width: 100% !important;
      height: 100% !important;
@@ -594,6 +624,16 @@ and (max-width: 1199px){
    }
 }
  @media (min-width: 1625px) {
+   .game-fontLeaderboard {
+     margin: 40px 0 0 0;
+     text-align: center;
+     font-size: 60px !important;
+   }
+   .game-fontGameName{
+     text-align: center;
+     font-size: 40px !important;
+     margin-bottom: 30px;
+   }
    .bgLine1 {
      width: 100% !important;
      height: 100% !important;
