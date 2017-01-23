@@ -173,7 +173,7 @@ and (max-width:568px)
   }
  }
 @media (min-width: 375px)
-and (max-width: 736px)
+and (max-width: 767px)
 {
   .game-fontLeaderboard {
     margin: 50px 0 10px 0;
