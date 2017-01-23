@@ -584,6 +584,11 @@ h1, p {
   body,html{
     font-size: 15px;
   }
+  .register {
+    width: 60%;
+    height: 10%;
+    margin: 0 20%;
+  }
   .ship img{
     height: 45em;
     position: absolute;
