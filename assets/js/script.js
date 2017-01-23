@@ -7,6 +7,9 @@ $(document).ready(function(){
   $('img').on('dragstart', function (e) {
     e.preventDefault();
   });
+  $('.idle .slide a').on('click', function (e) {
+    e.preventDefault();
+  });
 
   $('[data-toggle="tooltip"]').tooltip({
     html: true
