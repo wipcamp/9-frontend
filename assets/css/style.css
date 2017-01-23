@@ -489,6 +489,16 @@ i.fa{
     right: 0em;
     bottom: 2.85em;
   }
+  #five .cisland img{
+    height: 11em;
+    right: 0.2em;
+    bottom: 3em;
+  }
+  #seven .cisland img{
+    height: 12em;
+    right: 0em;
+    bottom: 1.45em;
+  }
   #logo{
     position: relative;
     z-index: 99;
@@ -610,6 +620,16 @@ i.fa{
     right: 0em;
     bottom: 2.85em;
   }
+  #five .cisland img{
+    height: 17em;
+    right: 0.2em;
+    bottom: 2.5em;
+  }
+  #seven .cisland img{
+    height: 17em;
+    right: 0.2em;
+    bottom: 0em;
+  }
   #logo{
     position: relative;
     z-index: 99;
@@ -716,6 +736,16 @@ i.fa{
     height: 22em;
     right: 0em;
     bottom: 2.85em;
+  }
+  #five .cisland img {
+    height: 22em;
+    right: 2em;
+    bottom: 2.85em;
+  }
+  #seven .cisland img {
+    height: 22em;
+    right: 2em;
+    bottom: 0.5em;
   }
   .card-menu{
     margin-top: 0.2em;
