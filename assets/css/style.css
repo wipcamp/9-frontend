@@ -250,12 +250,6 @@ h1, p {
     -ms-filter: fliph; /*IE*/
     filter: fliph; /*IE*/
 }
-#two p{
-  font-size: 1.0em;
-}
-.slide2-detail{
-  font-size: 0.85em;
-}
 .card-content{
   margin-top: 4.5em;
   z-index: 99;
@@ -442,9 +436,6 @@ i.fa{
   #two p{
     font-size: 0.9em;
   }
-  .slide2-detail{
-    font-size: 1.3em;
-  }
   .cisland img {
     height: 16.5em;
     z-index: 2;
@@ -537,10 +528,7 @@ i.fa{
     z-index: 3;
   }
   #two p{
-    font-size: 1em;
-  }
-  .slide2-detail{
-    font-size: 1.6em;
+    font-size: 0.85em;
   }
   .cisland img {
     height: 18.5em;
