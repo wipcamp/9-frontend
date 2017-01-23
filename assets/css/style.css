@@ -27,12 +27,24 @@ h1, p {
 @keyframes wave {
     0% {
         -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-        transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg)
+        transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
     }
     100% {
         -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-        transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg)
+        transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
     }
+}
+@keyframes cloud1 {
+  0% { right: -15%; }
+  100% { right: 115%; }
+}
+@keyframes cloud2 {
+  0% { right: -10%; }
+  100% { right: 110%; }
+}
+@keyframes cloud3 {
+  0% { right: -17%; }
+  100% { right: 117%; }
 }
 /*=============================== Components ================================*/
 
@@ -265,9 +277,50 @@ h1, p {
   left: -50%;
   z-index: 5;
 }
-.wave3.animation{
+.wave3.animation {
   animation: wave 2s .1s infinite linear;
 }
+
+.cloud1 {
+  background-image: url('../img/object/cloud.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10%;
+  right: -15%;
+  width: 15%;
+  height: 10%;
+  z-index: 2;
+}
+.cloud1.animation {
+  animation: cloud1 30s 0s infinite linear;
+}
+.cloud2 {
+  background-image: url('../img/object/cloud.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 25%;
+  right: -10%;
+  width: 10%;
+  height: 5%;
+  z-index: 2;
+}
+.cloud2.animation {
+  animation: cloud2 30s 3s infinite linear;
+}
+.cloud3 {
+  background-image: url('../img/object/cloud.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 5%;
+  right: -17%;
+  width: 17%;
+  height: 12%;
+  z-index: 3;
+}
+.cloud3.animation {
+  animation: cloud3 32s 8s infinite linear;
+}
+
 .flip-horizontal, .x-grid-cell-inner, .x-column-header-text, .x-panel-header-text {
     -moz-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
