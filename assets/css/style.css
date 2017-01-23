@@ -519,7 +519,16 @@ i.fa{
     font-size: 2em;
   }
   #three p{
-    margin:0.9em;
+    font-size: 1em;
+  }
+  #four p{
+    font-size: 1em;
+  }
+  #six p{
+    font-size: 1em;
+  }
+  #seven p{
+    font-size: 1em;
   }
   #three span{
     margin-top: 0.35em;
@@ -660,7 +669,7 @@ i.fa{
     z-index: 3;
   }
   #two p{
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   .cisland img {
     height: 18.5em;
@@ -706,10 +715,16 @@ i.fa{
   }
   #three p{
     margin: 1em;
-    font-size: 1.10em;
+    font-size: 0.9em;
   }
   #four p{
-    font-size: 1.15em;
+    font-size: 0.9em;
+  }
+  #six p{
+    font-size: 0.9em;
+  }
+  #seven p{
+    font-size: 0.9em;
   }
   .panel-heading{
     padding: 0.4em 0.6em;
