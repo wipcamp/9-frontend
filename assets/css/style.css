@@ -23,6 +23,7 @@ h1, p {
   font-weight: 200;
   white-space: nowrap;
 }
+
 @keyframes wave {
     0% {
         -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
@@ -42,18 +43,18 @@ h1, p {
   height: 100%;
 }
 
-.prev{
+.next, .prev {
   height: 100%;
   width: 100%;
   position: fixed;
   z-index: 5;
+  cursor: pointer;
 }
 
-.next {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 5;
+.idle .slide,
+.idle .slide h1,
+.idle .slide p {
+  cursor: pointer;
 }
 
 .slide {
@@ -330,15 +331,34 @@ h1, p {
   position: relative;
   z-index: 9;
 }
-#five h4 a{
+#five a,
+#five a:hover {
+  color: black !important;
   text-decoration: none !important;
 }
-#seven ul{
-  list-style-type: none;
+#five.active a,
+#seven.active a {
+  cursor: pointer;
+}
+#five a,
+#seven a {
+  cursor: default;
+}
+#six ul{
+  list-style: none;
+}
+#six ul li:before{
+  content: "⚓";
+}
+#seven a,
+#seven a:hover {
+  color: white !important;
+  text-decoration: none !important;
 }
 #seven ul li{
   display: inline;
   background-color: white;
+  list-style-type: none;
 }
 .fa-fa-map-marker{
   color: black;
@@ -406,15 +426,6 @@ i.fa{
     z-index: 2;
     width: 9em;
   }
-  #two.active h1 {
-    font-size: 2em;
-    text-align: left;
-  }
-  #two h1 {
-    font-size: 5em;
-    text-align: center;
-    margin-bottom: 0.35em;
-  }
   #two span{
     margin-top: 0.35em;
   }
@@ -436,6 +447,13 @@ i.fa{
   }
   #four h1 {
     font-size: 2em;
+  }
+  .slide.active h1 {
+    font-size: 2em;
+    text-align: left;
+  }
+  .slide h1 {
+    font-size: 5em;
     text-align: center;
   }
   #five h1{
@@ -513,27 +531,11 @@ i.fa{
     padding: 0.40em 0.35em;
     font-size:1em;
   }
-  #two.active h1 {
+  .slide.active h1 {
     font-size: 2em;
     text-align: left;
   }
-  #two h1 {
-    font-size: 7em;
-    text-align: center;
-  }
-  #three.active h1 {
-    font-size: 2em;
-    text-align: left;
-  }
-  #three h1 {
-    font-size: 7em;
-    text-align: center;
-  }
-  #four.active h1 {
-    font-size: 2em;
-    text-align: left;
-  }
-  #four h1 {
+  .slide h1 {
     font-size: 7em;
     text-align: center;
   }
@@ -618,24 +620,11 @@ i.fa{
   h1{
     font-size: 1.85em;
   }
-  #two.active h1 {
-    font-size: 2em;
-  }
-
-  #two h1 {
-    font-size: 7em;
-  }
-  #three.active h1 {
-    font-size: 2em;
-  }
-  #three h1 {
-    font-size: 7em;
-  }
-  #four.active h1 {
+  .slide.active h1 {
     font-size: 2em;
     text-align: left;
   }
-  #four h1 {
+  .slide h1 {
     font-size: 7em;
     text-align: center;
   }
