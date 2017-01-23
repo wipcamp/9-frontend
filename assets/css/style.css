@@ -526,22 +526,6 @@ i.fa{
   #two p{
     font-size: 1em;
   }
-  #three.active h1 {
-    font-size: 2em;
-    text-align: left;
-  }
-  #three h1 {
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 0.35em;
-  }
-  #four.active h1 {
-    font-size: 2em;
-    text-align: left;
-  }
-  #four h1 {
-    font-size: 2em;
-  }
   .slide.active h1 {
     font-size: 2em;
     text-align: left;
@@ -549,15 +533,6 @@ i.fa{
   .slide h1 {
     font-size: 5em;
     text-align: center;
-  }
-  #five h1{
-    font-size: 2em;
-  }
-  #six h1{
-    font-size: 2em;
-  }
-  #seven h1{
-    font-size: 2em;
   }
   #three p{
     font-size: 1em;
@@ -759,7 +734,7 @@ i.fa{
     padding: 0.30em 0.40em;
     font-size:1em;
   }
-  h1{
+  h1 {
     font-size: 1.85em;
   }
   .slide.active h1 {
