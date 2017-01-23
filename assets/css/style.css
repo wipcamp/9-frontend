@@ -480,6 +480,11 @@ h1, p {
     left:-3em;
     z-index: 3;
   }
+  .register {
+    width: 70%;
+    height: 10%;
+    margin: 0 15%;
+  }
   #two .cisland img{
     height: 11em;
     right: 1em;
