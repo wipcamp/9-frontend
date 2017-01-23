@@ -610,6 +610,10 @@ i.fa{
     left:-25em;
     z-index: 3;
   }
+  .cisland img{
+    height: 15em;
+    right: 1em;
+  }
   #two .cisland img{
     height: 17em;
     right: 1em;
@@ -726,6 +730,9 @@ i.fa{
   }
   #two p{
     font-size: 0.9em;
+  }
+  .cisland img{
+    height: 22em;
   }
   #two .cisland img{
     height: 22em;
