@@ -349,6 +349,7 @@ h1, p {
     filter: fliph; /*IE*/
 }
 .card-content{
+  position: relative;
   margin-top: 4.5em;
   z-index: 99;
 }
@@ -503,6 +504,22 @@ i.fa{
   #two p{
     font-size: 1em;
   }
+  #three.active h1 {
+    font-size: 2em;
+    text-align: left;
+  }
+  #three h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 0.35em;
+  }
+  #four.active h1 {
+    font-size: 2em;
+    text-align: left;
+  }
+  #four h1 {
+    font-size: 2em;
+  }
   .slide.active h1 {
     font-size: 2em;
     text-align: left;
@@ -511,8 +528,26 @@ i.fa{
     font-size: 5em;
     text-align: center;
   }
+  #five h1{
+    font-size: 2em;
+  }
+  #six h1{
+    font-size: 2em;
+  }
+  #seven h1{
+    font-size: 2em;
+  }
   #three p{
-    margin:0.9em;
+    font-size: 1em;
+  }
+  #four p{
+    font-size: 1em;
+  }
+  #six p{
+    font-size: 1em;
+  }
+  #seven p{
+    font-size: 1em;
   }
   #three span{
     margin-top: 0.35em;
@@ -574,8 +609,8 @@ i.fa{
   }
   .card-menu{
     margin-top: 0.2em;
-    padding: 0.2em;
-    font-size:1.15em;
+    padding: 0.40em 0.35em;
+    font-size:1em;
   }
   .slide.active h1 {
     font-size: 2em;
@@ -603,24 +638,17 @@ i.fa{
     bottom: -1em;
   }
   #three p{
-    font-size:
-  }
-  #three span{
-    margin-top: 0.35em;
-    padding: 0.45em;
-    font-size: 1.15em;
-  }
-  #three p{
     margin: 1em;
-    font-size: 1.15em;
+    font-size: 0.9em;
   }
   #four p{
-    font-size: 1em;
+    font-size: 0.9em;
   }
-  #four span{
-    margin-top: 0.35em;
-    padding: 0.3em;
-    font-size: 1.1em;
+  #six p{
+    font-size:0.9em;
+  }
+  #seven p{
+    font-size:0.9em;
   }
   .panel-heading{
     padding: 0.4em 0.6em;
@@ -660,15 +688,15 @@ i.fa{
     z-index: 3;
   }
   #two p{
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   .cisland img {
     height: 18.5em;
   }
   .card-menu{
     margin-top: 0.2em;
-    padding: 0.35em;
-    font-size:1.15em;
+    padding: 0.30em 0.40em;
+    font-size:1em;
   }
   h1{
     font-size: 1.85em;
@@ -704,22 +732,18 @@ i.fa{
   .wave3{
     bottom: -1em;
   }
-  #three span{
-    margin-top: 0.35em;
-    padding: 0.45em;
-    font-size: 1.15em;
-  }
   #three p{
     margin: 1em;
-    font-size: 1.10em;
+    font-size: 0.9em;
   }
   #four p{
-    font-size: 1.15em;
+    font-size: 0.9em;
   }
-  #four span{
-    margin-top: 0.35em;
-    padding: 0.3em;
-    font-size: 1.1em;
+  #six p{
+    font-size: 0.9em;
+  }
+  #seven p{
+    font-size: 0.9em;
   }
   .panel-heading{
     padding: 0.4em 0.6em;
@@ -730,10 +754,5 @@ i.fa{
   .panel-body{
     font-size: 0.65em;
     padding: 0.8em;
-  }
-  #five span{
-    margin-top: 0.35em;
-    padding: 0.2em;
-    font-size: 0.9em;
   }
 }
