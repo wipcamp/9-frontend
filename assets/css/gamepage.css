@@ -129,14 +129,14 @@ and (max-width:568px)
     padding: 60px 0 15px 0;
   }
   .btn-width{
-    width: 40%;
+    width: 120px;
     background-color: #eeeeee;
     font-family: 'Itim', sans-serif;
-    height: 50px;
+    height: 35px;
     padding: 0;
-    margin: 0;
+    margin: 0 5px 0 5px;
     color: white;
-    font-size: 20px !important;
+    font-size: 16px !important;
   }
   .buttonButtom {
     margin: 30px 0 30px 0 !important;
@@ -208,14 +208,14 @@ and (max-width: 767px)
     padding: 60px 0 15px 0;
   }
   .btn-width{
-    width: 40%;
+    width: 130px;
     background-color: #eeeeee;
     font-family: 'Itim', sans-serif;
-    height: 50px;
+    height: 35px;
     padding: 0;
-    margin: 0;
+    margin: 0 5px 0 5px;
     color: white;
-    font-size: 20px !important;
+    font-size: 16px !important;
   }
   .buttonButtom {
     margin: 30px 0 30px 0 !important;
@@ -298,13 +298,13 @@ and (max-width: 1024px){
     padding: 13% 0 60px 0;
   }
   .btn-width{
-    font-size: 22px !important;
-    width: 150px;
+    font-size: 18px !important;
+    width: 130px;
     background-color: #eeeeee;
     font-family: 'Itim', sans-serif;
-    height: 50px;
+    height: 40px;
     padding: 0;
-    margin: 0;
+    margin: 0 10px 0 10px;
     color: white;
   }
   .rounded-circle {
@@ -374,13 +374,13 @@ and (max-width: 1199px){
    padding: 50px 0 0px 0 !important;
  }
  .btn-width{
-   font-size: 22px !important;
-   width: 150px;
+   font-size: 18px !important;
+   width: 140px;
    background-color: #eeeeee;
    font-family: 'Itim', sans-serif;
-   height: 50px;
+   height: 40px;
    padding: 0;
-   margin: 0;
+   margin: 0 5px 0 5px;
    color: white;
  }
  .rounded-circle {
@@ -479,14 +479,14 @@ and (max-width: 1199px){
      padding: 80px 0 0px 0;
    }
    .btn-width{
-     width: 200px;
+     width: 150px;
      background-color: #eeeeee;
      font-family: 'Itim', sans-serif;
-     height: 70px;
+     height: 40px;
      padding: 0;
-     margin: 0;
+     margin: 0 10px 0 10px;
      color: white;
-     font-size: 30px !important;
+     font-size: 18px !important;
    }
    .bgLine1 {
      width: 100%;
@@ -572,14 +572,14 @@ and (max-width: 1199px){
      padding: 80px 0 0px 0;
    }
    .btn-width{
-     width: 200px;
+     width: 180px;
      background-color: #eeeeee;
      font-family: 'Itim', sans-serif;
-     height: 70px;
+     height: 50px;
      padding: 0;
-     margin: 0;
+     margin: 0 10px 0 10px;
      color: white;
-     font-size: 30px !important;
+     font-size: 25px !important;
    }
    .bgLine1 {
      width: 100%;
