@@ -1,9 +1,154 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Itim');
 
-.logoCss {
+body {
+  font-family: 'Itim', sans-serif;
+  color: white;
+  height: auto;
+}
+.bg{
+  background: linear-gradient(#141123, #2d214d, #463b6b); /* Standard syntax */
+}
+.center {
   text-align: center;
 }
-.wipcamp_logo{
-  height: 300px;
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width:568px){
+  .controlDiv{
+    overflow: hidden;
+  }
+  .wipcamp_logo{
+    width: 100%;
+    margin: 18% 0 0 0;
+  }
+  .shipCircle{
+    margin: 70px 0 0 0;
+    height: 130px;
+  }
+  .boxGameDesktop{
+    padding: 30% 0 15% 0;
+  }
+  .gameOnlyDesktop{
+    padding: 0 3px 0 3px;
+    width: 20%;
+  }
+  .textOnlyDesktop{
+    padding: 15px 0 0 0;
+    font-size:  15px;
+    color: white;
+  }
+}
+
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px){
+  .controlDiv{
+    overflow: hidden;
+  }
+  .wipcamp_logo{
+    width: 100%;
+    margin: 12% 0 0 0;
+  }
+  .shipCircle{
+    margin: 100px 0 0 0;
+    height: 130px;
+  }
+  .boxGameDesktop{
+    padding: 30% 0 15% 0;
+  }
+  .gameOnlyDesktop{
+    padding: 0 3px 0 3px;
+    width: 20%;
+  }
+  .textOnlyDesktop{
+    padding: 15px 0 0 0;
+    font-size:  18px;
+    color: white;
+  }
+}
+
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 767px){
+  /*.controlDiv{
+    overflow: hidden;
+  }*/
+  .wipcamp_logo{
+    width: 100%;
+    margin: 8% 0 0 0;
+  }
+  .shipCircle{
+    margin: 19% 0 0 0;
+    width: 50%;
+  }
+  .boxGameDesktop{
+    padding: 25% 0 35% 0;
+  }
+  .gameOnlyDesktop{
+    padding: 0 3px 0 3px;
+    width: 20%;
+  }
+  .textOnlyDesktop{
+    padding: 15px 0 0 0;
+    font-size:  20px;
+    color: white;
+  }
+}
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px){
+  /*.controlDiv{
+    overflow: hidden;
+  }*/
+  .wipcamp_logo{
+    width: 75%;
+    padding: 10% 0 0 0;
+  }
+  .shipCircle{
+    margin: 120px 0 0 0;
+    height: 250px;
+  }
+  .boxGameDesktop{
+    padding: 18% 0 0 0;
+  }
+  .gameOnlyDesktop{
+    padding: 0 3px 0 3px;
+    width: 15%;
+  }
+  .textOnlyDesktop{
+    padding: 15px 0 20% 0;
+    font-size:  30px;
+    color: white;
+  }
+}
+
+@media only screen
+and (min-device-width: 1024px)
+and (max-device-width: 1366px){
+  /*.controlDiv{
+    overflow: hidden;
+  }*/
+  .wipcamp_logo{
+    width: 75%;
+    padding: 10% 0 0 0;
+  }
+  .shipCircle{
+    margin: 200px 0 0 0;
+    height: 250px;
+  }
+  .boxGameDesktop{
+    padding: 25% 0 0 0;
+  }
+  .gameOnlyDesktop{
+    padding: 0 3px 0 3px;
+    width: 15%;
+  }
+  .textOnlyDesktop{
+    padding: 15px 0 20% 0;
+    font-size:  33px;
+    color: white;
+  }
 }
