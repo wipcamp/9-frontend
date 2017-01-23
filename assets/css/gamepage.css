@@ -13,15 +13,21 @@ body {
   text-align: center;
 }
 
+.over{
+  overflow: hidden;
+}
+
 .wave {
   width: 100%;
-  height: 3em;
+  height: 4em;
 }
 
 .wave1{
   background-image: url('../img/object/wave1.svg');
   background-repeat: repeat-x;
   position: absolute;
+  width: 160%;
+  left: -10px;
   bottom: 1.5em;
   z-index: -3;
   animation-name: wave;
@@ -36,12 +42,12 @@ body {
   background-repeat: repeat-x;
   background-position: -42px 0;
   position: absolute;
-  width: 200%;
+  width: 170%;
   bottom: 1em;
   left: -50%;
   z-index: -2;
   animation-name: wave;
-  animation-duration: 3s;
+  animation-duration: 4s;
   animation-delay: .1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -52,15 +58,20 @@ body {
   background-repeat: repeat-x;
   position: absolute;
   bottom: 0;
-  width: 200%;
+  width: 170%;
   left: -50%;
   z-index: -1;
   animation-name: wave;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-delay: .1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-play-state: running;
+}
+
+.bodyColorSea{
+  background: linear-gradient(#0a493d, #0e6857, #127763); /* Standard syntax */
+  
 }
 
 @keyframes wave {
