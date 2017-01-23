@@ -18,10 +18,28 @@ h1, p {
   cursor: default;
 }
 
+.fa::before, .fa::after {
+  font-family: 'FontAwesome';
+}
+
 .tooltip {
   font-family: 'thaisans_neueregular', sans-serif;
   font-weight: 200;
   white-space: nowrap;
+}
+
+#btn-getstarted {
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.8em 2.8em 0.8em 2.8em;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+#btn-getstarted:hover {
+  background: #0288d1;
+  border: 1px solid #0288d1;
 }
 
 @keyframes wave {
@@ -104,19 +122,6 @@ h1, p {
   height: 100%;
 }
 
-.menu {
-  display: inline-block;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 0.8em 2.8em 0.8em 2.8em;
-  text-decoration: none !important;
-  cursor: pointer;
-}
-
-.menu:hover {
-  background: #0288d1;
-  border: 1px solid #0288d1;
-}
 .link-map {
   font-family: 'thaisans_neueregular', sans-serif;
   display: inline-block;
@@ -145,7 +150,7 @@ h1, p {
   color: black !important;
   border: 1px solid white;
 }
-.idle .menu {
+.idle .btn {
   cursor: default;
 }
 
@@ -648,6 +653,7 @@ i.fa{
     height: 4em;
     bottom: -1em;
   }
+
   #three p{
     margin: 1em;
     font-size: 0.9em;
