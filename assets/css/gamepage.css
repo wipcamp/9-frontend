@@ -194,9 +194,7 @@ and (orientation: portrait){
   }
 }*/
 
-/*@media only screen
-and (min-device-width: 1024px)
-and (max-device-width: 1366px)
+@media only screen
 and (orientation: landscape){
   .sponsorSit{
     height: 30px;
@@ -205,15 +203,15 @@ and (orientation: landscape){
     height: 45px;
   }
   .gamecenter_logo{
-    width: 70%;
-    margin: 9% 0 0 0;
+    width: 30%;
+    margin: 5% 0 0 0;
   }
   .shipCircle{
-    margin: 25% 0 0 0;
-    height: 200px;
+    margin: 10% 0 0 0;
+    height: 150px;
   }
   .boxGameDesktop{
-    padding: 30% 0 10% 0;
+    padding: 10% 0 3% 0;
   }
   .gameOnlyDesktop{
     padding: 0 12px 0 12px;
@@ -221,14 +219,16 @@ and (orientation: landscape){
   }
   .textOnlyDesktop{
     padding: 15px 0 0 0;
-    font-size:  30px;
+    font-size:  18px;
     color: white;
   }
-}*/
+  .gameOnDesktop{
+    width: 0px;
+  }
+}
 
 @media only screen
-and (min-width: 1025px)
-and (max-width: 1440px){
+and (min-width: 1025px){
     .sponsorSit{
       height: 15px;
     }
@@ -257,5 +257,8 @@ and (max-width: 1440px){
     }
     .gameOnDesktop{
       width: 150px;
+    }
+    .bodyIconDesktop{
+      padding: 5% 0 5% 0;
     }
 }
