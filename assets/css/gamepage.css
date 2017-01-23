@@ -15,20 +15,24 @@ body {
 
 @media only screen
 and (min-device-width: 320px)
-and (max-device-width:568px){
-  .controlDiv{
-    overflow: hidden;
+and (max-device-width:568px)
+and (orientation: portrait){
+  .sponsorSit{
+    height: 15px;
   }
-  .wipcamp_logo{
-    width: 100%;
-    margin: 18% 0 0 0;
+  .sponsorKmutt{
+    height: 20px;
+  }
+  .gamecenter_logo{
+    width: 85%;
+    margin: 14% 0 0 0;
   }
   .shipCircle{
-    margin: 70px 0 0 0;
+    margin: 63px 0 0 0;
     height: 130px;
   }
   .boxGameDesktop{
-    padding: 30% 0 15% 0;
+    padding: 12.5% 0 10% 0;
   }
   .gameOnlyDesktop{
     padding: 0 3px 0 3px;
@@ -39,24 +43,31 @@ and (max-device-width:568px){
     font-size:  15px;
     color: white;
   }
+  .gameOnDesktop{
+    width: 0px;
+  }
 }
 
 @media only screen
 and (min-device-width: 375px)
-and (max-device-width: 667px){
-  .controlDiv{
-    overflow: hidden;
+and (max-device-width: 667px)
+and (orientation: portrait){
+  .sponsorSit{
+    height: 15px;
   }
-  .wipcamp_logo{
-    width: 100%;
-    margin: 12% 0 0 0;
+  .sponsorKmutt{
+    height: 20px;
+  }
+  .gamecenter_logo{
+    width: 90%;
+    margin: 10% 0 0 0;
   }
   .shipCircle{
-    margin: 100px 0 0 0;
+    margin: 30% 0 0 0;
     height: 130px;
   }
   .boxGameDesktop{
-    padding: 30% 0 15% 0;
+    padding: 19% 0 10% 0;
   }
   .gameOnlyDesktop{
     padding: 0 3px 0 3px;
@@ -64,27 +75,37 @@ and (max-device-width: 667px){
   }
   .textOnlyDesktop{
     padding: 15px 0 0 0;
-    font-size:  18px;
+    font-size:  15px;
     color: white;
+  }
+  .gameOnDesktop{
+    width: 0px;
   }
 }
 
 @media only screen
 and (min-device-width: 414px)
-and (max-device-width: 767px){
-  /*.controlDiv{
+and (max-device-width: 767px)
+and (orientation: portrait){
+  .overflow-ipad{
     overflow: hidden;
-  }*/
-  .wipcamp_logo{
-    width: 100%;
-    margin: 8% 0 0 0;
+  }
+  .sponsorSit{
+    height: 15px;
+  }
+  .sponsorKmutt{
+    height: 20px;
+  }
+  .gamecenter_logo{
+    width: 80%;
+    margin: 10% 0 0 0;
   }
   .shipCircle{
-    margin: 19% 0 0 0;
-    width: 50%;
+    margin: 30% 0 0 0;
+    height: 130px;
   }
   .boxGameDesktop{
-    padding: 25% 0 35% 0;
+    padding: 27.5% 0 10% 0;
   }
   .gameOnlyDesktop{
     padding: 0 3px 0 3px;
@@ -92,63 +113,149 @@ and (max-device-width: 767px){
   }
   .textOnlyDesktop{
     padding: 15px 0 0 0;
-    font-size:  20px;
+    font-size:  15px;
     color: white;
+  }
+  .gameOnDesktop{
+    width: 0px;
   }
 }
 
 @media only screen
 and (min-device-width: 768px)
-and (max-device-width: 1024px){
-  /*.controlDiv{
+and (max-device-width: 1024px)
+and (orientation: portrait){
+  .overflow-ipad{
     overflow: hidden;
-  }*/
-  .wipcamp_logo{
-    width: 75%;
-    padding: 10% 0 0 0;
+  }
+  .sponsorSit{
+    height: 30px;
+  }
+  .sponsorKmutt{
+    height: 45px;
+  }
+  .gamecenter_logo{
+    width: 70%;
+    margin: 6% 0 0 0;
   }
   .shipCircle{
-    margin: 120px 0 0 0;
-    height: 250px;
+    margin: 20% 0 0 0;
+    height: 200px;
   }
   .boxGameDesktop{
-    padding: 18% 0 0 0;
+    padding: 20% 0 10% 0;
   }
   .gameOnlyDesktop{
-    padding: 0 3px 0 3px;
+    padding: 0 10px 0 10px;
     width: 15%;
   }
   .textOnlyDesktop{
-    padding: 15px 0 20% 0;
+    padding: 15px 0 0 0;
     font-size:  30px;
     color: white;
   }
+  .gameOnDesktop{
+    width: 0px;
+  }
 }
 
-@media only screen
+/*@media only screen
 and (min-device-width: 1024px)
-and (max-device-width: 1366px){
-  /*.controlDiv{
+and (max-device-width: 1366px)
+and (orientation: portrait){
+  .overflow-ipad{
     overflow: hidden;
-  }*/
-  .wipcamp_logo{
-    width: 75%;
-    padding: 10% 0 0 0;
+  }
+  .sponsorSit{
+    height: 30px;
+  }
+  .sponsorKmutt{
+    height: 45px;
+  }
+  .gamecenter_logo{
+    width: 70%;
+    margin: 9% 0 0 0;
   }
   .shipCircle{
-    margin: 200px 0 0 0;
-    height: 250px;
+    margin: 30% 0 0 0;
+    height: 200px;
   }
   .boxGameDesktop{
-    padding: 25% 0 0 0;
+    padding: 30% 0 10% 0;
   }
   .gameOnlyDesktop{
-    padding: 0 3px 0 3px;
+    padding: 0 10px 0 10px;
     width: 15%;
   }
   .textOnlyDesktop{
-    padding: 15px 0 20% 0;
-    font-size:  33px;
+    padding: 15px 0 0 0;
+    font-size:  30px;
     color: white;
   }
+}*/
+
+/*@media only screen
+and (min-device-width: 1024px)
+and (max-device-width: 1366px)
+and (orientation: landscape){
+  .sponsorSit{
+    height: 30px;
+  }
+  .sponsorKmutt{
+    height: 45px;
+  }
+  .gamecenter_logo{
+    width: 70%;
+    margin: 9% 0 0 0;
+  }
+  .shipCircle{
+    margin: 25% 0 0 0;
+    height: 200px;
+  }
+  .boxGameDesktop{
+    padding: 30% 0 10% 0;
+  }
+  .gameOnlyDesktop{
+    padding: 0 12px 0 12px;
+    width: 13%;
+  }
+  .textOnlyDesktop{
+    padding: 15px 0 0 0;
+    font-size:  30px;
+    color: white;
+  }
+}*/
+
+@media only screen
+and (min-width: 1025px)
+and (max-width: 1440px){
+    .sponsorSit{
+      height: 15px;
+    }
+    .sponsorKmutt{
+      height: 30px;
+    }
+    .gamecenter_logo{
+      width: 35%;
+      margin: 5% 0 0 0;
+    }
+    .shipCircle{
+      margin: 0% 0 0 0;
+      height: 200px;
+    }
+    .boxGameDesktop{
+      padding: 0% 0 0% 0;
+    }
+    .gameOnlyDesktop{
+      padding: 0 0px 0 0px;
+      width: 0%;
+    }
+    .textOnlyDesktop{
+      padding: 0 0 0 0;
+      font-size:  0px;
+      color: white;
+    }
+    .gameOnDesktop{
+      width: 150px;
+    }
 }
