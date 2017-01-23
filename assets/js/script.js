@@ -20,6 +20,7 @@ $(document).ready(function(){
       $('.con').addClass('idle');
       $('.slide').addClass('animate');
       $('.wave2, .wave3').removeClass('animation');
+      $('.cloud1, .cloud2, .cloud3').removeClass('animation');
       $(event.target).parents().filter('.slide').removeClass('active');
       $(event.target).parents().filter('.slide').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
       event.stopPropagation();
@@ -49,6 +50,7 @@ $(document).ready(function(){
       beforeAnimate().done(afterAnimate());
     }
     $('.wave2, .wave3').addClass('animation');
+    $('.cloud1, .cloud2, .cloud3').addClass('animation');
   });
 });
 
