@@ -335,18 +335,29 @@ h1, p {
   color: black !important;
   text-decoration: none !important;
 }
-#five.active a {
+#five.active a,
+#seven.active a {
   cursor: pointer;
 }
-#five a {
+#five a,
+#seven a {
   cursor: default;
 }
-#seven ul{
-  list-style-type: none;
+#six ul{
+  list-style: none;
+}
+#six ul li:before{
+  content: "⚓";
+}
+#seven a,
+#seven a:hover {
+  color: white !important;
+  text-decoration: none !important;
 }
 #seven ul li{
   display: inline;
   background-color: white;
+  list-style-type: none;
 }
 .fa-fa-map-marker{
   color: black;
