@@ -46,6 +46,10 @@ h1, p {
   0% { right: -17%; }
   100% { right: 117%; }
 }
+
+.pause {
+  animation-play-state: paused !important;
+}
 /*=============================== Components ================================*/
 
 /*-------------- jQuery WIPCampCarousel3D ---------------*/
@@ -264,9 +268,12 @@ h1, p {
   bottom: 1em;
   left: -50%;
   z-index: 4;
-}
-.wave2.animation{
-  animation: wave 3s .1s infinite linear;
+  animation-name: wave;
+  animation-duration: 3s;
+  animation-delay: .1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
 }
 .wave3{
   background-image: url('../img/object/wave3.svg');
@@ -276,9 +283,12 @@ h1, p {
   width: 200%;
   left: -50%;
   z-index: 5;
-}
-.wave3.animation {
-  animation: wave 2s .1s infinite linear;
+  animation-name: wave;
+  animation-duration: 2s;
+  animation-delay: .1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
 }
 
 .cloud1 {
@@ -290,9 +300,12 @@ h1, p {
   width: 15%;
   height: 10%;
   z-index: 2;
-}
-.cloud1.animation {
-  animation: cloud1 30s 0s infinite linear;
+  animation-name: cloud1;
+  animation-duration: 30s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
 }
 .cloud2 {
   background-image: url('../img/object/cloud.svg');
@@ -303,9 +316,12 @@ h1, p {
   width: 10%;
   height: 5%;
   z-index: 2;
-}
-.cloud2.animation {
-  animation: cloud2 30s 3s infinite linear;
+  animation-name: cloud2;
+  animation-duration: 30s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
 }
 .cloud3 {
   background-image: url('../img/object/cloud.svg');
@@ -316,9 +332,12 @@ h1, p {
   width: 17%;
   height: 12%;
   z-index: 3;
-}
-.cloud3.animation {
-  animation: cloud3 32s 8s infinite linear;
+  animation-name: cloud3;
+  animation-duration: 32s;
+  animation-delay: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
 }
 
 .flip-horizontal, .x-grid-cell-inner, .x-column-header-text, .x-panel-header-text {
