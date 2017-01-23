@@ -8,10 +8,6 @@ $(document).ready(function(){
     e.preventDefault();
   });
 
-  $('.idle .slide a').on('click', function (e) {
-    e.preventDefault();
-  });
-
   $('[data-toggle="tooltip"]').tooltip({
     html: true
   });
