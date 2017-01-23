@@ -154,7 +154,6 @@ h1, p {
   cursor: default;
 }
 
-
 .slide.active .show--onActive {
   opacity: 1;
 }
@@ -404,6 +403,12 @@ h1, p {
   position: relative;
   z-index: 55;
 }
+#five.active h1 span {
+  display: inline;
+}
+#five h1 span {
+  display: none;
+}
 #five span{
   position: relative;
   z-index: 9;
@@ -456,10 +461,6 @@ h1, p {
 .fa-youtube{
   font-size: 1em;
   color:black;
-}
-i.fa{
-  color: black;
-  padding:0.4em;
 }
 .link-menu{
   margin-left: 1em !important;
