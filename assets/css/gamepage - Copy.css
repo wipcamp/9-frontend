@@ -667,7 +667,7 @@ th {
 /* GAMECENTER */
 
 .gamecenterBg{
-  background-color: #795C24 !important;
+  background-color: rgba(213, 149, 7, 0.96);
   /*background-image: url('');
   background-size: contain;*/
 }
