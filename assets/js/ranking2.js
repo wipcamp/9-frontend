@@ -35,7 +35,7 @@ $(function() {
 
     // get data form database ( child - users )
     // 1000 = 1 second
-    const usersRef = dbRef.child("game2");
+    const usersRef = dbRef.child("game2").orderByChild("score").limitToLast(100);
     // const getUsers = usersRef.on('value', snap => test.innerText = JSON.stringify(snap.val(), null, 3));
 
     // get score < only > !
