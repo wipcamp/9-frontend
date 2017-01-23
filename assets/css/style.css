@@ -45,12 +45,28 @@ h1, p {
 @keyframes wave {
     0% {
         -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-        transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg)
+        transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
     }
     100% {
         -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-        transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg)
+        transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
     }
+}
+@keyframes cloud1 {
+  0% { right: -15%; }
+  100% { right: 115%; }
+}
+@keyframes cloud2 {
+  0% { right: -10%; }
+  100% { right: 110%; }
+}
+@keyframes cloud3 {
+  0% { right: -17%; }
+  100% { right: 117%; }
+}
+
+.pause {
+  animation-play-state: paused !important;
 }
 /*=============================== Components ================================*/
 
@@ -257,9 +273,12 @@ h1, p {
   bottom: 1em;
   left: -50%;
   z-index: 4;
-}
-.wave2.animation{
-  animation: wave 3s .1s infinite linear;
+  animation-name: wave;
+  animation-duration: 3s;
+  animation-delay: .1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
 }
 .wave3{
   background-image: url('../img/object/wave3.svg');
@@ -269,10 +288,63 @@ h1, p {
   width: 200%;
   left: -50%;
   z-index: 5;
+  animation-name: wave;
+  animation-duration: 2s;
+  animation-delay: .1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
 }
-.wave3.animation{
-  animation: wave 2s .1s infinite linear;
+
+.cloud1 {
+  background-image: url('../img/object/cloud.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10%;
+  right: -15%;
+  width: 15%;
+  height: 10%;
+  z-index: 2;
+  animation-name: cloud1;
+  animation-duration: 30s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
 }
+.cloud2 {
+  background-image: url('../img/object/cloud.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 25%;
+  right: -10%;
+  width: 10%;
+  height: 5%;
+  z-index: 2;
+  animation-name: cloud2;
+  animation-duration: 30s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
+}
+.cloud3 {
+  background-image: url('../img/object/cloud.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 5%;
+  right: -17%;
+  width: 17%;
+  height: 12%;
+  z-index: 3;
+  animation-name: cloud3;
+  animation-duration: 32s;
+  animation-delay: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
+}
+
 .flip-horizontal, .x-grid-cell-inner, .x-column-header-text, .x-panel-header-text {
     -moz-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
@@ -282,6 +354,7 @@ h1, p {
     filter: fliph; /*IE*/
 }
 .card-content{
+  position: relative;
   margin-top: 4.5em;
   z-index: 99;
 }
@@ -340,18 +413,29 @@ h1, p {
   color: black !important;
   text-decoration: none !important;
 }
-#five.active a {
+#five.active a,
+#seven.active a {
   cursor: pointer;
 }
-#five a {
+#five a,
+#seven a {
   cursor: default;
 }
-#seven ul{
-  list-style-type: none;
+#six ul{
+  list-style: none;
+}
+#six ul li:before{
+  content: "⚓";
+}
+#seven a,
+#seven a:hover {
+  color: white !important;
+  text-decoration: none !important;
 }
 #seven ul li{
   display: inline;
   background-color: white;
+  list-style-type: none;
 }
 .fa-fa-map-marker{
   color: black;
@@ -425,6 +509,22 @@ i.fa{
   #two p{
     font-size: 1em;
   }
+  #three.active h1 {
+    font-size: 2em;
+    text-align: left;
+  }
+  #three h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 0.35em;
+  }
+  #four.active h1 {
+    font-size: 2em;
+    text-align: left;
+  }
+  #four h1 {
+    font-size: 2em;
+  }
   .slide.active h1 {
     font-size: 2em;
     text-align: left;
@@ -433,14 +533,32 @@ i.fa{
     font-size: 5em;
     text-align: center;
   }
+  #five h1{
+    font-size: 2em;
+  }
+  #six h1{
+    font-size: 2em;
+  }
+  #seven h1{
+    font-size: 2em;
+  }
   #three p{
-    margin:0.9em;
+    font-size: 1em;
+  }
+  #four p{
+    font-size: 1em;
+  }
+  #six p{
+    font-size: 1em;
+  }
+  #seven p{
+    font-size: 1em;
   }
   #three span{
     margin-top: 0.35em;
   }
   .wave3{
-    height: 4em;
+    height: 3.5em;
     bottom: -.5em;
   }
   .panel-heading{
@@ -496,8 +614,8 @@ i.fa{
   }
   .card-menu{
     margin-top: 0.2em;
-    padding: 0.2em;
-    font-size:1.15em;
+    padding: 0.40em 0.35em;
+    font-size:1em;
   }
   .slide.active h1 {
     font-size: 2em;
@@ -524,22 +642,19 @@ i.fa{
     height: 4em;
     bottom: -1em;
   }
-  #three span{
-    margin-top: 0.35em;
-    padding: 0.45em;
-    font-size: 1.15em;
-  }
+
   #three p{
     margin: 1em;
-    font-size: 1.15em;
+    font-size: 0.9em;
   }
   #four p{
-    font-size: 1em;
+    font-size: 0.9em;
   }
-  #four span{
-    margin-top: 0.35em;
-    padding: 0.3em;
-    font-size: 1.1em;
+  #six p{
+    font-size:0.9em;
+  }
+  #seven p{
+    font-size:0.9em;
   }
   .panel-heading{
     padding: 0.4em 0.6em;
@@ -560,7 +675,7 @@ i.fa{
   }
   .wave{
     width:100%;
-    height: 5em;
+    height: 4em;
   }
   #logo{
     position: relative;
@@ -579,15 +694,15 @@ i.fa{
     z-index: 3;
   }
   #two p{
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   .cisland img {
     height: 18.5em;
   }
   .card-menu{
     margin-top: 0.2em;
-    padding: 0.35em;
-    font-size:1.15em;
+    padding: 0.30em 0.40em;
+    font-size:1em;
   }
   h1{
     font-size: 1.85em;
@@ -623,22 +738,18 @@ i.fa{
   .wave3{
     bottom: -1em;
   }
-  #three span{
-    margin-top: 0.35em;
-    padding: 0.45em;
-    font-size: 1.15em;
-  }
   #three p{
     margin: 1em;
-    font-size: 1.10em;
+    font-size: 0.9em;
   }
   #four p{
-    font-size: 1.15em;
+    font-size: 0.9em;
   }
-  #four span{
-    margin-top: 0.35em;
-    padding: 0.3em;
-    font-size: 1.1em;
+  #six p{
+    font-size: 0.9em;
+  }
+  #seven p{
+    font-size: 0.9em;
   }
   .panel-heading{
     padding: 0.4em 0.6em;
@@ -649,10 +760,5 @@ i.fa{
   .panel-body{
     font-size: 0.65em;
     padding: 0.8em;
-  }
-  #five span{
-    margin-top: 0.35em;
-    padding: 0.2em;
-    font-size: 0.9em;
   }
 }
