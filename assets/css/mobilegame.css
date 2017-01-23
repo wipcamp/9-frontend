@@ -4,7 +4,7 @@
 body {
     font-family: 'Itim', sans-serif;
     margin: 0 0 0 0;
-    background: #ececec;
+    background:  rgba(213, 149, 7, 0.96) ;
 }
 
 .container {
@@ -40,6 +40,7 @@ and (orientation: portrait) {
     position: fixed;
   }
 }
+
 @media only screen
 and (min-device-width: 320px)
 and (max-device-width: 736px)
@@ -51,4 +52,48 @@ and (orientation: landscape) {
     z-index: -1 !important;
     position: fixed;
   }
+}
+
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait) {
+    .fixHeight {
+      max-height: 736px;
+    }
+    .warn{
+      width: 100%;
+      height: 55%;
+      background-color: rgb(252, 53, 0);
+      z-index: 1 !important;
+      position: absolute;
+    }
+    .textWarn{
+      padding: 60% 0 0 0;
+      color: white;
+      font-size: 365%;
+    }
+    .setIndexGame{
+      z-index: -1 !important;
+      position: fixed;
+    }
+}
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape) {
+    .fixHeight {
+      max-height: 736px;
+    }
+    .textWarn{
+      font-size: 0px;
+    }
+    .setIndexGame{
+      z-index: -1 !important;
+      position: fixed;
+    }
+    #game {
+      margin: 100px 0 0 0;
+      padding: 0 0 0 24px;
+    }
 }
