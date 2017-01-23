@@ -15,7 +15,7 @@ $(document).ready(function(){
     html: true
   });
 
-  $('span.menu').click(function (event) {
+  $('.card-btn-back').click(function (event) {
     if(getTransform($(event.target).parents().filter('.slide'))[0] == 0){
       $('.con').addClass('idle');
       $('.slide').addClass('animate');
