@@ -32,7 +32,7 @@ and (orientation: portrait){
     height: 130px;
   }
   .boxGameDesktop{
-    padding: 12.5% 0 10% 0;
+    padding: 13.5% 0 10% 0;
   }
   .gameOnlyDesktop{
     padding: 0 3px 0 3px;
@@ -40,7 +40,12 @@ and (orientation: portrait){
   }
   .textOnlyDesktop{
     padding: 15px 0 0 0;
-    font-size:  15px;
+    font-size:  13px;
+    color: white;
+  }
+  .returnToHome{
+    padding: 15px 0 0 0;
+    font-size:  13px;
     color: white;
   }
   .gameOnDesktop{
@@ -78,6 +83,11 @@ and (orientation: portrait){
     font-size:  15px;
     color: white;
   }
+  .returnToHome{
+    padding: 15px 0 0 0;
+    font-size:  15px;
+    color: white;
+  }
   .gameOnDesktop{
     width: 0px;
   }
@@ -87,9 +97,6 @@ and (orientation: portrait){
 and (min-device-width: 414px)
 and (max-device-width: 767px)
 and (orientation: portrait){
-  .overflow-ipad{
-    overflow: hidden;
-  }
   .sponsorSit{
     height: 15px;
   }
@@ -116,6 +123,11 @@ and (orientation: portrait){
     font-size:  15px;
     color: white;
   }
+  .returnToHome{
+    padding: 15px 0 0 0;
+    font-size:  15px;
+    color: white;
+  }
   .gameOnDesktop{
     width: 0px;
   }
@@ -123,11 +135,8 @@ and (orientation: portrait){
 
 @media only screen
 and (min-device-width: 768px)
-and (max-device-width: 1024px)
+and (max-device-width: 1023px)
 and (orientation: portrait){
-  .overflow-ipad{
-    overflow: hidden;
-  }
   .sponsorSit{
     height: 30px;
   }
@@ -151,7 +160,12 @@ and (orientation: portrait){
   }
   .textOnlyDesktop{
     padding: 15px 0 0 0;
-    font-size:  30px;
+    font-size:  28px;
+    color: white;
+  }
+  .returnToHome{
+    padding: 15px 0 0 0;
+    font-size:  28px;
     color: white;
   }
   .gameOnDesktop{
@@ -159,13 +173,10 @@ and (orientation: portrait){
   }
 }
 
-/*@media only screen
+@media only screen
 and (min-device-width: 1024px)
-and (max-device-width: 1366px)
+and (max-device-width: 1024px)
 and (orientation: portrait){
-  .overflow-ipad{
-    overflow: hidden;
-  }
   .sponsorSit{
     height: 30px;
   }
@@ -177,11 +188,11 @@ and (orientation: portrait){
     margin: 9% 0 0 0;
   }
   .shipCircle{
-    margin: 30% 0 0 0;
+    margin: 25% 0 0 0;
     height: 200px;
   }
   .boxGameDesktop{
-    padding: 30% 0 10% 0;
+    padding: 25% 0 11% 0;
   }
   .gameOnlyDesktop{
     padding: 0 10px 0 10px;
@@ -192,7 +203,15 @@ and (orientation: portrait){
     font-size:  30px;
     color: white;
   }
-}*/
+  .returnToHome{
+    padding: 15px 0 0 0;
+    font-size:  30px;
+    color: white;
+  }
+  .gameOnDesktop{
+    width: 0px;
+  }
+}
 
 @media only screen
 and (orientation: landscape){
@@ -218,6 +237,11 @@ and (orientation: landscape){
     width: 13%;
   }
   .textOnlyDesktop{
+    padding: 15px 0 0 0;
+    font-size:  18px;
+    color: white;
+  }
+  .returnToHome{
     padding: 15px 0 0 0;
     font-size:  18px;
     color: white;
@@ -254,6 +278,14 @@ and (min-width: 1025px){
       padding: 0 0 0 0;
       font-size:  0px;
       color: white;
+    }
+    .returnToHome{
+      padding: 150px 0 0 0;
+      font-size:  25px;
+      color: white;
+    }
+    .divText{
+      padding: 30px 0 0 0;
     }
     .gameOnDesktop{
       width: 150px;
