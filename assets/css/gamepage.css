@@ -7,7 +7,7 @@ body {
   height: auto;
 }
 .bg{
-  background: linear-gradient(#141123, #2d214d, #463b6b); /* Standard syntax */
+  background: linear-gradient(#141123, #2d214d, #127763); /* Standard syntax */
 }
 .center {
   text-align: center;
@@ -71,7 +71,9 @@ body {
 
 .bodyColorSea{
   background: linear-gradient(#0a493d, #0e6857, #127763); /* Standard syntax */
-  
+  position: relative;
+  top: -10px;
+  z-index: -4;
 }
 
 @keyframes wave {
