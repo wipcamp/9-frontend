@@ -817,3 +817,53 @@ i.fa{
     padding: 0.8em;
   }
 }
+@media only screen
+and (min-device-width : 1024px)
+and (max-device-width : 1366px) {
+  #logo{
+    top:19%;
+  }
+  #two h1{
+    font-size:4em;
+  }
+  #two p{
+    font-size:1.2em;
+  }
+  #three h1{
+    font-size:4em;
+  }
+  #three p{
+    font-size:1.2em;
+  }
+  #four h1{
+    font-size:4em;
+  }
+  #four p{
+    font-size:1.2em;
+  }
+  .panel-heading{
+    padding: 0.6em 0.8em;
+  }
+  .panel-title{
+    font-size: 1.2em;
+  }
+  .panel-body{
+    font-size: 1em;
+    padding: 1em;
+  }
+  #six h1{
+    font-size:4em;
+  }
+  #six strong{
+    font-size:1.2em;
+  }
+  #six li{
+    font-size:1.2em;
+  }
+  #seven h1{
+    font-size:4em;
+  }
+  #seven p{
+    font-size:1.2em;
+  }
+}
