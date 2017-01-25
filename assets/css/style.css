@@ -371,8 +371,7 @@ h1, p {
   background-color: #fff;
   display: inline-block;
   padding: 0.45em;
-  position: absolute;
-  top:4em;
+
 }
 .link-menu{
   text-decoration: none !important;
@@ -545,10 +544,10 @@ h1, p {
     margin-top: 0.35em;
   }
   #two p{
-    font-size: 1em;
+    font-size: 1.15em;
   }
   .slide.active h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     text-align: left;
   }
   .slide h1 {
@@ -556,16 +555,19 @@ h1, p {
     text-align: center;
   }
   #three p{
-    font-size: 1em;
+    font-size: 1.15em;
   }
   #four p{
-    font-size: 1em;
+    font-size: 1.15em;
   }
   #six p{
-    font-size: 1em;
+    font-size: 1.15em;
+  }
+  #six ul{
+    font-size: 1.07em;
   }
   #seven p{
-    font-size: 1em;
+    font-size: 1.15em;
   }
   #three span{
     margin-top: 0.35em;
@@ -581,7 +583,7 @@ h1, p {
     font-size: 0.9em;
   }
   .panel-body{
-    font-size: 0.80em;
+    font-size: 0.90em;
     padding: 0.8em;
   }
   #seven ul li img{
@@ -649,7 +651,7 @@ h1, p {
     z-index: 10;
   }
   #two p{
-    font-size: 0.9em;
+    font-size: 1em;
   }
 
   .card-menu{
@@ -685,25 +687,25 @@ h1, p {
 
   #three p{
     margin: 1em;
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #four p{
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #six p{
-    font-size:0.9em;
+    font-size:1em;
   }
   #seven p{
-    font-size:0.9em;
+    font-size:1em;
   }
   .panel-heading{
     padding: 0.4em 0.6em;
   }
   .panel-title{
-    font-size: 0.9em;
+    font-size: 0.95em;
   }
   .panel-body{
-    font-size: 0.80em;
+    font-size: 0.85em;
     padding: 0.8em;
   }
 }
@@ -765,7 +767,7 @@ h1, p {
   }
   .card-menu{
     margin-top: 0.2em;
-    padding: 0.30em 0.40em;
+    padding: 0.30em 0.30em;
     font-size:1em;
   }
   h1 {
@@ -802,6 +804,9 @@ h1, p {
   .wave3{
     bottom: -1em;
   }
+  #two p{
+    font-size: 0.9em;
+  }
   #three p{
     margin: 1em;
     font-size: 0.9em;
@@ -819,60 +824,10 @@ h1, p {
     padding: 0.4em 0.6em;
   }
   .panel-title{
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   .panel-body{
-    font-size: 0.65em;
+    font-size: 0.85em;
     padding: 0.8em;
-  }
-}
-@media only screen
-and (min-device-width : 1024px)
-and (max-device-width : 1366px) {
-  #logo{
-    top:19%;
-  }
-  #two h1{
-    font-size:4em;
-  }
-  #two p{
-    font-size:1.2em;
-  }
-  #three h1{
-    font-size:4em;
-  }
-  #three p{
-    font-size:1.2em;
-  }
-  #four h1{
-    font-size:4em;
-  }
-  #four p{
-    font-size:1.2em;
-  }
-  .panel-heading{
-    padding: 0.6em 0.8em;
-  }
-  .panel-title{
-    font-size: 1.2em;
-  }
-  .panel-body{
-    font-size: 1em;
-    padding: 1em;
-  }
-  #six h1{
-    font-size:4em;
-  }
-  #six strong{
-    font-size:1.2em;
-  }
-  #six li{
-    font-size:1.2em;
-  }
-  #seven h1{
-    font-size:4em;
-  }
-  #seven p{
-    font-size:1.2em;
   }
 }
