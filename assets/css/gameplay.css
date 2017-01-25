@@ -1,9 +1,10 @@
+.overFlowHidden{
+  overflow: hidden;
+}
 .background{
     background: linear-gradient(#141123, #2d214d, #463b6b) !important;
 }
 .logo{
-    margin-top:-20%;
-    margin-bottom:-15%;
     height: 100%;
     width : 100%;
 }
