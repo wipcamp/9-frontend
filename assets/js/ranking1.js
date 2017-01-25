@@ -52,7 +52,7 @@ $(function() {
     $(document).ready(function() {
       // New delay
       if(users !== temp ) {
-        delay=2250;
+        delay=2500;
         setTimeout(function() {
           var t = $('.game-tbl').DataTable({
             data: users,
