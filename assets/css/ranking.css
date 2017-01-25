@@ -74,6 +74,9 @@ body {
         color: white;
         font-size: 16px !important;
     }
+    .marginTableMobile{
+      margin: 0 10px 0 10px;
+    }
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
