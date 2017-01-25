@@ -75,7 +75,24 @@ body {
         font-size: 16px !important;
     }
     .marginTableMobile{
-      margin: 0 10px 0 10px;
+      margin: 0 15px 0 15px;
+    }
+    .backButton{
+      padding: 5px 0px 0 10px;
+      font-size: 30px;
+      color: white;
+      position: absolute;
+    }
+    .homeButton{
+      padding: 0px 0px 0 0px;
+      font-size: 30px;
+      color: white;
+    }
+    .buttonSet{
+      /*padding: 5px 0px 0 5px;
+      font-size: 30px;
+      color: white;
+      position: absolute;*/
     }
 }
 
@@ -348,6 +365,20 @@ body {
         margin: 0 10px 0 10px;
         color: white;
         font-size: 22px !important;
+    }
+    .backButton{
+      padding: 1% 0px 0 1%;
+      font-size: 50px;
+      color: white;
+      position: absolute;
+    }
+    .homeButton{
+      padding: 0px 0px 0 0px;
+      font-size: 30px;
+      color: white;
+    }
+    .buttonSet{
+      margin: 70px 0px 0 0px;
     }
 }
 

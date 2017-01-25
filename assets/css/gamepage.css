@@ -117,7 +117,7 @@ and (orientation: portrait){
     margin: 14% 0 0 0;
   }
   .shipCircle{
-    margin: 63px 0 0 0;
+    margin: 0px 0 0 0;
     height: 130px;
   }
   .boxGameDesktop{
@@ -141,7 +141,34 @@ and (orientation: portrait){
     width: 0px;
   }
   .bubble{
-
+    width: 100%;
+    height: 4em;
+  }
+  .bubble3{
+    width: 100%;
+    animation-name: wave;
+    animation-duration: 7.3s;
+    animation-delay: .1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+  }
+  .backButton{
+    padding: 5px 0px 0 5px;
+    font-size: 30px;
+    color: white;
+    position: absolute;
+  }
+  .homeButton{
+    padding: 0px 0px 0 0px;
+    font-size: 30px;
+    color: white;
+  }
+  .buttonSet{
+    /*padding: 5px 0px 0 5px;
+    font-size: 30px;
+    color: white;
+    position: absolute;*/
   }
 }
 
@@ -390,7 +417,7 @@ and (min-width: 1025px){
       top: 10;
       width: 100%;
       animation-name: wave;
-      animation-duration: 4.5s;
+      animation-duration: 6.5s;
       animation-delay: .1s;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
@@ -401,7 +428,7 @@ and (min-width: 1025px){
       /*top: 10;*/
       width: 100%;
       animation-name: wave2;
-      animation-duration: 4.5s;
+      animation-duration: 5.5s;
       animation-delay: .1s;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
@@ -422,7 +449,7 @@ and (min-width: 1025px){
       /*top: -250px;*/
       width: 100%;
       animation-name: wave;
-      animation-duration: 4.5s;
+      animation-duration: 5.5s;
       animation-delay: .1s;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
@@ -442,5 +469,18 @@ and (min-width: 1025px){
       width: 100%;
       height: 4em;
     }
-
+    .backButton{
+      padding: 1% 0px 0 1%;
+      font-size: 50px;
+      color: white;
+      position: absolute;
+    }
+    .homeButton{
+      padding: 0px 0px 0 0px;
+      font-size: 30px;
+      color: white;
+    }
+    .buttonSet{
+      margin: 70px 0px 0 0px;
+    }
 }
