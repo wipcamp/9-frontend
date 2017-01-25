@@ -1,424 +1,394 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Itim');
-
 body {
-  font-family: 'Itim', sans-serif;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  color: white !important;
-  background: linear-gradient(#141123, #2d214d);
-
+    font-family: 'Itim', sans-serif;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    color: white !important;
+    background: linear-gradient(#141123, #2d214d);
 }
-
 
 .logo-wipcamp--full {
-  margin: 0 auto;
-  display: block;
-  width: 100%;
-  max-width: 600px;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    max-width: 600px;
 }
 
+
 /* front_game */
+
+
 /* all in leaderboard */
+
 
 /*========================================================================*/
 
-@media (min-width: 320px)
-and (max-width:568px)
- {
-  .game-fontLeaderboard {
-    margin: 50px 0 10px 0;
-    text-align: center  ;
-    font-size: 280% !important;
-  }
-  .game-fontGameName{
-    text-align: center;
-    font-size: 170% !important;
-    margin-bottom: 50px;
-  }
-  .game-fontHeadTable{
-    font-size: 15px;
-    text-align: center;
-  }
-  .game-fontInTable{
-    font-size: 15px;
-    text-align: center;
-  }
-  .buttonButtom {
-    margin: 30px 0 30px 0 !important;
-  }
-  .game-forCenter{
-    text-align: center;
-  }
-  .rounded-circle{
-    height: 35px;
-    width: auto;
-  }
-  .wipgamebody {
-    min-width: 200px;
-    padding: 30px 0 30px 0;
-    border-width: 5px;
-    border-style: solid;
-    border-radius: 14px;
-    text-align: center;
-    background-color: white;
-    opacity: .8;
-  }
-  .ghost-button {
-      color: #fff;
-      background: inline;
-      border: 2px solid #fff;
-      font-size: 17px;
-      padding: 7px 12px;
-      border-radius: 8px;
-      margin: 0 6px 0 6px;
-      display: inline-block;
-      text-decoration: none;
-      font-family: 'Itim', sans-serif;
-      min-width: 120px;
-  }
- }
-@media (min-width: 375px)
-and (max-width: 767px)
-{
-  .game-fontLeaderboard {
-    margin: 50px 0 10px 0;
-    text-align: center  ;
-    font-size: 280% !important;
-  }
-  .game-fontGameName{
-    text-align: center;
-    font-size: 170% !important;
-    margin-bottom: 50px;
-  }
-  .game-fontHeadTable{
-    font-size: 15px;
-    text-align: center;
-  }
-  .game-fontInTable{
-    font-size: 15px;
-    text-align: center;
-  }
-  .buttonButtom {
-    margin: 30px 0 30px 0 !important;
-  }
-  .game-forCenter{
-    text-align: center;
-  }
-  .rounded-circle{
-    height: 35px;
-    width: auto;
-  }
-  .wipgamebody {
-    min-width: 200px;
-    padding: 30px 0 30px 0;
-    border-width: 5px;
-    border-style: solid;
-    border-radius: 14px;
-    text-align: center;
-    background-color: white;
-    opacity: .8;
-  }
-  .ghost-button {
-      color: #fff;
-      background: inline;
-      border: 2px solid #fff;
-      font-size: 17px;
-      padding: 7px 12px;
-      border-radius: 8px;
-      margin: 0 6px 0 6px;
-      display: inline-block;
-      text-decoration: none;
-      font-family: 'Itim', sans-serif;
-      min-width: 120px;
-  }
+@media (min-width: 320px) and (max-width:568px) {
+    .game-fontLeaderboard {
+        margin: 50px 0 10px 0;
+        text-align: center;
+        font-size: 280% !important;
+    }
+    .game-fontGameName {
+        text-align: center;
+        font-size: 170% !important;
+        margin-bottom: 50px;
+    }
+    .game-fontHeadTable {
+        font-size: 15px;
+        text-align: center;
+    }
+    .game-fontInTable {
+        font-size: 15px;
+        text-align: center;
+    }
+    .buttonButtom {
+        margin: 30px 0 30px 0 !important;
+    }
+    .game-forCenter {
+        text-align: center;
+    }
+    .rounded-circle {
+        height: 35px;
+        width: auto;
+    }
+    .wipgamebody {
+        min-width: 200px;
+        padding: 30px 0 30px 0;
+        border-width: 5px;
+        border-style: solid;
+        border-radius: 14px;
+        text-align: center;
+        background-color: white;
+        opacity: .8;
+    }
+    .btn-width {
+        width: 120px;
+        background-color: #eeeeee;
+        font-family: 'Itim', sans-serif;
+        height: 35px;
+        padding: 0;
+        margin: 0 5px 0 5px;
+        color: white;
+        font-size: 16px !important;
+    }
 }
-@media (min-width: 768px)
-and (max-width: 1024px){
-  .game-fontLeaderboard {
-    margin: 40px 0 0 0;
-    text-align: center;
-    font-size: 60px !important;
-  }
-  .game-fontGameName{
-    text-align: center;
-    font-size: 40px !important;
-    margin-bottom: 30px;
-  }
-  .game-fontHeadTable{
-    font-size: 20px;
-    text-align: center;
-  }
-  .game-fontInTable{
-    font-size: 20px;
-    text-align: center;
-  }
-  .buttonButtom {
-    margin: 30px 0 30px 0;
-  }
-  .game-forCenter{
-    text-align: center;
-  }
-  .rounded-circle {
-    width: auto;;
-    height: 45px;
-  }
-  .wipgamebody {
-    min-width: 300px;
-    padding: 30px 0 30px 0;
-    border-width: 5px;
-    border-style: solid;
-    border-radius: 14px;
-    text-align: center;
-    background-color: white;
-    opacity: .8;
-  }
-  .ghost-button {
-      color: #fff;
-      background: inline;
-      border: 2px solid #fff;
-      font-size: 17px;
-      padding: 7px 12px;
-      border-radius: 8px;
-      margin: 0 6px 0 6px;
-      display: inline-block;
-      text-decoration: none;
-      font-family: 'Itim', sans-serif;
-      min-width: 120px;
-  }
- }
 
-@media (min-width: 1025px)
-and (max-width: 1199px){
- .game-fontLeaderboard {
-   margin: 40px 0 0 0;
-   text-align: center;
-   font-size: 60px !important;
- }
- .game-fontGameName{
-   text-align: center;
-   font-size: 40px !important;
-   margin-bottom: 30px;
- }
- .game-fontHeadTable{
-   font-size: 20px;
-   text-align: center;
- }
- .game-fontInTable{
-   font-size: 20px;
-   text-align: center;
- }
- .buttonButtom {
-   margin: 30px 0 30px 0;
- }
- .game-forCenter{
-   text-align: center;
- }
- .rounded-circle {
-   width: auto;;
-   height: 45px;
- }
- .wipgamebody {
-   min-width: 300px;
-   padding: 30px 0 30px 0;
-   border-width: 5px;
-   border-style: solid;
-   border-radius: 14px;
-   text-align: center;
-   background-color: white;
-   opacity: .8;
- }
- .ghost-button {
-     color: #fff;
-     background: inline;
-     border: 2px solid #fff;
-     font-size: 20px;
-     padding: 8px 15px;
-     border-radius: 8px;
-     margin: 0 6px 0 6px;
-     display: inline-block;
-     text-decoration: none;
-     font-family: 'Itim', sans-serif;
-     min-width: 150px;
- }
+@media (min-width: 375px) and (max-width: 767px) {
+    .game-fontLeaderboard {
+        margin: 50px 0 10px 0;
+        text-align: center;
+        font-size: 280% !important;
+    }
+    .game-fontGameName {
+        text-align: center;
+        font-size: 170% !important;
+        margin-bottom: 50px;
+    }
+    .game-fontHeadTable {
+        font-size: 15px;
+        text-align: center;
+    }
+    .game-fontInTable {
+        font-size: 15px;
+        text-align: center;
+    }
+    .buttonButtom {
+        margin: 30px 0 30px 0 !important;
+    }
+    .game-forCenter {
+        text-align: center;
+    }
+    .rounded-circle {
+        height: 35px;
+        width: auto;
+    }
+    .wipgamebody {
+        min-width: 200px;
+        padding: 30px 0 30px 0;
+        border-width: 5px;
+        border-style: solid;
+        border-radius: 14px;
+        text-align: center;
+        background-color: white;
+        opacity: .8;
+    }
+
+    .btn-width {
+        width: 130px;
+        background-color: #eeeeee;
+        font-family: 'Itim', sans-serif;
+        height: 38px;
+        padding: 0;
+        margin: 0 5px 0 5px;
+        color: white;
+        font-size: 17px !important;
+    }
 }
- @media (min-width: 1200px) {
-   .game-fontLeaderboard {
-     margin: 40px 0 0 0;
-     text-align: center;
-     font-size: 60px !important;
-   }
-   .game-fontGameName{
-     text-align: center;
-     font-size: 40px !important;
-     margin-bottom: 30px;
-   }
-   .game-fontLeaderboard {
-     font-size: 60px !important;
-   }
-   .game-fontGameName{
-     font-size: 35px !important;
-     margin-bottom: 40px;
-   }
-   .game-fontHeadTable{
-     font-size: 27px;
-     text-align: center;
-   }
-   .game-fontInTable{
-     font-size: 20px;
-     text-align: center;
-   }
-   .buttonButtom {
-     margin: 30px 0 30px 0;
-   }
-   .game-forCenter{
-     text-align: center;
-   }
-   .rounded-circle {
-     width: auto;
-     height: 60px;
-   }
-   .wipgamebody {
-     min-width: 500px;
-     padding: 30px 0 30px 0;
-     border-width: 5px;
-     border-style: solid;
-     border-radius: 14px;
-     text-align: center;
-     background-color: white;
-     opacity: .8;
-   }
-   .ghost-button {
-       color: #fff;
-       background: inline;
-       border: 2px solid #fff;
-       font-size: 20px;
-       padding: 8px 15px;
-       border-radius: 8px;
-       margin: 0 6px 0 6px;
-       display: inline-block;
-       text-decoration: none;
-       font-family: 'Itim', sans-serif;
-       min-width: 150px;
-   }
- }
- @media (min-width: 1260px) {
-   .game-fontLeaderboard {
-     margin: 40px 0 0 0;
-     text-align: center;
-     font-size: 60px !important;
-   }
-   .game-fontGameName{
-     text-align: center;
-     font-size: 40px !important;
-     margin-bottom: 30px;
-   }
-   .game-fontLeaderboard {
-     font-size: 60px !important;
-   }
-   .game-fontGameName{
-     font-size: 35px !important;
-     margin-bottom: 40px;
-   }
-   .game-fontHeadTable{
-     font-size: 27px;
-     text-align: center;
-   }
-   .game-fontInTable{
-     font-size: 20px;
-     text-align: center;
-   }
-   .buttonButtom {
-     margin: 30px 0 30px 0;
-   }
-   .game-forCenter{
-     text-align: center;
-   }
-   .rounded-circle {
-     width: auto;
-     height: 60px;
-   }
 
-   .wipgamebody {
-     min-width: 500px;
-     padding: 30px 0 30px 0;
-     border-width: 5px;
-     border-style: solid;
-     border-radius: 14px;
-     text-align: center;
-     background-color: white;
-     opacity: .8;
-   }
-   .ghost-button {
-       color: #fff;
-       background: inline;
-       border: 2px solid #fff;
-       font-size: 20px;
-       padding: 8px 15px;
-       border-radius: 8px;
-       margin: 0 6px 0 6px;
-       display: inline-block;
-       text-decoration: none;
-       font-family: 'Itim', sans-serif;
-       min-width: 150px;
-   }
- }
- @media (min-width: 1460px) {
-   .game-fontLeaderboard {
-     margin: 40px 0 0 0;
-     text-align: center;
-     font-size: 60px !important;
-   }
-   .game-fontGameName{
-     text-align: center;
-     font-size: 40px !important;
-     margin-bottom: 30px;
-   }
-   .ghost-button {
-       color: #fff;
-       background: inline;
-       border: 2px solid #fff;
-       font-size: 20px;
-       padding: 8px 15px;
-       border-radius: 8px;
-       margin: 0 6px 0 6px;
-       display: inline-block;
-       text-decoration: none;
-       font-family: 'Itim', sans-serif;
-       min-width: 180px;
-   }
+@media (min-width: 768px) and (max-width: 1024px) {
+    .game-fontLeaderboard {
+        margin: 40px 0 0 0;
+        text-align: center;
+        font-size: 60px !important;
+    }
+    .game-fontGameName {
+        text-align: center;
+        font-size: 40px !important;
+        margin-bottom: 30px;
+    }
+    .game-fontHeadTable {
+        font-size: 20px;
+        text-align: center;
+    }
+    .game-fontInTable {
+        font-size: 20px;
+        text-align: center;
+    }
+    .buttonButtom {
+        margin: 30px 0 30px 0;
+    }
+    .game-forCenter {
+        text-align: center;
+    }
+    .rounded-circle {
+        width: auto;
+        ;
+        height: 45px;
+    }
+    .wipgamebody {
+        min-width: 300px;
+        padding: 30px 0 30px 0;
+        border-width: 5px;
+        border-style: solid;
+        border-radius: 14px;
+        text-align: center;
+        background-color: white;
+        opacity: .8;
+    }
+    .btn-width {
+        width: 140px;
+        background-color: #eeeeee;
+        font-family: 'Itim', sans-serif;
+        height: 45px;
+        padding: 0;
+        margin: 0 10px 0 10px;
+        color: white;
+        font-size: 20px !important;
+    }
 }
- @media (min-width: 1625px) {
-   .game-fontLeaderboard {
-     margin: 40px 0 0 0;
-     text-align: center;
-     font-size: 60px !important;
-   }
-   .game-fontGameName{
-     text-align: center;
-     font-size: 40px !important;
-     margin-bottom: 30px;
-   }
 
- }
-
- /*========================================================================*/
-
-.game-body{
-  color:#fff;
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .game-fontLeaderboard {
+        margin: 40px 0 0 0;
+        text-align: center;
+        font-size: 60px !important;
+    }
+    .game-fontGameName {
+        text-align: center;
+        font-size: 40px !important;
+        margin-bottom: 30px;
+    }
+    .game-fontHeadTable {
+        font-size: 20px;
+        text-align: center;
+    }
+    .game-fontInTable {
+        font-size: 20px;
+        text-align: center;
+    }
+    .buttonButtom {
+        margin: 30px 0 30px 0;
+    }
+    .game-forCenter {
+        text-align: center;
+    }
+    .rounded-circle {
+        width: auto;
+        ;
+        height: 45px;
+    }
+    .wipgamebody {
+        min-width: 300px;
+        padding: 30px 0 30px 0;
+        border-width: 5px;
+        border-style: solid;
+        border-radius: 14px;
+        text-align: center;
+        background-color: white;
+        opacity: .8;
+    }
+    .btn-width {
+        width: 140px;
+        background-color: #eeeeee;
+        font-family: 'Itim', sans-serif;
+        height: 40px;
+        padding: 0;
+        margin: 0 5px 0 5px;
+        color: white;
+        font-size: 18px !important;
+    }
 }
+
+@media (min-width: 1200px) {
+    .game-fontLeaderboard {
+        margin: 40px 0 0 0;
+        text-align: center;
+        font-size: 60px !important;
+    }
+    .game-fontGameName {
+        text-align: center;
+        font-size: 40px !important;
+        margin-bottom: 30px;
+    }
+    .game-fontLeaderboard {
+        font-size: 60px !important;
+    }
+    .game-fontGameName {
+        font-size: 35px !important;
+        margin-bottom: 40px;
+    }
+    .game-fontHeadTable {
+        font-size: 27px;
+        text-align: center;
+    }
+    .game-fontInTable {
+        font-size: 20px;
+        text-align: center;
+    }
+    .buttonButtom {
+        margin: 30px 0 30px 0;
+    }
+    .game-forCenter {
+        text-align: center;
+    }
+    .rounded-circle {
+        width: auto;
+        height: 60px;
+    }
+    .wipgamebody {
+        min-width: 500px;
+        padding: 30px 0 30px 0;
+        border-width: 5px;
+        border-style: solid;
+        border-radius: 14px;
+        text-align: center;
+        background-color: white;
+        opacity: .8;
+    }
+    .btn-width {
+        width: 150px;
+        background-color: #eeeeee;
+        font-family: 'Itim', sans-serif;
+        height: 40px;
+        padding: 0;
+        margin: 0 10px 0 10px;
+        color: white;
+        font-size: 20px !important;
+    }
+}
+
+@media (min-width: 1260px) {
+    .game-fontLeaderboard {
+        margin: 40px 0 0 0;
+        text-align: center;
+        font-size: 60px !important;
+    }
+    .game-fontGameName {
+        text-align: center;
+        font-size: 40px !important;
+        margin-bottom: 30px;
+    }
+    .game-fontLeaderboard {
+        font-size: 60px !important;
+    }
+    .game-fontGameName {
+        font-size: 35px !important;
+        margin-bottom: 40px;
+    }
+    .game-fontHeadTable {
+        font-size: 27px;
+        text-align: center;
+    }
+    .game-fontInTable {
+        font-size: 20px;
+        text-align: center;
+    }
+    .buttonButtom {
+        margin: 30px 0 30px 0;
+    }
+    .game-forCenter {
+        text-align: center;
+    }
+    .rounded-circle {
+        width: auto;
+        height: 60px;
+    }
+    .wipgamebody {
+        min-width: 500px;
+        padding: 30px 0 30px 0;
+        border-width: 5px;
+        border-style: solid;
+        border-radius: 14px;
+        text-align: center;
+        background-color: white;
+        opacity: .8;
+    }
+    .btn-width {
+        width: 160px;
+        background-color: #eeeeee;
+        font-family: 'Itim', sans-serif;
+        height: 45px;
+        padding: 0;
+        margin: 0 10px 0 10px;
+        color: white;
+        font-size: 22px !important;
+    }
+}
+
+@media (min-width: 1460px) {
+    .game-fontLeaderboard {
+        margin: 40px 0 0 0;
+        text-align: center;
+        font-size: 60px !important;
+    }
+    .game-fontGameName {
+        text-align: center;
+        font-size: 40px !important;
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 1625px) {
+    .game-fontLeaderboard {
+        margin: 40px 0 0 0;
+        text-align: center;
+        font-size: 60px !important;
+    }
+    .game-fontGameName {
+        text-align: center;
+        font-size: 40px !important;
+        margin-bottom: 30px;
+    }
+}
+
+
+/*========================================================================*/
+
+.game-body {
+    color: #fff;
+}
+
 th {
-  text-align: center !important;
+    text-align: center !important;
 }
-.table{
-  text-align: center;
+
+.table {
+    text-align: center;
 }
-.ghost-button:hover, .ghost-button:active {
-  color:#000;
-  background:#fff;
-  text-decoration: none;
-}
-.game-tbl{
-  color:black;
+
+.game-tbl {
+    color: black;
 }
