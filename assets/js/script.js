@@ -19,8 +19,9 @@ $(document).ready(function(){
     if(getTransform($(event.target).parents().filter('.slide'))[0] == 0){
       $('.con').addClass('idle');
       $('.slide').addClass('animate');
-      $('.wave2, .wave3').addClass('pause');
+      $('.wave1, .wave2, .wave3').addClass('pause');
       $('.cloud1, .cloud2, .cloud3').addClass('pause');
+      $('.ship').addClass('pause');
       $(event.target).parents().filter('.slide').removeClass('active');
       $(event.target).parents().filter('.slide').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
       event.stopPropagation();
@@ -49,8 +50,9 @@ $(document).ready(function(){
 
       beforeAnimate().done(afterAnimate());
     }
-    $('.wave2, .wave3').removeClass('pause');
+    $('.wave1, .wave2, .wave3').removeClass('pause');
     $('.cloud1, .cloud2, .cloud3').removeClass('pause');
+    $('.ship').removeClass('pause');
   });
 });
 

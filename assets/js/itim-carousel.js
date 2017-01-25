@@ -126,8 +126,9 @@ function WipcampCarousel(element) {
         else
         {
           $('.slide').addClass('animate');
-          $('.wave2, .wave3').addClass('pause');
+          $('.wave1, .wave2, .wave3').addClass('pause');
           $('.cloud1, .cloud2, .cloud3').addClass('pause');
+          $('.ship').addClass('pause');
           $('.slide.active').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
           $('.slide.active').removeClass('active');
           $('.con').removeClass('idle');
@@ -135,8 +136,9 @@ function WipcampCarousel(element) {
           setTimeout(function() { $('.slide:eq('+currentSlide+')').addClass('active'); }, 1000);
           setTimeout(function() { $('.slide:eq('+currentSlide+')').css({"transform": "perspective(100px) translate3d(0, 0, 0)"}); }, 1500);
           setTimeout(function() {
-            $('.wave2, .wave3').removeClass('pause');
+            $('.wave1, .wave2, .wave3').removeClass('pause');
             $('.cloud1, .cloud2, .cloud3').removeClass('pause');
+            $('.ship').removeClass('pause');
           }, 1500);
           $('.slide').removeClass('animate');
         }
@@ -147,8 +149,9 @@ function WipcampCarousel(element) {
         }
         else{
           $('.slide').addClass('animate');
-          $('.wave2, .wave3').addClass('pause');
+          $('.wave1, .wave2, .wave3').addClass('pause');
           $('.cloud1, .cloud2, .cloud3').addClass('pause');
+          $('.ship').addClass('pause');
           $('.slide.active').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
           $('.slide.active').removeClass('active');
           $('.con').removeClass('idle');
@@ -156,8 +159,9 @@ function WipcampCarousel(element) {
           setTimeout(function() { $('.slide:eq('+currentSlide+')').addClass('active'); }, 1000);
           setTimeout(function() { $('.slide:eq('+currentSlide+')').css({"transform": "perspective(100px) translate3d(0, 0, 0)"}); }, 1500);
           setTimeout(function() {
-            $('.wave2, .wave3').removeClass('pause');
+            $('.wave1, .wave2, .wave3').removeClass('pause');
             $('.cloud1, .cloud2, .cloud3').removeClass('pause');
+            $('.ship').removeClass('pause');
           }, 1500);
           $('.slide').removeClass('animate');
         }
