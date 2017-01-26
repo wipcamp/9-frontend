@@ -99,6 +99,9 @@ body {
           -webkit-transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
           transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
       }
+  .downButton{
+    display: none;
+  }
 }
 
 @media only screen
@@ -120,11 +123,11 @@ and (orientation: portrait){
     height: 130px;
   }
   .boxGameDesktop{
-    padding: 25.5% 0 15.5% 0;
+    padding: 50.5% 0 10% 0;
   }
   .gameOnlyDesktop{
-    padding: 0 3px 0 3px;
-    width: 20%;
+    padding: 0 1px 0 1px;
+    width: 14%;
   }
   .textOnlyDesktop{
     padding: 15px 0 0 0;
@@ -141,12 +144,12 @@ and (orientation: portrait){
   }
   .bubble{
     width: 100%;
-    height: 3em;
+    height: 1em;
   }
   .bubble3{
     width: 100%;
     animation-name: wave;
-    animation-duration: 7.3s;
+    animation-duration: 5.3s;
     animation-delay: .1s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -164,7 +167,13 @@ and (orientation: portrait){
     font-size: 30px;
     color: white;
   }
-
+  .marginSea{
+    margin: 90px 0 0 0;
+    height: auto;
+  }
+  .downButton{
+    display: none;
+  }
 }
 
 @media only screen
@@ -186,11 +195,11 @@ and (orientation: portrait){
     height: 130px;
   }
   .boxGameDesktop{
-    padding: 39% 0 15% 0;
+    padding: 62% 0 10% 0;
   }
   .gameOnlyDesktop{
-    padding: 0 3px 0 3px;
-    width: 20%;
+    padding: 0 1px 0 1px;
+    width: 15%;
   }
   .textOnlyDesktop{
     padding: 5px 0 8px 0;
@@ -204,12 +213,12 @@ and (orientation: portrait){
   }
   .bubble{
     width: 100%;
-    height: 3em;
+    height: 1em;
   }
   .bubble3{
     width: 100%;
     animation-name: wave;
-    animation-duration: 7.3s;
+    animation-duration: 4.3s;
     animation-delay: .1s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -220,10 +229,17 @@ and (orientation: portrait){
   }
   .backButton{
     padding: 3px 0px 0 10px;
-    font-size: 40px;
+    font-size: 30px;
     color: white;
     position: absolute;
     z-index: 50;
+  }
+  .marginSea{
+    margin: 90px 0 0 0;
+    height: auto;
+  }
+  .downButton{
+    display: none;
   }
 }
 
@@ -246,11 +262,11 @@ and (orientation: portrait){
     height: 130px;
   }
   .boxGameDesktop{
-    padding: 45.5% 0 18% 0;
+    padding: 62% 0 18% 0;
   }
   .gameOnlyDesktop{
     padding: 0 3px 0 3px;
-    width: 20%;
+    width: 15%;
   }
   .textOnlyDesktop{
     padding: 15px 0 0 0;
@@ -271,6 +287,13 @@ and (orientation: portrait){
     color: white;
     position: absolute;
     z-index: 50;
+  }
+  .marginSea{
+    margin: 90px 0 0 0;
+    height: auto;
+  }
+  .downButton{
+    display: none;
   }
 }
 
@@ -293,7 +316,7 @@ and (orientation: portrait){
     height: 200px;
   }
   .boxGameDesktop{
-    padding: 27% 0 12% 0;
+    padding: 42% 0 12% 0;
   }
   .gameOnlyDesktop{
     padding: 0 10px 0 10px;
@@ -321,7 +344,7 @@ and (orientation: portrait){
   }
   .bubble{
     width: 100%;
-    height: 5em;
+    height: 2em;
   }
   .bubble3{
     width: 100%;
@@ -352,6 +375,13 @@ and (orientation: portrait){
           -webkit-transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
           transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
       }
+  }
+  .marginSea{
+    margin: 90px 0 0 0;
+    height: auto;
+  }
+  .downButton{
+    display: none;
   }
 }
 
@@ -402,7 +432,7 @@ and (orientation: portrait){
   }
   .bubble{
     width: 100%;
-    height: 5em;
+    height: 4em;
   }
   .bubble3{
     width: 100%;
@@ -434,43 +464,100 @@ and (orientation: portrait){
           transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
       }
   }
+  .marginSea{
+    margin: 90px 0 0 0;
+    height: auto;
+  }
+  .downButton{
+    display: none;
+  }
 }
 
 @media only screen
 and (orientation: landscape){
   .sponsorSit{
-    width:  35%;
+    height: 70px;
   }
   .sponsorKmutt{
     height: 45px;
   }
   .gamecenter_logo{
-    width: 50%;
-    margin: 5% 0 0 0;
+    width: 70%;
+    margin: 9% 0 0 0;
   }
   .shipCircle{
-    margin: 10% 0 0 0;
+    margin: 0% 0 0 0;
     height: 150px;
   }
   .boxGameDesktop{
-    padding: 10% 0 3% 0;
+    padding: 25% 0 5% 0;
   }
   .gameOnlyDesktop{
-    padding: 0 12px 0 12px;
-    width: 13%;
+    padding: 0 2px 0 2px;
+    width: 10%;
   }
   .textOnlyDesktop{
     padding: 15px 0 0 0;
-    font-size:  18px;
+    font-size:  15px;
     color: white;
   }
   .returnToHome{
     padding: 15px 0 0 0;
-    font-size:  18px;
+    font-size:  30px;
     color: white;
   }
   .gameOnDesktop{
     width: 0px;
+  }
+  .backButton{
+    padding: 5px 0px 0 15px;
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    z-index: 50;
+  }
+  .bubble{
+    width: 100%;
+    height: 1em;
+  }
+  .bubble3{
+    width: 100%;
+    animation-name: wave;
+    animation-duration: 7.3s;
+    animation-delay: .1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+  }
+  @keyframes wave {
+      0% {
+          -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+          transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+      }
+      100% {
+          -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+          transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+      }
+  }
+
+  @keyframes wave2 {
+      0% {
+          -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+          transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+      }
+      100% {
+          -webkit-transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
+          transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
+      }
+  }
+  .marginSea{
+    margin: 90px 0 0 0;
+    height: auto;
+  }
+  .downButton{
+    margin: 30px 0 0 0;
+    color: white;
+    font-size: 30px;
   }
 }
 
@@ -588,6 +675,13 @@ and (min-width: 1025px){
       margin: 70px 0px 0 0px;
     }
     .backButton{
+      display: none;
+    }
+    .marginSea{
+      margin: 90px 0 0 0;
+      height: auto;
+    }
+    .downButton{
       display: none;
     }
 }
