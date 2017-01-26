@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Itim');
+
+body{
+    font-family: 'Itim', sans-serif !important;
+    color: white;
+    height: auto;   
+}
+
 blockquote {
   background-color: rgb(0,0, 0);
   /*color: rgb(36, 36, 36);*/
@@ -12,27 +21,25 @@ blockquote {
 }
 .background{
     background: linear-gradient(#141123, #2d214d, #463b6b) !important;
+
 }
 .logo{
     height: 100%;
     width : 100%;
+    margin-bottom : 40px;
 }
 #game{
     margin-top : 7%;
     margin-bottom:7.35%;
 }
 .gamesideleft1{
-    /*background-color: lightyellow;*/
     text-align: left;
     margin-left :5%;
     margin-right :2.5%;
     margin-top :3%;
     color: #eeeeee;
-    font-family: serif;
-    font-size: 18pt;
 }
 .gamesideright1{
-    /*background-color: lightyellow;*/
     text-align: left;
     margin-left :2.5%;
     margin-right :5%;
@@ -40,14 +47,29 @@ blockquote {
     text-align: center;
     color: #eeeeee;
 }
-#button{
-    margin-top : 5%;
-    background-color: darkcyan;
+.btn-custom1{
+    margin : 3% 4% 0% 0%;
+    padding-bottom: 10px !important;
+    padding-top: 10px !important;
+    font-size: 18px !important;
+    background-color: #FF964E;
+    color : white;
+}
+.btn-custom2{
+    margin : 3% 4% 0% 0%;
+    padding: 10px 32px 10px 32px !important;
+    font-size : 18px !important;
+    background-color: #F26767;
+    color : white;
+}
+#button3{
+    font-size: 18px;
+    padding: 10px 32px 10px 32px !important;
 }
 .pic{
-  width: 300px;
+  width: 250px;
   height: auto;
-  margin-top: 20px;
+  margin-top: 10%;
 }
 .footer{
     height : 10%;
