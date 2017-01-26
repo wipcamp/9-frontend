@@ -79,28 +79,27 @@ body {
   top: -10px;
   z-index: -4;
 }
-@keyframes wave {
-    0% {
-        -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-        transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-    }
-    100% {
-        -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-        transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-    }
-}
+  @keyframes wave {
+      0% {
+          -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+          transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+      }
+      100% {
+          -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+          transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+      }
+  }
 
-@keyframes wave2 {
-    0% {
-        -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-        transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-    }
-    100% {
-        -webkit-transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
-        transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
-    }
+  @keyframes wave2 {
+      0% {
+          -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+          transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+      }
+      100% {
+          -webkit-transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
+          transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
+      }
 }
-
 
 @media only screen
 and (min-device-width: 320px)
@@ -121,7 +120,7 @@ and (orientation: portrait){
     height: 130px;
   }
   .boxGameDesktop{
-    padding: 13.5% 0 10% 0;
+    padding: 25.5% 0 15.5% 0;
   }
   .gameOnlyDesktop{
     padding: 0 3px 0 3px;
@@ -142,7 +141,7 @@ and (orientation: portrait){
   }
   .bubble{
     width: 100%;
-    height: 4em;
+    height: 3em;
   }
   .bubble3{
     width: 100%;
@@ -154,22 +153,18 @@ and (orientation: portrait){
     animation-play-state: running;
   }
   .backButton{
-    padding: 5px 0px 0 5px;
-    font-size: 30px;
+    padding: 5px 0px 0 10px;
+    font-size: 35px;
     color: white;
     position: absolute;
+    z-index: 50;
   }
   .homeButton{
     padding: 0px 0px 0 0px;
     font-size: 30px;
     color: white;
   }
-  .buttonSet{
-    /*padding: 5px 0px 0 5px;
-    font-size: 30px;
-    color: white;
-    position: absolute;*/
-  }
+
 }
 
 @media only screen
@@ -187,18 +182,18 @@ and (orientation: portrait){
     margin: 10% 0 0 0;
   }
   .shipCircle{
-    margin: 30% 0 0 0;
+    margin: 7% 0 0% 0;
     height: 130px;
   }
   .boxGameDesktop{
-    padding: 19% 0 10% 0;
+    padding: 39% 0 15% 0;
   }
   .gameOnlyDesktop{
     padding: 0 3px 0 3px;
     width: 20%;
   }
   .textOnlyDesktop{
-    padding: 15px 0 0 0;
+    padding: 5px 0 8px 0;
     font-size:  15px;
     color: white;
   }
@@ -207,8 +202,28 @@ and (orientation: portrait){
     font-size:  15px;
     color: white;
   }
+  .bubble{
+    width: 100%;
+    height: 3em;
+  }
+  .bubble3{
+    width: 100%;
+    animation-name: wave;
+    animation-duration: 7.3s;
+    animation-delay: .1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+  }
   .gameOnDesktop{
     width: 0px;
+  }
+  .backButton{
+    padding: 3px 0px 0 10px;
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    z-index: 50;
   }
 }
 
@@ -227,11 +242,11 @@ and (orientation: portrait){
     margin: 10% 0 0 0;
   }
   .shipCircle{
-    margin: 30% 0 0 0;
+    margin: 15% 0 0 0;
     height: 130px;
   }
   .boxGameDesktop{
-    padding: 27.5% 0 10% 0;
+    padding: 45.5% 0 18% 0;
   }
   .gameOnlyDesktop{
     padding: 0 3px 0 3px;
@@ -250,6 +265,13 @@ and (orientation: portrait){
   .gameOnDesktop{
     width: 0px;
   }
+  .backButton{
+    padding: 5px 0px 0 10px;
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    z-index: 50;
+  }
 }
 
 @media only screen
@@ -267,11 +289,11 @@ and (orientation: portrait){
     margin: 6% 0 0 0;
   }
   .shipCircle{
-    margin: 20% 0 0 0;
+    margin: 10% 0 0% 0;
     height: 200px;
   }
   .boxGameDesktop{
-    padding: 20% 0 10% 0;
+    padding: 27% 0 12% 0;
   }
   .gameOnlyDesktop{
     padding: 0 10px 0 10px;
@@ -290,11 +312,52 @@ and (orientation: portrait){
   .gameOnDesktop{
     width: 0px;
   }
+  .backButton{
+    padding: 5px 0px 0 15px;
+    font-size: 70px;
+    color: white;
+    position: absolute;
+    z-index: 50;
+  }
+  .bubble{
+    width: 100%;
+    height: 5em;
+  }
+  .bubble3{
+    width: 100%;
+    animation-name: wave;
+    animation-duration: 7.3s;
+    animation-delay: .1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+  }
+  @keyframes wave {
+      0% {
+          -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+          transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+      }
+      100% {
+          -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+          transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+      }
+  }
+
+  @keyframes wave2 {
+      0% {
+          -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+          transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+      }
+      100% {
+          -webkit-transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
+          transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
+      }
+  }
 }
 
 @media only screen
 and (min-device-width: 1024px)
-and (max-device-width: 1024px)
+and (max-device-width: 1366px)
 and (orientation: portrait){
   .sponsorSit{
     height: 70px;
@@ -307,11 +370,11 @@ and (orientation: portrait){
     margin: 9% 0 0 0;
   }
   .shipCircle{
-    margin: 25% 0 0 0;
-    height: 200px;
+    margin: 5% 0 0 0;
+    height: 270px;
   }
   .boxGameDesktop{
-    padding: 25% 0 11% 0;
+    padding: 28% 0 20% 0;
   }
   .gameOnlyDesktop{
     padding: 0 10px 0 10px;
@@ -329,6 +392,47 @@ and (orientation: portrait){
   }
   .gameOnDesktop{
     width: 0px;
+  }
+  .backButton{
+    padding: 5px 0px 0 15px;
+    font-size: 90px;
+    color: white;
+    position: absolute;
+    z-index: 50;
+  }
+  .bubble{
+    width: 100%;
+    height: 5em;
+  }
+  .bubble3{
+    width: 100%;
+    animation-name: wave;
+    animation-duration: 7.3s;
+    animation-delay: .1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+  }
+  @keyframes wave {
+      0% {
+          -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+          transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+      }
+      100% {
+          -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+          transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+      }
+  }
+
+  @keyframes wave2 {
+      0% {
+          -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+          transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+      }
+      100% {
+          -webkit-transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
+          transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
+      }
   }
 }
 
@@ -380,7 +484,7 @@ and (min-width: 1025px){
     }
     .gamecenter_logo{
       width: 35%;
-      margin: 5% 0 0 0;
+      margin: 2% 0 0 0;
     }
     .shipCircle{
       margin: 0% 0 0 0;
@@ -482,5 +586,8 @@ and (min-width: 1025px){
     }
     .buttonSet{
       margin: 70px 0px 0 0px;
+    }
+    .backButton{
+      display: none;
     }
 }
