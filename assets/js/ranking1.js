@@ -59,8 +59,13 @@ $(function() {
             responsive: true,
             columnDefs: [
               {
+                  orderable : false,
                   className: "hidden-xs-down",
                   targets :[1]
+              },
+              {
+                  orderable : false,
+                  targets :[0]
               },
             ],
             order: [[ 3 , 'desc' ]],

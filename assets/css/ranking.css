@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Itim');
 body {
-    font-family: 'Itim', sans-serif;
+    font-family: 'Itim', sans-serif !important;
     height: 100%;
     padding: 0;
     margin: 0;
     color: white !important;
-    background: linear-gradient(#141123, #2d214d);
+    background: linear-gradient(#141123, #2d214d, #463b6b);
 }
 
 .logo-wipcamp--full {
