@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Itim');
+
+body {
+    font-family: 'Itim', sans-serif;
+    margin: 0 0 0 0;
+}
+
+.container {
+    text-align: center;
+    color: #fff;
+}
+
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 767px)
+and (orientation: portrait) {
+  .fixHeight {
+    max-height: 667px;
+  }
+  .warn{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(249, 32, 32);
+    z-index: 1 !important;
+    position: absolute;
+  }
+  .rotatePic{
+    margin-top:10%;
+  }
+  .rotateIpad{
+    width: 0px;
+    height: 0px;
+  }
+  .textWarn{
+    padding: 50% 0 0 0;
+    color: white;
+    font-size: 365%;
+  }
+  .setIndexGame{
+    z-index: -2 !important;
+    position: fixed;
+  }
+  #game canvas{
+    width:0px;
+    height:0px;
+  }
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 736px)
+and (orientation: landscape) {
+  .textWarn{
+    font-size: 0px;
+  }
+  .rotatePic{
+    width : 0px;
+    height : 0px;
+  }
+  .rotateIpad{
+    width: 0px;
+    height: 0px;
+  }
+  .rotatePicIpad{
+    width : 0px;
+    height : 0px;
+  }
+  .setIndexGame{
+    z-index: -1 !important;
+    position: fixed;
+  }
+}
+
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait) {
+    .fixHeight {
+      max-height: 667px;
+    }
+    .warn{
+      width: 100%;
+      height: 100%;
+      background-color: rgb(249, 32, 32);
+      z-index: 1 !important;
+      position: absolute;
+    }
+    .rotatePic{
+      width: 0px;
+      height: 0px;
+    }
+    .rotateIpad{
+      width: auto;
+    }
+    .textWarn{
+      padding: 45% 0 0 0;
+      color: white;
+      font-size: 365%;
+    }
+    .setIndexGame{
+      z-index: -1 !important;
+      position: fixed;
+    }
+    #game canvas{
+      width:0px;
+      height:0px;
+    }
+}
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape) {
+    .fixHeight {
+      max-height: 736px;
+    }
+    .textWarn{
+      font-size: 0px;
+    }
+    .rotatePic{
+      width: 0px;
+      height: 0px;
+    }
+    .rotateIpad{
+      width: 0px;
+      height: auto;
+    }
+    .setIndexGame{
+      z-index: -1 !important;
+      position: fixed;
+    }
+    #game {
+      width: 100%;
+      height: 100%;
+      padding: 100px 0 0 0;
+      background: linear-gradient(#141123, #2d214d, #463b6b);
+    }
+}
+
+@media only screen
+and (min-width:1025px) {
+  .setBgIpad{
+    background:linear-gradient(#141123, #2d214d, #463b6b);
+  }
+  .fixHeight {
+    max-height: 736px;
+  }
+  .textWarn{
+    font-size: 0px;
+  }
+  .rotatePic{
+    width: 0px;
+    height: 0px;
+  }
+  .rotateIpad{
+    width: 0px;
+    height: auto;
+  }
+  .setIndexGame{
+    z-index: -1 !important;
+    position: fixed;
+  }
+  #game {
+    width: 100%;
+    height: 100%;
+    padding: 10% 0 0 0;
+    background: linear-gradient(#141123, #2d214d, #463b6b);
+  }
+}
