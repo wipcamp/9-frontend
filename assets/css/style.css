@@ -514,7 +514,7 @@ h1, p {
   margin-left: 1em !important;
 }
 .link-img {
-  width: 100px;
+  width: 90px;
 }
 /*### Smartphones (portrait and landscape)(small)### */
 @media screen and (min-width : 0px) and (max-width : 767px){
