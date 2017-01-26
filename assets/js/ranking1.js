@@ -31,7 +31,7 @@ $(function() {
     let j = 9;
 
     // timeout
-    let delay = 10000;
+    let delay = 5000;
 
     // get data form database ( child - users )
     // 1000 = 1 second

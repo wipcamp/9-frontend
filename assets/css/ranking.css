@@ -411,6 +411,22 @@ body {
 
 /*========================================================================*/
 
+.fa-arrow-left{
+  font-size: 18px !important;
+  margin : 0 5px 0 0;
+}
+.fa-home{
+  font-size: 23px !important;
+  margin : 0 5px 0 0;
+}
+
+.btn-custom1 {
+  background-color: rgb(21, 91, 136);
+}
+.btn-custom2 {
+  background-color: rgb(255, 138, 0);
+}
+
 .game-body {
     color: #fff;
 }
@@ -423,6 +439,10 @@ th {
     text-align: center;
 }
 
+label{
+  color: black;
+}
+
 .game-tbl {
-    color: black;
+    color: black !important;
 }
