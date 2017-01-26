@@ -39,8 +39,8 @@ h1, p {
 }
 
 #btn-getstarted:hover {
-  background: #0288d1;
-  border: 1px solid #0288d1;
+  background: #dccb99;
+  border: 1px solid #dccb99;
 }
 
 @keyframes wave {
@@ -371,7 +371,11 @@ h1, p {
   background-color: #fff;
   display: inline-block;
   padding: 0.45em;
-
+}
+.card-menu:hover{
+  cursor: pointer;
+  color: white;
+  background-color: #323ba8;
 }
 .link-menu{
   text-decoration: none !important;
@@ -574,7 +578,7 @@ h1, p {
     margin-top: 0.35em;
   }
   #two p{
-    font-size: 1.15em;
+    font-size: 1.2em;
   }
   .slide.active h1 {
     font-size: 2.5em;
@@ -585,19 +589,19 @@ h1, p {
     text-align: center;
   }
   #three p{
-    font-size: 1.15em;
+    font-size: 1.2em;
   }
   #four p{
-    font-size: 1.15em;
+    font-size: 1.2em;
   }
   #six p{
-    font-size: 1.15em;
+    font-size: 1.2em;
   }
   #six ul{
     font-size: 1.07em;
   }
   #seven p{
-    font-size: 1.15em;
+    font-size: 1.2em;
   }
   #three span{
     margin-top: 0.35em;
@@ -681,7 +685,7 @@ h1, p {
     z-index: 10;
   }
   #two p{
-    font-size: 1em;
+    font-size: 1.06em;
   }
 
   .card-menu{
@@ -717,16 +721,16 @@ h1, p {
 
   #three p{
     margin: 1em;
-    font-size: 1em;
+    font-size: 1.06em;
   }
   #four p{
-    font-size: 1em;
+    font-size: 1.06em;
   }
   #six p{
-    font-size:1em;
+    font-size:1.06em;
   }
   #seven p{
-    font-size:1em;
+    font-size:1.06em;
   }
   .panel-heading{
     padding: 0.4em 0.6em;
@@ -785,6 +789,9 @@ h1, p {
     right: 0em;
     bottom: 2.85em;
   }
+  #four .cisland img{
+    bottom:0em;
+  }
   #five .cisland img {
     height: 22em;
     right: 2em;
@@ -796,8 +803,9 @@ h1, p {
     bottom: 0.5em;
   }
   .card-menu{
-    margin-top: 0.2em;
-    padding: 0.30em 0.30em;
+    margin-top: 0.65em;
+    padding: 0.30em 0.70em 0.30em 0.45em;
+    border-radius: 4px;
     font-size:1em;
   }
   h1 {
@@ -835,20 +843,20 @@ h1, p {
     bottom: -1em;
   }
   #two p{
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #three p{
     margin: 1em;
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #four p{
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #six p{
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #seven p{
-    font-size: 0.9em;
+    font-size: 1em;
   }
   .panel-heading{
     padding: 0.4em 0.6em;
