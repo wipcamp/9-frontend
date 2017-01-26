@@ -1,0 +1,14 @@
+h1{
+	color: #ff1a75;
+}
+.outSize{
+	text-align: center;
+	color: #bf00ff;
+}
+#game canvas{
+    margin: 15px auto;
+}
+body {
+    margin: 50px 0 0 0;
+    background: #ececec;
+}
