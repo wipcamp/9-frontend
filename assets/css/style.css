@@ -104,7 +104,7 @@ h1, p {
   }
 }
 
-@media screen and (max-height: 479px) {
+@media screen and (max-height: 299px) {
   .orientation-prevent-overlay {
     display: block;
   }
