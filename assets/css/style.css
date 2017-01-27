@@ -439,8 +439,11 @@ h1, p {
 
 .line {
   position: absolute;
-  width: 70px;
-  height: 280px;
+  margin-left: 27px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 10px;
+  height: 250px;
   background-color: #875717;
   z-index: -1;
 }
