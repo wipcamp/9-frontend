@@ -27,7 +27,19 @@ $(document).ready(function(){
       event.stopPropagation();
     }
   });
-
+  $('.card-btn-main').click(function (event) {
+    if(getTransform($(event.target).parents().filter('.slide'))[0] == 0){
+      $('.con').addClass('idle');
+      $('.slide').addClass('animate');
+      $('.wave1, .wave2, .wave3').addClass('pause');
+      $('.cloud1, .cloud2, .cloud3').addClass('pause');
+      $('.ship').addClass('pause');
+      $(event.target).parents().filter('.slide').removeClass('active');
+      $(event.target).parents().filter('.slide').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
+      event.stopPropagation();
+    }
+    carousel.next();
+  });
   $('div.slide').click(function(event) {
     if(getTransform($(event.target).parents().filter('.slide'))[0] == 0){
       var transitionTime = /((?:[0-9])+(?:\.(?:[0-9])+)?)(ms|s)/.exec($('.animate').css('transition-duration'));
