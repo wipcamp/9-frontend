@@ -6,11 +6,13 @@ $(document).ready(function(){
 
   $(window).on('resize orientation', function(e){
     orientationStatus = e.orientation;
-    $('body').on('click', function(e) {
-      if (orientationStatus = 'landscape') {
-        e.preventDefault();
-      }
-    });
+    windowWidth = this.width();
+  });
+
+  $('body').on('click', function(e) {
+    if (orientationStatus = 'landscape' && windowWidth == 300) {
+      e.preventDefault();
+    }
   });
 
   $('img').on('dragstart', function (e) {
