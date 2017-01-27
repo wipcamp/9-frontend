@@ -4,6 +4,15 @@ $(document).ready(function(){
   var carousel = new WipcampCarousel('.con');
   carousel.init();
 
+  $(window).on('resize orientation', function(e){
+    orientationStatus = e.orientation;
+    $('body').on('click', function(e) {
+      if (orientationStatus = 'landscape') {
+        e.preventDefault();
+      }
+    });
+  });
+
   $('img').on('dragstart', function (e) {
     e.preventDefault();
   });
