@@ -66,6 +66,7 @@ $(document).ready(function(){
     $('.cloud1, .cloud2, .cloud3').removeClass('pause');
     $('.ship').removeClass('pause');
   });
+  countDown();
 });
 
 function getTransform(el) {
@@ -75,4 +76,40 @@ function getTransform(el) {
     resultTranform[resultTranform.length - 1] = resultTranform[resultTranform.length - 1].replace(")","");
     var xyz = [resultTranform[12], resultTranform[13], resultTranform[14]];
     return xyz;
+}
+
+function countDown() {
+  var d = new Date();
+  if(d.getMonth() == 1 && d.getDate() >= 6 || d.getMonth() == 2 && d.getDate() < 20) {
+    onTime(0);
+  }
+  else if(d.getMonth() == 2 && d.getDate() >= 20) {
+    passTime(0);
+    onTime(1);
+  }
+  else if(d.getMonth() == 2 && d.getDate() == 31 || d.getMonth() == 3 || d.getMonth() == 4 && d.getDate() < 25) {
+    passTime(0);
+    passTime(1);
+    onTime(2);
+  }
+  else if(d.getMonth() == 4 && d.getDate() >= 25) {
+    passTime(0);
+    passTime(1);
+    passTime(2);
+    onTime(3);
+  }
+  else if(d.getMonth() == 4 && d.getDate() >= 30 || d.getMonth() > 4) {
+    passTime(0);
+    passTime(1);
+    passTime(2);
+    passTime(3);
+  }
+  function onTime(time){
+    $('.status:eq('+time+') img').remove();
+    $('.status:eq('+time+')').prepend('<img src="assets/img/object/shipInCircle.svg" alt="">');
+  }
+  function passTime(time){
+    $('.status:eq('+time+') img').remove();
+    $('.status:eq('+time+')').prepend('<img src="assets/img/object/shipInCircle2.svg" alt="">');
+  }
 }
