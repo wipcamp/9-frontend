@@ -262,7 +262,7 @@ h1, p {
   background-repeat: repeat-x;
   position: absolute;
   bottom: 1.5em;
-  z-index: 2;
+  z-index: 1;
   animation-name: wave;
   animation-duration: 5s;
   animation-delay: .1s;
@@ -425,7 +425,7 @@ h1, p {
   top:0;
   width: 100%;
   bottom: 0;
-  z-index: -1;
+  z-index: 2;
   overflow: hidden;
 }
 .cisland img {
@@ -803,7 +803,7 @@ h1, p {
   #two .cisland img{
     height: 22em;
     right: 1em;
-    bottom: 4em;
+    bottom: 3em;
   }
   #three .cisland img {
     height: 22em;
