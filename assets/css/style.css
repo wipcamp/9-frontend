@@ -516,6 +516,27 @@ h1, p {
 .link-img {
   width: 90px;
 }
+#one{
+  cursor: -webkit-grab;
+}
+#two{
+  cursor: -webkit-grab;
+}
+#three{
+  cursor: -webkit-grab;
+}
+#four{
+  cursor: -webkit-grab;
+}
+#five{
+  cursor: -webkit-grab;
+}
+#six{
+  cursor: -webkit-grab;
+}
+#seven{
+  cursor: -webkit-grab;
+}
 /*### Smartphones (portrait and landscape)(small)### */
 @media screen and (min-width : 0px) and (max-width : 767px){
   body,html{
