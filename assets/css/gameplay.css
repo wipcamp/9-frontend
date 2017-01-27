@@ -74,3 +74,149 @@ blockquote {
 .footer{
     height : 10%;
 }
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 736px)
+and (orientation: landscape) {
+  .textWarn{
+    padding: 50% 0 0 0;
+    color: white;
+    font-size: 365%;
+  }
+  .warn{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(249, 32, 32);
+    z-index: 1 !important;
+    position: absolute;
+  }
+}
+
+/*lock mobile*/
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width:  568px)
+  and (orientation: portrait) {
+  .lock{
+    position: absolute;
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+    padding-top:50%;
+    font-size:25px;
+    font-family: 'Itim', sans-serif !important;
+  }
+  .sizeCom{
+    width: 200px;
+    height: auto;
+  }
+}
+
+@media only screen
+  and (min-device-width: 568px)
+  and (max-device-width:  736px)
+  and (orientation: landscape) {
+  .lock{
+    position: absolute;
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+    padding-top:8%;
+    font-size:25px;
+    font-family: 'Itim', sans-serif !important;
+  }
+  .sizeCom{
+    width: 200px;
+    height: auto;
+  }
+}
+
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait) {
+    .lock{
+      position: absolute;
+      z-index: 1;
+      min-width: 100%;
+      min-height: 100%;
+      background-color: rgb(255, 0, 0);
+      color: #fff;
+      padding-top:40%;
+      font-size:40px;
+      font-family: 'Itim', sans-serif !important;
+    }
+    .sizeCom{
+      width: 350px;
+      height: auto;
+    }
+}
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape) {
+    .lock{
+      position: absolute;
+      z-index: 1;
+      min-width: 100%;
+      min-height: 100%;
+      background-color: rgb(255, 0, 0);
+      color: #fff;
+      padding-top:15%;
+      font-size:40px;
+      font-family: 'Itim', sans-serif !important;
+    }
+    .sizeCom{
+      width: 350px;
+      height: auto;
+    }
+}
+
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait) {
+    .lock{
+      position: absolute;
+      z-index: 1;
+      min-width: 100%;
+      min-height: 100%;
+      background-color: rgb(255, 0, 0);
+      color: #fff;
+      padding-top:40%;
+      font-size:40px;
+      font-family: 'Itim', sans-serif !important;
+    }
+    .sizeCom{
+      width: 350px;
+      height: auto;
+    }
+}
+
+/*ทำไม่ได้เว้ยยยยยยยยยยยยยยยยยย*/
+@media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1366px)
+  and (orientation: landscape) {
+    .lock{
+      position: absolute;
+      z-index: 1;
+      min-width: 100%;
+      min-height: 100%;
+      background-color: rgb(255, 0, 0);
+      color: #fff;
+      padding-top:15%;
+      font-size:40px;
+      font-family: 'Itim', sans-serif !important;
+    }
+    .sizeCom{
+      width: 350px;
+      height: auto;
+    }
+}
+/*End lock Mobile*/
