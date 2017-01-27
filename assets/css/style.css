@@ -713,7 +713,7 @@ h1,p{
     margin-top: 0.35em;
   }
   #two p{
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
   .slide.active h1 {
     font-size: 2.5em;
@@ -786,29 +786,70 @@ h1,p{
     left:-25em;
     z-index: 3;
   }
+
   .cisland img{
     height: 15em;
     right: 1em;
   }
+  #two .ship img{
+    height: 20em;
+    bottom: 0em;
+    left:0em;
+  }
+  #three .ship img{
+    height: 20em;
+    bottom: 0em;
+    left:0em;
+  }
+  #four .ship img{
+    height: 20em;
+    bottom: 0em;
+    left:0em;
+  }
+  #five .ship img{
+    height: 20em;
+    bottom: 0em;
+    left:0em;
+  }
+  #six .ship img{
+    height: 20em;
+    bottom: 0em;
+    left:0em;
+  }
+  #seven .ship img{
+    height: 20em;
+    bottom: 0em;
+    left:0em;
+  }
   #two .cisland img{
-    height: 17em;
+    height: 16.5em;
     right: 1em;
-    bottom: 3em;
+    bottom: 1em;
   }
   #three .cisland img {
-    height: 18em;
+    height: 14em;
     right: 0em;
-    bottom: 2.85em;
+    bottom: 1.50em;
+  }
+  #four .cisland img {
+    height: 15em;
+    right: 0em;
+    bottom: -1.50em;
   }
   #five .cisland img{
-    height: 17em;
+    height: 14em;
     right: 0.2em;
-    bottom: 2.5em;
+    bottom: 1.8em;
+  }
+  #six .cisland img{
+    height: 16em;
+    right: 0.2em;
+    bottom: 1.8em;
   }
   #seven .cisland img{
-    height: 17em;
-    right: 0.2em;
-    bottom: 0em;
+    height: 14.5em;
+    right: 0.8em;
+    bottom: -0.25em;
   }
   #logo{
     position: relative;
@@ -956,6 +997,7 @@ h1,p{
   }
   .card-content{
     margin-top: 2em;
+    position: relative;
     z-index: 99;
   }
   .mountain{
