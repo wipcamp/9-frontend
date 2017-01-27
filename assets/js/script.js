@@ -1,16 +1,18 @@
 $(document).ready(function(){
   var slideItems = $('div.slide');
+  var orientationStatus, windowWidth, windowHeight;
 
   var carousel = new WipcampCarousel('.con');
   carousel.init();
 
   $(window).on('resize orientation', function(e){
     orientationStatus = e.orientation;
-    windowWidth = this.width();
+    windowWidth = $(window).width();
+    windowHeight = $(window).height();
   });
 
   $('body').on('click', function(e) {
-    if (orientationStatus = 'landscape' && windowWidth == 300) {
+    if ((orientationStatus = 'landscape' && windowWidth < 300) || (orientationStatus = 'portrait' && windowHeight < 480)) {
       e.preventDefault();
     }
   });
