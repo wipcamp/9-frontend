@@ -31,7 +31,7 @@ $(function() {
     let j = 9;
 
     // timeout
-    let delay = 10000;
+    let delay = 3000;
 
     // get data form database ( child - users )
     // 1000 = 1 second
@@ -50,17 +50,21 @@ $(function() {
     });
 
     $(document).ready(function() {
-      // New delay
-      if(users !== temp ) {
-        delay=2250;
         setTimeout(function() {
           var t = $('.game-tbl').DataTable({
             data: users,
             responsive: true,
+            language : {
+              emptyTable : "กรุณา Refresh(F5) อีกครั้ง เพื่อโหลดข้อมูล"
+            },
             columnDefs: [
               {
                   className: "hidden-xs-down",
                   targets :[1]
+              },
+              {
+                  orderable : false,
+                  targets :[0,1,2]
               },
             ],
             order: [[ 3 , 'desc' ]],
@@ -87,6 +91,5 @@ $(function() {
         } ).draw();
 
       }, delay);
-      }
   });
 });
