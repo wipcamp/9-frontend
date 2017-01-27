@@ -453,11 +453,36 @@ h1, p {
   animation-play-state: running;
 }
 
+.line {
+  position: absolute;
+  margin-left: 27px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 10px;
+  height: 250px;
+  background-color: #875717;
+  z-index: -1;
+}
+
 .register-final,
 .notice,
 .open-wip {
   height: 70px;
   clear: left;
+}
+.register-open div p span,
+.register-final div p span,
+.notice div p span,
+.open-wip div p span {
+  display: block;
+  font-size: 0.8em !important;
+}
+.register-open div p,
+.register-final div p,
+.notice div p,
+.open-wip div p {
+  line-height: 1.2em;
+  transform: translateY(25%);
 }
 .status {
   width: 70px;
