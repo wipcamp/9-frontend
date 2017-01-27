@@ -41,6 +41,16 @@ function WipcampCarousel(element) {
           slideActivePrev()
         }
       }
+      if(event.which == 27) {
+        if (!element.hasClass('idle')) {
+          $('.slide').addClass('animate');
+          $('.wave1, .wave2, .wave3').addClass('pause');
+          $('.cloud1, .cloud2, .cloud3').addClass('pause');
+          $('.ship').addClass('pause');
+          $('.slide.active').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
+          $('.slide.active').removeClass('active');
+        }
+      }
     });
 
     $(window).on('mousewheel DOMMouseScroll', function (e) {
