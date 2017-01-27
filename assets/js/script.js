@@ -80,8 +80,6 @@ function getTransform(el) {
 
 function countDown() {
   var d = new Date();
-  d.setMonth(3);
-  d.setDate(12);
   if(d.getMonth() == 1 && d.getDate() >= 6 || d.getMonth() == 2 && d.getDate() < 20) {
     onTime(0);
   }
