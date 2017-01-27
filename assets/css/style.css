@@ -437,6 +437,26 @@ h1, p {
   animation-play-state: running;
 }
 
+.register-final,
+.notice,
+.open-wip {
+  height: 70px;
+  clear: left;
+}
+.status {
+  width: 70px;
+  height: 70px;
+  float: left;
+}
+.status + div {
+  float: left;
+  margin-left: 10px;
+}
+.status img {
+  width: 90%;
+  height: 90%;
+}
+
 @keyframes shipTraveller {
     0% {
         transform: rotateZ(0deg) translate(0, 1.25px);
