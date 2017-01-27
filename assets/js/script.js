@@ -10,7 +10,7 @@ $(document).ready(function(){
   });
 
   $('body').on('click', function(e) {
-    if (orientationStatus = 'landscape' && windowWidth == 480) {
+    if (orientationStatus = 'landscape' && windowWidth == 300) {
       e.preventDefault();
     }
   });
