@@ -64,13 +64,35 @@ blockquote {
     font-size: 18px;
     padding: 10px 32px 10px 32px !important;
 }
-.pic{
+.Right{
   width: 250px;
   height: auto;
   margin-top: 10%;
 }
+.register{
+  margin-left : 50px;
+}
+.picWip{
+  margin: 10px 0 0 40px;
+  height: 300px;
+}
 .footer{
     height : 10%;
+}
+.spac{
+  letter-spacing: 1px;
+}
+.tab{
+  text-indent: 50px;
+}
+.gameName{
+  font-size: 25px;
+}
+.boxFontRight{
+  font-size: 15px;
+}
+.boxRight{
+  width: 300px;
 }
 @media only screen
 and (min-device-width: 320px)
