@@ -333,7 +333,7 @@ h1, p {
   width: 200%;
   bottom: 1em;
   left: -50%;
-  z-index: 4;
+  z-index: 3;
   animation-name: wave;
   animation-duration: 3s;
   animation-delay: .1s;
@@ -416,7 +416,7 @@ h1, p {
 }
 .card-content{
   position: relative;
-  margin-top: 3em;
+  margin-top: 1.5em;
   z-index: 99;
 }
 
@@ -443,7 +443,7 @@ h1, p {
   position: absolute;
   width: 100%;
   bottom: 0;
-  z-index: 3;
+  z-index: 4;
   left: -1em;
   animation-name: shipTraveller;
   animation-duration: 4s;
@@ -637,15 +637,18 @@ h1, p {
 #seven{
   cursor: -webkit-grab;
 }
+h1,p{
+  cursor: -webkit-grab;
+}
 /*### Smartphones (portrait and landscape)(small)### */
 @media screen and (min-width : 0px) and (max-width : 767px){
   body,html{
     font-size: 13px;
   }
   .ship img{
-    height: 15em;
+    height: 16.5em;
     position: absolute;
-    bottom: 2em;
+    bottom: 1.3em;
     left:-3em;
     z-index: 3;
   }
@@ -655,24 +658,35 @@ h1, p {
     margin: 0 15%;
   }
   #two .cisland img{
-    height: 11em;
-    right: 1em;
-    bottom: 3em;
+    height: 12.5em;
+    right: -1em;
+    bottom: 2em;
   }
+
   #three .cisland img{
-    height: 13em;
+    height: 11em;
     right: 0em;
     bottom: 2.85em;
+  }
+  #four .cisland img{
+    height: 11.5em;
+    right: -2em;
+    bottom: -0.1em;
   }
   #five .cisland img{
     height: 11em;
     right: 0.2em;
-    bottom: 3em;
+    bottom: 2.1em;
+  }
+  #six .cisland img{
+    height: 13em;
+    right: 0em;
+    bottom: 1.7em;
   }
   #seven .cisland img{
     height: 12em;
-    right: 0em;
-    bottom: 1.45em;
+    right: -1em;
+    bottom: 0.45em;
   }
   #logo{
     position: relative;
