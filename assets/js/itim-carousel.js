@@ -39,11 +39,51 @@ function WipcampCarousel(element) {
         return delta > 0 ? 0 : 1;
       }());
 
-      if(direction === 1 && element.hasClass('idle')) {
+      if(direction === 1) {
+        if (element.hasClass('idle')) {
           self.next();
+        }
+        else {
+          $('.slide').addClass('animate');
+          $('.wave1, .wave2, .wave3').addClass('pause');
+          $('.cloud1, .cloud2, .cloud3').addClass('pause');
+          $('.ship').addClass('pause');
+          $('.slide.active').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
+          $('.slide.active').removeClass('active');
+          $('.con').removeClass('idle');
+          setTimeout(function() { self.next(); }, 500);
+          setTimeout(function() { $('.slide:eq('+currentSlide+')').addClass('active'); }, 1000);
+          setTimeout(function() { $('.slide:eq('+currentSlide+')').css({"transform": "perspective(100px) translate3d(0, 0, 0)"}); }, 1500);
+          setTimeout(function() {
+            $('.wave1, .wave2, .wave3').removeClass('pause');
+            $('.cloud1, .cloud2, .cloud3').removeClass('pause');
+            $('.ship').removeClass('pause');
+          }, 1500);
+          $('.slide').removeClass('animate');
+        }
       }
-      if(direction === 0 && element.hasClass('idle')) {
-         self.prev();
+      if(direction === 0) {
+        if (element.hasClass('idle')) {
+          self.prev();
+        }
+        else {
+          $('.slide').addClass('animate');
+          $('.wave1, .wave2, .wave3').addClass('pause');
+          $('.cloud1, .cloud2, .cloud3').addClass('pause');
+          $('.ship').addClass('pause');
+          $('.slide.active').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
+          $('.slide.active').removeClass('active');
+          $('.con').removeClass('idle');
+          setTimeout(function() { self.prev(); }, 500);
+          setTimeout(function() { $('.slide:eq('+currentSlide+')').addClass('active'); }, 1000);
+          setTimeout(function() { $('.slide:eq('+currentSlide+')').css({"transform": "perspective(100px) translate3d(0, 0, 0)"}); }, 1500);
+          setTimeout(function() {
+            $('.wave1, .wave2, .wave3').removeClass('pause');
+            $('.cloud1, .cloud2, .cloud3').removeClass('pause');
+            $('.ship').removeClass('pause');
+          }, 1500);
+          $('.slide').removeClass('animate');
+        }
       }
     });
 
@@ -123,8 +163,7 @@ function WipcampCarousel(element) {
         if (element.hasClass('idle')) {
           self.next();
         }
-        else
-        {
+        else {
           $('.slide').addClass('animate');
           $('.wave1, .wave2, .wave3').addClass('pause');
           $('.cloud1, .cloud2, .cloud3').addClass('pause');
@@ -147,7 +186,7 @@ function WipcampCarousel(element) {
         if (element.hasClass('idle')) {
           self.prev();
         }
-        else{
+        else {
           $('.slide').addClass('animate');
           $('.wave1, .wave2, .wave3').addClass('pause');
           $('.cloud1, .cloud2, .cloud3').addClass('pause');
