@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
-@import url('https://fonts.googleapis.com/css?family=Itim');
 
 body {
-    font-family: 'Itim', sans-serif;
+    font-family: 'thaisans_neueregular', sans-serif !important;
     margin: 0 0 0 0;
 }
 
@@ -139,6 +137,37 @@ and (orientation: landscape) {
       padding: 10% 0 0 0;
       background: linear-gradient(#141123, #2d214d, #463b6b);
     }
+}
+
+@media only screen
+and (min-width:1025px) {
+  .setBgIpad{
+    background:linear-gradient(#141123, #2d214d, #463b6b);
+  }
+  .fixHeight {
+    max-height: 736px;
+  }
+  .textWarn{
+    font-size: 0px;
+  }
+  .rotatePic{
+    width: 0px;
+    height: 0px;
+  }
+  .rotateIpad{
+    width: 0px;
+    height: auto;
+  }
+  .setIndexGame{
+    z-index: -1 !important;
+    position: fixed;
+  }
+  #game {
+    width: 100%;
+    height: 100%;
+    padding: 4% 0 7% 0;
+    background: linear-gradient(#141123, #2d214d, #463b6b);
+  }
 }
 
 @media only screen
