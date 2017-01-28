@@ -636,6 +636,9 @@ h1, p {
 #five{
   cursor: -webkit-grab;
 }
+#five .panel-title{
+  cursor: -webkit-grab;
+}
 #six{
   cursor: -webkit-grab;
 }
