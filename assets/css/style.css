@@ -1,8 +1,13 @@
+/*========================= Stylesheets Dependencies ========================*/
+@import url('fontface-thaisansneue.css');
+@import url('fontface-sarunsgothic2.css');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
 /*============================= Global Elements =============================*/
 body {
   background-color: #eeeeee;
-  font-family: 'thaisans_neueregular', sans-serif;
-  font-weight: 200;
+  font-family: 'Thaisans Neue for Web', sans-serif;
+  font-weight: 400;
   height: 100%;
   padding: 0;
   margin: 0;
@@ -23,7 +28,7 @@ h1, p {
 }
 
 .tooltip {
-  font-family: 'thaisans_neueregular', sans-serif;
+  font-family: 'Thaisans Neue for Web', sans-serif;
   font-weight: 200;
   white-space: nowrap;
 }
@@ -629,6 +634,9 @@ h1, p {
   cursor: -webkit-grab;
 }
 #five{
+  cursor: -webkit-grab;
+}
+#five .panel-title{
   cursor: -webkit-grab;
 }
 #six{
