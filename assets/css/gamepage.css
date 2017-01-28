@@ -76,7 +76,7 @@ body {
   position: relative;
   top: -10px;
   z-index: 3;
-  height: 70vh;
+  height: auto;
 }
   @keyframes wave {
       0% {
@@ -119,10 +119,13 @@ and (orientation: portrait){
   }
   .shipCircle{
     margin: 0px 0 0 0;
-    height: 130px;
+    height: 115px;
+  }
+  .fixBugHeight{
+    height: 61vh;
   }
   .boxGameDesktop{
-    padding: 50.5% 0 10% 0;
+    padding: 30.5% 0 10% 0;
   }
   .gameOnlyDesktop{
     padding: 0 1px 0 1px;
@@ -189,12 +192,15 @@ and (orientation: portrait){
     width: 90%;
     margin: 10% 0 0 0;
   }
+  .fixBugHeight{
+    height: 67vh;
+  }
   .shipCircle{
-    margin: 7% 0 0% 0;
+    margin: 0% 0 0% 0;
     height: 130px;
   }
   .boxGameDesktop{
-    padding: 62% 0 10% 0;
+    padding: 34% 0 10% 0;
   }
   .gameOnlyDesktop{
     padding: 0 1px 0 1px;
@@ -257,11 +263,14 @@ and (orientation: portrait){
     margin: 10% 0 0 0;
   }
   .shipCircle{
-    margin: 15% 0 0 0;
+    margin: 5% 0 0 0;
     height: 130px;
   }
+  .fixBugHeight{
+    height: 68vh;
+  }
   .boxGameDesktop{
-    padding: 62% 0 18% 0;
+    padding: 40% 0 18% 0;
   }
   .gameOnlyDesktop{
     padding: 0 3px 0 3px;
@@ -311,11 +320,14 @@ and (orientation: portrait){
     margin: 6% 0 0 0;
   }
   .shipCircle{
-    margin: 10% 0 0% 0;
+    margin: 5% 0 0% 0;
     height: 200px;
   }
   .boxGameDesktop{
-    padding: 42% 0 12% 0;
+    padding: 30% 0 12% 0;
+  }
+  .fixBugHeight{
+    height: 69.5vh;
   }
   .gameOnlyDesktop{
     padding: 0 10px 0 10px;
@@ -399,11 +411,14 @@ and (orientation: portrait){
     margin: 9% 0 0 0;
   }
   .shipCircle{
-    margin: 5% 0 0 0;
+    margin: 0% 0 0 0;
     height: 270px;
   }
   .boxGameDesktop{
-    padding: 28% 0 20% 0;
+    padding: 18% 0 20% 0;
+  }
+  .fixBugHeight{
+    height: 69.5vh;
   }
   .gameOnlyDesktop{
     padding: 0 10px 0 10px;
@@ -489,7 +504,10 @@ and (orientation: landscape){
     height: 150px;
   }
   .boxGameDesktop{
-    padding: 25% 0 5% 0;
+    padding: 23% 0 5% 0;
+  }
+  .fixBugHeight{
+    height: 100vh;
   }
   .gameOnlyDesktop{
     padding: 0 2px 0 2px;
@@ -576,6 +594,9 @@ and (min-width: 1025px){
     .shipCircle{
       margin: 0% 0 0 0;
       height: 130px;
+    }
+    .fixBugDesktop{
+      height: 70vh !important;
     }
     .boxGameDesktop{
       padding: 0% 0 0% 0;
