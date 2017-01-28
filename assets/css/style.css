@@ -154,7 +154,7 @@ h1, p {
   overflow: hidden;
   width: 100%;
   z-index: 1;
-  background: linear-gradient(#141123, #2d214d, #463b6b);
+  background: linear-gradient(#141123, #1d3c5c);
 }
 
 .slide.animate {
@@ -313,7 +313,7 @@ h1, p {
 }
 
 .wave1{
-  background-image: url('../img/object/wave1.svg');
+  background-image: url('../img/object/wave6.svg');
   background-repeat: repeat-x;
   position: absolute;
   bottom: 1.5em;
@@ -326,7 +326,7 @@ h1, p {
   animation-play-state: running;
 }
 .wave2{
-  background-image: url('../img/object/wave2.svg');
+  background-image: url('../img/object/wave5.svg');
   background-repeat: repeat-x;
   background-position: -42px 0;
   position: absolute;
@@ -342,7 +342,7 @@ h1, p {
   animation-play-state: running;
 }
 .wave3{
-  background-image: url('../img/object/wave3.svg');
+  background-image: url('../img/object/wave4.svg');
   background-repeat: repeat-x;
   position: absolute;
   bottom: 0;
@@ -637,7 +637,7 @@ h1, p {
 #seven{
   cursor: -webkit-grab;
 }
-h1,p{
+h1,p,ul{
   cursor: -webkit-grab;
 }
 /*### Smartphones (portrait and landscape)(small)### */
@@ -945,9 +945,39 @@ h1,p{
   .ship img{
     height: 50em;
     position: absolute;
-    bottom: 3em;
+    bottom: 1em;
     left:-20em;
     z-index: 3;
+  }
+  #two .ship img{
+    height: 24em;
+    bottom: 1em;
+    left: 0;
+  }
+  #three .ship img{
+    height: 24em;
+    bottom: 1em;
+    left: 0;
+  }
+  #four .ship img{
+    height: 24em;
+    bottom: 1em;
+    left: 0;
+  }
+  #five .ship img{
+    height: 24em;
+    bottom: 1em;
+    left: 0;
+  }
+  #six .ship img{
+    height: 24em;
+    bottom: 1em;
+    left: 0;
+  }
+  #seven .ship img{
+    height: 24em;
+    bottom: 1em;
+    left: 0;
   }
   #two p{
     font-size: 0.9em;
@@ -956,27 +986,34 @@ h1,p{
     height: 22em;
   }
   #two .cisland img{
-    height: 22em;
+    height: 18em;
     right: 1em;
-    bottom: 3em;
+    bottom: 1.5em;
   }
   #three .cisland img {
-    height: 22em;
-    right: 0em;
+    height: 16em;
+    right: 2em;
     bottom: 2.85em;
   }
   #four .cisland img{
-    bottom:0em;
+    bottom:-0.5em;
+    height: 16em;
+    right: 1em;
   }
   #five .cisland img {
-    height: 22em;
-    right: 2em;
-    bottom: 2.85em;
+    height: 16em;
+    right: 3em;
+    bottom: 2.65em;
+  }
+  #six .cisland img {
+    height: 18em;
+    right: 3em;
+    bottom: 2.65em;
   }
   #seven .cisland img {
-    height: 22em;
-    right: 2em;
-    bottom: 0.5em;
+    height: 17.5em;
+    right: 3em;
+    bottom: -0.5em;
   }
   .card-menu{
     margin-top: 0.65em;
