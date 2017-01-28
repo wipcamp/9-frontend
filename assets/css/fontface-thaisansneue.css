@@ -1,0 +1,35 @@
+/* 200: Light */
+@font-face {
+  font-family: 'Thaisans Neue for Web';
+  src: url('../fonts/thaisansneue/thaisansneue-light-webfont.eot');
+  src: url('../fonts/thaisansneue/thaisansneue-light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/thaisansneue/thaisansneue-light-webfont.woff') format('woff'),
+       url('../fonts/thaisansneue/thaisansneue-light-webfont.ttf') format('truetype'),
+       url('../fonts/thaisansneue/thaisansneue-light-webfont.svg#thaisans_neue_lightregular') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* 400: Regular */
+@font-face {
+  font-family: 'Thaisans Neue for Web';
+  src: url('../fonts/thaisansneue/thaisansneue-regular-webfont.eot');
+  src: url('../fonts/thaisansneue/thaisansneue-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/thaisansneue/thaisansneue-regular-webfont.woff') format('woff'),
+       url('../fonts/thaisansneue/thaisansneue-regular-webfont.ttf') format('truetype'),
+       url('../fonts/thaisansneue/thaisansneue-regular-webfont.svg#thaisans_neueregular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* 700: Bold */
+@font-face {
+  font-family: 'Thaisans Neue for Web';
+  src: url('../fonts/thaisansneue/thaisansneue-bold-webfont.eot');
+  src: url('../fonts/thaisansneue/thaisansneue-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/thaisansneue/thaisansneue-bold-webfont.woff') format('woff'),
+       url('../fonts/thaisansneue/thaisansneue-bold-webfont.ttf') format('truetype'),
+       url('../fonts/thaisansneue/thaisansneue-bold-webfont.svg#thaisans_neuebold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
