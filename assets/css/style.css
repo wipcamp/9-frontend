@@ -670,6 +670,7 @@ div.card-heading h1 > span {
 h1,p,ul{
   cursor: -webkit-grab;
 }
+
 #two p{
   font-weight: 100;
 }
@@ -1235,4 +1236,7 @@ strong{
     height: 5em;
     z-index: 10;
   }
+}
+#five .panel-title:hover{
+  cursor: pointer;
 }
