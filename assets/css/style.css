@@ -20,6 +20,10 @@ h1 {
   font-family: "Sarun\'s Gothic 2";
 }
 
+h1 > span {
+  font-family: 'Thaisans Neue for Web';
+}
+
 h1, p {
   cursor: default;
 }
@@ -170,6 +174,27 @@ h1, p {
 .slide.active {
   transform: perspective(100px) translate3d(0, 0, 0) !important;
   z-index: 10;
+}
+.slide div.card-heading {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  margin-top: 10%;
+  text-align: center !important;
+  left: 0;
+  opacity: 1;
+  transition: all 0.1s;
+}
+.slide.active div.card-heading {
+  opacity: 0;
+}
+div.card-heading h1 {
+  line-height: 0.7em;
+  text-align: center !important;
+}
+div.card-heading h1 > span {
+  display: block;
+  text-align: center !important;
 }
 .register {
   position: fixed;
@@ -722,6 +747,10 @@ h1,p,ul{
     font-size: 3.5em;
     text-align: left;
   }
+  .slide.active h1 > span {
+    font-size: 0.5em;
+    text-align: left;
+  }
   #three p{
     font-size: 1.2em;
   }
@@ -872,6 +901,10 @@ h1,p,ul{
     font-size: 3em;
     text-align: left;
   }
+  .slide.active h1 > span {
+    font-size: 0.5em;
+    text-align: left;
+  }
   .mountain{
     position: absolute;
     bottom: 3em;
@@ -1019,6 +1052,16 @@ h1,p,ul{
   .slide.active h1 {
     font-size: 3em;
     text-align: left;
+  }
+  .slide.active h1 > span {
+    font-size: 0.5em;
+    text-align: left;
+  }
+  .slide div.card-heading h1 {
+    font-size: 7.5em;
+  }
+  .slide div.card-heading h1 > span {
+    font-size: 0.35em;
   }
   .card-content{
     margin-top: 2em;
