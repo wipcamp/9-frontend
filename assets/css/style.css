@@ -17,6 +17,7 @@ body {
 h1 {
   transition: font-size .5s cubic-bezier(0.075, 0.82, 0.165, 1);
   line-height: 1.5em;
+  font-family: "Sarun\'s Gothic 2";
 }
 
 h1, p {
@@ -556,12 +557,6 @@ h1, p {
   position: relative;
   z-index: 55;
 }
-#five.active h1 span {
-  display: inline;
-}
-#five h1 span {
-  display: none;
-}
 #five span{
   position: relative;
   z-index: 9;
@@ -724,12 +719,8 @@ h1,p{
     font-size: 1.3em;
   }
   .slide.active h1 {
-    font-size: 2.5em;
+    font-size: 3.5em;
     text-align: left;
-  }
-  .slide h1 {
-    font-size: 5em;
-    text-align: center;
   }
   #three p{
     font-size: 1.2em;
@@ -878,12 +869,8 @@ h1,p{
     font-size:1em;
   }
   .slide.active h1 {
-    font-size: 2em;
+    font-size: 3em;
     text-align: left;
-  }
-  .slide h1 {
-    font-size: 7em;
-    text-align: center;
   }
   .mountain{
     position: absolute;
@@ -992,16 +979,9 @@ h1,p{
     border-radius: 4px;
     font-size:1em;
   }
-  h1 {
-    font-size: 1.85em;
-  }
   .slide.active h1 {
-    font-size: 2em;
+    font-size: 3em;
     text-align: left;
-  }
-  .slide h1 {
-    font-size: 7em;
-    text-align: center;
   }
   .card-content{
     margin-top: 2em;
