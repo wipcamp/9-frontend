@@ -682,6 +682,9 @@ h1,p,ul{
   z-index: 10;
   overflow: hidden;
 }
+strong{
+  font-weight: bold;
+}
 /*### Smartphones (portrait and landscape)(small)### */
 @media screen and (min-width : 0px) and (max-width : 767px){
   body,html{
@@ -762,7 +765,7 @@ h1,p,ul{
     margin-top: 0.35em;
   }
   #two p{
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
   .slide.active h1 {
     font-size: 3.5em;
@@ -823,6 +826,55 @@ h1,p,ul{
     width: 60%;
     height: 10%;
     margin: 0 20%;
+  }
+  .moon img{
+    position: absolute;
+    top:1.5em;
+    right: 2em;
+    height: 5em;
+    z-index: 10;
+  }
+  #two .moon img{
+    position: absolute;
+    top:1.5em;
+    right: 5em;
+    height: 5em;
+    z-index: 10;
+  }
+  #three .moon img{
+    position: absolute;
+    top:1.5em;
+    right: 5em;
+    height: 5em;
+    z-index: 10;
+  }
+  #four .moon img{
+    position: absolute;
+    top:1.5em;
+    right: 5em;
+    height: 5em;
+    z-index: 10;
+  }
+  #five .moon img{
+    position: absolute;
+    top:1.5em;
+    right: 5em;
+    height: 5em;
+    z-index: 10;
+  }
+  #six .moon img{
+    position: absolute;
+    top:1.5em;
+    right: 5em;
+    height: 5em;
+    z-index: 10;
+  }
+  #seven .moon img{
+    position: absolute;
+    top:1.5em;
+    right: 5em;
+    height: 5em;
+    z-index: 10;
   }
   .logo-important-sponsor{
     margin-top: -2.4em;
@@ -1133,5 +1185,54 @@ h1,p,ul{
   .panel-body{
     font-size: 0.85em;
     padding: 0.8em;
+  }
+  .moon img{
+    position: absolute;
+    top:1.5em;
+    right: 2em;
+    height: 5em;
+    z-index: 10;
+  }
+  #two .moon img{
+    position: absolute;
+    top:1.5em;
+    right: 5em;
+    height: 5em;
+    z-index: 10;
+  }
+  #three .moon img{
+    position: absolute;
+    top:1.5em;
+    right: 5em;
+    height: 5em;
+    z-index: 10;
+  }
+  #four .moon img{
+    position: absolute;
+    top:1.5em;
+    right: 5em;
+    height: 5em;
+    z-index: 10;
+  }
+  #five .moon img{
+    position: absolute;
+    top:1.5em;
+    right: 5em;
+    height: 5em;
+    z-index: 10;
+  }
+  #six .moon img{
+    position: absolute;
+    top:1.5em;
+    right: 5em;
+    height: 5em;
+    z-index: 10;
+  }
+  #seven .moon img{
+    position: absolute;
+    top:1.5em;
+    right: 5em;
+    height: 5em;
+    z-index: 10;
   }
 }
