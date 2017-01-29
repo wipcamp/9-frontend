@@ -17,6 +17,11 @@ body {
 h1 {
   transition: font-size .5s cubic-bezier(0.075, 0.82, 0.165, 1);
   line-height: 1.5em;
+  font-family: "Sarun\'s Gothic 2";
+}
+
+h1 > span {
+  font-family: 'Thaisans Neue for Web';
 }
 
 h1, p {
@@ -171,6 +176,27 @@ h1, p {
 .slide.active {
   transform: perspective(100px) translate3d(0, 0, 0) !important;
   z-index: 10;
+}
+.slide div.card-heading {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  margin-top: 10%;
+  text-align: center !important;
+  left: 0;
+  opacity: 1;
+  transition: all 0.1s;
+}
+.slide.active div.card-heading {
+  opacity: 0;
+}
+div.card-heading h1 {
+  line-height: 0.7em;
+  text-align: center !important;
+}
+div.card-heading h1 > span {
+  display: block;
+  text-align: center !important;
 }
 .register {
   position: fixed;
@@ -558,12 +584,6 @@ h1, p {
   position: relative;
   z-index: 55;
 }
-#five.active h1 span {
-  display: inline;
-}
-#five h1 span {
-  display: none;
-}
 #five span{
   position: relative;
   z-index: 9;
@@ -745,12 +765,12 @@ h1,p,ul{
     font-size: 1.3em;
   }
   .slide.active h1 {
-    font-size: 2.5em;
+    font-size: 3.5em;
     text-align: left;
   }
-  .slide h1 {
-    font-size: 5em;
-    text-align: center;
+  .slide.active h1 > span {
+    font-size: 0.5em;
+    text-align: left;
   }
   #three p{
     font-size: 1.2em;
@@ -899,12 +919,12 @@ h1,p,ul{
     font-size:1em;
   }
   .slide.active h1 {
-    font-size: 2em;
+    font-size: 3em;
     text-align: left;
   }
-  .slide h1 {
-    font-size: 7em;
-    text-align: center;
+  .slide.active h1 > span {
+    font-size: 0.5em;
+    text-align: left;
   }
   .mountain{
     position: absolute;
@@ -1050,16 +1070,19 @@ h1,p,ul{
     border-radius: 4px;
     font-size:1em;
   }
-  h1 {
-    font-size: 1.85em;
-  }
   .slide.active h1 {
-    font-size: 2em;
+    font-size: 3em;
     text-align: left;
   }
-  .slide h1 {
-    font-size: 7em;
-    text-align: center;
+  .slide.active h1 > span {
+    font-size: 0.5em;
+    text-align: left;
+  }
+  .slide div.card-heading h1 {
+    font-size: 7.5em;
+  }
+  .slide div.card-heading h1 > span {
+    font-size: 0.35em;
   }
   .card-content{
     margin-top: 2em;
