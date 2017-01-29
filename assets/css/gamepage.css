@@ -75,7 +75,8 @@ body {
   background: linear-gradient(#0a493d, #0e6857, #127763); /* Standard syntax */
   position: relative;
   top: -10px;
-  z-index: -4;
+  z-index: 3;
+  height: auto;
 }
   @keyframes wave {
       0% {
@@ -118,10 +119,13 @@ and (orientation: portrait){
   }
   .shipCircle{
     margin: 0px 0 0 0;
-    height: 130px;
+    height: 115px;
+  }
+  .fixBugHeight{
+    height: 61vh;
   }
   .boxGameDesktop{
-    padding: 50.5% 0 10% 0;
+    padding: 30.5% 0 10% 0;
   }
   .gameOnlyDesktop{
     padding: 0 1px 0 1px;
@@ -188,12 +192,15 @@ and (orientation: portrait){
     width: 90%;
     margin: 10% 0 0 0;
   }
+  .fixBugHeight{
+    height: 67vh;
+  }
   .shipCircle{
-    margin: 7% 0 0% 0;
+    margin: 0% 0 0% 0;
     height: 130px;
   }
   .boxGameDesktop{
-    padding: 62% 0 10% 0;
+    padding: 34% 0 10% 0;
   }
   .gameOnlyDesktop{
     padding: 0 1px 0 1px;
@@ -256,11 +263,14 @@ and (orientation: portrait){
     margin: 10% 0 0 0;
   }
   .shipCircle{
-    margin: 15% 0 0 0;
+    margin: 5% 0 0 0;
     height: 130px;
   }
+  .fixBugHeight{
+    height: 68vh;
+  }
   .boxGameDesktop{
-    padding: 62% 0 18% 0;
+    padding: 40% 0 18% 0;
   }
   .gameOnlyDesktop{
     padding: 0 3px 0 3px;
@@ -310,11 +320,14 @@ and (orientation: portrait){
     margin: 6% 0 0 0;
   }
   .shipCircle{
-    margin: 10% 0 0% 0;
+    margin: 5% 0 0% 0;
     height: 200px;
   }
   .boxGameDesktop{
-    padding: 42% 0 12% 0;
+    padding: 30% 0 12% 0;
+  }
+  .fixBugHeight{
+    height: 69.5vh;
   }
   .gameOnlyDesktop{
     padding: 0 10px 0 10px;
@@ -398,11 +411,14 @@ and (orientation: portrait){
     margin: 9% 0 0 0;
   }
   .shipCircle{
-    margin: 5% 0 0 0;
+    margin: 0% 0 0 0;
     height: 270px;
   }
   .boxGameDesktop{
-    padding: 28% 0 20% 0;
+    padding: 18% 0 20% 0;
+  }
+  .fixBugHeight{
+    height: 69.5vh;
   }
   .gameOnlyDesktop{
     padding: 0 10px 0 10px;
@@ -474,13 +490,13 @@ and (orientation: portrait){
 @media only screen
 and (orientation: landscape){
   .sponsorSit{
-    height: 70px;
+    height: 5.5vw;
   }
   .sponsorKmutt{
     height: 45px;
   }
   .gamecenter_logo{
-    width: 70%;
+    width: 40vw;
     margin: 9% 0 0 0;
   }
   .shipCircle{
@@ -488,7 +504,10 @@ and (orientation: landscape){
     height: 150px;
   }
   .boxGameDesktop{
-    padding: 25% 0 5% 0;
+    padding: 23% 0 5% 0;
+  }
+  .fixBugHeight{
+    height: 100vh;
   }
   .gameOnlyDesktop{
     padding: 0 2px 0 2px;
@@ -561,6 +580,136 @@ and (orientation: landscape){
 
 @media only screen
 and (min-width: 1025px){
+    .sponsorSit{
+      width: 20%;
+      height: auto;
+    }
+    .sponsorKmutt{
+      height: 30px;
+    }
+    .gamecenter_logo{
+      width: 35%;
+      margin: 2% 0 0 0;
+    }
+    .shipCircle{
+      margin: 0% 0 0 0;
+      height: 130px;
+    }
+    .fixBugDesktop{
+      height: 70vh !important;
+    }
+    .boxGameDesktop{
+      padding: 0% 0 0% 0;
+    }
+    .gameOnlyDesktop{
+      padding: 0 0px 0 0px;
+      width: 0%;
+    }
+    .textOnlyDesktop{
+      padding: 0 0 0 0;
+      font-size:  0px;
+      color: white;
+    }
+    .returnToHome{
+      padding: 150px 0 0 0;
+      font-size:  25px;
+      color: white;
+    }
+    .divText{
+      padding: 30px 0 0 0;
+    }
+    .gameOnDesktop{
+      width: 130px;
+    }
+    .bodyIconDesktop{
+      padding: 5% 0 5% 0;
+    }
+
+    .bubble1{
+      top: 10;
+      width: 100%;
+      animation-name: wave;
+      animation-duration: 6.5s;
+      animation-delay: .1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-play-state: running;
+    }
+    .bubble2{
+      /*margin: 0 0 0 70px;*/
+      /*top: 10;*/
+      width: 100%;
+      animation-name: wave2;
+      animation-duration: 5.5s;
+      animation-delay: .1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-play-state: running;
+    }
+    .bubble3{
+      top: 10;
+      width: 100%;
+      animation-name: wave;
+      animation-duration: 7.3s;
+      animation-delay: .1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-play-state: running;
+    }
+    .bubble4{
+      /*margin: 0px 0 0 70px;*/
+      /*top: -250px;*/
+      width: 100%;
+      animation-name: wave;
+      animation-duration: 5.5s;
+      animation-delay: .1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-play-state: running;
+    }
+    .bubble5{
+      top: -330px;
+      width: 100%;
+      animation-name: wave2;
+      animation-duration: 6.5s;
+      animation-delay: .1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-play-state: running;
+    }
+    .bubble {
+      width: 100%;
+      height: 4em;
+    }
+    .backButton{
+      padding: 1% 0px 0 1%;
+      font-size: 50px;
+      color: white;
+      position: absolute;
+    }
+    .homeButton{
+      padding: 0px 0px 0 0px;
+      font-size: 30px;
+      color: white;
+    }
+    .buttonSet{
+      margin: 70px 0px 0 0px;
+    }
+    .backButton{
+      display: none;
+    }
+    .marginSea{
+      margin: 90px 0 0 0;
+      height: auto;
+    }
+    .downButton{
+      display: none;
+    }
+}
+
+
+@media only screen
+and (min-width: 1280px){
     .sponsorSit{
       width: 20%;
       height: auto;
@@ -677,7 +826,7 @@ and (min-width: 1025px){
       display: none;
     }
     .marginSea{
-      margin: 90px 0 0 0;
+      margin: 90px 0 0px 0;
       height: auto;
     }
     .downButton{
