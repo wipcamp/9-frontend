@@ -713,17 +713,13 @@ h1,p,ul{
   }
   .ship-main img{
     height: 16.5em;
-    position: absolute;
     bottom: 1.3em;
-    left:-3em;
-    z-index: 3;
+    left: -3em;
   }
   .ship img{
     height: 16.5em;
-    position: absolute;
     bottom: 1.3em;
-    left:-3em;
-    z-index: 3;
+    left: -3em;
   }
   #two.active .ship img{
     left: -3em;
@@ -995,22 +991,24 @@ h1,p,ul{
     margin-top: -2.4em;
     max-width: 300px;
   }
-  .ship img{
-    height: 45em;
-    position: absolute;
-    bottom: 0em;
-    left:-25em;
-    z-index: 3;
-  }
-
   .cisland img{
     height: 15em;
     right: 1em;
   }
+  .ship-main img{
+    height: 20em;
+    bottom: 0;
+    left: 0;
+  }
+  .ship img{
+    height: 20em;
+    bottom: 0;
+    left: 0;
+  }
   #two.active .ship img{
     height: 20em;
     bottom: 0em;
-    left:0em;
+    left: 0em;
   }
   #two .ship img {
     height: 20em;
@@ -1235,18 +1233,16 @@ h1,p,ul{
     z-index: 10;
   }
   .ship-main img{
-    height: 50em;
+    height: 24em;
     position: absolute;
-    bottom: -1em;
-    left:-20em;
-    z-index: 3;
+    bottom: 0em;
+    left: 0;
   }
   .ship img{
     height: 50em;
     position: absolute;
-    bottom: -1em;
-    left:-20em;
-    z-index: 3;
+    bottom: 0em;
+    left: 0;
   }
   #two.active .ship img{
     height: 24em;
