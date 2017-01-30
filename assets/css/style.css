@@ -472,6 +472,19 @@ div.card-heading h1 > span {
   /*padding-top: 0.45em !important;*/
 }
 
+.ship-main {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 4;
+  left: -1em;
+  animation-name: shipTraveller;
+  animation-duration: 4s;
+  animation-delay: 0.1s;
+  animation-timing-function: cubic-bezier(0.25, 0, 0.75, 1);
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
 .ship {
   position: absolute;
   width: 100%;
@@ -484,6 +497,9 @@ div.card-heading h1 > span {
   animation-timing-function: cubic-bezier(0.25, 0, 0.75, 1);
   animation-iteration-count: infinite;
   animation-play-state: running;
+}
+.ship img {
+  transition: all 2.5s;
 }
 
 .line {
@@ -690,13 +706,17 @@ h1,p,ul{
   z-index: 0;
   overflow: hidden;
 }
-strong{
-  font-weight: bold;
-}
 /*### Smartphones (portrait and landscape)(small)### */
 @media screen and (min-width : 0px) and (max-width : 767px){
   body,html{
     font-size: 13px;
+  }
+  .ship-main img{
+    height: 16.5em;
+    position: absolute;
+    bottom: 1.3em;
+    left:-3em;
+    z-index: 3;
   }
   .ship img{
     height: 16.5em;
@@ -704,6 +724,42 @@ strong{
     bottom: 1.3em;
     left:-3em;
     z-index: 3;
+  }
+  #two.active .ship img{
+    left: -3em;
+  }
+  #two .ship img {
+    left: -95%;
+  }
+  #three.active .ship img{
+    left: -3em;
+  }
+  #three .ship img {
+    left: -95%;
+  }
+  #four.active .ship img{
+    left: -3em;
+  }
+  #four .ship img {
+    left: -95%;
+  }
+  #five.active .ship img{
+    left: -3em;
+  }
+  #five .ship img {
+    left: -95%;
+  }
+  #six.active .ship img{
+    left: -3em;
+  }
+  #six .ship img {
+    left: -95%;
+  }
+  #seven.active .ship img{
+    left: -3em;
+  }
+  #seven .ship img {
+    left: -95%;
   }
   .register {
     width: 70%;
@@ -715,7 +771,6 @@ strong{
     right: -1em;
     bottom: 2em;
   }
-
   #three .cisland img{
     height: 11em;
     right: 0em;
@@ -775,11 +830,11 @@ strong{
   #two p{
     font-size: 1.2em;
   }
-  .slide.active h1 {
+  .slide h1 {
     font-size: 3.5em;
     text-align: left;
   }
-  .slide.active h1 > span {
+  .slide h1 > span {
     font-size: 0.5em;
     text-align: left;
   }
@@ -952,35 +1007,65 @@ strong{
     height: 15em;
     right: 1em;
   }
-  #two .ship img{
+  #two.active .ship img{
     height: 20em;
     bottom: 0em;
     left:0em;
   }
-  #three .ship img{
+  #two .ship img {
+    height: 20em;
+    bottom: 0em;
+    left: -50%;
+  }
+  #three.active .ship img{
     height: 20em;
     bottom: 0em;
     left:0em;
   }
-  #four .ship img{
+  #three .ship img {
+    height: 20em;
+    bottom: 0em;
+    left: -50%;
+  }
+  #four.active .ship img{
     height: 20em;
     bottom: 0em;
     left:0em;
   }
-  #five .ship img{
+  #four .ship img {
+    height: 20em;
+    bottom: 0em;
+    left: -50%;
+  }
+  #five.active .ship img{
     height: 20em;
     bottom: 0em;
     left:0em;
   }
-  #six .ship img{
+  #five .ship img {
+    height: 20em;
+    bottom: 0em;
+    left: -50%;
+  }
+  #six.active .ship img{
     height: 20em;
     bottom: 0em;
     left:0em;
   }
-  #seven .ship img{
+  #six .ship img {
+    height: 20em;
+    bottom: 0em;
+    left: -50%;
+  }
+  #seven.active .ship img{
     height: 20em;
     bottom: 0em;
     left:0em;
+  }
+  #seven .ship img {
+    height: 20em;
+    bottom: 0em;
+    left: -50%;
   }
   #two .cisland img{
     height: 16.5em;
@@ -1030,11 +1115,11 @@ strong{
     padding: 0.40em 0.35em;
     font-size:1em;
   }
-  .slide.active h1 {
+  .slide h1 {
     font-size: 3em;
     text-align: left;
   }
-  .slide.active h1 > span {
+  .slide h1 > span {
     font-size: 0.5em;
     text-align: left;
   }
@@ -1103,6 +1188,13 @@ strong{
     margin: 0px auto;
     z-index: 10;
   }
+  .ship-main img{
+    height: 50em;
+    position: absolute;
+    bottom: -1em;
+    left:-20em;
+    z-index: 3;
+  }
   .ship img{
     height: 50em;
     position: absolute;
@@ -1110,35 +1202,65 @@ strong{
     left:-20em;
     z-index: 3;
   }
-  #two .ship img{
+  #two.active .ship img{
     height: 24em;
     bottom: 0em;
     left: 0;
   }
-  #three .ship img{
+  #two .ship img {
+    height: 24em;
+    bottom: 0em;
+    left: -50%;
+  }
+  #three.active .ship img{
     height: 24em;
     bottom: 0em;
     left: 0;
   }
-  #four .ship img{
+  #three .ship img {
+    height: 24em;
+    bottom: 0em;
+    left: -50%;
+  }
+  #four.active .ship img{
     height: 24em;
     bottom: 0em;
     left: 0;
   }
-  #five .ship img{
+  #four .ship img {
+    height: 24em;
+    bottom: 0em;
+    left: -50%;
+  }
+  #five.active .ship img{
     height: 24em;
     bottom: 0em;
     left: 0;
   }
-  #six .ship img{
+  #five .ship img {
+    height: 24em;
+    bottom: 0em;
+    left: -50%;
+  }
+  #six.active .ship img{
     height: 24em;
     bottom: 0em;
     left: 0;
   }
-  #seven .ship img{
+  #six .ship img {
+    height: 24em;
+    bottom: 0em;
+    left: -50%;
+  }
+  #seven.active .ship img{
     height: 24em;
     bottom: 0em;
     left: 0;
+  }
+  #seven .ship img {
+    height: 24em;
+    bottom: 0em;
+    left: -50%;
   }
   #two p{
     font-size: 0.9em;
@@ -1182,11 +1304,11 @@ strong{
     border-radius: 4px;
     font-size:1em;
   }
-  .slide.active h1 {
+  .slide h1 {
     font-size: 3em;
     text-align: left;
   }
-  .slide.active h1 > span {
+  .slide h1 > span {
     font-size: 0.5em;
     text-align: left;
   }
