@@ -179,9 +179,9 @@ h1, p {
 }
 .slide div.card-heading {
   position: absolute;
-  z-index: 5;
+  z-index: 55;
   width: 100%;
-  margin-top: 10%;
+  margin-top: 50%;
   text-align: center !important;
   left: 0;
   opacity: 1;
@@ -824,6 +824,58 @@ strong{
   .link-img {
     width: 70px;
   }
+  .slide div.card-heading h1 {
+    font-size: 7.5em;
+  }
+  .slide div.card-heading h1 > span {
+    margin-top: -0.5em !important;
+    font-size: 0.3em;
+  }
+  #two .card-content h1 > span{
+    display: block;
+    font-size: 0.4em;
+    margin-top: -2.1em;
+    margin-bottom: -1em;
+  }
+  #three .card-content h1 > span{
+    display: block;
+    font-size: 0.4em;
+    margin-top: -2.1em;
+    margin-bottom: -1em;
+  }
+  #four .card-content h1 > span{
+    display: block;
+    font-size: 0.4em;
+    margin-top: -2.1em;
+    margin-bottom: -1em;
+  }
+  #five .card-content h1 > span{
+    display: block;
+    font-size: 0.4em;
+    margin-top: -2.1em;
+    margin-bottom: -1em;
+  }
+  #six .card-content h1 > span{
+    display: block;
+    font-size: 0.4em;
+    margin-top: -2.1em;
+    margin-bottom: -1em;
+  }
+  #seven .card-content h1 > span{
+    display: block;
+    font-size: 0.4em;
+    margin-top: -2.1em;
+    margin-bottom: -1em;
+  }
+  .logo-important-sponsor{
+    margin-top: 0em;
+  }
+  #btn-getstarted{
+    margin-top: 3em;
+  }
+  .logo-important-sponsor{
+    margin-top:-0.5em;
+  }
 }
 /*###Tablet(medium)###*/
 @media screen and (min-width : 768px) and (max-width : 1023px){
@@ -1054,38 +1106,38 @@ strong{
   .ship img{
     height: 50em;
     position: absolute;
-    bottom: 1em;
+    bottom: -1em;
     left:-20em;
     z-index: 3;
   }
   #two .ship img{
     height: 24em;
-    bottom: 1em;
+    bottom: 0em;
     left: 0;
   }
   #three .ship img{
     height: 24em;
-    bottom: 1em;
+    bottom: 0em;
     left: 0;
   }
   #four .ship img{
     height: 24em;
-    bottom: 1em;
+    bottom: 0em;
     left: 0;
   }
   #five .ship img{
     height: 24em;
-    bottom: 1em;
+    bottom: 0em;
     left: 0;
   }
   #six .ship img{
     height: 24em;
-    bottom: 1em;
+    bottom: 0em;
     left: 0;
   }
   #seven .ship img{
     height: 24em;
-    bottom: 1em;
+    bottom: 0em;
     left: 0;
   }
   #two p{
