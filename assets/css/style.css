@@ -1072,6 +1072,52 @@ strong{
     font-size: 0.85em;
     padding: 0.8em;
   }
+  .slide div.card-heading h1 {
+    font-size: 8.7em;
+  }
+  .slide div.card-heading h1 > span {
+    margin-top: -0.5em !important;
+    font-size: 0.27em;
+  }
+  #two .card-content h1 > span{
+    display: block;
+    font-size: 0.4em;
+    margin-top: -2.1em;
+    margin-bottom: -1em;
+  }
+  #three .card-content h1 > span{
+    display: block;
+    font-size: 0.4em;
+    margin-top: -2.1em;
+    margin-bottom: -1em;
+  }
+  #four .card-content h1 > span{
+    display: block;
+    font-size: 0.4em;
+    margin-top: -2.1em;
+    margin-bottom: -1em;
+  }
+  #five .card-content h1 > span{
+    display: block;
+    font-size: 0.4em;
+    margin-top: -2.1em;
+    margin-bottom: -1em;
+  }
+  #six .card-content h1 > span{
+    display: block;
+    font-size: 0.4em;
+    margin-top: -2.1em;
+    margin-bottom: -1em;
+  }
+  #seven .card-content h1 > span{
+    display: block;
+    font-size: 0.4em;
+    margin-top: -2.1em;
+    margin-bottom: -1em;
+  }
+  .slide div.card-heading {
+    margin-top: 20%;
+  }
 }
 
 /*###Desktops, big landscape tablets and laptops(Large, Extra large)####*/
@@ -1287,6 +1333,52 @@ strong{
     right: 5em;
     height: 5em;
     z-index: 10;
+  }
+  .slide div.card-heading h1 {
+    font-size: 8.7em;
+  }
+  .slide div.card-heading h1 > span {
+    margin-top: -0.5em !important;
+    font-size: 0.27em;
+  }
+  #two .card-content h1 > span{
+    display: block;
+    font-size: 0.4em;
+    margin-top: -2.1em;
+    margin-bottom: -1em;
+  }
+  #three .card-content h1 > span{
+    display: block;
+    font-size: 0.4em;
+    margin-top: -2.1em;
+    margin-bottom: -1em;
+  }
+  #four .card-content h1 > span{
+    display: block;
+    font-size: 0.4em;
+    margin-top: -2.1em;
+    margin-bottom: -1em;
+  }
+  #five .card-content h1 > span{
+    display: block;
+    font-size: 0.4em;
+    margin-top: -2.1em;
+    margin-bottom: -1em;
+  }
+  #six .card-content h1 > span{
+    display: block;
+    font-size: 0.4em;
+    margin-top: -2.1em;
+    margin-bottom: -1em;
+  }
+  #seven .card-content h1 > span{
+    display: block;
+    font-size: 0.4em;
+    margin-top: -2.1em;
+    margin-bottom: -1em;
+  }
+  .slide div.card-heading {
+    margin-top: 17%;
   }
 }
 #five .panel-title:hover{
