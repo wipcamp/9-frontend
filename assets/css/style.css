@@ -181,7 +181,7 @@ h1, p {
   position: absolute;
   z-index: 200;
   width: 100%;
-  margin-top: 50%;
+  margin-top: 40%;
   text-align: center !important;
   left: 0;
   opacity: 1;
@@ -1363,7 +1363,7 @@ h1,p,ul{
     margin-bottom: -1em;
   }
   .slide div.card-heading {
-    margin-top: 17%;
+    margin-top: 13%;
   }
 }
 #five .panel-title:hover{
