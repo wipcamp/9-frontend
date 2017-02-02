@@ -63,8 +63,8 @@ $(document).ready(function(){
 
       var beforeAnimate = function() {
         var r = $.Deferred();
-        $('.con').removeClass('idle');
         $(event.target).parents().filter('.slide').addClass('active');
+        $('.con').removeClass('idle');
         $(event.target).parents().filter('.slide').css({"transform": "perspective(100px) translate3d(0, 0, 0)"});
         return r;
       };
