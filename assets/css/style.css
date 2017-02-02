@@ -342,8 +342,9 @@ div.card-heading h1 > span {
 }
 
 .wave {
-  width: 100%;
   height: 3em;
+  width: 200%;
+  left:-30%;
 }
 
 .wave1{
@@ -1137,7 +1138,6 @@ h1,p,ul{
     font-size: 18px;
   }
   .wave{
-    width:100%;
     height: 4em;
   }
   .logo-important-sponsor{
@@ -1240,9 +1240,6 @@ h1,p,ul{
     right: 0;
     z-index: 2;
     width: 11em;
-  }
-  .wave{
-    width: 200%;
   }
   .wave3{
     bottom: -1em;
