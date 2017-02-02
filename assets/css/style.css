@@ -9,6 +9,7 @@ body {
   font-weight: 400;
   height: 100%;
   padding: 0;
+  cursor: -webkit-grab;
   margin: 0;
   color: white;
 }
@@ -714,6 +715,12 @@ h1,p,ul{
   z-index: 0;
   overflow: hidden;
 }
+.ship img{
+  position: absolute;
+}
+.ship-main img{
+  position: absolute;
+}
 /*### Smartphones (portrait and landscape)(small)### */
 @media screen and (min-width : 0px) and (max-width : 767px){
   body,html{
@@ -721,12 +728,12 @@ h1,p,ul{
   }
   .ship-main img{
     height: 16.5em;
-    bottom: 1.3em;
+    bottom: 1.1em;
     left: -3em;
   }
   .ship img {
     height: 16.5em;
-    bottom: 1.3em;
+    bottom: 1.1em;
   }
   .slide.active .ship {
     left: -3em;
@@ -859,6 +866,20 @@ h1,p,ul{
     margin-top: -0.5em !important;
     font-size: 0.3em;
   }
+  #six div.card-heading h1 {
+    font-size: 5.5em;
+  }
+  #six div.card-heading h1 > span {
+    margin-top: -0.5em !important;
+    font-size: 0.37em;
+  }
+  #seven div.card-heading h1 {
+    font-size: 5.5em;
+  }
+  #seven div.card-heading h1 > span {
+    margin-top: -0.5em !important;
+    font-size: 0.38em;
+  }
   #two .card-content h1 > span{
     display: block;
     font-size: 0.4em;
@@ -903,6 +924,13 @@ h1,p,ul{
   }
   .logo-important-sponsor{
     margin-top:-0.5em;
+  }
+  #six h2 {
+    font-size: 1.25em;
+    margin-top: 0 !important;
+  }
+  #six h2 ~ p {
+    text-indent: 50px;
   }
 }
 /*###Tablet(medium)###*/
