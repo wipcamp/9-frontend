@@ -1,6 +1,5 @@
 /*========================= Stylesheets Dependencies ========================*/
 @import url('fontface-thaisansneue.css');
-@import url('fontface-sarunsgothic2.css');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 /*============================= Global Elements =============================*/
@@ -17,7 +16,7 @@ body {
 h1 {
   transition: font-size .5s cubic-bezier(0.075, 0.82, 0.165, 1);
   line-height: 1.5em;
-  font-family: "Sarun\'s Gothic 2";
+  font-family: "Thaisans Neue for Web";
 }
 
 h1 > span {
@@ -179,7 +178,7 @@ h1, p {
 }
 .slide div.card-heading {
   position: absolute;
-  z-index: 55;
+  z-index: 200;
   width: 100%;
   margin-top: 50%;
   text-align: center !important;
@@ -192,7 +191,7 @@ h1, p {
   display: none;
 }
 div.card-heading h1 {
-  line-height: 0.7em;
+  line-height: 1em;
   text-align: center !important;
 }
 div.card-heading h1 > span {
@@ -491,7 +490,6 @@ div.card-heading h1 > span {
   width: 100%;
   bottom: 0;
   z-index: 4;
-  left: -1em;
   animation-name: shipTraveller;
   animation-duration: 4s;
   animation-delay: 0.1s;
@@ -499,7 +497,7 @@ div.card-heading h1 > span {
   animation-iteration-count: infinite;
   animation-play-state: running;
 }
-.ship img {
+div.ship {
   transition: all 2.5s;
 }
 
@@ -724,45 +722,14 @@ h1,p,ul{
     bottom: 1.3em;
     left: -3em;
   }
-  .ship img{
+  .ship img {
     height: 16.5em;
     bottom: 1.3em;
+  }
+  .slide.active .ship {
     left: -3em;
   }
-  #two.active .ship img{
-    left: -3em;
-  }
-  #two .ship img {
-    left: -95%;
-  }
-  #three.active .ship img{
-    left: -3em;
-  }
-  #three .ship img {
-    left: -95%;
-  }
-  #four.active .ship img{
-    left: -3em;
-  }
-  #four .ship img {
-    left: -95%;
-  }
-  #five.active .ship img{
-    left: -3em;
-  }
-  #five .ship img {
-    left: -95%;
-  }
-  #six.active .ship img{
-    left: -3em;
-  }
-  #six .ship img {
-    left: -95%;
-  }
-  #seven.active .ship img{
-    left: -3em;
-  }
-  #seven .ship img {
+  .slide .ship {
     left: -95%;
   }
   .register {
@@ -1008,69 +975,14 @@ h1,p,ul{
     bottom: 0;
     left: 0;
   }
-  .ship img{
+  .ship img {
     height: 20em;
     bottom: 0;
+  }
+  .slide.active div.ship{
     left: 0;
   }
-  #two.active .ship img{
-    height: 20em;
-    bottom: 0em;
-    left: 0em;
-  }
-  #two .ship img {
-    height: 20em;
-    bottom: 0em;
-    left: -50%;
-  }
-  #three.active .ship img{
-    height: 20em;
-    bottom: 0em;
-    left:0em;
-  }
-  #three .ship img {
-    height: 20em;
-    bottom: 0em;
-    left: -50%;
-  }
-  #four.active .ship img{
-    height: 20em;
-    bottom: 0em;
-    left:0em;
-  }
-  #four .ship img {
-    height: 20em;
-    bottom: 0em;
-    left: -50%;
-  }
-  #five.active .ship img{
-    height: 20em;
-    bottom: 0em;
-    left:0em;
-  }
-  #five .ship img {
-    height: 20em;
-    bottom: 0em;
-    left: -50%;
-  }
-  #six.active .ship img{
-    height: 20em;
-    bottom: 0em;
-    left:0em;
-  }
-  #six .ship img {
-    height: 20em;
-    bottom: 0em;
-    left: -50%;
-  }
-  #seven.active .ship img{
-    height: 20em;
-    bottom: 0em;
-    left:0em;
-  }
-  #seven .ship img {
-    height: 20em;
-    bottom: 0em;
+  .slide div.ship{
     left: -50%;
   }
   #two .cisland img{
@@ -1242,74 +1154,16 @@ h1,p,ul{
   }
   .ship-main img{
     height: 24em;
-    position: absolute;
     bottom: 0em;
-    left: 0;
   }
   .ship img{
-    height: 50em;
-    position: absolute;
+    height: 24em;
     bottom: 0em;
+  }
+  .slide.active .ship {
     left: 0;
   }
-  #two.active .ship img{
-    height: 24em;
-    bottom: 0em;
-    left: 0;
-  }
-  #two .ship img {
-    height: 24em;
-    bottom: 0em;
-    left: -50%;
-  }
-  #three.active .ship img{
-    height: 24em;
-    bottom: 0em;
-    left: 0;
-  }
-  #three .ship img {
-    height: 24em;
-    bottom: 0em;
-    left: -50%;
-  }
-  #four.active .ship img{
-    height: 24em;
-    bottom: 0em;
-    left: 0;
-  }
-  #four .ship img {
-    height: 24em;
-    bottom: 0em;
-    left: -50%;
-  }
-  #five.active .ship img{
-    height: 24em;
-    bottom: 0em;
-    left: 0;
-  }
-  #five .ship img {
-    height: 24em;
-    bottom: 0em;
-    left: -50%;
-  }
-  #six.active .ship img{
-    height: 24em;
-    bottom: 0em;
-    left: 0;
-  }
-  #six .ship img {
-    height: 24em;
-    bottom: 0em;
-    left: -50%;
-  }
-  #seven.active .ship img{
-    height: 24em;
-    bottom: 0em;
-    left: 0;
-  }
-  #seven .ship img {
-    height: 24em;
-    bottom: 0em;
+  .slide .ship {
     left: -50%;
   }
   #two p{
