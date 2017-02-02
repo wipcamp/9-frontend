@@ -600,6 +600,13 @@ div.ship {
   position: relative;
   z-index: 55;
 }
+
+#where-map-iframe {
+  border: 0;
+  width: 100%;
+  height: 350px;
+}
+
 #five span{
   position: relative;
   z-index: 9;
