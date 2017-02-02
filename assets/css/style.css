@@ -1147,9 +1147,7 @@ h1,p,ul{
   }
   .ship-main img{
     height: 24em;
-    position: absolute;
     bottom: 0em;
-    left: 0;
   }
   .ship img{
     height: 24em;
