@@ -14,7 +14,6 @@ function WipcampCarousel(element) {
       self.showSlide(currentSlide);
       $('.next').css({"transform": "perspective(100px) translate3d(" + pageTransform[1] + "px, -100px, -50px)"});
       $('.prev').css({"transform": "perspective(100px) translate3d(" + pageTransform[-1] + "px, -100px, -50px)"});
-      marginSlideControl();
     });
 
     $(".next").click(function(){
@@ -91,8 +90,41 @@ function WipcampCarousel(element) {
     });
   };
 
+  //public int getCurrentSlide()
   this.getCurrentSlide = function () {
     return currentSlide;
+  };
+
+  /**
+   * @public
+   * Determine what slide want to show.
+   * @param {number} skipto - Determine the index of carousel slide.
+   * @param {boolean} animate - Determine to use animation while changing carousel slide.
+   */
+  this.showSlide = function(skipto, animate) {
+    skipto = Math.max(0, Math.min(skipto, slideCount-1));
+    currentSlide = skipto;
+    $('.bullet-container').children().removeClass('current');
+    $('.bullet-container').children().filter(':eq(' + currentSlide + ')').addClass('current');
+
+    bullet = $('.bullet-container .bullet');
+    bulletDiff = slideCount - (currentSlide + 1);
+    bullet.removeClass('step');
+    bullet.splice(-bulletDiff, bulletDiff);
+    bullet.addClass('step');
+
+    animation(animate);
+    setSlideDemensions();
+  };
+
+  //public void showPrev()
+  this.prev = function () {
+    return this.showSlide(currentSlide - 1, true);
+  };
+
+  //public void showNext()
+  this.next = function () {
+     return this.showSlide(currentSlide + 1, true);
   };
 
   function setSlideDemensions() {
@@ -115,22 +147,6 @@ function WipcampCarousel(element) {
     return windowWidth * 1.15625;
   }
 
-  this.showSlide = function(skipto, animate) {
-    skipto = Math.max(0, Math.min(skipto, slideCount-1));
-    currentSlide = skipto;
-    $('.bullet-container').children().removeClass('current');
-    $('.bullet-container').children().filter(':eq(' + currentSlide + ')').addClass('current');
-
-    bullet = $('.bullet-container .bullet');
-    bulletDiff = slideCount - (currentSlide + 1);
-    bullet.removeClass('step');
-    bullet.splice(-bulletDiff, bulletDiff);
-    bullet.addClass('step');
-
-    animation(animate);
-    setSlideDemensions();
-  };
-
   function animation(animate) {
     slide.removeClass('animate');
 
@@ -138,14 +154,6 @@ function WipcampCarousel(element) {
       slide.addClass('animate');
     }
   }
-
-   this.next = function () {
-     return this.showSlide(currentSlide + 1, true);
-   };
-
-   this.prev = function () {
-     return this.showSlide(currentSlide - 1, true);
-   };
 
   function eventDetection(e) {
     switch (e.type) {
@@ -177,11 +185,6 @@ function WipcampCarousel(element) {
       resultTranform[resultTranform.length - 1] = resultTranform[resultTranform.length - 1].replace(")","");
       var xyz = [resultTranform[12], resultTranform[13], resultTranform[14]];
       return xyz;
-  }
-
-  function marginSlideControl(){
-    var dif = ($(window).width()-$('div.slide-control').width())/2;
-    $('.slide-control').css({"margin-left": + dif +"px"});
   }
 
   function slideActiveNext() {
