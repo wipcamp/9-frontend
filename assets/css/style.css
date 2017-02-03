@@ -863,6 +863,9 @@ h1,p,ul{
   .link-img {
     width: 70px;
   }
+  #five .card-content h1{
+    font-size: 3.1em;
+  }
   .slide div.card-heading h1 {
     font-size: 7.5em;
   }
