@@ -6,6 +6,7 @@ body {
 }
 .bg{
   background: linear-gradient(#141123, #2d214d, #127763); /* Standard syntax */
+  overflow-y: hidden;
 }
 .center {
   text-align: center;
