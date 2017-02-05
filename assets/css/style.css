@@ -360,7 +360,7 @@ div.card-heading h1 > span {
 /*================================= Pages ===================================*/
 
 /*-------------------- Welcome Page ---------------------*/
-.sponsor-logo{
+.supporter-logo{
   margin: 0px auto;
   width: 30em;
   z-index: 10;
@@ -1077,7 +1077,7 @@ h1,p,ul{
     z-index: 99;
     top:10%;
   }
-  .sponsor-logo{
+  .supporter-logo{
     margin: 0px auto;
     z-index: 10;
   }
@@ -1204,7 +1204,7 @@ h1,p,ul{
     z-index: 99;
     top:14%;
   }
-  .sponsor-logo{
+  .supporter-logo{
     margin: 0px auto;
     z-index: 10;
   }
