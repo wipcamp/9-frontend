@@ -282,7 +282,9 @@ div.card-heading h1 > span {
   cursor: pointer;
   width: 100%;
   max-width: 480px;
-  margin: 0px 4px;
+  padding: 0px 12px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .slide-control .prev-container,
@@ -299,13 +301,13 @@ div.card-heading h1 > span {
 }
 
 .slide-control .bullet-container {
-  width: calc(100% - 24px * 2 - 4px * 2);
-  margin: 0px 4px;
+  width: calc(100% - 24px * 2 - 8px * 2);
+  margin: 0px 8px;
 }
 
 .bullet-container .bullet {
   height: 24px;
-  width: calc((100% - 24px * 2) / 7);
+  width: calc((100% - 12px * 2) / 7);
   float: left;
 }
 
@@ -341,7 +343,7 @@ div.card-heading h1 > span {
 }
 
 .bullet-container .bullet-gap {
-  width: 24px;
+  width: 12px;
   height: 24px;
   float: left;
   cursor: default;
@@ -880,6 +882,9 @@ h1,p,ul{
   }
   .link-img {
     width: 70px;
+  }
+  #five .card-content h1{
+    font-size: 3.1em;
   }
   .slide div.card-heading h1 {
     font-size: 7.5em;
