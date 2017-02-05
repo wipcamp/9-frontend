@@ -793,7 +793,7 @@ h1,p,ul{
   #six .cisland img{
     height: 13em;
     right: 0em;
-    bottom: 1.7em;
+    bottom: 1.15em;
   }
   #seven .cisland img{
     height: 12em;
@@ -1065,7 +1065,7 @@ h1,p,ul{
   #six .cisland img{
     height: 16em;
     right: 0.2em;
-    bottom: 1.8em;
+    bottom: 0.75em;
   }
   #seven .cisland img{
     height: 14.5em;
@@ -1251,7 +1251,7 @@ h1,p,ul{
   #six .cisland img {
     height: 18em;
     right: 3em;
-    bottom: 2.65em;
+    bottom: 1.1em;
   }
   #seven .cisland img {
     height: 17.5em;
@@ -1419,6 +1419,9 @@ h1,p,ul{
   }
   .slide div.card-heading {
     margin-top: 13%;
+  }
+  .wave2{
+    bottom: 0.3em;
   }
 }
 #five .panel-title:hover{
