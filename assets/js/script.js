@@ -20,6 +20,7 @@ $(document).ready(function(){
   $('img').on('dragstart', function (e) {
     e.preventDefault();
   });
+
   $('.idle .slide a').on('click', function (e) {
     e.preventDefault();
   });
@@ -35,11 +36,13 @@ $(document).ready(function(){
       $('.wave1, .wave2, .wave3').addClass('pause');
       $('.cloud1, .cloud2, .cloud3').addClass('pause');
       $('.ship').addClass('pause');
+      $('.ship-main').addClass('pause');
       $(event.target).parents().filter('.slide').removeClass('active');
       $(event.target).parents().filter('.slide').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
       event.stopPropagation();
     }
   });
+
   $('.card-btn-main').click(function (event) {
     if(getTransform($(event.target).parents().filter('.slide'))[0] == 0){
       $('.con').addClass('idle');
@@ -47,12 +50,14 @@ $(document).ready(function(){
       $('.wave1, .wave2, .wave3').addClass('pause');
       $('.cloud1, .cloud2, .cloud3').addClass('pause');
       $('.ship').addClass('pause');
+      $('.ship-main').addClass('pause');
       $(event.target).parents().filter('.slide').removeClass('active');
       $(event.target).parents().filter('.slide').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
       event.stopPropagation();
     }
     carousel.next();
   });
+
   $('div.slide').click(function(event) {
     if(getTransform($(event.target).parents().filter('.slide'))[0] == 0){
       var transitionTime = /((?:[0-9])+(?:\.(?:[0-9])+)?)(ms|s)/.exec($('.animate').css('transition-duration'));
@@ -61,8 +66,8 @@ $(document).ready(function(){
 
       var beforeAnimate = function() {
         var r = $.Deferred();
-        $('.con').removeClass('idle');
         $(event.target).parents().filter('.slide').addClass('active');
+        $('.con').removeClass('idle');
         $(event.target).parents().filter('.slide').css({"transform": "perspective(100px) translate3d(0, 0, 0)"});
         return r;
       };
@@ -78,8 +83,10 @@ $(document).ready(function(){
     $('.wave1, .wave2, .wave3').removeClass('pause');
     $('.cloud1, .cloud2, .cloud3').removeClass('pause');
     $('.ship').removeClass('pause');
+    $('.ship-main').removeClass('pause');
   });
   countDown();
+
 });
 
 function getTransform(el) {
