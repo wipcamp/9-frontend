@@ -49,6 +49,7 @@ $(document).ready(function(){
     $('.cloud1, .cloud2, .cloud3').addClass('pause');
     $('.ship').addClass('pause');
     $('.ship-main').addClass('pause');
+    $('.slide:eq('+carousel.getCurrentSlide()+')').removeClass('hover');
     $(event.target).parents().filter('.slide').removeClass('active');
     $(event.target).parents().filter('.slide').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
     event.stopPropagation();
