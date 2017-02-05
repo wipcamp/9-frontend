@@ -216,6 +216,7 @@ function WipcampCarousel(element) {
     $('.cloud1, .cloud2, .cloud3').addClass('pause');
     $('.ship').addClass('pause');
     $('.slide.active').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
+    $('.slide:eq('+self.getCurrentSlide()+')').removeClass('hover');
     $('.slide.active').removeClass('active');
     $('.con').removeClass('idle');
     setTimeout(function() { self.next(); }, 500);
@@ -234,6 +235,7 @@ function WipcampCarousel(element) {
     $('.cloud1, .cloud2, .cloud3').addClass('pause');
     $('.ship').addClass('pause');
     $('.slide.active').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
+    $('.slide:eq('+self.getCurrentSlide()+')').removeClass('hover');
     $('.slide.active').removeClass('active');
     $('.con').removeClass('idle');
     setTimeout(function() { self.prev(); }, 500);
