@@ -14,16 +14,18 @@ var menu = { preload : preload , create : create1};
 var howToPlay = { preload : preload ,create : create2};
 var resultGame = {preload : preload , create : create3};
 var login = {preload : preload , create : create4};
+var credit = {preload : preload , create : create5};
 game.state.add('login',login);
 game.state.add('main', main);
 game.state.add('menu', menu);
 game.state.add('howToPlay',howToPlay);
 game.state.add('result',resultGame);
+game.state.add('credit',credit);
 game.state.start('login');
 function preload() {
     game.load.image('bgStart','images/bg-Start.png');
     game.load.spritesheet('ship', 'images/player.png',500,500);
-	game.load.image('kraken','images/boss.png');
+    game.load.image('kraken','images/boss.png');
     game.load.image('map','images/map.png');
     game.load.spritesheet('boom','images/boom2.png',80,90);
     game.load.spritesheet('boom2','images/boom_1.png',160,200);
@@ -32,14 +34,22 @@ function preload() {
     game.load.image('retry','images/retry.png');
     game.load.image('menu','images/menu.png');
     game.load.spritesheet('wranning','images/wranning.png',100,100);
-    game.load.audio('Play','sound/Escape.wav');
-    game.load.audio('Kraken','sound/Kraken.mp3');
-    game.load.audio('Death','sound/Death.wav');
-    game.load.audio('buttonPush','sound/Test.wav');
+    game.load.audio('Play','sound/Escape.ogg');
+    game.load.audio('Kraken','sound/Kraken.ogg');
+    game.load.audio('Death','sound/Death.ogg');
+    game.load.audio('buttonPush','sound/Paddling.ogg');
     game.load.image('cannonball','images/enemyship.png');
     game.load.image('obj','images/tower.png');
     game.load.image('shark','images/shark.png');
     game.load.image('bottom','images/bottom.png');
+    game.load.audio('Login','sound/Login.ogg');
+    game.load.audio('Shank','sound/Shank.ogg');
+    game.load.audio('BombDrop','sound/BombDrop.ogg');
+    game.load.audio('dKraken','sound/DeathbyKraken.ogg');
+    game.load.audio('dBomb','sound/DeathbyBombDrop.ogg');
+    game.load.audio('Warn','sound/Warn.ogg');
+    game.load.audio('BombAway','sound/BombAway.ogg');
+    
 }
 var map;
 var player;
@@ -48,7 +58,6 @@ var ck;
 var textScore;
 var score;
 var boom1,boom2,boom3,boom4;
-var soundFx1;
 var timer;
 var cannonTimer;
 var time;
@@ -70,6 +79,11 @@ var sharkTime;
 var bottomship;
 var animJumpSprite;
 var buttonPush;
+var soundFx2;
+var soundFx3;
+var soundFx4;
+var soundFx1;
+var death;
 function create() {
     game.world.setBounds(0, 0, 1960, 550);
     music.stop();
@@ -204,14 +218,22 @@ function update() {
     cannonTime--;
     bombTime--;
     sharkTime--;
-    if(time%720>=540)
+    if(time%720>=540){
         wranning.animations.play('play');
+        soundFx1= game.add.audio('Warn');
+        soundFx1.play();
+    }
     if(time%720<=600){
     	wranning.frame = 0;
     	sprite.body.velocity.x -= 0.5;
-    }
+        
+   
+     }
     else{
     	sprite.body.velocity.x -= 1.5;
+        soundFx1.stop();
+        soundFx1= game.add.audio('Kraken');
+        soundFx1.play();
     }
     time++;
     if(sprite.body.velocity.x<=maxSpeed){
@@ -240,6 +262,8 @@ function update() {
         }
     }
     if(sprite.x>game.world.width*(6/7)){
+        death = game.add.audio('dKraken');
+        death.play();
         game.state.start('result');
     }
     if (jump.isDown && sprite.body.touching.down) {
@@ -252,16 +276,18 @@ function update() {
 var buttonCredit;
 var buttonStart;
 var buttonHowTOPlay;
+var buttonCredit;
 var menuButton;
 var music;
 var bg;
 function create1(){ // main page
     bg = game.add.image(0,0,'bgStart');
-    music = game.add.audio('Play');
+    music.stop();
+    music = game.add.audio('Login');
     music.loopFull();
-    buttonCredit = game.add.button(980*(3/10),550*(8/10) , 'startButton', toGame, this);
-    buttonCredit.anchor.set(0.5);
+    buttonCredit = game.add.button(980*(3/10),550*(8/10) , 'startButton', toCredit, this);
     buttonStart = game.add.button(980*(5/10), 550*(8/10), 'startButton', toGame, this);
+    buttonCredit.anchor.set(0.5);
     buttonStart.anchor.set(0.5);
     buttonHowTOPlay = game.add.button(980*(7/10), 550*(8/10), 'howToPlayButton', toHowToPlay, this);
     buttonHowTOPlay.anchor.set(0.5);
@@ -284,8 +310,11 @@ function create3(){ //result
     setScore();
 }
 function create4() { //login
+    music = game.add.audio('Login');
+    music.loopFull();
     game.add.plugin(PhaserInput.Plugin);
     input = game.add.inputField(game.world.centerX-150, game.world.centerY-12.5, {
+    //input = game.add.inputField(980/2, 550/2, {
         font: '22px Arial',
         fill: '#212121',
         fontWeight: 'normal',
@@ -299,7 +328,10 @@ function create4() { //login
     menuButton = game.add.button(980/2, game.world.centerY+100, 'menu', toMenu, this);
     menuButton.anchor.set(0.5);
     //input.anchor.set(0.5);
-    
+}
+function create5() { //credit
+    menuButton = game.add.button(980/2, game.world.centerY+100, 'menu', toMenu, this);
+    menuButton.anchor.set(0.5);
 }
 function toGame() {
     game.state.start('main');
@@ -312,16 +344,19 @@ function toMenu() {
 function toHowToPlay() {
     game.state.start('howToPlay');
 }
+function toCredit() {
+    game.state.start('credit');
+}
+
 function toLink() {
     window.open(linkToScore);
 }
-function playSound(){
-    soundFx1 = game.add.audio('Kraken');
-    soundFx1.play();
-}
+
 function shootThem() {
     if(cannonTimer<game.time.now){
         var output = game.rnd.integerInRange(0,20);
+        var soundFx3 = game.add.audio('BombDrop');
+        soundFx3.play();
         if(output == 0){
             cannonTimer = game.time.now + 10000;
             var range = game.rnd.integerInRange(-200, 200);
@@ -332,20 +367,30 @@ function shootThem() {
     }
 }
 function cannonHitPlayer() {
-    console.log("hit by cannon");
+    death = game.add.audio('dBomb');
+    death.play();
+    console.log("hit by cannon"); 
     game.state.start('result');
 }
 function bombHitPlayer() {
+    death = game.add.audio('dBomb');
+    death.play();
     console.log("hit by bomb");
     game.state.start('result');
+
 }
 function sharkHitPlayer() {
+    death = game.add.audio('dKraken');
+    death.play();
     console.log("hit by shark");
     game.state.start('result');
+    
 }
 function bombSpawn() {
     if(bombTimer<game.time.now){
         var output = game.rnd.integerInRange(0,20);
+        soundFx4 = game.add.audio('BombAway');
+        soundFx4.play();
         if(output == 0){
             bombTimer = game.time.now + 5000;
             bomby = bombGroup.getFirstExists(false);
@@ -355,9 +400,12 @@ function bombSpawn() {
         }
     }
 }
+
 function sharkSpawn() {
     if(sharkTimer<game.time.now){
         var output = game.rnd.integerInRange(0,20);
+        soundFx2 = game.add.audio('Shank');
+        soundFx2.play();
         if(output == 0){
             sharkTimer = game.time.now + 8000;
             bomby = sharkGroup.getFirstExists(false);
@@ -385,7 +433,7 @@ function setScore() {
 
     if(highscore < score || highscore === undefined){
         dbEtk.child(name).update(
-            {    
+            {
                  "score" : score,
                  "highscore" : score
             }
@@ -399,4 +447,12 @@ function setScore() {
         );
     }
      console.log("set score complete");
+
+     
 }
+    function bgmStop(){
+        this
+    }
+
+
+
