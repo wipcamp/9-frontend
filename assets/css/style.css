@@ -401,7 +401,7 @@ div.card-heading h1 > span {
   left: -50%;
   z-index: 1;
   animation-name: wave;
-  animation-duration: 5s;
+  animation-duration: 13s;
   animation-delay: .1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -413,11 +413,11 @@ div.card-heading h1 > span {
   background-position: -42px 0;
   position: absolute;
   width: 200%;
-  bottom: 1em;
+  bottom: 0.7em;
   left: -50%;
   z-index: 3;
   animation-name: wave;
-  animation-duration: 3s;
+  animation-duration: 7s;
   animation-delay: .1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -432,7 +432,7 @@ div.card-heading h1 > span {
   left: -50%;
   z-index: 5;
   animation-name: wave;
-  animation-duration: 2.5s;
+  animation-duration: 4s;
   animation-delay: .1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -783,7 +783,7 @@ h1,p,ul{
   }
   .ship img {
     height: 16.5em;
-    bottom: 1.1em;
+    bottom: 0.6em;
   }
   .slide.active .ship {
     left: -3em;
@@ -1196,7 +1196,7 @@ h1,p,ul{
   }
   #six .card-content h1 > span{
     display: block;
-    font-size: 0.4em;
+    font-size: 0.27em;
     margin-top: -2.1em;
     margin-bottom: -1em;
   }
