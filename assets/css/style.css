@@ -16,12 +16,16 @@ body {
 
 h1 {
   transition: font-size .5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  line-height: 1.5em;
   font-family: "Thaisans Neue for Web";
+  margin-bottom: 0;
 }
 
-h1 > span {
+h1 > span, span {
   font-family: 'Thaisans Neue for Web';
+}
+
+.top {
+  margin-top: 1.5em;
 }
 
 h1, p {
@@ -85,6 +89,9 @@ h1, p {
 .pause {
   -webkit-animation-play-state: paused !important;
   animation-play-state: paused !important;
+}
+.btn {
+  text-shadow: none;
 }
 /*=============================== Components ================================*/
 
