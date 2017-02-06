@@ -1246,7 +1246,7 @@ h1,p,ul{
   #five .cisland img {
     height: 16em;
     right: 3em;
-    bottom: 2.65em;
+    bottom: 2.1em;
   }
   #six .cisland img {
     height: 18em;
@@ -1407,7 +1407,6 @@ h1,p,ul{
   }
   #six .card-content h1 > span{
     display: block;
-    font-size: 0.4em;
     margin-top: -2.1em;
     margin-bottom: -1em;
   }
@@ -1426,4 +1425,10 @@ h1,p,ul{
 }
 #five .panel-title:hover{
   cursor: pointer;
+}
+@media only screen
+and (device-width: 1366px)
+and (device-height: 1024px)
+and (orientation: landscape){
+  
 }
