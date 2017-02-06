@@ -1,6 +1,9 @@
+@import url('fontface-thaisansneue.css');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-body {
-    font-family: 'thaisans_neueregular', sans-serif !important;
+body{
+    font-family: 'Thaisans Neue for Web', sans-serif !important;
+    font-weight: 400;
     margin: 0 0 0 0;
 }
 
@@ -17,6 +20,9 @@ body {
 and (min-device-width: 320px)
 and (max-device-width: 767px)
 and (orientation: portrait) {
+  .nameGame{
+    display: none;
+  }
   .fixHeight {
     max-height: 667px;
   }
@@ -53,6 +59,9 @@ and (orientation: portrait) {
 and (min-device-width: 320px)
 and (max-device-width: 736px)
 and (orientation: landscape) {
+  .nameGame{
+    display: none;
+  }
   .textWarn{
     font-size: 0px;
   }
@@ -78,6 +87,9 @@ and (orientation: landscape) {
   and (min-device-width: 768px)
   and (max-device-width: 1024px)
   and (orientation: portrait) {
+    .nameGame{
+      display: none;
+    }
     .fixHeight {
       max-height: 667px;
     }
@@ -113,6 +125,12 @@ and (orientation: landscape) {
   and (min-device-width: 768px)
   and (max-device-width: 1024px)
   and (orientation: landscape) {
+    .nameGame{
+      top: 3vw;
+      position: absolute;
+      color: white;
+      left: 32vw;
+    }
     .fixHeight {
       max-height: 736px;
     }
@@ -134,13 +152,22 @@ and (orientation: landscape) {
     #game {
       width: 100%;
       height: 100%;
-      padding: 10% 0 0 0;
+      padding: 13% 0 0 0;
       background: linear-gradient(#141123, #2d214d, #463b6b);
     }
 }
 
 @media only screen
-and (min-width:1025px) {
+  and (device-width: 1366px)
+  and (device-height: 1024px)
+  and (orientation: landscape) {
+  .nameGame{
+    position: absolute;
+    color: white;
+    top: 8vh;
+    left: 30vw;
+    font-size: 3em;
+  }
   .setBgIpad{
     background:linear-gradient(#141123, #2d214d, #463b6b);
   }
@@ -165,13 +192,20 @@ and (min-width:1025px) {
   #game {
     width: 100%;
     height: 100%;
-    padding: 4% 0 7% 0;
+    padding: 25vh 0 0 0;
     background: linear-gradient(#141123, #2d214d, #463b6b);
   }
 }
 
 @media only screen
-and (min-width:1025px) {
+and (min-width:1024px) {
+  .nameGame{
+    position: absolute;
+    color: white;
+    left: 20vw;
+    right: 20vw;
+    font-size: 3em;
+  }
   .setBgIpad{
     background:linear-gradient(#141123, #2d214d, #463b6b);
   }
@@ -196,7 +230,46 @@ and (min-width:1025px) {
   #game {
     width: 100%;
     height: 100%;
-    padding: 7% 0 7% 0;
+    padding: 16vh 0 0 0;
     background: linear-gradient(#141123, #2d214d, #463b6b);
   }
+}
+
+@media only screen
+and (min-width:1300px) {  .nameGame{
+    position: absolute;
+    color: white;
+    top: 1vh;
+    left: 20vw;
+    right: 20vw;
+    font-size: 1.5em;
+  }
+  .setBgIpad{
+    background:linear-gradient(#141123, #2d214d, #463b6b);
+  }
+  .fixHeight {
+    max-height: 736px;
+  }
+  .textWarn{
+    font-size: 0px;
+  }
+  .rotatePic{
+    width: 0px;
+    height: 0px;
+  }
+  .rotateIpad{
+    width: 0px;
+    height: auto;
+  }
+  .setIndexGame{
+    z-index: -1 !important;
+    position: fixed;
+  }
+  #game {
+    width: 100%;
+    height: 100%;
+    padding: 10vh 0 0 0;
+    background: linear-gradient(#141123, #2d214d, #463b6b);
+  }
+}
 }
