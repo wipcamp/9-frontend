@@ -45,32 +45,40 @@ h1, p {
 #btn-getstarted {
   display: inline-block;
   color: #fff;
-  border: 1px solid #188c83;
   margin-top: 2em;
   padding: 0.8em 2.8em 0.8em 2.8em;
   text-decoration: none !important;
   border-radius: 7px;
+  border: 1px solid #fff;
   cursor: pointer;
-  background-color: #188c83;
+  background-color: transparent;
+
 }
 .idle .slide #btn-getstarted {
   display: none;
 }
 #btn-getstarted:hover {
-  background-color: transparent;
+  background-color: #188c83;
+  border: 1px solid #188c83;
   border-radius: 7px;
-  border: 1px solid #fff;
 }
 
 @keyframes wave {
-    0% {
-        -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-        transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-    }
-    100% {
-        -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-        transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-    }
+  0% {
+    transform: translate(-3px, 6.25px);
+  }
+  25% {
+    transform: translate(10px, 12.25px);
+  }
+  50% {
+    transform: translate(18px, 6.25px);
+  }
+  75% {
+    transform: translate(10px, -3.25px);
+  }
+  100% {
+    transform: translate(-3px, 6.25px);
+  }
 }
 @keyframes cloud1 {
   0% { right: -15%; }
@@ -213,6 +221,7 @@ h1, p {
   left: 0;
   opacity: 1;
   transition: all 0.1s;
+  text-shadow: 1px 1px 3px #777;
 }
 .slide.active div.card-heading {
   opacity: 0;
@@ -377,10 +386,12 @@ div.card-heading h1 > span {
 }
 
 .wave1{
-  background-image: url('../img/object/wave6.svg');
+  background-image: url('../img/object/wave1.svg');
   background-repeat: repeat-x;
   position: absolute;
   bottom: 1.5em;
+  width: 200%;
+  left: -50%;
   z-index: 1;
   animation-name: wave;
   animation-duration: 5s;
@@ -390,7 +401,7 @@ div.card-heading h1 > span {
   animation-play-state: running;
 }
 .wave2{
-  background-image: url('../img/object/wave5.svg');
+  background-image: url('../img/object/wave2.svg');
   background-repeat: repeat-x;
   background-position: -42px 0;
   position: absolute;
@@ -406,7 +417,7 @@ div.card-heading h1 > span {
   animation-play-state: running;
 }
 .wave3{
-  background-image: url('../img/object/wave4.svg');
+  background-image: url('../img/object/wave3.svg');
   background-repeat: repeat-x;
   position: absolute;
   bottom: 0;
@@ -482,14 +493,17 @@ div.card-heading h1 > span {
   position: relative;
   margin-top: 1.5em;
   z-index: 99;
+  text-shadow: 1px 1px 3px #777;
 }
 
 .card-menu{
   text-decoration: none !important;
   color: #000;
   background-color: #fff;
+  border-radius: 4px;
   display: inline-block;
   padding: 0.45em;
+  text-shadow: none;
 }
 .card-menu:hover{
   cursor: pointer;
@@ -629,6 +643,7 @@ div.ship {
   width:100%;
   position: relative;
   z-index: 55;
+  text-shadow: none;
 }
 
 #where-map-iframe {
@@ -953,9 +968,7 @@ h1,p,ul{
   #btn-getstarted{
     margin-top: 3em;
   }
-  .logo-important-sponsor{
-    margin-top:-0.5em;
-  }
+
   #six h2 {
     font-size: 1.25em;
     margin-top: 0 !important;
@@ -1024,7 +1037,7 @@ h1,p,ul{
     z-index: 10;
   }
   .logo-important-sponsor{
-    margin-top: -2.4em;
+    margin-top: -1.5em;
     max-width: 300px;
   }
   .cisland img{
@@ -1200,7 +1213,7 @@ h1,p,ul{
     height: 4em;
   }
   .logo-important-sponsor{
-    margin-top: -2em;
+    margin-top: -1em;
     max-width: 320px;
   }
   #logo{
@@ -1250,7 +1263,7 @@ h1,p,ul{
   #five .cisland img {
     height: 16em;
     right: 3em;
-    bottom: 2.65em;
+    bottom: 2.1em;
   }
   #six .cisland img {
     height: 18em;
@@ -1411,7 +1424,6 @@ h1,p,ul{
   }
   #six .card-content h1 > span{
     display: block;
-    font-size: 0.4em;
     margin-top: -2.1em;
     margin-bottom: -1em;
   }
@@ -1430,4 +1442,10 @@ h1,p,ul{
 }
 #five .panel-title:hover{
   cursor: pointer;
+}
+@media only screen
+and (device-width: 1366px)
+and (device-height: 1024px)
+and (orientation: landscape){
+
 }
