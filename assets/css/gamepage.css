@@ -5,16 +5,18 @@ body {
   font-family: 'thaisans_neueregular', sans-serif !important;
   color: white;
   height: auto;
+  background: linear-gradient(#141123, #1d3c5c); /* Standard syntax */
 }
 .bg{
-  background: linear-gradient(#141123, #1d3c5c); /* Standard syntax */
-  overflow: hidden;
+  overflow: hidden !important;
 }
 .center {
   text-align: center;
 }
 
-
+.over {
+  overflow: hidden;
+}
 
 .wave {
   width: 100%;
@@ -108,15 +110,18 @@ body {
 and (device-width: 320px)
 and (device-height:568px)
 and (orientation: portrait){
+  /*.over {
+    overflow-y: hidden;
+  }*/
   .setSit{
-    height: 30px;
+    height: 2.5em;
   }
   .sponsorKmutt{
     height: 20px;
   }
   .gameCenter{
     width: 85%;
-    margin: 14% 0 0 0;
+    margin: 8vh 0 3vh 0;
   }
   .shipCircle{
     margin: 0px 0 0 0;
@@ -254,14 +259,14 @@ and (min-device-width: 414px)
 and (max-device-width: 767px)
 and (orientation: portrait){
   .setSit{
-    height: 30px;
+    height: 3  em;
   }
   .sponsorKmutt{
     height: 20px;
   }
   .gameCenter{
-    width: 80%;
-    margin: 10% 0 0 0;
+    width: 65%;
+    margin: 8vh 0 3vh 0;
   }
   .shipCircle{
     margin: 5% 0 0 0;
@@ -317,8 +322,8 @@ and (orientation: portrait){
     height: 45px;
   }
   .gameCenter{
-    width: 70%;
-    margin: 10% 0 0 0;
+    width: 65%;
+    margin: 8vh 0 3vh 0;
   }
   .shipCircle{
     margin: 5% 0 0% 0;
@@ -578,100 +583,97 @@ and (orientation: landscape){
     font-size: 30px;
   }
 }
+  /*
+  @media only screen
+  and (min-width: 0px){
+    .setSit{
+      height: 5.5vw;
+    }
+    .sponsorKmutt{
+      height: 45px;
+    }
+    .gameCenter{
+      width: 40vw;
+      margin: 9% 0 0 0;
+    }
+    .shipCircle{
+      margin: 0% 0 0 0;
+      height: 150px;
+    }
+    .boxGameDesktop{
+      padding: 23% 0 5% 0;
+    }
+    .fixBugHeight{
+      height: 100vh !important;
+    }
+    .gameOnlyDesktop{
+      padding: 0 2px 0 2px;
+      width: 10%;
+    }
+    .textOnlyDesktop{
+      padding: 15px 0 0 0;
+      font-size:  15px;
+      color: white;
+    }
+    .returnToHome{
+      padding: 15px 0 0 0;
+      font-size:  30px;
+      color: white;
+    }
+    .gameOnDesktop{
+      width: 0px;
+    }
+    .backButton{
+      padding: 5px 0px 0 15px;
+      font-size: 40px;
+      color: white;
+      position: absolute;
+      z-index: 50;
+    }
+    .bubble{
+      width: 100%;
+      height: 1em;
+    }
+    .bubble3{
+      width: 100%;
+      animation-name: wave;
+      animation-duration: 7.3s;
+      animation-delay: .1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-play-state: running;
+    }
+    @keyframes wave {
+        0% {
+            -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+            transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+        }
+        100% {
+            -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+            transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+        }
+    }
 
-@media only screen
-and (min-width: 0px){
-  /*.over{
-    overflow-x: hidden !important;
+    @keyframes wave2 {
+        0% {
+            -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+            transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+        }
+        100% {
+            -webkit-transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
+            transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
+        }
+    }
+    .marginSea{
+      margin: 90px 0 0 0;
+      height: auto;
+    }
+    .downButton{
+      margin: 30px 0 0 0;
+      color: white;
+      font-size: 30px;
+    }
   }*/
-  .setSit{
-    height: 5.5vw;
-  }
-  .sponsorKmutt{
-    height: 45px;
-  }
-  .gameCenter{
-    width: 40vw;
-    margin: 9% 0 0 0;
-  }
-  .shipCircle{
-    margin: 0% 0 0 0;
-    height: 150px;
-  }
-  .boxGameDesktop{
-    padding: 23% 0 5% 0;
-  }
-  .fixBugHeight{
-    height: 100vh !important;
-  }
-  .gameOnlyDesktop{
-    padding: 0 2px 0 2px;
-    width: 10%;
-  }
-  .textOnlyDesktop{
-    padding: 15px 0 0 0;
-    font-size:  15px;
-    color: white;
-  }
-  .returnToHome{
-    padding: 15px 0 0 0;
-    font-size:  30px;
-    color: white;
-  }
-  .gameOnDesktop{
-    width: 0px;
-  }
-  .backButton{
-    padding: 5px 0px 0 15px;
-    font-size: 40px;
-    color: white;
-    position: absolute;
-    z-index: 50;
-  }
-  .bubble{
-    width: 100%;
-    height: 1em;
-  }
-  .bubble3{
-    width: 100%;
-    animation-name: wave;
-    animation-duration: 7.3s;
-    animation-delay: .1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-play-state: running;
-  }
-  @keyframes wave {
-      0% {
-          -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-          transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-      }
-      100% {
-          -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-          transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-      }
-  }
-
-  @keyframes wave2 {
-      0% {
-          -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-          transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-      }
-      100% {
-          -webkit-transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
-          transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
-      }
-  }
-  .marginSea{
-    margin: 90px 0 0 0;
-    height: auto;
-  }
-  .downButton{
-    margin: 30px 0 0 0;
-    color: white;
-    font-size: 30px;
-  }
-}
 
 @media only screen
 and (min-width: 1025px){
@@ -808,13 +810,14 @@ and (min-width: 1280px){
     .setSit{
       width: 20%;
       height: auto;
+      margin-bottom: 3vh;
     }
     .sponsorKmutt{
-      height: 30px;
+      height: 20em !important;
     }
     .gameCenter{
-      width: 35%;
-      margin: 2% 0 0 0;
+      width: 38em;
+      margin: 10vh 0 2vh 0;
     }
     .fixBugDesktop{
       height: 60vh !important;
@@ -1197,14 +1200,14 @@ and (device-width: 1024px)
 and (device-height: 1366px)
 and (orientation: portrait){
     .setSit{
-      height: 50px;
+      width: 30em;
     }
     .sponsorKmutt{
       height: 45px;
     }
     .gameCenter{
-      width: 70%;
-      margin: 10% 0 0 0;
+      width: 65%;
+      margin: 8vh 0 3vh 0;
     }
     .shipCircle{
       margin: 5% 0 0% 0;
