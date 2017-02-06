@@ -1,0 +1,109 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@orange-games/phaser-input",
+        "scope": "@orange-games",
+        "escapedName": "@orange-games%2fphaser-input",
+        "name": "@orange-games/phaser-input",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\xampp\\htdocs\\9-gamepr"
+    ]
+  ],
+  "_from": "@orange-games/phaser-input@latest",
+  "_id": "@orange-games/phaser-input@2.0.2",
+  "_inCache": true,
+  "_location": "/@orange-games/phaser-input",
+  "_nodeVersion": "6.9.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/phaser-input-2.0.2.tgz_1485532479610_0.5523341877851635"
+  },
+  "_npmUser": {
+    "name": "fbrq",
+    "email": "fabrique@orangegames.com"
+  },
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@orange-games/phaser-input",
+    "scope": "@orange-games",
+    "escapedName": "@orange-games%2fphaser-input",
+    "name": "@orange-games/phaser-input",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/@orange-games/phaser-input/-/phaser-input-2.0.2.tgz",
+  "_shasum": "76ad886de5a313d5312b1a1c35948fdad276579a",
+  "_shrinkwrap": null,
+  "_spec": "@orange-games/phaser-input",
+  "_where": "C:\\xampp\\htdocs\\9-gamepr",
+  "author": {
+    "name": "OrangeGames"
+  },
+  "bugs": {
+    "url": "https://github.com/orange-games/phaser-input/issues"
+  },
+  "config": {
+    "name": "phaser-input"
+  },
+  "contributors": [
+    {
+      "name": "Ale Bles",
+      "email": "a.bles@orangegames.com"
+    }
+  ],
+  "dependencies": {},
+  "description": "Adds input boxes to Phaser like CanvasInput, but also works for WebGL and Mobile, made for Phaser only.",
+  "devDependencies": {
+    "@orange-games/phaser-nineslice": "^2.0.0",
+    "grunt": "1.0.x",
+    "grunt-banner": "^0.6.0",
+    "grunt-contrib-clean": "0.6.0",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-ts": "^6.0.0-beta.11",
+    "phaser": "2.6.2",
+    "typescript": "2.1.x"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "76ad886de5a313d5312b1a1c35948fdad276579a",
+    "tarball": "https://registry.npmjs.org/@orange-games/phaser-input/-/phaser-input-2.0.2.tgz"
+  },
+  "homepage": "https://github.com/orange-games/phaser-input#readme",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/orange-games/phaser-input/raw/master/LICENSE"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "alebles",
+      "email": "a.bles@orangegames.com"
+    },
+    {
+      "name": "fbrq",
+      "email": "fabrique@orangegames.com"
+    }
+  ],
+  "name": "@orange-games/phaser-input",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/orange-games/phaser-input.git"
+  },
+  "scripts": {},
+  "version": "2.0.2"
+}
