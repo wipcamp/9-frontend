@@ -153,7 +153,7 @@ function WipcampCarousel(element) {
   }
 
   this.isModalOpening = function () {
-    return ($('.modal').data('bs.modal') || {}).isShown;
+    return ($(".modal").data('bs.modal') || {}).isShown;
   }
 
   function setSlideDemensions() {
@@ -230,7 +230,6 @@ function WipcampCarousel(element) {
     $('.con').removeClass('idle');
     setTimeout(function() { self.next(); }, 500);
     setTimeout(function() { $('.slide:eq('+currentSlide+')').addClass('active'); }, 1000);
-    setTimeout(function() { $('.slide:eq('+currentSlide+')').css({"transform": "perspective(100px) translate3d(0, 0, 0)"}); }, 1500);
     setTimeout(function() {
       $('.wave1, .wave2, .wave3').removeClass('pause');
       $('.cloud1, .cloud2, .cloud3').removeClass('pause');
@@ -251,7 +250,6 @@ function WipcampCarousel(element) {
     $('.con').removeClass('idle');
     setTimeout(function() { self.prev(); }, 500);
     setTimeout(function() { $('.slide:eq('+currentSlide+')').addClass('active'); }, 1000);
-    setTimeout(function() { $('.slide:eq('+currentSlide+')').css({"transform": "perspective(100px) translate3d(0, 0, 0)"}); }, 1500);
     setTimeout(function() {
       $('.wave1, .wave2, .wave3').removeClass('pause');
       $('.cloud1, .cloud2, .cloud3').removeClass('pause');

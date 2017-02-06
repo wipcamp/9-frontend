@@ -1,3 +1,5 @@
+@import url('fontface-thaisansneue.css');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 body {
   font-family: 'thaisans_neueregular', sans-serif !important;
@@ -6,7 +8,7 @@ body {
 }
 .bg{
   background: linear-gradient(#141123, #2d214d, #127763); /* Standard syntax */
-  overflow-y: hidden;
+  /*overflow-y: hidden;*/
 }
 .center {
   text-align: center;
