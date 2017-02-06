@@ -153,7 +153,7 @@ function WipcampCarousel(element) {
   }
 
   this.isModalOpening = function () {
-    return $(".modal").data('bs.modal').isShown;
+    return ($(".modal").data('bs.modal') || {}).isShown;
   }
 
   function setSlideDemensions() {
