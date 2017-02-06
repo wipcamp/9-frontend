@@ -128,6 +128,6 @@ function countDown() {
   }
   function passTime(time){
     $('.status:eq('+time+') img').remove();
-    $('.status:eq('+time+')').prepend('<img src="assets/img/object/shipInCircle3.svg" alt="">');
+    $('.status:eq('+time+')').prepend('<img src="assets/img/object/shipInCircle.svg" alt="">');
   }
 }
