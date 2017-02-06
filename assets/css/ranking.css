@@ -4,9 +4,9 @@
 body {
     font-family: 'Thaisans Neue for Web', sans-serif !important;
     font-weight: 400;
-    height: 100%;
-    padding: 0;
-    margin: 0;
+    height: 100vh !important;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
     color: white !important;
     background: linear-gradient(#141123, #2d214d, #463b6b);
 }

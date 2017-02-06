@@ -108,7 +108,7 @@ body {
 and (device-width: 320px)
 and (device-height:568px)
 and (orientation: portrait){
-  .sponsorSit{
+  .setSit{
     height: 30px;
   }
   .sponsorKmutt{
@@ -183,7 +183,7 @@ and (orientation: portrait){
 and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (orientation: portrait){
-  .sponsorSit{
+  .setSit{
     height: 35px;
   }
   .sponsorKmutt{
@@ -253,7 +253,7 @@ and (orientation: portrait){
 and (min-device-width: 414px)
 and (max-device-width: 767px)
 and (orientation: portrait){
-  .sponsorSit{
+  .setSit{
     height: 30px;
   }
   .sponsorKmutt{
@@ -310,7 +310,7 @@ and (orientation: portrait){
 and (min-device-width: 768px)
 and (max-device-width: 1023px)
 and (orientation: portrait){
-  .sponsorSit{
+  .setSit{
     height: 50px;
   }
   .sponsorKmutt{
@@ -401,7 +401,7 @@ and (orientation: portrait){
 and (device-width: 1024px)
 and (device-height: 768px)
 and (orientation: landscape){
-  .sponsorSit{
+  .setSit{
     height: 70px;
   }
   .sponsorKmutt{
@@ -490,7 +490,7 @@ and (orientation: landscape){
 
 @media only screen
 and (orientation: landscape){
-  .sponsorSit{
+  .setSit{
     height: 5.5vw;
   }
   .sponsorKmutt{
@@ -584,7 +584,7 @@ and (min-width: 0px){
   /*.over{
     overflow-x: hidden !important;
   }*/
-  .sponsorSit{
+  .setSit{
     height: 5.5vw;
   }
   .sponsorKmutt{
@@ -675,7 +675,7 @@ and (min-width: 0px){
 
 @media only screen
 and (min-width: 1025px){
-    .sponsorSit{
+    .setSit{
       width: 20%;
       height: auto;
     }
@@ -805,7 +805,7 @@ and (min-width: 1025px){
 
 @media only screen
 and (min-width: 1280px){
-    .sponsorSit{
+    .setSit{
       width: 20%;
       height: auto;
     }
@@ -935,7 +935,7 @@ and (min-width: 1280px){
 @media only screen
 and (width: 1366px)
 and (height: 768px){
-    .sponsorSit{
+    .setSit{
       width: 20%;
       height: auto;
     }
@@ -1066,7 +1066,7 @@ and (height: 768px){
 and (device-width: 1366px)
 and (device-height: 1024px)
 and (orientation: landscape){
-    .sponsorSit{
+    .setSit{
       width: 20%;
       height: auto;
     }
@@ -1196,7 +1196,7 @@ and (orientation: landscape){
 and (device-width: 1024px)
 and (device-height: 1366px)
 and (orientation: portrait){
-    .sponsorSit{
+    .setSit{
       height: 50px;
     }
     .sponsorKmutt{
