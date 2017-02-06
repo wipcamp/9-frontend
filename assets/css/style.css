@@ -60,14 +60,21 @@ h1, p {
 }
 
 @keyframes wave {
-    0% {
-        -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-        transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-    }
-    100% {
-        -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-        transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-    }
+  0% {
+    transform: translate(-3px, 6.25px);
+  }
+  25% {
+    transform: translate(10px, 12.25px);
+  }
+  50% {
+    transform: translate(18px, 6.25px);
+  }
+  75% {
+    transform: translate(10px, -3.25px);
+  }
+  100% {
+    transform: translate(-3px, 6.25px);
+  }
 }
 @keyframes cloud1 {
   0% { right: -15%; }
@@ -210,6 +217,7 @@ h1, p {
   left: 0;
   opacity: 1;
   transition: all 0.1s;
+  text-shadow: 1px 1px 3px #777;
 }
 .slide.active div.card-heading {
   opacity: 0;
@@ -481,6 +489,7 @@ div.card-heading h1 > span {
   position: relative;
   margin-top: 1.5em;
   z-index: 99;
+  text-shadow: 1px 1px 3px #777;
 }
 
 .card-menu{
@@ -490,6 +499,7 @@ div.card-heading h1 > span {
   border-radius: 4px;
   display: inline-block;
   padding: 0.45em;
+  text-shadow: none;
 }
 .card-menu:hover{
   cursor: pointer;
@@ -629,6 +639,7 @@ div.ship {
   width:100%;
   position: relative;
   z-index: 55;
+  text-shadow: none;
 }
 
 #where-map-iframe {
