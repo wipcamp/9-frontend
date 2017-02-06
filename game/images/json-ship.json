@@ -1,0 +1,20 @@
+{"frames": {
+
+"ship.png":
+{
+	"frame": {"x":1,"y":1,"w":526,"h":407},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":5,"w":526,"h":407},
+	"sourceSize": {"w":531,"h":414}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "json-ship.png",
+	"format": "RGBA8888",
+	"size": {"w":528,"h":409},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:8c091504136811228d4d5ffccc3f7bcf:5ac4737cd1525dd1f758362cea28be5f:2a08fcbfb3fb23a17d4b2ce424293a3f$"
+}
+}
