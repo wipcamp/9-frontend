@@ -98,7 +98,7 @@ function getTransform(el) {
 
 function countDown() {
   var d = new Date();
-  if(d.getMonth() == 1 && d.getDate() >= 6 || d.getMonth() == 2 && d.getDate() < 20) {
+  if(d.getMonth() == 1 && d.getDate() >= 18 || d.getMonth() == 2 && d.getDate() < 20) {
     onTime(0);
   }
   else if(d.getMonth() == 2 && d.getDate() >= 20) {
@@ -124,10 +124,10 @@ function countDown() {
   }
   function onTime(time){
     $('.status:eq('+time+') img').remove();
-    $('.status:eq('+time+')').prepend('<img src="assets/img/object/shipInCircle.svg" alt="">');
+    $('.status:eq('+time+')').prepend('<img src="assets/img/object/shipInCircle2.svg" alt="">');
   }
   function passTime(time){
     $('.status:eq('+time+') img').remove();
-    $('.status:eq('+time+')').prepend('<img src="assets/img/object/shipInCircle2.svg" alt="">');
+    $('.status:eq('+time+')').prepend('<img src="assets/img/object/shipInCircle3.svg" alt="">');
   }
 }
