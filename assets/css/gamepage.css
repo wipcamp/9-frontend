@@ -114,7 +114,7 @@ and (orientation: portrait){
   .sponsorKmutt{
     height: 20px;
   }
-  .gamecenter_logo{
+  .gameCenter{
     width: 85%;
     margin: 14% 0 0 0;
   }
@@ -189,7 +189,7 @@ and (orientation: portrait){
   .sponsorKmutt{
     height: 20px;
   }
-  .gamecenter_logo{
+  .gameCenter{
     width: 90%;
     margin: 10% 0 0 0;
   }
@@ -259,7 +259,7 @@ and (orientation: portrait){
   .sponsorKmutt{
     height: 20px;
   }
-  .gamecenter_logo{
+  .gameCenter{
     width: 80%;
     margin: 10% 0 0 0;
   }
@@ -316,7 +316,7 @@ and (orientation: portrait){
   .sponsorKmutt{
     height: 45px;
   }
-  .gamecenter_logo{
+  .gameCenter{
     width: 70%;
     margin: 10% 0 0 0;
   }
@@ -407,7 +407,7 @@ and (orientation: landscape){
   .sponsorKmutt{
     height: 45px;
   }
-  .gamecenter_logo{
+  .gameCenter{
     width: 70%;
     margin: 4% 0 0 0 !important;
   }
@@ -496,7 +496,7 @@ and (orientation: landscape){
   .sponsorKmutt{
     height: 45px;
   }
-  .gamecenter_logo{
+  .gameCenter{
     width: 40vw;
     margin: 9% 0 0 0;
   }
@@ -590,7 +590,7 @@ and (min-width: 0px){
   .sponsorKmutt{
     height: 45px;
   }
-  .gamecenter_logo{
+  .gameCenter{
     width: 40vw;
     margin: 9% 0 0 0;
   }
@@ -682,7 +682,7 @@ and (min-width: 1025px){
     .sponsorKmutt{
       height: 30px;
     }
-    .gamecenter_logo{
+    .gameCenter{
       width: 35%;
       margin: 2% 0 0 0;
     }
@@ -812,7 +812,7 @@ and (min-width: 1280px){
     .sponsorKmutt{
       height: 30px;
     }
-    .gamecenter_logo{
+    .gameCenter{
       width: 35%;
       margin: 2% 0 0 0;
     }
@@ -942,7 +942,7 @@ and (height: 768px){
     .sponsorKmutt{
       height: 30px;
     }
-    .gamecenter_logo{
+    .gameCenter{
       width: 35%;
       margin: 2% 0 0 0;
     }
@@ -1073,7 +1073,7 @@ and (orientation: landscape){
     .sponsorKmutt{
       height: 30px;
     }
-    .gamecenter_logo{
+    .gameCenter{
       width: 35%;
       margin: 2% 0 0 0;
     }
@@ -1202,7 +1202,7 @@ and (orientation: portrait){
     .sponsorKmutt{
       height: 45px;
     }
-    .gamecenter_logo{
+    .gameCenter{
       width: 70%;
       margin: 10% 0 0 0;
     }
