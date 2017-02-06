@@ -229,8 +229,7 @@ function WipcampCarousel(element) {
     $('.slide.active').removeClass('active');
     $('.con').removeClass('idle');
     setTimeout(function() { self.next(); }, 500);
-    setTimeout(function() { $('.slide:eq('+currentSlide+')').addClass('active'); }, 600);
-    setTimeout(function() { $('.slide:eq('+currentSlide+')').css({"transform": "perspective(100px) translate3d(0, 0, 0)"}); }, 1500);
+    setTimeout(function() { $('.slide:eq('+currentSlide+')').addClass('active'); }, 1000);
     setTimeout(function() {
       $('.wave1, .wave2, .wave3').removeClass('pause');
       $('.cloud1, .cloud2, .cloud3').removeClass('pause');
@@ -250,8 +249,7 @@ function WipcampCarousel(element) {
     $('.slide.active').removeClass('active');
     $('.con').removeClass('idle');
     setTimeout(function() { self.prev(); }, 500);
-    setTimeout(function() { $('.slide:eq('+currentSlide+')').addClass('active'); }, 600);
-    setTimeout(function() { $('.slide:eq('+currentSlide+')').css({"transform": "perspective(100px) translate3d(0, 0, 0)"}); }, 1500);
+    setTimeout(function() { $('.slide:eq('+currentSlide+')').addClass('active'); }, 1000);
     setTimeout(function() {
       $('.wave1, .wave2, .wave3').removeClass('pause');
       $('.cloud1, .cloud2, .cloud3').removeClass('pause');
