@@ -35,7 +35,7 @@ function WipcampCarousel(element) {
           $('.slide:eq('+self.getCurrentSlide()+')').addClass('hover');
         }
         else {
-          slideActiveNext()
+          slideActiveNext();
         }
       }
       if(event.which == 37) {
@@ -45,7 +45,7 @@ function WipcampCarousel(element) {
           setTimeout($('.slide:eq('+self.getCurrentSlide()+')').addClass('hover'),500);
         }
         else {
-          slideActivePrev()
+          slideActivePrev();
         }
       }
       if(event.which == 27) {
@@ -138,13 +138,23 @@ function WipcampCarousel(element) {
 
   //public void showPrev()
   this.prev = function () {
+    closeModalAfterSlide();
     return this.showSlide(currentSlide - 1, true);
   };
 
   //public void showNext()
   this.next = function () {
-     return this.showSlide(currentSlide + 1, true);
+    closeModalAfterSlide();
+    return this.showSlide(currentSlide + 1, true);
   };
+
+  this.isIdle = function () {
+    return $(self.element).hasClass(idle);
+  }
+
+  this.isModalOpening = function () {
+    return $(".modal").data('bs.modal').isShown;
+  }
 
   function setSlideDemensions() {
     for (var i = - (slideCount - 1); i < slideCount; i++) {
@@ -199,8 +209,6 @@ function WipcampCarousel(element) {
     }
   }
 
-  new Hammer(element[0], {dragLockToAxis: true}).on("swipeleft swiperight", eventDetection);
-
   function getTransform(el) {
       var results = $(el).css('-webkit-transform');
       var resultTranform = results.split(", ");
@@ -211,6 +219,7 @@ function WipcampCarousel(element) {
   }
 
   function slideActiveNext() {
+    closeModalAfterSlide();
     $('.slide').addClass('animate');
     $('.wave1, .wave2, .wave3').addClass('pause');
     $('.cloud1, .cloud2, .cloud3').addClass('pause');
@@ -229,7 +238,9 @@ function WipcampCarousel(element) {
     }, 1500);
     $('.slide').removeClass('animate');
   }
+
   function slideActivePrev() {
+    closeModalAfterSlide();
     $('.slide').addClass('animate');
     $('.wave1, .wave2, .wave3').addClass('pause');
     $('.cloud1, .cloud2, .cloud3').addClass('pause');
@@ -248,4 +259,12 @@ function WipcampCarousel(element) {
     }, 1500);
     $('.slide').removeClass('animate');
   }
+
+  function closeModalAfterSlide() {
+    if (self.isModalOpening()) {
+      $('.modal').modal('hide');
+    }
+  }
+
+  new Hammer(element[0], {dragLockToAxis: true}).on("swipeleft swiperight", eventDetection);
 }
