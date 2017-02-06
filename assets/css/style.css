@@ -14,6 +14,10 @@ body {
   color: white;
 }
 
+.modal {
+  color: #333333;
+}
+
 h1 {
   transition: font-size .5s cubic-bezier(0.075, 0.82, 0.165, 1);
   font-family: "Thaisans Neue for Web";
@@ -64,14 +68,21 @@ h1, p {
 }
 
 @keyframes wave {
-    0% {
-        -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-        transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-    }
-    100% {
-        -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-        transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-    }
+  0% {
+    transform: translate(-3px, 6.25px);
+  }
+  25% {
+    transform: translate(10px, 12.25px);
+  }
+  50% {
+    transform: translate(18px, 6.25px);
+  }
+  75% {
+    transform: translate(10px, -3.25px);
+  }
+  100% {
+    transform: translate(-3px, 6.25px);
+  }
 }
 @keyframes cloud1 {
   0% { right: -15%; }
@@ -386,6 +397,8 @@ div.card-heading h1 > span {
   background-repeat: repeat-x;
   position: absolute;
   bottom: 1.5em;
+  width: 200%;
+  left: -50%;
   z-index: 1;
   animation-name: wave;
   animation-duration: 5s;
@@ -962,9 +975,7 @@ h1,p,ul{
   #btn-getstarted{
     margin-top: 3em;
   }
-  .logo-important-sponsor{
-    margin-top:-0.5em;
-  }
+
   #six h2 {
     font-size: 1.25em;
     margin-top: 0 !important;
@@ -1033,7 +1044,7 @@ h1,p,ul{
     z-index: 10;
   }
   .logo-important-sponsor{
-    margin-top: -2.4em;
+    margin-top: -1.5em;
     max-width: 300px;
   }
   .cisland img{
@@ -1209,7 +1220,7 @@ h1,p,ul{
     height: 4em;
   }
   .logo-important-sponsor{
-    margin-top: -2em;
+    margin-top: -1em;
     max-width: 320px;
   }
   #logo{
