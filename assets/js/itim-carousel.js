@@ -74,7 +74,7 @@ function WipcampCarousel(element) {
           $('.slide:eq('+self.getCurrentSlide()+')').addClass('hover');
         }
         else {
-          slideActiveNext()
+          slideActiveNext();
         }
       }
       if(direction === 0) {
@@ -84,7 +84,7 @@ function WipcampCarousel(element) {
           setTimeout($('.slide:eq('+self.getCurrentSlide()+')').addClass('hover'),500);
         }
         else {
-          slideActivePrev()
+          slideActivePrev();
         }
       }
     });
