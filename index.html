@@ -410,9 +410,9 @@
             <div class="row">
               <div class="col-xs-12 show--onActive">
                 <span class="card-menu card-btn-back show--onActive"><i class="fa fa-chevron-left"></i> Back</span>
-                <a class="btn btn-default btn-sm" href="#" data-toggle="modal" data-target="#where-map">
+                <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#where-map">
                   <i class="fa fa-map-marker"></i>&nbsp;แผนที่
-                </a>
+                </button>
               </div>
             </div>
           </section>
@@ -524,19 +524,18 @@
       </div>
     </main>
     <!-- HTML: On-Demand Component -->
-    <div class="modal fade" id="where-map" tabindex="-1" role="dialog" aria-labelledby="where-map-title">
+    <div class="modal fade" id="where-map" tabindex="-1" role="dialog" aria-labelledby="whereMapTitle">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="ปิด"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="where-map-title">แผนที่เดินทางมายัง WIP Camp</h4>
+            <h4 class="modal-title" id="whereMapTitle">แผนที่เดินทางมายัง WIP Camp</h4>
           </div>
           <div class="modal-body">
             <iframe id="where-map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.085126665765!2d100.49142161438388!3d13.652585490411745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2a251a57396f5%3A0x5e0d31f39f400b1e!2sWIP+Camp!5e0!3m2!1sth!2sth!4v1485773494599" allowfullscreen></iframe>
           </div>
         </div>
       </div>
-    </div>
     <!-- JavaScript: Postload -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </body>
