@@ -378,6 +378,8 @@ div.card-heading h1 > span {
   background-repeat: repeat-x;
   position: absolute;
   bottom: 1.5em;
+  width: 200%;
+  left: -50%;
   z-index: 1;
   animation-name: wave;
   animation-duration: 5s;
@@ -951,9 +953,7 @@ h1,p,ul{
   #btn-getstarted{
     margin-top: 3em;
   }
-  .logo-important-sponsor{
-    margin-top:-0.5em;
-  }
+
   #six h2 {
     font-size: 1.25em;
     margin-top: 0 !important;
@@ -1022,7 +1022,7 @@ h1,p,ul{
     z-index: 10;
   }
   .logo-important-sponsor{
-    margin-top: -2.4em;
+    margin-top: -1.5em;
     max-width: 300px;
   }
   .cisland img{
@@ -1198,7 +1198,7 @@ h1,p,ul{
     height: 4em;
   }
   .logo-important-sponsor{
-    margin-top: -2em;
+    margin-top: -1em;
     max-width: 320px;
   }
   #logo{
