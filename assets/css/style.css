@@ -781,6 +781,7 @@ h1,p,ul{
     bottom: 1.1em;
     left: -3em;
   }
+
   .ship img {
     height: 16.5em;
     bottom: 0.6em;
@@ -797,29 +798,29 @@ h1,p,ul{
     margin: 0 15%;
   }
   #two .cisland img{
-    height: 12.5em;
+    height: 14.5em;
     right: -2em;
     bottom: 1.1em;
   }
   #three .cisland img{
     height: 11em;
     right: 0em;
-    bottom: 2.85em;
+    bottom: 1.85em;
   }
   #four .cisland img{
     height: 11.5em;
     right: -2em;
-    bottom: -0.1em;
+    bottom: -0.7em;
   }
   #five .cisland img{
     height: 11em;
     right: 0.2em;
-    bottom: 2.1em;
+    bottom: 1.5em;
   }
   #six .cisland img{
     height: 13em;
     right: 0em;
-    bottom: 1.15em;
+    bottom: 0.6em;
   }
   #seven .cisland img{
     height: 12em;
@@ -842,7 +843,7 @@ h1,p,ul{
   }
   .game-btn{
     position: absolute;
-    bottom: 1.5em;
+    bottom: 0em;
     right: 0;
     z-index: 2;
     width: 9em;
@@ -1315,7 +1316,7 @@ h1,p,ul{
   }
   .game-btn{
     position: absolute;
-    bottom: 3.6em;
+    bottom: 1em;
     right: 0;
     z-index: 2;
     width: 11em;
