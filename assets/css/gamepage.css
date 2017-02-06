@@ -7,7 +7,7 @@ body {
   height: auto;
 }
 .bg{
-  background: linear-gradient(#141123, #2d214d, #127763); /* Standard syntax */
+  background: linear-gradient(#141123, #1d3c5c); /* Standard syntax */
   /*overflow-y: hidden;*/
 }
 .center {
@@ -75,7 +75,7 @@ body {
 }
 
 .bodyColorSea{
-  background: linear-gradient(#0a493d, #0e6857, #127763); /* Standard syntax */
+  background: linear-gradient(#09706b, #188c83, #29a599); /* Standard syntax */
   position: relative;
   top: -10px;
   z-index: 3;
