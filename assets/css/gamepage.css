@@ -90,7 +90,7 @@ body {
       }
   }
 
-  @keyframes wave2 {
+  @keyframes wave {
       0% {
           -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
           transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
@@ -468,7 +468,7 @@ and (orientation: portrait){
       }
   }
 
-  @keyframes wave2 {
+  @keyframes wave {
       0% {
           -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
           transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
@@ -562,7 +562,7 @@ and (orientation: landscape){
       }
   }
 
-  @keyframes wave2 {
+  @keyframes wave {
       0% {
           -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
           transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
@@ -594,7 +594,7 @@ and (orientation: landscape){
   }
   .gameCenter{
     width: 40vw;
-    margin: 9% 0 0 0;
+    margin: 4vh 0 0 0;
   }
   .shipCircle{
     margin: 0% 0 0 0;
@@ -643,26 +643,40 @@ and (orientation: landscape){
     animation-timing-function: linear;
     animation-play-state: running;
   }
-  @keyframes wave {
-      0% {
-          -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-          transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-      }
-      100% {
-          -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-          transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-      }
-  }
 
-  @keyframes wave2 {
-      0% {
-          -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-          transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-      }
-      100% {
-          -webkit-transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
-          transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
-      }
+  @keyframes wave {
+    0% {
+      transform: translate(-3px, 6.25px);
+    }
+    25% {
+      transform: translate(10px, 12.25px);
+    }
+    50% {
+      transform: translate(18px, 6.25px);
+    }
+    75% {
+      transform: translate(10px, -3.25px);
+    }
+    100% {
+      transform: translate(-3px, 6.25px);
+    }
+  }
+  @keyframes wave {
+    0% {
+      transform: translate(-3px, 6.25px);
+    }
+    25% {
+      transform: translate(10px, 12.25px);
+    }
+    50% {
+      transform: translate(18px, 6.25px);
+    }
+    75% {
+      transform: translate(10px, -3.25px);
+    }
+    100% {
+      transform: translate(-3px, 6.25px);
+    }
   }
   .marginSea{
     margin: 90px 0 0 0;
@@ -745,7 +759,7 @@ and (orientation: landscape){
         }
     }
 
-    @keyframes wave2 {
+    @keyframes wave {
         0% {
             -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
             transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
@@ -847,7 +861,7 @@ and (min-width: 1025px){
       /*margin: 0 0 0 70px;*/
       /*top: 10;*/
       width: 100%;
-      animation-name: wave2;
+      animation-name: wave;
       animation-duration: 5.5s;
       animation-delay: .1s;
       animation-iteration-count: infinite;
@@ -878,7 +892,7 @@ and (min-width: 1025px){
     .bubble5{
       top: -330px;
       width: 100%;
-      animation-name: wave2;
+      animation-name: wave;
       animation-duration: 6.5s;
       animation-delay: .1s;
       animation-iteration-count: infinite;
@@ -931,7 +945,7 @@ and (min-width: 1200px){
       height: 20em !important;
     }
     .gameCenter{
-      width: 38em;
+      width: 25em;
       margin: 3vh 0 0vh 0;
     }
     .fixBugDesktop{
@@ -983,7 +997,7 @@ and (min-width: 1200px){
       /*margin: 0 0 0 70px;*/
       /*top: 10;*/
       width: 100%;
-      animation-name: wave2;
+      animation-name: wave;
       animation-duration: 5.5s;
       animation-delay: .1s;
       animation-iteration-count: infinite;
@@ -1014,7 +1028,7 @@ and (min-width: 1200px){
     .bubble5{
       top: -330px;
       width: 100%;
-      animation-name: wave2;
+      animation-name: wave;
       animation-duration: 6.5s;
       animation-delay: .1s;
       animation-iteration-count: infinite;
@@ -1055,6 +1069,7 @@ and (min-width: 1200px){
 and (min-width: 1300px){
     .bg{
       overflow-x: hidden !important;
+      overflow-y: hidden !important;
     }
     .setSit{
       width: 20%;
@@ -1064,8 +1079,8 @@ and (min-width: 1300px){
       height: 30px;
     }
     .gameCenter{
-      width: 35%;
-      margin: 1vh 0 0 0;
+      width: 35em;
+      margin: 7vh 0 0 0;
     }
     .fixBugDesktop{
       height: 65vh !important;
@@ -1116,7 +1131,7 @@ and (min-width: 1300px){
       /*margin: 0 0 0 70px;*/
       /*top: 10;*/
       width: 100%;
-      animation-name: wave2;
+      animation-name: wave;
       animation-duration: 5.5s;
       animation-delay: .1s;
       animation-iteration-count: infinite;
@@ -1147,7 +1162,7 @@ and (min-width: 1300px){
     .bubble5{
       top: -330px;
       width: 100%;
-      animation-name: wave2;
+      animation-name: wave;
       animation-duration: 6.5s;
       animation-delay: .1s;
       animation-iteration-count: infinite;
@@ -1252,7 +1267,7 @@ and (orientation: landscape){
       /*margin: 0 0 0 70px;*/
       /*top: 10;*/
       width: 100%;
-      animation-name: wave2;
+      animation-name: wave;
       animation-duration: 5.5s;
       animation-delay: .1s;
       animation-iteration-count: infinite;
@@ -1283,7 +1298,7 @@ and (orientation: landscape){
     .bubble5{
       top: -330px;
       width: 100%;
-      animation-name: wave2;
+      animation-name: wave;
       animation-duration: 6.5s;
       animation-delay: .1s;
       animation-iteration-count: infinite;
@@ -1394,16 +1409,6 @@ and (orientation: portrait){
         }
     }
 
-    @keyframes wave2 {
-        0% {
-            -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-            transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-        }
-        100% {
-            -webkit-transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
-            transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
-        }
-    }
     .marginSea{
       margin: 90px 0 0 0;
       height: auto;
