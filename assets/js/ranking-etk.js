@@ -47,68 +47,86 @@ $(function() {
       users.push(data.val());
       nameUsers.push(data.key);
       // console.log(data.key);
-      $(document).ready(function() {
-        setTimeout(function() {
-          var t = $('.game-tbl').DataTable({
-            data: users,
-            responsive: true,
-            paging: true,
-            destroy: true,
-            searching: false,
-            // orderable: false,
-            language : {
-              emptyTable : "กรุณา Refresh(F5) อีกครั้ง เพื่อโหลดข้อมูล"
-            },
-            bSortable : false,
-            columnDefs: [
-              // {
-              //     className: "hidden-xs-down",
-              //     targets :[1]
-              // },
-              {
-                orderable : false,
-                targets :[0,1,2]
-              }
-            ],
-            order: [[ 2 , 'desc' ]],
-            columns: [
-              { data: null,
-                render: function ( data , type , row){
-                  return '<div>';
-                }
-              },
-              //   { data: 'urlpic',
-              //   render: function ( data , type  , row){
-              //     return '<img src="'+ data + '" class="rounded-circle">';
-              //   }
-              // },
-              { data: 'score'
-                // ,
-                // render: function ( data , type , row){
-                //   return '<div>';
-                // }
-              },
-              {  data: 'highscore' }
-            ]
-          });
-
-          t.on( 'order.dt search.dt', function () {
-            t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
-              cell.innerHTML = i+1;
-            } );
-            let checkIndex = nameUsers.length-1;
-            t.column(1, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
-              cell.innerHTML = nameUsers[checkIndex];
-              if(checkIndex>=0){
-                checkIndex--;
-              }
-            } );
-          } ).draw();
-
-        }, delay);
-      });
     });
-    console.log(users);
+    $(document).ready(function() {
+      setTimeout(function() {
+        var t = $('.game-tbl').DataTable({
+          data: users,
+          responsive: true,
+          paging: true,
+          destroy: true,
+          searching: false,
+          // orderable: false,
+          language : {
+            emptyTable : "กรุณา Refresh(F5) อีกครั้ง เพื่อโหลดข้อมูล"
+          },
+          bSortable : false,
+          columnDefs: [
+            // {
+            //     className: "hidden-xs-down",
+            //     targets :[1]
+            // },
+            {
+              orderable : false,
+              targets :[0,1,2]
+            }
+          ],
+          order: [[ 2 , 'desc' ]],
+          columns: [
+            { data: null,
+              render: function ( data , type , row){
+                return '<div>';
+              }
+            },
+            //   { data: 'urlpic',
+            //   render: function ( data , type  , row){
+            //     return '<img src="'+ data + '" class="rounded-circle">';
+            //   }
+            // },
+            { data: 'score'
+            ,
+            render: function ( data , type , row){
+              return '<div>';
+            }
+          },
+          {  data: 'highscore' }
+        ]
+      });
 
-    console.log(nameUsers);
+      let checkIndex = nameUsers.length-1;
+      // console.log("checkindex - "+checkIndex);
+      // const tempIndex = checkIndex;
+      // console.log("tempindex - "+tempIndex);
+      t.on( 'order.dt search.dt', function () {
+        t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+          if(i===0){
+            cell.innerHTML = '<img src="../assets/img/object/moon.svg" alt="" class="prize1">' + (i+1);
+          }
+          else if(i===1){
+            cell.innerHTML = '<img src="../assets/img/object/moon.svg" alt="" class="prize2">' + (i+1);
+          }
+          else if(i===2){
+            cell.innerHTML = '<img src="../assets/img/object/moon.svg"  alt="" class="prize3">' + (i+1);
+          }
+          else {
+            cell.innerHTML = i+1;
+          }
+          // cell.innerHTML = i+1;
+        } );
+
+        t.column(1, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+          cell.innerHTML = nameUsers[checkIndex];
+          if(checkIndex>=0){
+            checkIndex--;
+          }
+
+        } );
+      } ).draw();
+
+    }, delay);
+
+  });
+    // console.log(users);
+    //
+    // console.log(nameUsers);
 });

@@ -13,9 +13,11 @@ var main = { preload : preload , create : create , update : update};
 var menu = { preload : preload , create : create1};
 var howToPlay = { preload : preload ,create : create2};
 var resultGame = {preload : preload , create : create3};
+var credit = {preload : preload, create : create5}
 var login = {preload : preload , create : create4};
 var credit = {preload : preload , create : create5};
 game.state.add('login',login);
+game.state.add('credit',credit);
 game.state.add('main', main);
 game.state.add('menu', menu);
 game.state.add('howToPlay',howToPlay);
@@ -23,16 +25,19 @@ game.state.add('result',resultGame);
 game.state.add('credit',credit);
 game.state.start('login');
 function preload() {
+	game.load.image('gameOver','images/GAME-OVER-01.png');
+	game.load.image('logo','images/escape-01.png');
+    game.load.image('bgEnd','images/endState.png');
     game.load.image('bgStart','images/bg-Start.png');
     game.load.spritesheet('ship', 'images/player.png',500,500);
     game.load.image('kraken','images/boss.png');
     game.load.image('map','images/map.png');
     game.load.spritesheet('boom','images/boom2.png',80,90);
     game.load.spritesheet('boom2','images/boom_1.png',160,200);
-    game.load.image('startButton','images/start.png');
-    game.load.image('howToPlayButton','images/howtoplay.png');
-    game.load.image('retry','images/retry.png');
-    game.load.image('menu','images/menu.png');
+    game.load.image('startButton','images/start-01.png');
+    game.load.image('howToPlayButton','images/how-to-play-01.png');
+    game.load.image('retry','images/play-again-01.png');
+    game.load.image('menu','images/main_menu-01-01.png');
     game.load.spritesheet('wranning','images/wranning.png',100,100);
     game.load.audio('Play','sound/Escape.ogg');
     game.load.audio('Kraken','sound/Kraken.ogg');
@@ -49,6 +54,7 @@ function preload() {
     game.load.audio('dBomb','sound/DeathbyBombDrop.ogg');
     game.load.audio('Warn','sound/Warn.ogg');
     game.load.audio('BombAway','sound/BombAway.ogg');
+    game.load.audio('button','sound/pushIt.ogg');
     
 }
 var map;
@@ -102,9 +108,14 @@ function create() {
     sharkTime = 25*60;
     floor = game.add.sprite(0,game.world.height*(3.75/4),'obj');
     floor.scale.setTo(19.6,0.5);
-    map = game.add.tileSprite(0, 0, 1960, 550, 'map');
     game.physics.arcade.enable(floor);
     floor.body.immovable = true;
+    player = this.add.sprite((game.world.width/2),(game.world.height*(2/4))+24,'obj');
+    player.anchor.set(0.5);
+    player.scale.setTo(0.95, 0.20);
+    game.physics.arcade.enable(player);
+    player.body.setCircle(40,10,-5);
+    map = game.add.tileSprite(0, 0, 1960, 550, 'map');
     wranning = game.add.sprite(20,game.world.height*(3.5/6),'wranning');
     wranning.frame = 0;
     wranning.anchor.set(0.5);
@@ -129,11 +140,6 @@ function create() {
     boom4.frame = 0;
     kraken = game.add.image(0,game.world.height*(1/4),'kraken');
     kraken.scale.setTo(0.2,0.2);
-    player = this.add.sprite((game.world.width/2),(game.world.height*(2/4))+24,'obj');
-    player.anchor.set(0.5);
-    player.scale.setTo(0.95, 0.20);
-    game.physics.arcade.enable(player);
-    player.body.setCircle(40,10,-5);
     sprite = this.add.sprite(game.world.width/2,game.world.height*(2/4), 'ship');
     animJumpSprite = sprite.animations.add('jump',[2,1,0],3,true);
     animJumpSprite.onComplete.add(startAnimationMove, this);
@@ -280,36 +286,51 @@ var buttonCredit;
 var menuButton;
 var music;
 var bg;
+var logo;
 function create1(){ // main page
     bg = game.add.image(0,0,'bgStart');
     music.stop();
     music = game.add.audio('Login');
     music.loopFull();
-    buttonCredit = game.add.button(980*(3/10),550*(8/10) , 'startButton', toCredit, this);
-    buttonStart = game.add.button(980*(5/10), 550*(8/10), 'startButton', toGame, this);
+    logo = game.add.image(980*(2/10),550*(2/10),'logo');
+    logo.anchor.set(0.5);
+    logo.scale.setTo(0.25,0.25);
+    buttonCredit = game.add.button(980*(2/10),550*(6/10) , 'startButton', toCredit, this);
+    buttonStart = game.add.button(980*(2/10), 550*(4/10), 'startButton', toGame, this);
     buttonCredit.anchor.set(0.5);
     buttonStart.anchor.set(0.5);
-    buttonHowTOPlay = game.add.button(980*(7/10), 550*(8/10), 'howToPlayButton', toHowToPlay, this);
+    buttonStart.scale.setTo(0.25, 0.25);
+    buttonCredit.scale.setTo(0.25, 0.25);
+    buttonHowTOPlay = game.add.button(980*(2/10), 550*(5/10), 'howToPlayButton', toHowToPlay, this);
     buttonHowTOPlay.anchor.set(0.5);
+    buttonHowTOPlay.scale.setTo(0.25,0.25);
 }
 function create2(){ //how to play
-    buttonStart = game.add.button(400, game.world.centerY, 'startButton', toGame, this);
+	game.add.image(0,0,'bgStart');
+    buttonStart = game.add.button(980/2, 550*(3.5/4), 'startButton', toGame, this);
     buttonStart.anchor.set(0.5);
 }
 function create3(){ //result
+    game.add.image(0,0,'bgEnd');
     music.stop();
     music = game.add.audio('Death');
     music.loopFull();
-    text = game.add.text(980/2,game.world.centerY*(1/4),"Score : "+score.toFixed(1),{fontSize : "20px",fill : "#ed3465"});
+    logo = game.add.image(980/2,game.world.centerY-125,'gameOver');
+    logo.anchor.set(0.5);
+    logo.scale.setTo(0.2,0.2);
+    text = game.add.text(980/2+80,550*(1/4)+50,"Score : "+score.toFixed(1),{fontSize : "20px",fill : "#ed3465"});
     text.anchor.set(0.5);
     text.scale.setTo(2,2);
-    buttonStart = game.add.button(980/2, game.world.centerY, 'retry', toGame, this);
+    buttonStart = game.add.button(980/2, game.world.centerY+25+50, 'retry', toGame, this);
     buttonStart.anchor.set(0.5);
-    menuButton = game.add.button(980/2, game.world.centerY+100, 'menu', toMenu, this);
+    buttonStart.scale.setTo(0.25,0.25);
+    menuButton = game.add.button(980/2, game.world.centerY+115+75, 'menu', toMenu, this);
     menuButton.anchor.set(0.5);
+    menuButton.scale.setTo(0.25,0.25);
     setScore();
 }
 function create4() { //login
+	game.add.image(0,0,'bgStart');
     music = game.add.audio('Login');
     music.loopFull();
     game.add.plugin(PhaserInput.Plugin);
@@ -327,24 +348,36 @@ function create4() { //login
     });
     menuButton = game.add.button(980/2, game.world.centerY+100, 'menu', toMenu, this);
     menuButton.anchor.set(0.5);
+    menuButton.scale.setTo(0.25,0.25);
     //input.anchor.set(0.5);
 }
+function buttonSound(){
+    soundFx1 = game.add.audio('button');
+    soundFx1.play();
+}
 function create5() { //credit
-    menuButton = game.add.button(980/2, game.world.centerY+100, 'menu', toMenu, this);
-    menuButton.anchor.set(0.5);
+    buttonStart = game.add.button(980*(1/2),550*(1/2),'startButton',toMenu,this);
+    buttonStart.anchor.set(0.5);
+}
+function toCredit() {
+    game.state.start('credit');
 }
 function toGame() {
+    buttonSound();
     game.state.start('main');
 }
 function toMenu() {
+    buttonSound();
     game.state.start('menu');
     name = input.value;
     console.log(name);
 }
 function toHowToPlay() {
+    buttonSound();
     game.state.start('howToPlay');
 }
 function toCredit() {
+    buttounSound();
     game.state.start('credit');
 }
 
@@ -448,11 +481,4 @@ function setScore() {
     }
      console.log("set score complete");
 
-     
 }
-    function bgmStop(){
-        this
-    }
-
-
-
