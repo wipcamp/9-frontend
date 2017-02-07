@@ -85,19 +85,19 @@ function getTransform(el) {
 
 function countDown() {
   var d = new Date();
-  if(d.getMonth() == 1 && d.getDate() >= 18 || d.getMonth() == 2 && d.getDate() < 20) {
+  if(d.getMonth() == 1 && d.getDate() >= 18 || d.getMonth() == 2 && d.getDate() < 19) {
     onTime(0);
   }
-  else if(d.getMonth() == 2 && d.getDate() >= 20) {
+  else if(d.getMonth() == 2 && d.getDate() >= 19) {
     passTime(0);
     onTime(1);
   }
-  else if(d.getMonth() == 2 && d.getDate() == 31 || d.getMonth() == 3 || d.getMonth() == 4 && d.getDate() < 25) {
+  else if(d.getMonth() == 2 && d.getDate() == 31 || d.getMonth() == 3 || d.getMonth() == 4 && d.getDate() < 24) {
     passTime(0);
     passTime(1);
     onTime(2);
   }
-  else if(d.getMonth() == 4 && d.getDate() >= 25) {
+  else if(d.getMonth() == 4 && d.getDate() >= 24) {
     passTime(0);
     passTime(1);
     passTime(2);
