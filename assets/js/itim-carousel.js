@@ -17,22 +17,28 @@ function WipcampCarousel(element) {
     });
 
     $(".next").click(function(){
-      $('.slide:eq('+self.getCurrentSlide()+')').removeClass('hover');
+      $('.slide:eq(' + currentSlide + ')').removeClass('hover')
       self.next();
-      $('.slide:eq('+self.getCurrentSlide()+')').addClass('hover');
+      setTimeout(function () {
+        $('.slide:eq(' + currentSlide + ')').addClass('hover')
+      },500);
     });
     $(".prev").click(function(){
-      $('.slide:eq('+self.getCurrentSlide()+')').removeClass('hover');
+      $('.slide:eq(' + currentSlide + ')').removeClass('hover')
       self.prev();
-      setTimeout($('.slide:eq('+self.getCurrentSlide()+')').addClass('hover'),500);
+      setTimeout(function () {
+        $('.slide:eq(' + currentSlide + ')').addClass('hover')
+      },500);
     });
 
     $(document).keydown(function(event) {
       if(event.which == 39) {
         if (element.hasClass('idle')) {
-          $('.slide:eq('+self.getCurrentSlide()+')').removeClass('hover');
+          $('.slide:eq(' + currentSlide + ')').removeClass('hover')
           self.next();
-          $('.slide:eq('+self.getCurrentSlide()+')').addClass('hover');
+          setTimeout(function () {
+            $('.slide:eq(' + currentSlide + ')').addClass('hover')
+          },500);
         }
         else {
           slideActiveNext();
@@ -40,9 +46,11 @@ function WipcampCarousel(element) {
       }
       if(event.which == 37) {
         if (element.hasClass('idle')) {
-          $('.slide:eq('+self.getCurrentSlide()+')').removeClass('hover');
+          $('.slide:eq(' + currentSlide + ')').removeClass('hover')
           self.prev();
-          setTimeout($('.slide:eq('+self.getCurrentSlide()+')').addClass('hover'),500);
+          setTimeout(function () {
+            $('.slide:eq(' + currentSlide + ')').addClass('hover')
+          },500);
         }
         else {
           slideActivePrev();
@@ -50,13 +58,14 @@ function WipcampCarousel(element) {
       }
       if(event.which == 27) {
         if (!element.hasClass('idle')) {
+          $('.con').addClass('idle');
           $('.slide').addClass('animate');
-          $('.wave1, .wave2, .wave3').addClass('pause');
+          /*$('.wave1, .wave2, .wave3').addClass('pause');
           $('.cloud1, .cloud2, .cloud3').addClass('pause');
-          $('.ship').addClass('pause');
+          $('.ship').addClass('pause');*/
           $('.slide.active').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
           $('.slide.active').removeClass('active');
-          $('.slide:eq('+self.getCurrentSlide()+')').addClass('hover');
+          $('.slide:eq(' + currentSlide + ')').addClass('hover')
         }
       }
     });
@@ -69,9 +78,11 @@ function WipcampCarousel(element) {
 
       if(direction === 1) {
         if (element.hasClass('idle')) {
-          $('.slide:eq('+self.getCurrentSlide()+')').removeClass('hover');
+          $('.slide:eq(' + currentSlide + ')').removeClass('hover')
           self.next();
-          $('.slide:eq('+self.getCurrentSlide()+')').addClass('hover');
+          setTimeout(function () {
+            $('.slide:eq(' + currentSlide + ')').addClass('hover')
+          },500);
         }
         else {
           slideActiveNext();
@@ -79,9 +90,11 @@ function WipcampCarousel(element) {
       }
       if(direction === 0) {
         if (element.hasClass('idle')) {
-          $('.slide:eq('+self.getCurrentSlide()+')').removeClass('hover');
+          $('.slide:eq(' + currentSlide + ')').removeClass('hover')
           self.prev();
-          setTimeout($('.slide:eq('+self.getCurrentSlide()+')').addClass('hover'),500);
+          setTimeout(function () {
+            $('.slide:eq(' + currentSlide + ')').addClass('hover')
+          },500);
         }
         else {
           slideActivePrev();
@@ -90,22 +103,26 @@ function WipcampCarousel(element) {
     });
 
     $('.slide-control .bullet').on('click', function(event) {
-      $('.slide:eq('+self.getCurrentSlide()+')').removeClass('hover');
+      /*$('.slide:eq('+self.getCurrentSlide()+')').removeClass('hover');*/
       var idx =  $('.slide-control .bullet').index(event.target);
       self.showSlide(idx, true);
-      $('.slide:eq('+self.getCurrentSlide()+')').addClass('hover');
+      /*$('.slide:eq('+self.getCurrentSlide()+')').addClass('hover');*/
     });
 
     $('.slide-control .next-container').on('click', function() {
-      $('.slide:eq('+self.getCurrentSlide()+')').removeClass('hover');
+      $('.slide:eq(' + currentSlide + ')').removeClass('hover')
       self.next();
-      $('.slide:eq('+self.getCurrentSlide()+')').addClass('hover');
+      setTimeout(function () {
+        $('.slide:eq(' + currentSlide + ')').addClass('hover')
+      },500);
     });
 
     $('.slide-control .prev-container').on('click', function() {
-      $('.slide:eq('+self.getCurrentSlide()+')').removeClass('hover');
+      $('.slide:eq(' + currentSlide + ')').removeClass('hover')
       self.prev();
-      setTimeout($('.slide:eq('+self.getCurrentSlide()+')').addClass('hover'),500);
+      setTimeout(function () {
+        $('.slide:eq(' + currentSlide + ')').addClass('hover')
+      },500);
     });
   };
 
@@ -188,9 +205,11 @@ function WipcampCarousel(element) {
     switch (e.type) {
       case 'swipeleft':
         if (element.hasClass('idle')) {
-          $('.slide:eq('+self.getCurrentSlide()+')').removeClass('hover');
+          $('.slide:eq(' + currentSlide + ')').removeClass('hover')
           self.next();
-          $('.slide:eq('+self.getCurrentSlide()+')').addClass('hover');
+          setTimeout(function () {
+            $('.slide:eq(' + currentSlide + ')').addClass('hover')
+          },500);
         }
         else {
           slideActiveNext();
@@ -198,9 +217,11 @@ function WipcampCarousel(element) {
         break;
       case 'swiperight':
         if (element.hasClass('idle')) {
-          $('.slide:eq('+self.getCurrentSlide()+')').removeClass('hover');
+          $('.slide:eq(' + currentSlide + ')').removeClass('hover')
           self.prev();
-          setTimeout($('.slide:eq('+self.getCurrentSlide()+')').addClass('hover'),500);
+          setTimeout(function () {
+            $('.slide:eq(' + currentSlide + ')').addClass('hover')
+          },500);
         }
         else {
           slideActivePrev();
@@ -221,40 +242,40 @@ function WipcampCarousel(element) {
   function slideActiveNext() {
     closeModalAfterSlide();
     $('.slide').addClass('animate');
-    $('.wave1, .wave2, .wave3').addClass('pause');
+    /*$('.wave1, .wave2, .wave3').addClass('pause');
     $('.cloud1, .cloud2, .cloud3').addClass('pause');
-    $('.ship').addClass('pause');
+    $('.ship').addClass('pause');*/
     $('.slide.active').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
-    $('.slide:eq('+self.getCurrentSlide()+')').removeClass('hover');
+    $('.slide:eq('+currentSlide+')').removeClass('hover');
     $('.slide.active').removeClass('active');
     $('.con').removeClass('idle');
     setTimeout(function() { self.next(); }, 500);
     setTimeout(function() { $('.slide:eq('+currentSlide+')').addClass('active'); }, 1000);
-    setTimeout(function() {
+    /*setTimeout(function() {
       $('.wave1, .wave2, .wave3').removeClass('pause');
       $('.cloud1, .cloud2, .cloud3').removeClass('pause');
       $('.ship').removeClass('pause');
-    }, 1500);
+    }, 1500);*/
     $('.slide').removeClass('animate');
   }
 
   function slideActivePrev() {
     closeModalAfterSlide();
     $('.slide').addClass('animate');
-    $('.wave1, .wave2, .wave3').addClass('pause');
+    /*$('.wave1, .wave2, .wave3').addClass('pause');
     $('.cloud1, .cloud2, .cloud3').addClass('pause');
-    $('.ship').addClass('pause');
+    $('.ship').addClass('pause');*/
     $('.slide.active').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
-    $('.slide:eq('+self.getCurrentSlide()+')').removeClass('hover');
+    $('.slide:eq('+currentSlide+')').removeClass('hover');
     $('.slide.active').removeClass('active');
     $('.con').removeClass('idle');
     setTimeout(function() { self.prev(); }, 500);
     setTimeout(function() { $('.slide:eq('+currentSlide+')').addClass('active'); }, 1000);
-    setTimeout(function() {
+    /*setTimeout(function() {
       $('.wave1, .wave2, .wave3').removeClass('pause');
       $('.cloud1, .cloud2, .cloud3').removeClass('pause');
       $('.ship').removeClass('pause');
-    }, 1500);
+    }, 1500);*/
     $('.slide').removeClass('animate');
   }
 
