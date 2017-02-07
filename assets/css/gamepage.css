@@ -107,6 +107,78 @@ body {
 }
 
 @media only screen
+and (min-width: 0px){
+  .setSit{
+    height: 35px;
+  }
+  .sponsorKmutt{
+    height: 20px;
+  }
+  .gameCenter{
+    width: 85%;
+    margin: 10% 0 0 0;
+  }
+  .fixBugHeight{
+    height: 67vh;
+  }
+  .shipCircle{
+    margin: 0% 0 0% 0;
+    height: 130px;
+  }
+  .boxGameDesktop{
+    padding: 35% 0 10% 0;
+  }
+  .gameOnlyDesktop{
+    padding: 0 1px 0 1px;
+    width: 15%;
+  }
+  .textOnlyDesktop{
+    padding: 15px 0 8px 0;
+    font-size:  15px;
+    color: white;
+  }
+  .fixBugDesktop{
+    height: 0vh !important;
+  }
+  .returnToHome{
+    padding: 15px 0 0 0;
+    font-size:  15px;
+    color: white;
+  }
+  .bubble{
+    width: 100%;
+    height: 1em;
+  }
+  .bubble3{
+    width: 100%;
+    animation-name: wave;
+    animation-duration: 4.3s;
+    animation-delay: .1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+  }
+  .gameOnDesktop{
+    width: 0px;
+  }
+  .backButton{
+    padding: 3px 0px 0 10px;
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    z-index: 50;
+  }
+  .marginSea{
+    margin: 90px 0 0 0;
+    height: auto;
+  }
+  .downButton{
+    display: none;
+  }
+}
+
+
+@media only screen
 and (device-width: 320px)
 and (device-height:568px)
 and (orientation: portrait){
