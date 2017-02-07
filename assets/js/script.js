@@ -32,11 +32,11 @@ $(document).ready(function(){
   $('.card-btn-back').click(function (event) {
     $('.con').addClass('idle');
     $('.slide').addClass('animate');
-    $('.slide:eq('+carousel.getCurrentSlide()+')').addClass('hover');
+    /*$('.slide:eq('+carousel.getCurrentSlide()+')').addClass('hover');
     $('.wave1, .wave2, .wave3').addClass('pause');
     $('.cloud1, .cloud2, .cloud3').addClass('pause');
     $('.ship').addClass('pause');
-    $('.ship-main').addClass('pause');
+    $('.ship-main').addClass('pause');*/
     $(event.target).parents().filter('.slide').removeClass('active');
     $(event.target).parents().filter('.slide').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
     event.stopPropagation();
@@ -45,16 +45,16 @@ $(document).ready(function(){
   $('.card-btn-main').click(function (event) {
     $('.con').addClass('idle');
     $('.slide').addClass('animate');
-    $('.wave1, .wave2, .wave3').addClass('pause');
+    /*$('.wave1, .wave2, .wave3').addClass('pause');
     $('.cloud1, .cloud2, .cloud3').addClass('pause');
     $('.ship').addClass('pause');
     $('.ship-main').addClass('pause');
-    $('.slide:eq('+carousel.getCurrentSlide()+')').removeClass('hover');
+    $('.slide:eq('+carousel.getCurrentSlide()+')').removeClass('hover');*/
     $(event.target).parents().filter('.slide').removeClass('active');
     $(event.target).parents().filter('.slide').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
     event.stopPropagation();
     carousel.next();
-    setTimeout($('.slide:eq('+carousel.getCurrentSlide()+')').addClass('hover'),500);
+    /*setTimeout($('.slide:eq('+carousel.getCurrentSlide()+')').addClass('hover'),500);*/
   });
 
   $('div.slide').click(function(event) {
@@ -78,10 +78,10 @@ $(document).ready(function(){
 
     beforeAnimate().done(afterAnimate());
     $('.slide').removeClass('animate');
-    $('.wave1, .wave2, .wave3').removeClass('pause');
+    /*$('.wave1, .wave2, .wave3').removeClass('pause');
     $('.cloud1, .cloud2, .cloud3').removeClass('pause');
     $('.ship').removeClass('pause');
-    $('.ship-main').removeClass('pause');
+    $('.ship-main').removeClass('pause');*/
   });
   countDown();
 
