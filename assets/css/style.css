@@ -49,7 +49,7 @@ h1, p {
 #btn-getstarted {
   display: inline-block;
   color: #fff;
-  margin-top: 2em;
+  margin-top: 2.3em;
   padding: 0.8em 2.8em 0.8em 2.8em;
   text-decoration: none !important;
   border-radius: 7px;
@@ -515,7 +515,7 @@ div.card-heading h1 > span {
   background-color: #fff;
   border-radius: 4px;
   display: inline-block;
-  padding: 0.45em;
+  padding: 0.6em;
   text-shadow: none;
 }
 .card-menu:hover{
@@ -786,9 +786,10 @@ h1,p,ul{
   }
   .ship-main img{
     height: 16.5em;
-    bottom: 1.1em;
+    bottom: 0.6em;
     left: -3em;
   }
+
   .ship img {
     height: 16.5em;
     bottom: 0.6em;
@@ -805,29 +806,29 @@ h1,p,ul{
     margin: 0 15%;
   }
   #two .cisland img{
-    height: 12.5em;
+    height: 14.5em;
     right: -2em;
     bottom: 1.1em;
   }
   #three .cisland img{
     height: 11em;
     right: 0em;
-    bottom: 2.85em;
+    bottom: 1.85em;
   }
   #four .cisland img{
     height: 11.5em;
     right: -2em;
-    bottom: -0.1em;
+    bottom: -0.7em;
   }
   #five .cisland img{
     height: 11em;
     right: 0.2em;
-    bottom: 2.1em;
+    bottom: 1.5em;
   }
   #six .cisland img{
     height: 13em;
-    right: 0em;
-    bottom: 1.15em;
+    right: -3em;
+    bottom: 0.6em;
   }
   #seven .cisland img{
     height: 12em;
@@ -844,13 +845,13 @@ h1,p,ul{
   }
   .mountain{
     position: absolute;
-    bottom: 2em;
+    bottom: 1.6em;
     right: -5em;
     height: 7em;
   }
   .game-btn{
     position: absolute;
-    bottom: 1.5em;
+    bottom: 0em;
     right: 0;
     z-index: 2;
     width: 9em;
@@ -1119,7 +1120,7 @@ h1,p,ul{
 
   .card-menu{
     margin-top: 0.2em;
-    padding: 0.40em 0.35em;
+    padding: 0.60em 0.4em;
     font-size:1em;
   }
   .slide h1 {
@@ -1292,7 +1293,7 @@ h1,p,ul{
   }
   .card-menu{
     margin-top: 0.65em;
-    padding: 0.30em 0.70em 0.30em 0.45em;
+    padding: 0.50em 0.70em 0.50em 0.45em;
     border-radius: 4px;
     font-size:1em;
   }
@@ -1323,7 +1324,7 @@ h1,p,ul{
   }
   .game-btn{
     position: absolute;
-    bottom: 3.6em;
+    bottom: 1em;
     right: 0;
     z-index: 2;
     width: 11em;
