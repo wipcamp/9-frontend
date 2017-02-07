@@ -37,8 +37,9 @@ $(document).ready(function(){
     $('.cloud1, .cloud2, .cloud3').addClass('pause');
     $('.ship').addClass('pause');
     $('.ship-main').addClass('pause');*/
-    $(event.target).parents().filter('.slide').removeClass('active');
-    $(event.target).parents().filter('.slide').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
+    $('.slide.active').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
+    $('.slide.active').removeClass('active');
+    $('.slide:eq('+carousel.getCurrentSlide()+')').addClass('hover');
     event.stopPropagation();
   });
 
@@ -68,6 +69,7 @@ $(document).ready(function(){
     $('.ship').removeClass('pause');
     $('.ship-main').removeClass('pause');*/
   });
+  $('.slide:eq(' + currentSlide + ')').removeClass('hover');
   countDown();
 
 });

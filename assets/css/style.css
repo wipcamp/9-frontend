@@ -193,7 +193,8 @@ h1, p {
 }
 
 .slide.animate {
-  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  /*transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);*/
+  transition: all 0.5s;
 }
 
 .slide.active {
@@ -389,15 +390,13 @@ div.card-heading h1 > span {
 .wave {
   height: 3em;
   width: 200%;
-  left:-30%;
+  position: absolute;
 }
 
 .wave1{
   background-image: url('../img/object/wave1.svg');
   background-repeat: repeat-x;
-  position: absolute;
   bottom: 1.5em;
-  width: 200%;
   left: -50%;
   z-index: 1;
   animation-name: wave;
@@ -412,8 +411,6 @@ div.card-heading h1 > span {
   background-image: url('../img/object/wave2.svg');
   background-repeat: repeat-x;
   background-position: -42px 0;
-  position: absolute;
-  width: 200%;
   bottom: 0.7em;
   left: -50%;
   z-index: 3;
@@ -428,9 +425,7 @@ div.card-heading h1 > span {
 .wave3{
   background-image: url('../img/object/wave3.svg');
   background-repeat: repeat-x;
-  position: absolute;
   bottom: 0;
-  width: 200%;
   left: -50%;
   z-index: 5;
   animation-name: wave;
