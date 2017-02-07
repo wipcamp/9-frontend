@@ -32,29 +32,15 @@ $(document).ready(function(){
   $('.card-btn-back').click(function (event) {
     $('.con').addClass('idle');
     $('.slide').addClass('animate');
+    /*$('.slide:eq('+carousel.getCurrentSlide()+')').addClass('hover');
+    $('.wave1, .wave2, .wave3').addClass('pause');
+    $('.cloud1, .cloud2, .cloud3').addClass('pause');
+    $('.ship').addClass('pause');
+    $('.ship-main').addClass('pause');*/
+    $('.slide.active').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
+    $('.slide.active').removeClass('active');
     $('.slide:eq('+carousel.getCurrentSlide()+')').addClass('hover');
-    $('.wave1, .wave2, .wave3').addClass('pause');
-    $('.cloud1, .cloud2, .cloud3').addClass('pause');
-    $('.ship').addClass('pause');
-    $('.ship-main').addClass('pause');
-    $(event.target).parents().filter('.slide').removeClass('active');
-    $(event.target).parents().filter('.slide').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
     event.stopPropagation();
-  });
-
-  $('.card-btn-main').click(function (event) {
-    $('.con').addClass('idle');
-    $('.slide').addClass('animate');
-    $('.wave1, .wave2, .wave3').addClass('pause');
-    $('.cloud1, .cloud2, .cloud3').addClass('pause');
-    $('.ship').addClass('pause');
-    $('.ship-main').addClass('pause');
-    $('.slide:eq('+carousel.getCurrentSlide()+')').removeClass('hover');
-    $(event.target).parents().filter('.slide').removeClass('active');
-    $(event.target).parents().filter('.slide').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
-    event.stopPropagation();
-    carousel.next();
-    setTimeout($('.slide:eq('+carousel.getCurrentSlide()+')').addClass('hover'),500);
   });
 
   $('div.slide').click(function(event) {
@@ -78,11 +64,12 @@ $(document).ready(function(){
 
     beforeAnimate().done(afterAnimate());
     $('.slide').removeClass('animate');
-    $('.wave1, .wave2, .wave3').removeClass('pause');
+    /*$('.wave1, .wave2, .wave3').removeClass('pause');
     $('.cloud1, .cloud2, .cloud3').removeClass('pause');
     $('.ship').removeClass('pause');
-    $('.ship-main').removeClass('pause');
+    $('.ship-main').removeClass('pause');*/
   });
+  $('.slide:eq(' + currentSlide + ')').removeClass('hover');
   countDown();
 
 });
@@ -98,19 +85,19 @@ function getTransform(el) {
 
 function countDown() {
   var d = new Date();
-  if(d.getMonth() == 1 && d.getDate() >= 6 || d.getMonth() == 2 && d.getDate() < 20) {
+  if(d.getMonth() == 1 && d.getDate() >= 18 || d.getMonth() == 2 && d.getDate() < 19) {
     onTime(0);
   }
-  else if(d.getMonth() == 2 && d.getDate() >= 20) {
+  else if(d.getMonth() == 2 && d.getDate() >= 19) {
     passTime(0);
     onTime(1);
   }
-  else if(d.getMonth() == 2 && d.getDate() == 31 || d.getMonth() == 3 || d.getMonth() == 4 && d.getDate() < 25) {
+  else if(d.getMonth() == 2 && d.getDate() == 31 || d.getMonth() == 3 || d.getMonth() == 4 && d.getDate() < 24) {
     passTime(0);
     passTime(1);
     onTime(2);
   }
-  else if(d.getMonth() == 4 && d.getDate() >= 25) {
+  else if(d.getMonth() == 4 && d.getDate() >= 24) {
     passTime(0);
     passTime(1);
     passTime(2);
@@ -124,10 +111,10 @@ function countDown() {
   }
   function onTime(time){
     $('.status:eq('+time+') img').remove();
-    $('.status:eq('+time+')').prepend('<img src="assets/img/object/shipInCircle.svg" alt="">');
+    $('.status:eq('+time+')').prepend('<img src="assets/img/object/shipInCircle2.svg" alt="">');
   }
   function passTime(time){
     $('.status:eq('+time+') img').remove();
-    $('.status:eq('+time+')').prepend('<img src="assets/img/object/shipInCircle2.svg" alt="">');
+    $('.status:eq('+time+')').prepend('<img src="assets/img/object/shipInCircle.svg" alt="">');
   }
 }
