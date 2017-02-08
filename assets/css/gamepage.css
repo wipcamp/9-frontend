@@ -139,7 +139,7 @@ and (min-width: 0px){
     color: white;
   }
   .fixBugDesktop{
-    height: 0vh !important;
+    height: 56vh !important;
   }
   .returnToHome{
     padding: 15px 0 0 0;
@@ -185,6 +185,7 @@ and (device-height:568px)
 and (orientation: portrait){
   .bg{
     overflow-x: hidden !important;
+    overflow-y: hidden !important;
   }
   /*.over {
     overflow-y: hidden;
@@ -205,6 +206,9 @@ and (orientation: portrait){
   }
   .fixBugHeight{
     height: 61vh;
+  }
+  .fixBugDesktop{
+    height: 56vh !important;
   }
   .boxGameDesktop{
     padding: 30.5% 0 10% 0;
@@ -266,6 +270,7 @@ and (max-device-width: 667px)
 and (orientation: portrait){
   .bg{
     overflow-x: hidden !important;
+    overflow-y: hidden !important;
   }
   .setSit{
     height: 35px;
@@ -279,6 +284,9 @@ and (orientation: portrait){
   }
   .fixBugHeight{
     height: 67vh;
+  }
+  .fixBugDesktop{
+    height: 70vh !important;
   }
   .shipCircle{
     margin: 0% 0 0% 0;
@@ -399,6 +407,7 @@ and (max-device-width: 1023px)
 and (orientation: portrait){
   .bg{
     overflow-x: hidden !important;
+    overflow-y: hidden !important;
   }
   .setSit{
     height: 50px;
@@ -419,6 +428,9 @@ and (orientation: portrait){
   }
   .fixBugHeight{
     height: 67vh;
+  }
+  .fixBugDesktop{
+    height: 66vh !important;
   }
   .gameOnlyDesktop{
     padding: 0 10px 0 10px;
@@ -1340,6 +1352,7 @@ and (device-height: 1366px)
 and (orientation: portrait){
   .bg{
     overflow-x: hidden !important;
+    overflow-y: hidden !important;
   }
     .setSit{
       width: 30em;
@@ -1360,6 +1373,9 @@ and (orientation: portrait){
     }
     .fixBugHeight{
       height: 70vh;
+    }
+    .fixBugDesktop{
+      height: 68vh !important;
     }
     .gameOnlyDesktop{
       padding: 0 10px 0 10px;
