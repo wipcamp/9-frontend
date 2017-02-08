@@ -69,7 +69,7 @@ $(document).ready(function(){
     $('.ship').removeClass('pause');
     $('.ship-main').removeClass('pause');*/
   });
-  $('.slide:eq(' + currentSlide + ')').removeClass('hover');
+  $('.slide:eq(' + carousel.getCurrentSlide() + ')').removeClass('hover');
   countDown();
 
 });

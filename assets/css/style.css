@@ -276,8 +276,14 @@ div.card-heading h1 > span {
   color: #000;
   border: 1px solid #FFF;
   border-radius: 10px;
-  padding: 0.3em 0.4em 0.3em 0.4em !important;
+  padding: 0.45em 0.5em 0.45em 0.5em !important;
   text-decoration: none !important;
+}
+.fa-facebook {
+    padding-left: 0.7em !important;
+}
+.link-img2 {
+  padding: 0.2em 0 0 0 !important;
 }
 .link:hover {
   background: white;
@@ -727,7 +733,7 @@ div.ship {
   margin-left: 0.5em !important;
 }
 .link-img {
-  width: 90px;
+  width: 70px;
   margin-bottom: 0.2em;
 }
 #one{
