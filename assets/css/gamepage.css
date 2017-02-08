@@ -79,30 +79,46 @@ body {
   z-index: 3;
   height: auto;
 }
-  @keyframes wave {
-      0% {
-          -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-          transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-      }
-      100% {
-          -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-          transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-      }
+@keyframes wave {
+  0% {
+    transform: translate(-3px, 6.25px);
   }
-
-  @keyframes wave {
-      0% {
-          -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-          transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-      }
-      100% {
-          -webkit-transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
-          transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
-      }
-  .downButton{
-    display: none;
+  25% {
+    transform: translate(10px, 12.25px);
+  }
+  50% {
+    transform: translate(18px, 6.25px);
+  }
+  75% {
+    transform: translate(10px, -3.25px);
+  }
+  100% {
+    transform: translate(-3px, 6.25px);
   }
 }
+
+.downButton{
+  display: none;
+}
+.objUnder{
+  position: absolute;
+  z-index: 100;
+  width: auto;
+}
+.unwat-1{
+ width: 25em;
+ z-index: -1;
+ bottom: 10em;
+}
+.unwat-2{
+ width: 25em;
+  z-index: -2;
+}
+.kraken{
+ width: 25em;
+ z-index: -1;
+}
+
 
 @media only screen
 and (min-width: 0px){
@@ -473,26 +489,23 @@ and (orientation: portrait){
     animation-play-state: running;
   }
   @keyframes wave {
-      0% {
-          -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-          transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-      }
-      100% {
-          -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-          transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-      }
+    0% {
+      transform: translate(-3px, 6.25px);
+    }
+    25% {
+      transform: translate(10px, 12.25px);
+    }
+    50% {
+      transform: translate(18px, 6.25px);
+    }
+    75% {
+      transform: translate(10px, -3.25px);
+    }
+    100% {
+      transform: translate(-3px, 6.25px);
+    }
   }
 
-  @keyframes wave {
-      0% {
-          -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-          transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-      }
-      100% {
-          -webkit-transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
-          transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
-      }
-  }
   .marginSea{
     margin: 90px 0 0 0;
     height: auto;
@@ -566,27 +579,25 @@ and (orientation: landscape){
     animation-timing-function: linear;
     animation-play-state: running;
   }
-  @keyframes wave {
-      0% {
-          -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-          transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-      }
-      100% {
-          -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-          transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-      }
-  }
 
   @keyframes wave {
-      0% {
-          -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-          transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-      }
-      100% {
-          -webkit-transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
-          transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
-      }
+    0% {
+      transform: translate(-3px, 6.25px);
+    }
+    25% {
+      transform: translate(10px, 12.25px);
+    }
+    50% {
+      transform: translate(18px, 6.25px);
+    }
+    75% {
+      transform: translate(10px, -3.25px);
+    }
+    100% {
+      transform: translate(-3px, 6.25px);
+    }
   }
+
   .marginSea{
     margin: 90px 0 0 0;
     height: auto;
@@ -676,23 +687,7 @@ and (orientation: landscape){
       transform: translate(-3px, 6.25px);
     }
   }
-  @keyframes wave {
-    0% {
-      transform: translate(-3px, 6.25px);
-    }
-    25% {
-      transform: translate(10px, 12.25px);
-    }
-    50% {
-      transform: translate(18px, 6.25px);
-    }
-    75% {
-      transform: translate(10px, -3.25px);
-    }
-    100% {
-      transform: translate(-3px, 6.25px);
-    }
-  }
+
   .marginSea{
     margin: 90px 0 0 0;
     height: auto;
@@ -773,23 +768,6 @@ and (orientation: landscape){
     animation-play-state: running;
   }
 
-  @keyframes wave {
-    0% {
-      transform: translate(-3px, 6.25px);
-    }
-    25% {
-      transform: translate(10px, 12.25px);
-    }
-    50% {
-      transform: translate(18px, 6.25px);
-    }
-    75% {
-      transform: translate(10px, -3.25px);
-    }
-    100% {
-      transform: translate(-3px, 6.25px);
-    }
-  }
   @keyframes wave {
     0% {
       transform: translate(-3px, 6.25px);
@@ -1441,16 +1419,22 @@ and (orientation: portrait){
       animation-play-state: running;
     }
     @keyframes wave {
-        0% {
-            -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-            transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
-        }
-        100% {
-            -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-            transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
-        }
+      0% {
+        transform: translate(-3px, 6.25px);
+      }
+      25% {
+        transform: translate(10px, 12.25px);
+      }
+      50% {
+        transform: translate(18px, 6.25px);
+      }
+      75% {
+        transform: translate(10px, -3.25px);
+      }
+      100% {
+        transform: translate(-3px, 6.25px);
+      }
     }
-
     .marginSea{
       margin: 90px 0 0 0;
       height: auto;
