@@ -1113,19 +1113,19 @@ h1,p,ul{
     left: -50%;
   }
   #two .cisland img{
-    height: 16.5em;
-    right: 1em;
+    height: 20.5em;
+    right: 0em;
     bottom: 1em;
   }
   #three .cisland img {
-    height: 14em;
-    right: 0em;
-    bottom: 1.50em;
+    height: 19em;
+    right: -2em;
+    bottom: 1.0em;
   }
   #four .cisland img {
-    height: 15em;
-    right: 0em;
-    bottom: -1.50em;
+    height: 18em;
+    right: -3em;
+    bottom: -2.50em;
   }
   #five .cisland img{
     height: 14em;
@@ -1176,10 +1176,10 @@ h1,p,ul{
   }
   .game-btn{
     position: absolute;
-    bottom: 1.5em;
-    right: 0;
+    bottom: 1em;
+    right: 1em;
     z-index: 2;
-    width: 9em;
+    width: 11em;
   }
   .wave3{
     height: 4em;
