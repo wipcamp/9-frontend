@@ -103,10 +103,12 @@ function WipcampCarousel(element) {
     });
 
     $('.slide-control .bullet').on('click', function(event) {
-      /*$('.slide:eq('+self.getCurrentSlide()+')').removeClass('hover');*/
+      $('.slide:eq(' + currentSlide + ')').removeClass('hover');
       var idx =  $('.slide-control .bullet').index(event.target);
       self.showSlide(idx, true);
-      /*$('.slide:eq('+self.getCurrentSlide()+')').addClass('hover');*/
+      setTimeout(function () {
+        $('.slide:eq(' + currentSlide + ')').addClass('hover');
+      },500);
     });
 
     $('.slide-control .next-container').on('click', function() {
