@@ -20,6 +20,9 @@ body {
 }
 h1 small{
   color:white;
+  font-size: 0.55em;
+  line-height: 1.4em;
+  display: block;
 }
 h1 {
   transition: font-size .5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -283,9 +286,6 @@ div.card-heading h1 > span {
   padding: 0.45em 0.5em 0.45em 0.5em !important;
   text-decoration: none !important;
 }
-.fa-facebook {
-    padding-left: 0.7em !important;
-}
 .link-img2 {
   padding: 0.3em 0 0 0 !important;
 }
@@ -296,7 +296,7 @@ div.card-heading h1 > span {
 }
 #seven i.link {
   width: 2em;
-  height: 2em;
+  height: 1.9em;
   font-size: 2em !important;
   text-shadow: none;
 }
@@ -539,7 +539,6 @@ div.card-heading h1 > span {
   text-decoration: none !important;
   color: #000 !important;
   display: inline-block;
-  /*padding-top: 0.45em !important;*/
 }
 
 .ship-main {
@@ -547,7 +546,7 @@ div.card-heading h1 > span {
   width: 100%;
   bottom: 0;
   z-index: 4;
-  left: -1em;
+  left: -30em;
   animation-name: shipTraveller;
   animation-duration: 4s;
   animation-delay: 0.1s;
@@ -555,6 +554,9 @@ div.card-heading h1 > span {
   animation-iteration-count: infinite;
   /*animation-play-state: running;*/
   animation-play-state: paused;
+}
+.ship-main.transition1 {
+  transition: left 3s;
 }
 .ship {
   position: absolute;
@@ -568,9 +570,6 @@ div.card-heading h1 > span {
   animation-iteration-count: infinite;
   /*animation-play-state: running;*/
   animation-play-state: paused;
-}
-div.ship {
-  transition: all 2.5s;
 }
 
 .line {
@@ -698,7 +697,7 @@ div.ship {
 }
 #six h2 {
   font-size: 1.75em;
-  margin-top: 0 !important;
+  margin-top: 10px !important;
 }
 #six h2 ~ p {
   text-indent: 50px;
@@ -717,28 +716,25 @@ div.ship {
   color: black;
   font-size: 1em;
 }
-.fa-facebook{
-  color:black;
-  font-size: 1em;
+.fa-facebook-square:before {
+  padding-left: 0.07em;
 }
-.fa-twitter{
-  color:black;
-  font-size: 1em;
+.fa-twitter:before {
+  padding-left: 0.05em;
 }
-.fa-instagram{
-  font-size: 1em;
-  color:black;
+.fa-instagram:before {
+  padding-left: 0.06em;
 }
-.fa-youtube{
-  font-size: 1em;
-  color:black;
+.fa-youtube:before {
+  padding-left: 0.07em;
 }
 .link-menu{
   margin-left: 0.5em !important;
 }
 .link-img {
   width: 70px;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.5em;
+  margin-left: 0.03em;
 }
 #one{
   cursor: -webkit-grab;
@@ -819,7 +815,7 @@ h1,p,ul{
 /*### Smartphones (portrait and landscape)(small)### */
 @media screen and (min-width : 0px) and (max-width : 767px){
   body,html{
-    font-size: 15px;
+    font-size: 13px;
   }
   .ship-main img{
     height: 16.5em;
@@ -843,33 +839,33 @@ h1,p,ul{
     margin: 0 15%;
   }
   #two .cisland img{
-    height: 14.5em;
-    right: -2em;
-    bottom: 1.1em;
-  }
-  #three .cisland img{
-    height: 11em;
-    right: 0em;
-    bottom: 1.85em;
-  }
-  #four .cisland img{
-    height: 11.5em;
-    right: -2em;
-    bottom: -0.7em;
-  }
-  #five .cisland img{
-    height: 11em;
-    right: 0.2em;
+    height: 19.5em;
+    right: -4.2em;
     bottom: 1.5em;
   }
-  #six .cisland img{
-    height: 13em;
+  #three .cisland img{
+    height: 19em;
+    right: -6em;
+    bottom: 0em;
+  }
+  #four .cisland img{
+    height: 19em;
     right: -3em;
-    bottom: 0.6em;
+    bottom: -3.7em;
+  }
+  #five .cisland img{
+    height: 15em;
+    right: -1.8em;
+    bottom: 0.9em;
+  }
+  #six .cisland img{
+    height: 18em;
+    right: -4em;
+    bottom: 0.5em;
   }
   #seven .cisland img{
-    height: 12em;
-    right: -1em;
+    height: 14em;
+    right: -2em;
     bottom: 0.45em;
   }
   #logo{
@@ -888,7 +884,7 @@ h1,p,ul{
   }
   .game-btn{
     position: absolute;
-    bottom: 0em;
+    bottom: 1em;
     right: 0;
     z-index: 2;
     width: 9em;
@@ -904,7 +900,7 @@ h1,p,ul{
     margin-top: 0.35em;
   }
   #two p{
-    font-size: 1.45em;
+    font-size: 1.2em;
   }
   .slide h1 {
     font-size: 3.5em;
@@ -915,19 +911,19 @@ h1,p,ul{
     text-align: left;
   }
   #three p{
-    font-size: 1.45em;
+    font-size: 1.2em;
   }
   #four p{
-    font-size: 1.45em;
+    font-size: 1.2em;
   }
   #six p{
-    font-size: 1.45em;
+    font-size: 1.2em;
   }
   #six ul{
     font-size: 1.07em;
   }
   #seven p{
-    font-size: 1.45em;
+    font-size: 1.2em;
   }
   #three span{
     margin-top: 0.35em;
@@ -1024,10 +1020,14 @@ h1,p,ul{
 
   #six h2 {
     font-size: 1.25em;
-    margin-top: 0 !important;
+    margin-top: 10px !important;
   }
   #six h2 ~ p {
-    text-indent: 50px;
+    text-indent: 0px;
+  }
+  em{
+    display: block;
+    margin-left: 1.55em;
   }
 }
 /*###Tablet(medium)###*/
