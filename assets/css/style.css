@@ -1,5 +1,5 @@
 /*========================= Stylesheets Dependencies ========================*/
-@import url('fontface-thaisansneue.css');
+@import url('fontface-thaisans.css');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 /*============================= Global Elements =============================*/
@@ -812,7 +812,7 @@ h1,p,ul{
 /*### Smartphones (portrait and landscape)(small)### */
 @media screen and (min-width : 0px) and (max-width : 767px){
   body,html{
-    font-size: 13px;
+    font-size: 15px;
   }
   .ship-main img{
     height: 16.5em;
@@ -897,7 +897,7 @@ h1,p,ul{
     margin-top: 0.35em;
   }
   #two p{
-    font-size: 1.2em;
+    font-size: 1.45em;
   }
   .slide h1 {
     font-size: 3.5em;
@@ -908,19 +908,19 @@ h1,p,ul{
     text-align: left;
   }
   #three p{
-    font-size: 1.2em;
+    font-size: 1.45em;
   }
   #four p{
-    font-size: 1.2em;
+    font-size: 1.45em;
   }
   #six p{
-    font-size: 1.2em;
+    font-size: 1.45em;
   }
   #six ul{
     font-size: 1.07em;
   }
   #seven p{
-    font-size: 1.2em;
+    font-size: 1.45em;
   }
   #three span{
     margin-top: 0.35em;
