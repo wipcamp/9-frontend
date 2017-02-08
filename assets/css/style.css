@@ -1,5 +1,5 @@
 /*========================= Stylesheets Dependencies ========================*/
-@import url('fontface-thaisans.css');
+@import url('fontface-thaisansneue.css');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 /*============================= Global Elements =============================*/
@@ -19,6 +19,9 @@ body {
 }
 h1 small{
   color:white;
+  font-size: 0.55em;
+  line-height: 1.4em;
+  display: block;
 }
 h1 {
   transition: font-size .5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -691,7 +694,7 @@ div.ship {
 }
 #six h2 {
   font-size: 1.75em;
-  margin-top: 0 !important;
+  margin-top: 10px !important;
 }
 #six h2 ~ p {
   text-indent: 50px;
@@ -812,7 +815,7 @@ h1,p,ul{
 /*### Smartphones (portrait and landscape)(small)### */
 @media screen and (min-width : 0px) and (max-width : 767px){
   body,html{
-    font-size: 15px;
+    font-size: 13px;
   }
   .ship-main img{
     height: 16.5em;
@@ -836,9 +839,9 @@ h1,p,ul{
     margin: 0 15%;
   }
   #two .cisland img{
-    height: 14.5em;
-    right: -2em;
-    bottom: 1.1em;
+    height: 19.5em;
+    right: -4.2em;
+    bottom: 1.5em;
   }
   #three .cisland img{
     height: 11em;
@@ -897,7 +900,7 @@ h1,p,ul{
     margin-top: 0.35em;
   }
   #two p{
-    font-size: 1.45em;
+    font-size: 1.2em;
   }
   .slide h1 {
     font-size: 3.5em;
@@ -908,19 +911,19 @@ h1,p,ul{
     text-align: left;
   }
   #three p{
-    font-size: 1.45em;
+    font-size: 1.2em;
   }
   #four p{
-    font-size: 1.45em;
+    font-size: 1.2em;
   }
   #six p{
-    font-size: 1.45em;
+    font-size: 1.2em;
   }
   #six ul{
     font-size: 1.07em;
   }
   #seven p{
-    font-size: 1.45em;
+    font-size: 1.2em;
   }
   #three span{
     margin-top: 0.35em;
@@ -1017,10 +1020,14 @@ h1,p,ul{
 
   #six h2 {
     font-size: 1.25em;
-    margin-top: 0 !important;
+    margin-top: 10px !important;
   }
   #six h2 ~ p {
-    text-indent: 50px;
+    text-indent: 0px;
+  }
+  em{
+    display: block;
+    margin-left: 1.55em;
   }
 }
 /*###Tablet(medium)###*/
