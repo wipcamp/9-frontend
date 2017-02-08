@@ -17,7 +17,9 @@ body {
 .modal {
   color: #333333;
 }
-
+h1 small{
+  color:white;
+}
 h1 {
   transition: font-size .5s cubic-bezier(0.075, 0.82, 0.165, 1);
   font-family: "Thaisans Neue for Web";
@@ -189,6 +191,7 @@ h1, p {
   overflow: hidden;
   width: 100%;
   z-index: 1;
+  color: white;
   background: linear-gradient(#141123, #1d3c5c);
 }
 
