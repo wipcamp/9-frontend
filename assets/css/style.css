@@ -1,5 +1,5 @@
 /*========================= Stylesheets Dependencies ========================*/
-@import url('fontface-thaisansneue.css');
+@import url('fontface-thaisans.css');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 /*============================= Global Elements =============================*/
@@ -17,7 +17,9 @@ body {
 .modal {
   color: #333333;
 }
-
+h1 small{
+  color:white;
+}
 h1 {
   transition: font-size .5s cubic-bezier(0.075, 0.82, 0.165, 1);
   font-family: "Thaisans Neue for Web";
@@ -189,6 +191,7 @@ h1, p {
   overflow: hidden;
   width: 100%;
   z-index: 1;
+  color: white;
   background: linear-gradient(#141123, #1d3c5c);
 }
 
@@ -276,8 +279,14 @@ div.card-heading h1 > span {
   color: #000;
   border: 1px solid #FFF;
   border-radius: 10px;
-  padding: 0.3em 0.4em 0.3em 0.4em !important;
+  padding: 0.45em 0.5em 0.45em 0.5em !important;
   text-decoration: none !important;
+}
+.fa-facebook {
+    padding-left: 0.7em !important;
+}
+.link-img2 {
+  padding: 0.3em 0 0 0 !important;
 }
 .link:hover {
   background: white;
@@ -458,8 +467,8 @@ div.card-heading h1 > span {
   animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  /*animation-play-state: running;*/
-  animation-play-state: paused;
+  animation-play-state: running;
+  /*animation-play-state: paused;*/
 }
 .cloud2 {
   background-image: url('../img/object/cloud.svg');
@@ -475,8 +484,8 @@ div.card-heading h1 > span {
   animation-delay: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  /*animation-play-state: running;*/
-  animation-play-state: paused;
+  animation-play-state: running;
+  /*animation-play-state: paused;*/
 }
 .cloud3 {
   background-image: url('../img/object/cloud.svg');
@@ -492,8 +501,8 @@ div.card-heading h1 > span {
   animation-delay: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  /*animation-play-state: running;*/
-  animation-play-state: paused;
+  animation-play-state: running;
+  /*animation-play-state: paused;*/
 }
 
 .flip-horizontal, .x-grid-cell-inner, .x-column-header-text, .x-panel-header-text {
@@ -727,7 +736,7 @@ div.ship {
   margin-left: 0.5em !important;
 }
 .link-img {
-  width: 90px;
+  width: 70px;
   margin-bottom: 0.2em;
 }
 #one{
@@ -809,7 +818,7 @@ h1,p,ul{
 /*### Smartphones (portrait and landscape)(small)### */
 @media screen and (min-width : 0px) and (max-width : 767px){
   body,html{
-    font-size: 13px;
+    font-size: 15px;
   }
   .ship-main img{
     height: 16.5em;
@@ -894,7 +903,7 @@ h1,p,ul{
     margin-top: 0.35em;
   }
   #two p{
-    font-size: 1.2em;
+    font-size: 1.45em;
   }
   .slide h1 {
     font-size: 3.5em;
@@ -905,19 +914,19 @@ h1,p,ul{
     text-align: left;
   }
   #three p{
-    font-size: 1.2em;
+    font-size: 1.45em;
   }
   #four p{
-    font-size: 1.2em;
+    font-size: 1.45em;
   }
   #six p{
-    font-size: 1.2em;
+    font-size: 1.45em;
   }
   #six ul{
     font-size: 1.07em;
   }
   #seven p{
-    font-size: 1.2em;
+    font-size: 1.45em;
   }
   #three span{
     margin-top: 0.35em;
