@@ -629,8 +629,11 @@ and (orientation: landscape){
   .boxGameDesktop{
     padding: 23% 0 5% 0;
   }
+  .fixBugDesktop{
+    height: 100vh !important;
+  }
   .fixBugHeight{
-    height: 100vh;
+    height: 130vh !important;
   }
   .gameOnlyDesktop{
     padding: 0 2px 0 2px;
