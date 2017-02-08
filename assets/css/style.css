@@ -282,8 +282,11 @@ div.card-heading h1 > span {
   color: #000;
   border: 1px solid #FFF;
   border-radius: 10px;
-  padding: 0.3em 0.4em 0.3em 0.4em !important;
+  padding: 0.45em 0.5em 0.45em 0.5em !important;
   text-decoration: none !important;
+}
+.link-img2 {
+  padding: 0.3em 0 0 0 !important;
 }
 .link:hover {
   background: white;
@@ -464,8 +467,8 @@ div.card-heading h1 > span {
   animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  /*animation-play-state: running;*/
-  animation-play-state: paused;
+  animation-play-state: running;
+  /*animation-play-state: paused;*/
 }
 .cloud2 {
   background-image: url('../img/object/cloud.svg');
@@ -481,8 +484,8 @@ div.card-heading h1 > span {
   animation-delay: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  /*animation-play-state: running;*/
-  animation-play-state: paused;
+  animation-play-state: running;
+  /*animation-play-state: paused;*/
 }
 .cloud3 {
   background-image: url('../img/object/cloud.svg');
@@ -498,8 +501,8 @@ div.card-heading h1 > span {
   animation-delay: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  /*animation-play-state: running;*/
-  animation-play-state: paused;
+  animation-play-state: running;
+  /*animation-play-state: paused;*/
 }
 
 .flip-horizontal, .x-grid-cell-inner, .x-column-header-text, .x-panel-header-text {
@@ -713,28 +716,25 @@ div.ship {
   color: black;
   font-size: 1em;
 }
-.fa-facebook{
-  color:black;
-  font-size: 1em;
+.fa-facebook-square:before {
+  padding-left: 0.07em;
 }
-.fa-twitter{
-  color:black;
-  font-size: 1em;
+.fa-twitter:before {
+  padding-left: 0.05em;
 }
-.fa-instagram{
-  font-size: 1em;
-  color:black;
+.fa-instagram:before {
+  padding-left: 0.06em;
 }
-.fa-youtube{
-  font-size: 1em;
-  color:black;
+.fa-youtube:before {
+  padding-left: 0.07em;
 }
 .link-menu{
   margin-left: 0.5em !important;
 }
 .link-img {
-  width: 90px;
-  margin-bottom: 0.2em;
+  width: 70px;
+  margin-bottom: 0.4em;
+  margin-left: 0.03em;
 }
 #one{
   cursor: -webkit-grab;
