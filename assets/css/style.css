@@ -282,9 +282,6 @@ div.card-heading h1 > span {
   padding: 0.45em 0.5em 0.45em 0.5em !important;
   text-decoration: none !important;
 }
-.fa-facebook {
-    padding-left: 0.7em !important;
-}
 .link-img2 {
   padding: 0.3em 0 0 0 !important;
 }
@@ -716,28 +713,25 @@ div.ship {
   color: black;
   font-size: 1em;
 }
-.fa-facebook{
-  color:black;
-  font-size: 1em;
+.fa-facebook-square:before {
+  padding-left: 0.07em;
 }
-.fa-twitter{
-  color:black;
-  font-size: 1em;
+.fa-twitter:before {
+  padding-left: 0.05em;
 }
-.fa-instagram{
-  font-size: 1em;
-  color:black;
+.fa-instagram:before {
+  padding-left: 0.06em;
 }
-.fa-youtube{
-  font-size: 1em;
-  color:black;
+.fa-youtube:before {
+  padding-left: 0.07em;
 }
 .link-menu{
   margin-left: 0.5em !important;
 }
 .link-img {
   width: 70px;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.4em;
+  margin-left: 0.03em;
 }
 #one{
   cursor: -webkit-grab;
