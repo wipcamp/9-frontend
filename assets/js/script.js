@@ -50,11 +50,11 @@ $(document).ready(function(){
         $('.slide:eq('+carousel.getCurrentSlide()+')').addClass('hover');
         $('.cloud1, .cloud2, .cloud3').addClass('pause');
         $('.wave1, .wave2, .wave3').addClass('pause');
-        // $('.ship').addClass('pause');
-        // $('.ship-main').addClass('pause');
+        $('.ship').addClass('pause');
+        $('.ship-main').addClass('pause');
         $('.ship-main').removeClass('transition1');
         $('.ship-main').css({left: '-30em'});
-      },2000);
+      },1500);
     },300);
     event.stopPropagation();
   });
@@ -74,28 +74,30 @@ $(document).ready(function(){
         $('.slide:eq('+carousel.getCurrentSlide()+')').addClass('hover');
         $('.cloud1, .cloud2, .cloud3').addClass('pause');
         $('.wave1, .wave2, .wave3').addClass('pause');
-        // $('.ship').addClass('pause');
-        // $('.ship-main').addClass('pause');
+        $('.ship').addClass('pause');
+        $('.ship-main').addClass('pause');
         $('.ship').removeClass('transition1');
         $('.ship').css({left: '-30em'});
-      },2000);
+      },1500);
     },300);
     event.stopPropagation();
   });
 
   $('div.slide').click(function(event) {
     $('.slide:eq(' + carousel.getCurrentSlide() + ')').removeClass('hover');
-    $('.slide:eq(' + carousel.getCurrentSlide() + ')').addClass('active');
-    $('.con').removeClass('idle');
-    $('.slide').removeClass('animate');
-    $('.wave1, .wave2, .wave3').removeClass('pause');
-    $('.cloud1, .cloud2, .cloud3').removeClass('pause');
-    // $('.ship').removeClass('pause');
-    // $('.ship-main').removeClass('pause');
-    $('.ship-main').addClass('transition1');
-    $('.ship').addClass('transition1');
-    $('.ship-main').css({"left": "-1em"});
-    $('.ship').css({"left": "-1em"});
+    setTimeout(function(){
+      $('.slide:eq(' + carousel.getCurrentSlide() + ')').addClass('active');
+      $('.con').removeClass('idle');
+      $('.slide').removeClass('animate');
+      $('.wave1, .wave2, .wave3').removeClass('pause');
+      $('.cloud1, .cloud2, .cloud3').removeClass('pause');
+      $('.ship').removeClass('pause');
+      $('.ship-main').removeClass('pause');
+      $('.ship-main').addClass('transition1');
+      $('.ship').addClass('transition1');
+      $('.ship-main').css({"left": "-1em"});
+      $('.ship').css({"left": "-1em"});
+    },300);
   });
   countDown();
 
