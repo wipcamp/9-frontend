@@ -280,7 +280,7 @@ function WipcampCarousel(element) {
           $('.ship').css({left: '-30em'});
           $('.ship').addClass('transition1');
           $('.ship').css({"left": "-1em"});
-        },500);
+        },300);
       },1000);
     }
   }
@@ -297,7 +297,7 @@ function WipcampCarousel(element) {
         setTimeout(function(){
           $('.slide.active').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
           $('.slide.active').removeClass('active');
-        },300);
+        },500);
       }
       else {
         $('.ship:eq('+(currentSlide-1)+')').css({left: '110%'});
