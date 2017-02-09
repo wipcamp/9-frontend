@@ -205,6 +205,7 @@ h1, p {
 .slide.active {
   z-index: 10;
   transform: perspective(100px) translate3d(0, 0, 0) !important;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .idle .slide.hover  {
   animation-name: card;
@@ -417,8 +418,8 @@ div.card-heading h1 > span {
   animation-delay: .1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  /*animation-play-state: running;*/
-  animation-play-state: paused;
+  animation-play-state: running;
+  /*animation-play-state: paused;*/
 }
 .wave2{
   background-image: url('../img/object/wave2.svg');
@@ -432,8 +433,8 @@ div.card-heading h1 > span {
   animation-delay: .1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  /*animation-play-state: running;*/
-  animation-play-state: paused;
+  animation-play-state: running;
+  /*animation-play-state: paused;*/
 }
 .wave3{
   background-image: url('../img/object/wave3.svg');
@@ -446,8 +447,8 @@ div.card-heading h1 > span {
   animation-delay: .1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  /*animation-play-state: running;*/
-  animation-play-state: paused;
+  animation-play-state: running;
+  /*animation-play-state: paused;*/
 }
 
 .cloud1 {
