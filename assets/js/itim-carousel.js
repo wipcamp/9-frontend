@@ -243,6 +243,7 @@ function WipcampCarousel(element) {
 
   function slideActiveNext() {
     closeModalAfterSlide();
+    $('.con').addClass('idle');
     $('.slide').addClass('animate');
     // $('.wave1, .wave2, .wave3').addClass('pause');
     $('.cloud1, .cloud2, .cloud3').addClass('pause');
@@ -251,8 +252,13 @@ function WipcampCarousel(element) {
     $('.slide:eq('+currentSlide+')').removeClass('hover');
     $('.slide.active').removeClass('active');
     $('.con').removeClass('idle');
-    setTimeout(function() { self.next(); }, 500);
-    setTimeout(function() { $('.slide:eq('+currentSlide+')').addClass('active'); }, 1000);
+    setTimeout(function() {
+      self.next();
+      $('.con').removeClass('idle');
+    }, 500);
+    setTimeout(function() {
+      $('.slide:eq('+currentSlide+')').addClass('active');
+    }, 1000);
     setTimeout(function() {
       // $('.wave1, .wave2, .wave3').removeClass('pause');
       $('.cloud1, .cloud2, .cloud3').removeClass('pause');
@@ -263,6 +269,7 @@ function WipcampCarousel(element) {
 
   function slideActivePrev() {
     closeModalAfterSlide();
+    $('.con').addClass('idle');
     $('.slide').addClass('animate');
     // $('.wave1, .wave2, .wave3').addClass('pause');
     $('.cloud1, .cloud2, .cloud3').addClass('pause');
@@ -271,8 +278,13 @@ function WipcampCarousel(element) {
     $('.slide:eq('+currentSlide+')').removeClass('hover');
     $('.slide.active').removeClass('active');
     $('.con').removeClass('idle');
-    setTimeout(function() { self.prev(); }, 500);
-    setTimeout(function() { $('.slide:eq('+currentSlide+')').addClass('active'); }, 1000);
+    setTimeout(function() {
+      self.prev();
+      $('.con').removeClass('idle');
+    }, 500);
+    setTimeout(function() {
+      $('.slide:eq('+currentSlide+')').addClass('active');
+    }, 1000);
     setTimeout(function() {
       // $('.wave1, .wave2, .wave3').removeClass('pause');
       $('.cloud1, .cloud2, .cloud3').removeClass('pause');
