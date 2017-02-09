@@ -205,6 +205,7 @@ h1, p {
 .slide.active {
   z-index: 10;
   transform: perspective(100px) translate3d(0, 0, 0) !important;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .idle .slide.hover  {
   animation-name: card;
@@ -417,8 +418,8 @@ div.card-heading h1 > span {
   animation-delay: .1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  /*animation-play-state: running;*/
-  animation-play-state: paused;
+  animation-play-state: running;
+  /*animation-play-state: paused;*/
 }
 .wave2{
   background-image: url('../img/object/wave2.svg');
@@ -432,8 +433,8 @@ div.card-heading h1 > span {
   animation-delay: .1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  /*animation-play-state: running;*/
-  animation-play-state: paused;
+  animation-play-state: running;
+  /*animation-play-state: paused;*/
 }
 .wave3{
   background-image: url('../img/object/wave3.svg');
@@ -446,8 +447,8 @@ div.card-heading h1 > span {
   animation-delay: .1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  /*animation-play-state: running;*/
-  animation-play-state: paused;
+  animation-play-state: running;
+  /*animation-play-state: paused;*/
 }
 
 .cloud1 {
@@ -1023,56 +1024,24 @@ h1,p,ul{
     height: 10%;
     margin: 0 20%;
   }
-  .moon img{
+  #one .moon img{
     position: absolute;
     top:1.5em;
     right: 2em;
-    height: 5em;
+    height: 6em;
     z-index: 10;
   }
   em{
     display: block;
     margin-left: 1.55em;
   }
-  #two .moon img{
-    position: absolute;
-    top:1.5em;
-    right: 5em;
-    height: 5em;
-    z-index: 10;
+  .register-open div p span{
+    font-size: 0.9em;
   }
-  #three .moon img{
+  .moon img{
     position: absolute;
     top:1.5em;
-    right: 5em;
-    height: 5em;
-    z-index: 10;
-  }
-  #four .moon img{
-    position: absolute;
-    top:1.5em;
-    right: 5em;
-    height: 5em;
-    z-index: 10;
-  }
-  #five .moon img{
-    position: absolute;
-    top:1.5em;
-    right: 5em;
-    height: 5em;
-    z-index: 10;
-  }
-  #six .moon img{
-    position: absolute;
-    top:1.5em;
-    right: 5em;
-    height: 5em;
-    z-index: 10;
-  }
-  #seven .moon img{
-    position: absolute;
-    top:1.5em;
-    right: 5em;
+    right: 6.5em;
     height: 5em;
     z-index: 10;
   }
@@ -1134,13 +1103,18 @@ h1,p,ul{
     z-index: 10;
   }
   #two p{
-    font-size: 1.06em;
+    font-size: 1.16em;
   }
 
   .card-menu{
     margin-top: 0.2em;
-    padding: 0.60em 0.4em;
+    padding: 0.60em 0.75em 0.6em 0.55em;
     font-size:1em;
+  }
+  .line-at{
+    height: 3.61em;
+    margin-top: -0.97em;
+    margin-left: 1em;
   }
   .slide h1 {
     font-size: 3em;
@@ -1170,25 +1144,25 @@ h1,p,ul{
 
   #three p{
     margin: 1em;
-    font-size: 1.06em;
+    font-size: 1.2em;
   }
   #four p{
-    font-size: 1.06em;
+    font-size: 1.26em;
   }
   #six p{
-    font-size:1.06em;
+    font-size:1.26em;
   }
   #seven p{
-    font-size:1.06em;
+    font-size:1.26em;
   }
   .panel-heading{
     padding: 0.4em 0.6em;
   }
   .panel-title{
-    font-size: 0.95em;
+    font-size: 1.15em;
   }
   .panel-body{
-    font-size: 0.85em;
+    font-size: 1.1em;
     padding: 0.8em;
   }
   .slide div.card-heading h1 {
@@ -1358,29 +1332,37 @@ h1,p,ul{
     font-size: 1em;
   }
   #four p{
-    font-size: 1em;
+    font-size: 1.1em;
+  }
+  .register-open div p span{
+    font-size: 0.9em;
   }
   #six p{
-    font-size: 1em;
+    font-size: 1.12em;
   }
   #seven p{
-    font-size: 1em;
+    font-size: 1.1em;
   }
   .panel-heading{
     padding: 0.4em 0.6em;
   }
   .panel-title{
-    font-size: 0.9em;
+    font-size: 1.01em;
   }
   .panel-body{
-    font-size: 0.85em;
+    font-size: 0.9em;
     padding: 0.8em;
+  }
+  .line-at{
+    height: 3.65em;
+    margin-top: -0.95em;
+    margin-left: 1em;
   }
   .moon img{
     position: absolute;
     top:1.5em;
     right: 2em;
-    height: 5em;
+    height: 6em;
     z-index: 10;
   }
   #two .moon img{
