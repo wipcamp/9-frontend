@@ -807,6 +807,9 @@ h1,p,ul{
   body,html{
     font-size: 13px;
   }
+  .slide{
+    min-height: 100%;
+  }
   .faqblock{
     overflow-y: auto;
   }
