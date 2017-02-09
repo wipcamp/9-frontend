@@ -513,7 +513,7 @@ div.card-heading h1 > span {
 }
 .card-content{
   position: relative;
-  margin-top: 1.5em;
+  margin-top: 0.5em;
   z-index: 99;
   text-shadow: 1px 1px 3px #777;
 }
@@ -669,6 +669,7 @@ div.card-heading h1 > span {
   width:100%;
   position: relative;
   z-index: 55;
+  overflow: auto;
   text-shadow: none;
 }
 
@@ -807,9 +808,7 @@ h1,p,ul{
   body,html{
     font-size: 13px;
   }
-  .faqblock{
-    overflow: auto;
-  }
+
   .ship-main img{
     height: 16.5em;
     bottom: 0.6em;
