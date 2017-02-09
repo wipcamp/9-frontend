@@ -49,7 +49,7 @@ $(document).ready(function(){
       setTimeout(function(){
         $('.slide:eq('+carousel.getCurrentSlide()+')').addClass('hover');
         $('.cloud1, .cloud2, .cloud3').addClass('pause');
-        // $('.wave1, .wave2, .wave3').addClass('pause');
+        $('.wave1, .wave2, .wave3').addClass('pause');
         // $('.ship').addClass('pause');
         // $('.ship-main').addClass('pause');
         $('.ship-main').removeClass('transition1');
@@ -73,7 +73,7 @@ $(document).ready(function(){
       setTimeout(function(){
         $('.slide:eq('+carousel.getCurrentSlide()+')').addClass('hover');
         $('.cloud1, .cloud2, .cloud3').addClass('pause');
-        // $('.wave1, .wave2, .wave3').addClass('pause');
+        $('.wave1, .wave2, .wave3').addClass('pause');
         // $('.ship').addClass('pause');
         // $('.ship-main').addClass('pause');
         $('.ship').removeClass('transition1');
