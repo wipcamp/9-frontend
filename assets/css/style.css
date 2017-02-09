@@ -281,7 +281,7 @@ div.card-heading h1 > span {
   color: #000;
   border: 1px solid #FFF;
   border-radius: 10px;
-  padding: 0.45em 0.5em 0.45em 0.5em !important;
+  padding: 0.35em 0.4em 0.35em 0.4em !important;
   text-decoration: none !important;
 }
 .link-img2 {
@@ -293,8 +293,6 @@ div.card-heading h1 > span {
   border: 1px solid white;
 }
 #seven i.link {
-  width: 2em;
-  height: 1.9em;
   font-size: 2em !important;
   text-shadow: none;
 }
@@ -730,7 +728,7 @@ div.card-heading h1 > span {
   padding-left: 0.07em;
 }
 .link-menu{
-  margin-left: 0.5em !important;
+  margin-left: 0.5em;
 }
 .link-img {
   width: 70px;
@@ -794,7 +792,14 @@ h1,p,ul{
     width: calc(100% - 30px * 2);
   }
 }
-
+.line-at{
+  height: 3.55em;
+  margin-top: -0.85em;
+}
+#three .card-content p em{
+  font-weight: 100;
+  line-height: 1.5em;
+}
 /*### Smartphones (portrait and landscape)(small)### */
 @media screen and (min-width : 0px) and (max-width : 767px){
   body,html{
@@ -849,7 +854,7 @@ h1,p,ul{
   #logo{
     position: relative;
     z-index: 99;
-    top:15%;
+    top:19%;
   }
   .wipcamp-logo{
     height: 15em;
@@ -914,17 +919,17 @@ h1,p,ul{
     padding: 0.4em 0.6em;
   }
   .panel-title{
-    font-size: 0.9em;
+    font-size: 1.06em;
   }
   .panel-body{
-    font-size: 0.90em;
+    font-size: 1em;
     padding: 0.8em;
   }
   #seven ul li img{
     width: 4em;
   }
   .link-menu{
-    margin-left: 0.5em !important;
+    margin-left: 0em !important;
   }
   .link-img {
     width: 70px;
