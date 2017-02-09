@@ -774,7 +774,7 @@ h1,p,ul{
 }
 
 #where-map .modal-body {
-  height: calc(100% - 56px);
+  height: calc(100% - 56px - 65px);
 }
 
 #where-map .modal-content {
@@ -793,6 +793,7 @@ h1,p,ul{
     width: calc(100% - 30px * 2);
   }
 }
+
 .line-at{
   height: 3.55em;
   margin-top: -0.85em;

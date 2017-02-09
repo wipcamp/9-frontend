@@ -17,17 +17,17 @@ function WipcampCarousel(element) {
     });
 
     $(".next").click(function(){
-      $('.slide:eq(' + currentSlide + ')').removeClass('hover')
+      $('.slide:eq(' + currentSlide + ')').removeClass('hover');
       self.next();
       setTimeout(function () {
-        $('.slide:eq(' + currentSlide + ')').addClass('hover')
+        $('.slide:eq(' + currentSlide + ')').addClass('hover');
       },500);
     });
     $(".prev").click(function(){
-      $('.slide:eq(' + currentSlide + ')').removeClass('hover')
+      $('.slide:eq(' + currentSlide + ')').removeClass('hover');
       self.prev();
       setTimeout(function () {
-        $('.slide:eq(' + currentSlide + ')').addClass('hover')
+        $('.slide:eq(' + currentSlide + ')').addClass('hover');
       },500);
     });
 
@@ -60,12 +60,44 @@ function WipcampCarousel(element) {
         if (!element.hasClass('idle')) {
           $('.con').addClass('idle');
           $('.slide').addClass('animate');
-          // $('.wave1, .wave2, .wave3').addClass('pause');
-          $('.cloud1, .cloud2, .cloud3').addClass('pause');
-          // $('.ship').addClass('pause');
-          $('.slide.active').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
-          $('.slide.active').removeClass('active');
-          $('.slide:eq(' + currentSlide + ')').addClass('hover')
+          if(currentSlide == 0) {
+            $('.ship-main').css({left: '110%'});
+            $('.ship').removeClass('transition1');
+            $('.ship').css({left: '-30em'});
+            setTimeout(function(){
+              $('.slide.active').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
+              $('.slide.active').removeClass('active');
+              setTimeout(function(){
+                $('.slide:eq('+ currentSlide +')').addClass('hover');
+                $('.cloud1, .cloud2, .cloud3').addClass('pause');
+                $('.wave1, .wave2, .wave3').addClass('pause');
+                $('.ship').addClass('pause');
+                $('.ship-main').addClass('pause');
+                $('.ship-main').removeClass('transition1');
+                $('.ship-main').css({left: '-30em'});
+              },1500);
+            },300);
+          }
+          else {
+            $('.ship:eq('+ (currentSlide-1) +')').css({left: '110%'});
+            $('.ship').not(':eq('+ (currentSlide-1) +')').removeClass('transition1');
+            $('.ship').not(':eq('+ (currentSlide-1) +')').css({left: '-30em'});
+            $('.ship-main').removeClass('transition1');
+            $('.ship-main').css({left: '-30em'});
+            setTimeout(function(){
+              $('.slide.active').css({"transform": "perspective(100px) translate3d(0, -100px, -50px)"});
+              $('.slide.active').removeClass('active');
+              setTimeout(function(){
+                $('.slide:eq('+ currentSlide +')').addClass('hover');
+                $('.cloud1, .cloud2, .cloud3').addClass('pause');
+                $('.wave1, .wave2, .wave3').addClass('pause');
+                $('.ship').addClass('pause');
+                $('.ship-main').addClass('pause');
+                $('.ship').removeClass('transition1');
+                $('.ship').css({left: '-30em'});
+              },1500);
+            },300);
+          }
         }
       }
     });
@@ -78,10 +110,10 @@ function WipcampCarousel(element) {
 
       if(direction === 1) {
         if (element.hasClass('idle')) {
-          $('.slide:eq(' + currentSlide + ')').removeClass('hover')
+          $('.slide:eq(' + currentSlide + ')').removeClass('hover');
           self.next();
           setTimeout(function () {
-            $('.slide:eq(' + currentSlide + ')').addClass('hover')
+            $('.slide:eq(' + currentSlide + ')').addClass('hover');
           },500);
         }
         else {
@@ -90,10 +122,10 @@ function WipcampCarousel(element) {
       }
       if(direction === 0) {
         if (element.hasClass('idle')) {
-          $('.slide:eq(' + currentSlide + ')').removeClass('hover')
+          $('.slide:eq(' + currentSlide + ')').removeClass('hover');
           self.prev();
           setTimeout(function () {
-            $('.slide:eq(' + currentSlide + ')').addClass('hover')
+            $('.slide:eq(' + currentSlide + ')').addClass('hover');
           },500);
         }
         else {
@@ -112,18 +144,18 @@ function WipcampCarousel(element) {
     });
 
     $('.slide-control .next-container').on('click', function() {
-      $('.slide:eq(' + currentSlide + ')').removeClass('hover')
+      $('.slide:eq(' + currentSlide + ')').removeClass('hover');
       self.next();
       setTimeout(function () {
-        $('.slide:eq(' + currentSlide + ')').addClass('hover')
+        $('.slide:eq(' + currentSlide + ')').addClass('hover');
       },500);
     });
 
     $('.slide-control .prev-container').on('click', function() {
-      $('.slide:eq(' + currentSlide + ')').removeClass('hover')
+      $('.slide:eq(' + currentSlide + ')').removeClass('hover');
       self.prev();
       setTimeout(function () {
-        $('.slide:eq(' + currentSlide + ')').addClass('hover')
+        $('.slide:eq(' + currentSlide + ')').addClass('hover');
       },500);
     });
   };
@@ -207,10 +239,10 @@ function WipcampCarousel(element) {
     switch (e.type) {
       case 'swipeleft':
         if (element.hasClass('idle')) {
-          $('.slide:eq(' + currentSlide + ')').removeClass('hover')
+          $('.slide:eq(' + currentSlide + ')').removeClass('hover');
           self.next();
           setTimeout(function () {
-            $('.slide:eq(' + currentSlide + ')').addClass('hover')
+            $('.slide:eq(' + currentSlide + ')').addClass('hover');
           },500);
         }
         else {
@@ -219,10 +251,10 @@ function WipcampCarousel(element) {
         break;
       case 'swiperight':
         if (element.hasClass('idle')) {
-          $('.slide:eq(' + currentSlide + ')').removeClass('hover')
+          $('.slide:eq(' + currentSlide + ')').removeClass('hover');
           self.prev();
           setTimeout(function () {
-            $('.slide:eq(' + currentSlide + ')').addClass('hover')
+            $('.slide:eq(' + currentSlide + ')').addClass('hover');
           },500);
         }
         else {
