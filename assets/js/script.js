@@ -55,7 +55,7 @@ $(document).ready(function(){
         $('.ship-main').removeClass('transition1');
         $('.ship-main').css({left: '-30em'});
       },2000);
-    },500);
+    },300);
     event.stopPropagation();
   });
 
@@ -79,7 +79,7 @@ $(document).ready(function(){
         $('.ship').removeClass('transition1');
         $('.ship').css({left: '-30em'});
       },2000);
-    },500);
+    },300);
     event.stopPropagation();
   });
 
