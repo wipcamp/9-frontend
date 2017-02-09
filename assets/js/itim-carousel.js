@@ -312,7 +312,7 @@ function WipcampCarousel(element) {
           $('.ship-main').removeClass('transition1');
           $('.ship-main').css({left: '-30em'});
         },2000);
-      },500);
+      },300);
     }
     else {
       $('.ship:eq('+(currentSlide-1)+')').css({left: '110%'});
@@ -347,7 +347,7 @@ function WipcampCarousel(element) {
           $('.ship-main').addClass('transition1');
           $('.ship-main').css({"left": "-1em"});
         }
-      },500);
+      },300);
     },2000);
   }
 
