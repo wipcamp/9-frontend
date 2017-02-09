@@ -807,10 +807,8 @@ h1,p,ul{
   body,html{
     font-size: 13px;
   }
-  .slide{
-    min-height: 100%;
-  }
   .faqblock{
+    min-height: 100%;
     overflow-y: auto;
   }
   .ship-main img{
