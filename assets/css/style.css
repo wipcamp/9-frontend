@@ -200,8 +200,7 @@ h1, p {
 }
 
 .slide.animate {
-  /*transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);*/
-  transition: all 0.5s;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .slide.active {
@@ -1113,33 +1112,33 @@ h1,p,ul{
     left: -50%;
   }
   #two .cisland img{
-    height: 16.5em;
-    right: 1em;
+    height: 20.5em;
+    right: 0em;
     bottom: 1em;
   }
   #three .cisland img {
-    height: 14em;
-    right: 0em;
-    bottom: 1.50em;
+    height: 19em;
+    right: -2em;
+    bottom: 1.0em;
   }
   #four .cisland img {
-    height: 15em;
-    right: 0em;
-    bottom: -1.50em;
+    height: 18em;
+    right: -3em;
+    bottom: -2.50em;
   }
   #five .cisland img{
-    height: 14em;
-    right: 0.2em;
-    bottom: 1.8em;
+    height: 17em;
+    right: -1em;
+    bottom: 1em;
   }
   #six .cisland img{
-    height: 16em;
-    right: 0.2em;
-    bottom: 0.75em;
+    height: 20em;
+    right: -2.8em;
+    bottom: -0.25em;
   }
   #seven .cisland img{
-    height: 14.5em;
-    right: 0.8em;
+    height: 18.5em;
+    right: -1.2em;
     bottom: -0.25em;
   }
   #logo{
@@ -1176,10 +1175,10 @@ h1,p,ul{
   }
   .game-btn{
     position: absolute;
-    bottom: 1.5em;
-    right: 0;
+    bottom: 1em;
+    right: 1em;
     z-index: 2;
-    width: 9em;
+    width: 11em;
   }
   .wave3{
     height: 4em;
@@ -1299,34 +1298,34 @@ h1,p,ul{
     height: 22em;
   }
   #two .cisland img{
+    height: 20em;
+    right: 1em;
+    bottom: 1.2em;
+  }
+  #three .cisland img {
     height: 18em;
     right: 1em;
     bottom: 1.5em;
   }
-  #three .cisland img {
-    height: 16em;
-    right: 2em;
-    bottom: 2.85em;
-  }
   #four .cisland img{
-    bottom:-0.5em;
-    height: 16em;
+    bottom:-1.5em;
+    height: 17em;
     right: 1em;
   }
   #five .cisland img {
-    height: 16em;
-    right: 3em;
-    bottom: 2.1em;
-  }
-  #six .cisland img {
     height: 18em;
-    right: 3em;
+    right: 2em;
     bottom: 1.1em;
   }
+  #six .cisland img {
+    height: 20em;
+    right: 2em;
+    bottom: 0.6em;
+  }
   #seven .cisland img {
-    height: 17.5em;
-    right: 3em;
-    bottom: -0.5em;
+    height: 18.5em;
+    right: 8em;
+    bottom: 8em;
   }
   .card-menu{
     margin-top: 0.65em;
@@ -1362,9 +1361,9 @@ h1,p,ul{
   .game-btn{
     position: absolute;
     bottom: 1em;
-    right: 0;
+    right: 2em;
     z-index: 2;
-    width: 11em;
+    width: 12em;
   }
   .wave3{
     bottom: -1em;
