@@ -205,6 +205,7 @@ h1, p {
 .slide.active {
   z-index: 10;
   transform: perspective(100px) translate3d(0, 0, 0) !important;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .idle .slide.hover  {
   animation-name: card;
