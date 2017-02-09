@@ -55,8 +55,9 @@ h1, p {
 #btn-getstarted {
   display: inline-block;
   color: #fff;
+  font-size: 1.2em;
   margin-top: 2.3em;
-  padding: 0.8em 2.8em 0.8em 2.8em;
+  padding: 0.8em 1.7em 0.8em 1.7em;
   text-decoration: none !important;
   border-radius: 7px;
   border: 1px solid #fff;
@@ -198,12 +199,9 @@ h1, p {
   color: white;
   background: linear-gradient(#141123, #1d3c5c);
 }
-
 .slide.animate {
-  /*transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);*/
-  transition: all 0.5s;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
 .slide.active {
   z-index: 10;
   transform: perspective(100px) translate3d(0, 0, 0) !important;
@@ -283,7 +281,7 @@ div.card-heading h1 > span {
   color: #000;
   border: 1px solid #FFF;
   border-radius: 10px;
-  padding: 0.45em 0.5em 0.45em 0.5em !important;
+  padding: 0.35em 0.4em 0.35em 0.4em !important;
   text-decoration: none !important;
 }
 .link-img2 {
@@ -295,8 +293,6 @@ div.card-heading h1 > span {
   border: 1px solid white;
 }
 #seven i.link {
-  width: 2em;
-  height: 1.9em;
   font-size: 2em !important;
   text-shadow: none;
 }
@@ -558,6 +554,9 @@ div.card-heading h1 > span {
 .ship-main.transition1 {
   transition: left 3s;
 }
+.ship.transition1 {
+  transition: left 3s;
+}
 .ship {
   position: absolute;
   width: 100%;
@@ -729,35 +728,17 @@ div.card-heading h1 > span {
   padding-left: 0.07em;
 }
 .link-menu{
-  margin-left: 0.5em !important;
+  margin-left: 0.5em;
 }
 .link-img {
   width: 70px;
   margin-bottom: 0.5em;
   margin-left: 0.03em;
 }
-#one{
-  cursor: -webkit-grab;
-}
-#two{
-  cursor: -webkit-grab;
-}
-#three{
-  cursor: -webkit-grab;
-}
-#four{
-  cursor: -webkit-grab;
-}
-#five{
-  cursor: -webkit-grab;
-}
-#five .panel-title{
-  cursor: -webkit-grab;
-}
-#six{
-  cursor: -webkit-grab;
-}
-#seven{
+#one, #two,
+#three, #four,
+#five, #five .panel-title,
+#six, #seven {
   cursor: -webkit-grab;
 }
 h1,p,ul{
@@ -811,7 +792,14 @@ h1,p,ul{
     width: calc(100% - 30px * 2);
   }
 }
-
+.line-at{
+  height: 3.55em;
+  margin-top: -0.85em;
+}
+#three .card-content p em{
+  font-weight: 100;
+  line-height: 1.5em;
+}
 /*### Smartphones (portrait and landscape)(small)### */
 @media screen and (min-width : 0px) and (max-width : 767px){
   body,html{
@@ -827,12 +815,7 @@ h1,p,ul{
     height: 16.5em;
     bottom: 0.6em;
   }
-  .slide.active .ship {
-    left: -3em;
-  }
-  .slide .ship {
-    left: -95%;
-  }
+
   .register {
     width: 70%;
     height: 10%;
@@ -871,7 +854,7 @@ h1,p,ul{
   #logo{
     position: relative;
     z-index: 99;
-    top:15%;
+    top:19%;
   }
   .wipcamp-logo{
     height: 15em;
@@ -891,16 +874,16 @@ h1,p,ul{
   }
   .moon img{
     position: absolute;
-    top:1.5em;
-    right: 2em;
-    height: 5em;
+    top:1.1em;
+    right: 1em;
+    height: 6.5em;
     z-index: 10;
   }
   #two span{
-    margin-top: 0.35em;
+    margin-top: 0.8em;
   }
   #two p{
-    font-size: 1.2em;
+    font-size: 1.24em;
   }
   .slide h1 {
     font-size: 3.5em;
@@ -936,17 +919,17 @@ h1,p,ul{
     padding: 0.4em 0.6em;
   }
   .panel-title{
-    font-size: 0.9em;
+    font-size: 1.06em;
   }
   .panel-body{
-    font-size: 0.90em;
+    font-size: 1em;
     padding: 0.8em;
   }
   #seven ul li img{
     width: 4em;
   }
   .link-menu{
-    margin-left: 0.5em !important;
+    margin-left: 0em !important;
   }
   .link-img {
     width: 70px;
@@ -1047,6 +1030,10 @@ h1,p,ul{
     height: 5em;
     z-index: 10;
   }
+  em{
+    display: block;
+    margin-left: 1.55em;
+  }
   #two .moon img{
     position: absolute;
     top:1.5em;
@@ -1106,12 +1093,7 @@ h1,p,ul{
     height: 20em;
     bottom: 0;
   }
-  .slide.active div.ship{
-    left: 0;
-  }
-  .slide div.ship{
-    left: -50%;
-  }
+
   #two .cisland img{
     height: 20.5em;
     right: 0em;
@@ -1274,6 +1256,10 @@ h1,p,ul{
     z-index: 99;
     top:14%;
   }
+  em{
+    display: block;
+    margin-left: 1.55em;
+  }
   .supporter-logo{
     margin: 0px auto;
     z-index: 10;
@@ -1286,12 +1272,7 @@ h1,p,ul{
     height: 24em;
     bottom: 0em;
   }
-  .slide.active .ship {
-    left: 0;
-  }
-  .slide .ship {
-    left: -50%;
-  }
+
   #two p{
     font-size: 0.9em;
   }
@@ -1325,8 +1306,8 @@ h1,p,ul{
   }
   #seven .cisland img {
     height: 18.5em;
-    right: 8em;
-    bottom: 8em;
+    right: 2em;
+    bottom: 0.2em;
   }
   .card-menu{
     margin-top: 0.65em;
