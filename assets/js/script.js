@@ -49,7 +49,7 @@ $(document).ready(function(){
       setTimeout(function(){
         $('.slide:eq('+carousel.getCurrentSlide()+')').addClass('hover');
         $('.cloud1, .cloud2, .cloud3').addClass('pause');
-        // $('.wave1, .wave2, .wave3').addClass('pause');
+        $('.wave1, .wave2, .wave3').addClass('pause');
         // $('.ship').addClass('pause');
         // $('.ship-main').addClass('pause');
         $('.ship-main').removeClass('transition1');
@@ -73,7 +73,7 @@ $(document).ready(function(){
       setTimeout(function(){
         $('.slide:eq('+carousel.getCurrentSlide()+')').addClass('hover');
         $('.cloud1, .cloud2, .cloud3').addClass('pause');
-        // $('.wave1, .wave2, .wave3').addClass('pause');
+        $('.wave1, .wave2, .wave3').addClass('pause');
         // $('.ship').addClass('pause');
         // $('.ship-main').addClass('pause');
         $('.ship').removeClass('transition1');
@@ -84,28 +84,11 @@ $(document).ready(function(){
   });
 
   $('div.slide').click(function(event) {
-    var transitionTime = /((?:[0-9])+(?:\.(?:[0-9])+)?)(ms|s)/.exec($('.animate').css('transition-duration'));
-    transitionTime.shift();
-    transitionTime = transitionTime[1] == "s" ? transitionTime[0]*1000 : transitionTime[0];
-
-    var beforeAnimate = function() {
-      var r = $.Deferred();
-      $('.slide:eq(' + carousel.getCurrentSlide() + ')').removeClass('hover');
-      $(event.target).parents().filter('.slide').addClass('active');
-      $('.con').removeClass('idle');
-      $(event.target).parents().filter('.slide').css({"transform": "perspective(100px) translate3d(0, 0, 0)"});
-      return r;
-    };
-
-    var afterAnimate = function() {
-      setTimeout(function() {
-        $('.slide').removeClass('animate');
-      }, transitionTime);
-    };
-
-    beforeAnimate().done(afterAnimate());
+    $('.slide:eq(' + carousel.getCurrentSlide() + ')').removeClass('hover');
+    $('.slide:eq(' + carousel.getCurrentSlide() + ')').addClass('active');
+    $('.con').removeClass('idle');
     $('.slide').removeClass('animate');
-    // $('.wave1, .wave2, .wave3').removeClass('pause');
+    $('.wave1, .wave2, .wave3').removeClass('pause');
     $('.cloud1, .cloud2, .cloud3').removeClass('pause');
     // $('.ship').removeClass('pause');
     // $('.ship-main').removeClass('pause');
