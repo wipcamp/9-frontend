@@ -199,12 +199,9 @@ h1, p {
   color: white;
   background: linear-gradient(#141123, #1d3c5c);
 }
-
 .slide.animate {
-  /*transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);*/
-  transition: all 0.5s;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
 .slide.active {
   z-index: 10;
   transform: perspective(100px) translate3d(0, 0, 0) !important;
@@ -559,6 +556,9 @@ div.card-heading h1 > span {
 .ship-main.transition1 {
   transition: left 3s;
 }
+.ship.transition1 {
+  transition: left 3s;
+}
 .ship {
   position: absolute;
   width: 100%;
@@ -737,28 +737,10 @@ div.card-heading h1 > span {
   margin-bottom: 0.5em;
   margin-left: 0.03em;
 }
-#one{
-  cursor: -webkit-grab;
-}
-#two{
-  cursor: -webkit-grab;
-}
-#three{
-  cursor: -webkit-grab;
-}
-#four{
-  cursor: -webkit-grab;
-}
-#five{
-  cursor: -webkit-grab;
-}
-#five .panel-title{
-  cursor: -webkit-grab;
-}
-#six{
-  cursor: -webkit-grab;
-}
-#seven{
+#one, #two,
+#three, #four,
+#five, #five .panel-title,
+#six, #seven {
   cursor: -webkit-grab;
 }
 h1,p,ul{
@@ -828,12 +810,7 @@ h1,p,ul{
     height: 16.5em;
     bottom: 0.6em;
   }
-  .slide.active .ship {
-    left: -3em;
-  }
-  .slide .ship {
-    left: -95%;
-  }
+
   .register {
     width: 70%;
     height: 10%;
@@ -1111,12 +1088,7 @@ h1,p,ul{
     height: 20em;
     bottom: 0;
   }
-  .slide.active div.ship{
-    left: 0;
-  }
-  .slide div.ship{
-    left: -50%;
-  }
+
   #two .cisland img{
     height: 20.5em;
     right: 0em;
@@ -1295,12 +1267,7 @@ h1,p,ul{
     height: 24em;
     bottom: 0em;
   }
-  .slide.active .ship {
-    left: 0;
-  }
-  .slide .ship {
-    left: -50%;
-  }
+
   #two p{
     font-size: 0.9em;
   }
