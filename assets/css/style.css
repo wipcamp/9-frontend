@@ -1034,6 +1034,9 @@ h1,p,ul{
     display: block;
     margin-left: 1.55em;
   }
+  .register-open div p span{
+    font-size: 0.9em;
+  }
   #two .moon img{
     position: absolute;
     top:1.5em;
@@ -1134,13 +1137,17 @@ h1,p,ul{
     z-index: 10;
   }
   #two p{
-    font-size: 1.06em;
+    font-size: 1.16em;
   }
 
   .card-menu{
     margin-top: 0.2em;
-    padding: 0.60em 0.4em;
+    padding: 0.60em 0.75em 0.6em 0.55em;
     font-size:1em;
+  }
+  .line-at{
+    height: 3.61em;
+    margin-left: 1em;
   }
   .slide h1 {
     font-size: 3em;
@@ -1170,25 +1177,25 @@ h1,p,ul{
 
   #three p{
     margin: 1em;
-    font-size: 1.06em;
+    font-size: 1.2em;
   }
   #four p{
-    font-size: 1.06em;
+    font-size: 1.26em;
   }
   #six p{
-    font-size:1.06em;
+    font-size:1.26em;
   }
   #seven p{
-    font-size:1.06em;
+    font-size:1.26em;
   }
   .panel-heading{
     padding: 0.4em 0.6em;
   }
   .panel-title{
-    font-size: 0.95em;
+    font-size: 1.15em;
   }
   .panel-body{
-    font-size: 0.85em;
+    font-size: 1.1em;
     padding: 0.8em;
   }
   .slide div.card-heading h1 {
