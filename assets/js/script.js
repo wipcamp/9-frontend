@@ -35,7 +35,7 @@ $(document).ready(function(){
   $('.ship').addClass('transition1');
   setTimeout(function(){
     $('.ship-main').css({"left": "-1em"});
-  },3000);
+  },1000);
 
   $('.card-btn-back-home').click(function (event) {
     $('.con').addClass('idle');
