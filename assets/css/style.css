@@ -513,7 +513,7 @@ div.card-heading h1 > span {
 }
 .card-content{
   position: relative;
-  margin-top: 1.5em;
+  margin-top: 0.5em;
   z-index: 99;
   text-shadow: 1px 1px 3px #777;
 }
@@ -774,7 +774,7 @@ h1,p,ul{
 }
 
 #where-map .modal-body {
-  height: calc(100% - 56px);
+  height: calc(100% - 56px - 65px);
 }
 
 #where-map .modal-content {
@@ -793,6 +793,7 @@ h1,p,ul{
     width: calc(100% - 30px * 2);
   }
 }
+
 .line-at{
   height: 3.55em;
   margin-top: -0.85em;
@@ -805,6 +806,10 @@ h1,p,ul{
 @media screen and (min-width : 0px) and (max-width : 767px){
   body,html{
     font-size: 13px;
+  }
+  .faqblock{
+    min-height: 100%;
+    overflow-y: auto;
   }
   .ship-main img{
     height: 16.5em;
@@ -1015,7 +1020,7 @@ h1,p,ul{
   }
 }
 /*###Tablet(medium)###*/
-@media screen and (min-width : 768px) and (max-width : 1023px){
+@media screen and (min-width : 768px) and (max-width : 991px){
   body,html{
     font-size: 15px;
   }
@@ -1214,7 +1219,7 @@ h1,p,ul{
 }
 
 /*###Desktops, big landscape tablets and laptops(Large, Extra large)####*/
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 992px){
   body,html{
     font-size: 18px;
   }
@@ -1456,12 +1461,38 @@ h1,p,ul{
     bottom: 0.3em;
   }
 }
+@media (min-width:1400px){
+  body,html{
+    font-size: 20px;
+  }
+  #two .cisland img{
+    height: 22em;
+    bottom: 0.8em;
+  }
+  #three .cisland img{
+    height: 20em;
+  }
+  #four .cisland img{
+    height: 20em;
+    bottom: -3em;
+  }
+  #five .cisland img{
+    height: 20em;
+    bottom: 0.9em;
+  }
+  #six .cisland img{
+    height: 23em;
+    bottom: 1.5em;
+  }
+  #seven .cisland img{
+    height: 20.5em;
+    bottom: -0.5em;
+  }
+  h1 small{
+    font-size: 0.5em;
+    line-height: 1.9em;
+  }
+}
 #five .panel-title:hover{
   cursor: pointer;
-}
-@media only screen
-and (device-width: 1366px)
-and (device-height: 1024px)
-and (orientation: landscape){
-
 }
