@@ -35,7 +35,7 @@ h1 > span, span {
 }
 
 .top {
-  margin-top: 1.5em;
+  margin-top: 15px;
 }
 
 h1, p {
@@ -513,7 +513,7 @@ div.card-heading h1 > span {
 }
 .card-content{
   position: relative;
-  margin-top: 0.5em;
+  /*background-color: rgba(0, 0, 0, 0.5);*/
   z-index: 99;
   text-shadow: 1px 1px 3px #777;
 }
@@ -767,7 +767,9 @@ h1,p,ul{
 .ship-main img{
   position: absolute;
 }
-
+.btnbtn{
+  display: inline;
+}
 /*----------------------- Location ----------------------*/
 #where-map .modal-dialog {
   height: calc(100% - 10px * 2);
