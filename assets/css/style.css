@@ -807,10 +807,6 @@ h1,p,ul{
   body,html{
     font-size: 13px;
   }
-  .faqblock{
-    min-height: 100%;
-    overflow-y: auto;
-  }
   .ship-main img{
     height: 16.5em;
     bottom: 0.6em;
@@ -1491,6 +1487,27 @@ h1,p,ul{
   h1 small{
     font-size: 0.5em;
     line-height: 1.9em;
+  }
+  .mountain{
+    bottom: 5em;
+  }
+  #two .moon img{
+    height: 7.5em;
+  }
+  #three .moon img{
+    height: 7.5em;
+  }
+  #four .moon img{
+    height: 7.5em;
+  }
+  #five .moon img{
+    height: 7.5em;
+  }
+  #six .moon img{
+    height: 7.5em;
+  }
+  #seven .moon img{
+    height: 7.5em;
   }
 }
 #five .panel-title:hover{
