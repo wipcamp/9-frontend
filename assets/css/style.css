@@ -461,7 +461,7 @@ div.card-heading h1 > span {
   height: 10%;
   z-index: 2;
   animation-name: cloud1;
-  animation-duration: 30s;
+  animation-duration: 60s;
   animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -478,7 +478,7 @@ div.card-heading h1 > span {
   height: 5%;
   z-index: 2;
   animation-name: cloud2;
-  animation-duration: 30s;
+  animation-duration: 60s;
   animation-delay: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -495,7 +495,7 @@ div.card-heading h1 > span {
   height: 12%;
   z-index: 3;
   animation-name: cloud3;
-  animation-duration: 32s;
+  animation-duration: 62s;
   animation-delay: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -549,8 +549,8 @@ div.card-heading h1 > span {
   animation-delay: 0.1s;
   animation-timing-function: cubic-bezier(0.25, 0, 0.75, 1);
   animation-iteration-count: infinite;
-  /*animation-play-state: running;*/
-  animation-play-state: paused;
+  animation-play-state: running;
+  /*animation-play-state: paused;*/
 }
 .ship-main.transition1 {
   transition: left 3s;
@@ -568,8 +568,8 @@ div.card-heading h1 > span {
   animation-delay: 0.1s;
   animation-timing-function: cubic-bezier(0.25, 0, 0.75, 1);
   animation-iteration-count: infinite;
-  /*animation-play-state: running;*/
-  animation-play-state: paused;
+  animation-play-state: running;
+  /*animation-play-state: paused;*/
 }
 
 .line {
@@ -806,10 +806,6 @@ h1,p,ul{
 @media screen and (min-width : 0px) and (max-width : 767px){
   body,html{
     font-size: 13px;
-  }
-  .faqblock{
-    min-height: 100%;
-    overflow-y: auto;
   }
   .ship-main img{
     height: 16.5em;
@@ -1491,6 +1487,27 @@ h1,p,ul{
   h1 small{
     font-size: 0.5em;
     line-height: 1.9em;
+  }
+  .mountain{
+    bottom: 5em;
+  }
+  #two .moon img{
+    height: 7.5em;
+  }
+  #three .moon img{
+    height: 7.5em;
+  }
+  #four .moon img{
+    height: 7.5em;
+  }
+  #five .moon img{
+    height: 7.5em;
+  }
+  #six .moon img{
+    height: 7.5em;
+  }
+  #seven .moon img{
+    height: 7.5em;
   }
 }
 #five .panel-title:hover{
