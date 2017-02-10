@@ -1,560 +1,342 @@
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-body{
-    font-family: 'Thaisans Neue for Web', sans-serif !important;
-    font-weight: 400;
-    margin: 0 0 0 0;
-}
-
-.container {
-    text-align: center;
-    color: #fff;
-}
-.overFlowHidden{
-  overflow: hidden;
-}
-/*
+/* iphone5 */
 @media only screen
-and (device-width: 320px)
+and (device-width:320px)
 and (device-height:568px)
 and (orientation: portrait){
-  .nameGame{
-    display: none;
-  }
-  .fixHeight {
-    max-height: 667px;
-  }
-  .warn{
-    width: 100%;
-    height: 100%;
-    background-color: rgb(249, 32, 32);
-    z-index: 1 !important;
-    position: absolute;
-  }
-  .rotatePic{
-    position: absolute;
-    top:220px;
-    left:80px;
-    width: 50%;
-    height: auto;
-  }
-  .rotateIpad{
-    width: 0px;
-    height: 0px;
-  }
-  .textWarn{
-    position: absolute;
-    top:330px;
-    left:30px;
-    color: white;
-    font-size: 22px;
-  }
-  .setIndexGame{
-    z-index: -2 !important;
-    position: fixed;
-  }
-  #game canvas{
-    width:0px;
-    height:0px;
-  }
-}*/
-
-
-@media only screen
-and (min-device-width: 320px)
-and (max-device-width: 349px)
-and (orientation: portrait){
-  .nameGame{
-    display: none;
-  }
-  .fixHeight {
-    max-height: 667px;
-  }
-  .warn{
-    width: 100%;
-    height: 100%;
-    background-color: rgb(249, 32, 32);
-    z-index: 1 !important;
-    position: absolute;
-  }
-  .rotatePic{
-    position: absolute;
-    top:40%;
-    left:90px;
-    width: 50%;
-    height: auto;
-  }
-  .rotateIpad{
-    width: 0px;
-    height: 0px;
-  }
-  .textWarn{
-    position: absolute;
-    top:350px;
-    left:40px;
-    color: white;
-    font-size: 22px;
-  }
-  .desktopClose{
-    font-size: 0px;
-  }
-  .setIndexGame{
-    z-index: -2 !important;
-    position: fixed;
-  }
-  #game canvas{
-    width:0px;
-    height:0px;
-  }
-}
-@media only screen
-and (min-device-width: 350px)
-and (max-device-width: 360px)
-and (orientation: portrait){
-  .nameGame{
-    display: none;
-  }
-  .fixHeight {
-    max-height: 667px;
-  }
-  .warn{
-    width: 100%;
-    height: 100%;
-    background-color: rgb(249, 32, 32);
-    z-index: 1 !important;
-    position: absolute;
-  }
-  .rotatePic{
-    position: absolute;
-    top:260px;
-    left:90px;
-    width: 50%;
-    height: auto;
-  }
-  .rotateIpad{
-    width: 0px;
-    height: 0px;
-  }
-  .textWarn{
-    position: absolute;
-    top:380px;
-    left:50px;
-    color: white;
-    font-size: 22px;
-  }
-  .desktopClose{
-    font-size: 0px;
-  }
-  .setIndexGame{
-    z-index: -2 !important;
-    position: fixed;
-  }
-  #game canvas{
-    width:0px;
-    height:0px;
-  }
-}
-@media only screen
-and (min-device-width: 361px)
-and (max-device-width: 767px)
-and (orientation: portrait){
-  .nameGame{
-    display: none;
-  }
-  .fixHeight {
-    max-height: 667px;
-  }
-  .warn{
-    width: 100%;
-    height: 100%;
-    background-color: rgb(249, 32, 32);
-    z-index: 1 !important;
-    position: absolute;
-  }
-  .rotatePic{
-    position: absolute;
-    top:40%;
-    left:100px;
-    width: 50%;
-    height: auto;
-  }
-  .rotateIpad{
-    width: 0px;
-    height: 0px;
-  }
-  .textWarn{
-    position: absolute;
-    top:60%;
-    left:18%;
-    color: white;
-    font-size: 22px;
-  }
-  .desktopClose{
-    font-size: 0px;
-  }
-  .setIndexGame{
-    z-index: -2 !important;
-    position: fixed;
-  }
-  #game canvas{
-    width:0px;
-    height:0px;
-  }
-}
-/*@media only screen
-and (min-device-width: 320px)
-and (max-device-width: 767px)
-and (orientation: portrait) {
-  .nameGame{
-    display: none;
-  }
-  .fixHeight {
-    max-height: 667px;
-  }
-  .warn{
-    width: 100%;
-    height: 100%;
-    background-color: rgb(249, 32, 32);
-    z-index: 1 !important;
-    position: absolute;
-  }
-  .rotatePic{
-    position: absolute;
-    top:220px;
-    left:80px;
-    width: 50%;
-    height: auto;
-  }
-  .rotateIpad{
-    width: 0px;
-    height: 0px;
-  }
-  .textWarn{
-    position: absolute;
-    top:330px;
-    left:30px;
-    color: white;
-    font-size: 22px;
-  }
-  .setIndexGame{
-    z-index: -2 !important;
-    position: fixed;
-  }
-  #game canvas{
-    width:0px;
-    height:0px;
-  }
-}*/
-
-@media only screen
-and (min-device-width: 320px)
-and (max-device-width: 736px)
-and (orientation: landscape) {
-  .nameGame{
-    display: none;
-  }
-  .warn{
-    width: 0px;
-    height: 0px;
-  }
-  .textWarn{
-    font-size: 0px;
-  }
-  .rotatePic{
-    width : 0px;
-    height : 0px;
-  }
-  .rotateIpad{
-    width: 0px;
-    height: 0px;
-  }
-  .desktopClose{
-    font-size: 0px;
-  }
-  .rotatePicIpad{
-    width : 0px;
-    height : 0px;
-  }
-  .setIndexGame{
-    z-index: -1 !important;
-    position: fixed;
-  }
-}
-
-@media only screen
-  and (device-width: 768px)
-  and (device-height: 1024px)
-  and (orientation: portrait) {
-    .nameGame{
-      display: none;
-    }
-    .fixHeight {
-      max-height: 667px;
-    }
-    .warn{
-      width: 100%;
-      height: 100%;
-      background-color: rgb(249, 32, 32);
-      z-index: 1 !important;
-      position: absolute;
-    }
-    .rotatePic{
-      width: 0px;
-      height: 0px;
-    }
-    .rotateIpad{
-      top:350px;
-      left: 280px;
-      width: auto;
-      position: absolute;
-    }
-    .textWarn{
-      position: absolute;
-      top: 600px;
-      left: 150px;
-      color: white;
-      font-size: 40px;;
-    }
-    .desktopClose{
-      font-size: 0px;
-    }
-    .setIndexGame{
-      z-index: -1 !important;
-      position: fixed;
-    }
-    #game canvas{
-      width:0px;
-      height:0px;
-    }
-}
-
-@media only screen
-and (device-width: 1024px)
-and (device-height: 1366px)
-and (orientation: portrait) {
-  .nameGame{
-  display: none;
-  }
-  .fixHeight {
-  max-height: 667px;
-  }
-  .warn{
-  width: 100%;
-  height: 100%;
-  background-color: rgb(249, 32, 32);
-  z-index: 1 !important;
-  position: absolute;
-  }
-  .rotatePic{
-  width: 0px;
-  height: 0px;
-  }
-  .rotateIpad{
-  position: absolute;
-  top:500px;
-  left: 380px;
-  width: auto;
-  }
-  .textWarn{
-  position: absolute;
-  top:730px;
-  left: 160px;
-  color: white;
-  font-size: 60px !important;
-  }
-  .desktopClose{
-  font-size: 0px;
-  }
-  .setIndexGame{
-  z-index: -1 !important;
-  position: fixed;
-  }
-  #game canvas{
-  width:0px;
-  height:0px;
-  }
-}
-
-@media only screen
-  and (device-width: 1024px)
-  and (device-height: 768px)
-  and (orientation: landscape) {
-    .nameGame{
-      top: 3vw;
-      position: absolute;
-      color: white;
-      left: 32vw;
-    }
-    .fixHeight {
-      max-height: 736px;
-    }
-    .warn{
-      width: 0px;
-      height: 0px;
-    }
-    .desktopClose{
-      font-size: 0px;
-    }
-    .textWarn{
-      font-size: 0px;
-    }
-    .rotatePic{
-      width: 0px;
-      height: 0px;
-    }
-    .rotateIpad{
-      width: 0px;
-      height: auto;
-    }
-    .setIndexGame{
-      z-index: -1 !important;
-      position: fixed;
-    }
-    #game {
-      width: 100%;
-      height: 100%;
-      padding: 13% 0 0 0;
-      background: linear-gradient(#141123, #2d214d, #463b6b);
-    }
-}
-
-@media only screen
-  and (device-width: 1366px)
-  and (device-height: 1024px)
-  and (orientation: landscape) {
-  .nameGame{
-    position: absolute;
-    color: white;
-    top: 8vh;
-    left: 20vw;
-    right: 20vw;
-    font-size: 3em;
-  }
-  .desktopClose{
-    font-size: 0px;
-  }
-  .warn{
-    width: 0px;
-    height: 0px;
-  }
-  .setBgIpad{
-    background:linear-gradient(#141123, #2d214d, #463b6b);
-  }
-  .fixHeight {
-    max-height: 736px;
-  }
-  .textWarn{
-    font-size: 0px;
-  }
-  .rotatePic{
-    width: 0px;
-    height: 0px;
-  }
-  .rotateIpad{
-    width: 0px;
-    height: auto;
-  }
-  .setIndexGame{
-    z-index: -1 !important;
-    position: fixed;
-  }
-  #game {
-    width: 100%;
-    height: 100%;
-    padding: 25vh 0 0 0;
-    background: linear-gradient(#141123, #2d214d, #463b6b);
-  }
-}
-
-/*----------------Desktop---------------*/
-
-
-/*ชนกันไอเเพดอ่ะ อันนี้จอ*/
-/*@media only screen
-and (max-width:979px)
-and (max-height:549px){
-  .nameGame{
+  body{
+    margin: 0 0 0 0;
+  }
+  .hide{
+     background-color: red;
+     position: absolute;
+     width: 100vw;
+     height: 100vh;
+  }
+  #game{
       display: none;
   }
-  .warn{
-    width: 0;
-    height: 0;
+}
+@media only screen
+and (device-width:568px)
+and (device-height:320px)
+and (orientation: landscape){
+  body{
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
   }
-  .setBgIpad{
-    background:linear-gradient(#141123, #2d214d, #463b6b);
-  }
-  .desktopClose{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1 !important;
-    background:linear-gradient(#141123, #2d214d, #463b6b);
-
-  }
-  .fixHeight {
-    max-height: 736px;
-  }
-  .textWarn{
-    font-size: 0px;
-  }
-  .rotatePic{
-    width: 0px;
-    height: 0px;
-  }
-  .rotateIpad{
-    width: 0px;
-    height: 0px;
-  }
-  .setIndexGame{
-    z-index: -1 !important;
-    position: fixed;
+  .container{
+    margin: 0 0 0 0 !important;
   }
   #game canvas{
-    width:0px;
-    height:0px;
+      margin: 0px auto;
   }
-}*/
+}
 
+/* iphone6 */
+@media only screen
+and (device-width:375px)
+and (device-height:667px)
+and (orientation: portrait){
+  body{
+    margin: 0 0 0 0;
+  }
+  .hide{
+     background-color: red;
+     position: absolute;
+     width: 100vw;
+     height: 100vh;
+  }
+  #game{
+      display: none;
+  }
+}
+@media only screen
+and (device-width:667px)
+and (device-height:375px)
+and (orientation: landscape){
+  body{
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+  }
+  .container{
+    margin: 0 0 0 0 !important;
+  }
+  #game canvas{
+      margin: 0px auto;
+  }
+}
+/* iphone6 */
+@media only screen
+and (device-width:414px)
+and (device-height:736px)
+and (orientation: portrait){
+  body{
+    margin: 0 0 0 0;
+  }
+  .hide{
+     background-color: red;
+     position: absolute;
+     width: 100vw;
+     height: 100vh;
+  }
+  #game{
+      display: none;
+  }
+}
+@media only screen
+and (device-width:736px)
+and (device-height:414px)
+and (orientation: landscape){
+  body{
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+  }
+  .container{
+    margin: 0 0 0 0 !important;
+  }
+  #game canvas{
+      margin: 0px auto;
+  }
+}
+
+/* ipad */
+@media only screen
+and (device-width:768px)
+and (device-height:1024px)
+and (orientation: portrait){
+  body{
+    margin: 0 0 0 0;
+  }
+  .hide{
+     background-color: red;
+     position: absolute;
+     width: 100vw;
+     height: 100vh;
+  }
+  #game{
+      display: none;
+  }
+}
+@media only screen
+and (device-width:1024px)
+and (device-height:768px)
+and (orientation: landscape){
+  body{
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+  }
+.container{
+    margin: 6em 0 0 0 !important;
+}
+  #game canvas{
+      margin: 0px auto;
+  }
+}
+
+/* ipadpro */
+@media only screen
+and (device-width:1024px)
+and (device-height:1366px)
+and (orientation: portrait){
+  body{
+    margin: 0 0 0 0;
+  }
+  .hide{
+     background-color: red;
+     position: absolute;
+     width: 100vw;
+     height: 100vh;
+  }
+  #game{
+      display: none;
+  }
+}
+@media only screen
+and (device-width:1366px)
+and (device-height:1024px)
+and (orientation: landscape){
+  body{
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+  }
+  .container{
+    margin: 12.5em 0 0 0 !important;
+  }
+  #game canvas{
+      margin: 0px auto;
+  }
+}
+
+/* Desktop + Android */
+@media only screen
+and (min-width:0px)
+and (orientation: portrait){
+  body {
+      margin: 0 0 0 0;
+      background: #ececec;
+      overflow: hidden;
+  }
+  .container{
+    margin: 0 0 0 0 !important;
+  }
+  .hide{
+     background-color: red;
+     position: absolute;
+     width: 100vw;
+     height: 100vh;
+  }
+  center{
+    overflow: hidden;
+  }
+  #game{
+      display: none;
+  }
+}
+@media only screen
+and (min-width:0px)
+and (orientation: landscape){
+  body {
+      margin: 0 0 0 0;
+      background: #ececec;
+      overflow: hidden;
+  }
+  .container{
+    margin: 0 0 0 0 !important;
+  }
+  center{
+    overflow: hidden;
+  }
+  #game canvas{
+      margin: 0px auto;
+  }
+}
 
 @media only screen
-and (min-width:1366px) {
-  .nameGame{
-    position: absolute;
-    color: white;
-    top: 1vh;
-    left: 20vw;
-    right: 20vw;
-    font-size: 1.5em;
+and (min-width:800px)
+and (orientation:portrait){
+  body {
+      margin: 0 0 0 0;
+      background: #ececec;
+      overflow: hidden;
   }
-  .warn{
-    width: 0px;
-    height: 0px;
+  center{
+    overflow: hidden;
   }
-  .setBgIpad{
-    background:linear-gradient(#141123, #2d214d, #463b6b);
+  .hide{
+     background-color: red;
+     position: absolute;
+     width: 100vw;
+     height: 100vh;
   }
-  .fixHeight {
-    max-height: 736px;
+  #game{
+      display: none;
   }
-  .textWarn{
-    font-size: 0px;
+}
+@media only screen
+and (min-width:800px)
+and (orientation: landscape){
+  body {
+      margin: 0 0 0 0;
+      background: #ececec;
+      /*overflow: hidden;*/
   }
-  .rotatePic{
-    width: 0px;
-    height: 0px;
+  center{
+    /*overflow: hidden;*/
   }
-  .rotateIpad{
-    width: 0px;
-    height: auto;
+  .container{
+    margin: 2% 0 0 0;
   }
-  .setIndexGame{
-    z-index: -1 !important;
-    position: fixed;
+  #game canvas{
+      margin: 0px auto;
   }
-  #game {
-    width: 100%;
-    height: 100%;
-    padding: 10vh 0 0 0;
-    background: linear-gradient(#141123, #2d214d, #463b6b);
+}
+
+@media only screen
+and (min-width:1024px){
+  body {
+      margin: 0 0 0 0;
+      background: #ececec;
+      /*overflow: hidden;*/
+  }
+  center{
+    /*overflow: hidden;*/
+  }
+  .container{
+    margin: 3% 0 0 0 !important;
+  }
+  #game canvas{
+      margin: 0px auto;
+  }
+}
+
+@media only screen
+and (min-width:1280px){
+  body {
+      margin: 0 0 0 0;
+      background: #ececec;
+      /*overflow: hidden;*/
+  }
+  center{
+    /*overflow: hidden;*/
+  }
+  .container{
+    margin: 3em 0 0 0;
+  }
+  #game canvas{
+      margin: 0px auto;
+  }
+}
+
+@media only screen
+and (min-width:1300px){
+  body {
+      margin: 0 0 0 0;
+      background: #ececec;
+      /*overflow: hidden;*/
+  }
+  center{
+    /*overflow: hidden;*/
+  }
+  .container{
+    margin: 3% 0 0 0 !important;
+  }
+  #game canvas{
+      margin: 0px auto;
+  }
+}
+
+@media only screen
+and (min-width:1440px){
+  body {
+      margin: 0 0 0 0;
+      background: #ececec;
+      overflow: hidden;
+  }
+  center{
+    overflow: hidden;
+  }
+  .container{
+    margin: 5em 0 0 0;
+  }
+  #game canvas{
+      margin: 0px auto;
+  }
+}
+@media only screen
+and (min-width:1600px){
+  body {
+      margin: 0 0 0 0;
+      background: #ececec;
+      overflow: hidden;
+  }
+  center{
+    overflow: hidden;
+  }
+  .container{
+    margin: 6em 0 0 0;
+  }
+  #game canvas{
+      margin: 0px auto;
   }
 }

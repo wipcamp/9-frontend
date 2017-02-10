@@ -210,7 +210,7 @@ h1, p {
 .idle .slide.hover  {
   animation-name: card;
   animation-duration: 1s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 5;
 }
 @keyframes card {
     0% {
@@ -554,6 +554,9 @@ div.card-heading h1 > span {
 }
 .ship-main.transition1 {
   transition: left 3s;
+}
+.ship-main.transitionSpecial {
+  transition: left 5400s;
 }
 .ship.transition1 {
   transition: left 3s;
