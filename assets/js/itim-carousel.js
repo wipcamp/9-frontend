@@ -361,6 +361,11 @@ function WipcampCarousel(element) {
             $('.ship-main').css({left: '-30em'});
             $('.ship-main').addClass('transition1');
             $('.ship-main').css({"left": "-1em"});
+            setTimeout(function(){
+              $('.ship-main').removeClass('transition1');
+              $('.ship-main').addClass('transitionSpecial');
+              $('.ship-main').css({left: '40%'});
+            },3000);
           }
         },300);
       },1000);
