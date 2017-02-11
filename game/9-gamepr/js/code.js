@@ -1,4 +1,4 @@
-var game = new Phaser.Game(980, 550, Phaser.AUTO, "game");
+// Firebase config
 var config = {
     apiKey: "AIzaSyAhBOG3nZFT0xjOu5UPm1k-ZVot1IPEfoQ",
     authDomain: "wip-camps-game.firebaseapp.com",
@@ -7,84 +7,106 @@ var config = {
     messagingSenderId: "768785136426"
 };
 firebase.initializeApp(config);
+// end Firebase config
 
-var dbEtk = firebase.database().ref().child("etk").child("web");
-var name = 'ชื่อไรก็ได้ โตแล้ว';
-var main = { preload : preload , create : create , update : update};
-var menu = { preload : preload , create : create1};
-var howToPlay = { preload : preload ,create : create2 ,update : update1};
-var resultGame = {preload : preload , create : create3};
-var login = {preload : preload , create : create4 ,update : update2};
-var credit = {preload : preload , create : create5};
+// State Management
+var game = new Phaser.Game(980, 550, Phaser.AUTO, "game");
+
+var login = {preload : preload , create : createLogin ,update : updateLogin};
+
+var menu = { preload : preload , create : createMenu};
+var howToPlay = { preload : preload ,create : createHowToPlay ,update : updateHowToPlay};
+var credit = {preload : preload , create : createCredit};
+
+var gameplay = { preload : preload , create : createGameplay , update : updateGameplay};
+
+var resultGame = {preload : preload , create : createResult};
+
 game.state.add('login',login);
-game.state.add('main', main);
 game.state.add('menu', menu);
 game.state.add('howToPlay',howToPlay);
-game.state.add('result',resultGame);
 game.state.add('credit',credit);
+
+game.state.add('gameplay', gameplay);
+
+game.state.add('result',resultGame);
+
 game.state.start('login');
+//end State Management
+
+// Preload function : [login,menu,gameplay,howToPlay,result,credit]
+
 function preload() {
-	game.load.image('wippo','images/wippo.png');
-	game.load.image('sky','images/sky.png');
-	game.load.image('water3','images/water3.png');
-	game.load.image('water2','images/water2.png');
-	game.load.image('water1','images/water1.png');
-	game.load.image('oldMap','images/oldMap.png');
-	game.load.image('bgHowToPlay','images/bghowtoplay.png');
+	game.load.spritesheet('enemyShip','images/enemyShip.png',600,400);
+    game.load.spritesheet('boom','images/boom.png',80,90);
+    game.load.spritesheet('boomGroup','images/boom-group.png',160,200);
+    game.load.spritesheet('menu','images/mainmenu.png',2584/2,196);
+    game.load.spritesheet('warnning','images/warnning.png',100,100);
+    game.load.spritesheet('playership', 'images/playership.png',500,500);
 	game.load.spritesheet('left','images/left.png',283,275);
 	game.load.spritesheet('right','images/right.png',283,275);
-	game.load.image('rope','images/rope-01.png');
-	game.load.image('rope2','images/rope-02.png');
 	game.load.spritesheet('report','images/report.png',2584/2,196);
 	game.load.spritesheet('scoreboard','images/score.png',2584/2,196);
-	game.load.spritesheet('creditButton','images/credit.png',2584/2,196);
-	game.load.script('webfont', '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js');
 	game.load.spritesheet('spacebar','images/spacebar.png',2584/2,196);
 	game.load.spritesheet('enter','images/enter.png',851.33,196);
+    game.load.spritesheet('startButton','images/start.png',2584/2,196);
+    game.load.spritesheet('howToPlayButton','images/howtoplay.png',2584/2,196);
+	game.load.spritesheet('creditButton','images/credit.png',2584/2,196);
+    game.load.spritesheet('playagain','images/playagain.png',2584/2,196);
+	
+	game.load.image('wippo','images/wippo.png');
+	game.load.image('sky','images/sky.png');
+	game.load.image('water_bot','images/water_bot.png');
+	game.load.image('water_mid','images/water_mid.png');
+	game.load.image('water_top','images/water_top.png');
+	game.load.image('oldMap','images/oldMap.png');
 	game.load.image('logoWip','images/wip.png');
 	game.load.image('bgLogin','images/login.png');
 	game.load.image('gameOver','images/GAME-OVER-01.png');
-	game.load.image('logo','images/escape-01.png');
+	game.load.image('logoGame','images/escape-01.png');
+	game.load.image('bgHowToPlay','images/bghowtoplay.png');
     game.load.image('bgEnd','images/endState.png');
     game.load.image('bgStart','images/bg-Start.png');
-    game.load.spritesheet('ship', 'images/sprite.png',500,500);
     game.load.image('kraken','images/boss.png');
     game.load.image('map','images/map.png');
-    game.load.spritesheet('boom','images/boom2.png',80,90);
-    game.load.spritesheet('boom2','images/boom_1.png',160,200);
-    game.load.spritesheet('startButton','images/start.png',2584/2,196);
-    game.load.spritesheet('howToPlayButton','images/howtoplay.png',2584/2,196);
-    game.load.spritesheet('retry','images/playagain.png',2584/2,196);
-    game.load.spritesheet('menu','images/mainmenu.png',2584/2,196);
-    game.load.spritesheet('wranning','images/wranning.png',100,100);
+	game.load.image('ropeResult','images/rope-02.png');
+	game.load.image('ropeMenu','images/rope-01.png');
+    game.load.image('cannonball','images/cannonball.png');
+    game.load.image('obj','images/object.png');
+    game.load.image('shark','images/shark.png');
+    game.load.image('bottom','images/bottom.png');
+
     game.load.audio('Play','sound/Escape.wav');
     game.load.audio('Kraken','sound/Kraken.wav');
     game.load.audio('Death','sound/Death.wav');
     game.load.audio('buttonPush','sound/Paddling.wav');
-    game.load.image('cannonball','images/enemyship.png');
-    game.load.image('obj','images/tower.png');
-    game.load.image('shark','images/shark.png');
-    game.load.image('bottom','images/bottom.png');
     game.load.audio('Login','sound/Login.wav');
-    game.load.audio('Shank','sound/Shank.wav');
+    game.load.audio('Shark','sound/Shark.wav');
     game.load.audio('BombDrop','sound/BombDrop.wav');
     game.load.audio('dKraken','sound/DeathbyKraken.wav');
     game.load.audio('dBomb','sound/DeathbyBombDrop.wav');
     game.load.audio('Warn','sound/Warn.wav');
     game.load.audio('BombAway','sound/BombAway.wav');
     game.load.audio('button','sound/pushIt.wav');
+
+	game.load.script('webfont', '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js');
 }
+
+// end Preload function
+
+// Declare Global variable
+var name = "พี่ Wippo";
 var map;
 var player;
-var sprite;
+var playership;
 var ck;
 var textScore;
 var score;
-var boom1,boom2,boom3,boom4;
+var boomGroup;
 var timer;
 var cannonTimer;
 var time;
-var wranning;
+var warnning;
 var maxSpeed;
 var cannonball;
 var cannonGroup;
@@ -100,13 +122,39 @@ var cannonTime;
 var bombTime;
 var sharkTime;
 var bottomship;
-var animJumpSprite;
+var playershipJump;
 var buttonPush;
 var death;
-var water1,water2,water3;
+var water_top,water_mid,water_bot;
 var warnSound;
 var krakenSound;
-function create() {
+var enemy;
+var enemyAnimations;
+var buttonStart;
+var buttonHowTOPlay;
+var buttonCredit;
+var buttonScore;
+var buttonReport;
+var menuButton;
+var music;
+var bg;
+var logoGame;
+var ropeMenu;
+var left;
+var right;
+var spacebar;
+var playershipEx;
+var animJumpSpacebar;
+var oldMap;
+var checkMove;
+var textName;
+var wippo;
+var message;
+var random;
+// end Declare Global variable
+
+// CreateGameplay function
+function createGameplay() {
     game.world.setBounds(0, 0, 1960, 550);
     music.stop();
     music = game.add.audio('Play');
@@ -132,62 +180,63 @@ function create() {
     game.physics.arcade.enable(player);
     player.body.setCircle(40,10,-5);
     map = game.add.tileSprite(0, 0, 1960, 550, 'sky');
-    water1 = game.add.tileSprite(0,550/2+50,1960,550,'water1');
-    water2 = game.add.tileSprite(0,550/2+125,1960,550,'water2');
-    water3 = game.add.tileSprite(0,550/2+200,1960,550,'water3');
-    wranning = game.add.sprite(20,game.world.height*(3.5/6),'wranning');
-    wranning.frame = 0;
-    wranning.anchor.set(0.5);
-    wranning.scale.setTo(0.25,0.25);
-    wranning.animations.add('play',[0,1],4,true);
-    wranning.fixedToCamera = true;
-    boom1=game.add.image(game.world.width*(7/8),game.world.height*(3.5/6),'boom2');
-    boom1.scale.setTo(0.6, 0.6);
-    boom1.animations.add('move1', [0,1,2,3,4,5], 10, true);
-    boom2=game.add.image(game.world.width*(7/8),game.world.height*(4.5/6),'boom2');
-    boom2.scale.setTo(0.6, 0.6);
-    boom2.animations.add('move2', [0,1,2,3,4,5], 10, true);
-    boom3=game.add.image(game.world.width*(7/8)+90,game.world.height*(3.5/6),'boom2');
-    boom3.scale.setTo(0.6, 0.6);
-    boom3.animations.add('move1', [0,1,2,3,4,5], 10, true);
-    boom4=game.add.image(game.world.width*(7/8)+90,game.world.height*(4.5/6),'boom2');
-    boom4.scale.setTo(0.6, 0.6);
-    boom4.animations.add('move1', [0,1,2,3,4,5], 10, true);
-    boom1.frame = 0;
-    boom2.frame = 0;
-    boom3.frame = 0;
-    boom4.frame = 0;
+    enemy = game.add.image(980*(1.5/4),550/2,'enemyShip');
+    enemy.frame = 0;
+    enemyAnimations = enemy.animations.add('play',[0,1,2,3,0],5,true);
+    water_top = game.add.tileSprite(0,550/2+50,1960,550,'water_top');
+    water_mid = game.add.tileSprite(0,550/2+125,1960,550,'water_mid');
+    water_bot = game.add.tileSprite(0,550/2+200,1960,550,'water_bot');
+    warnning = game.add.sprite(20,game.world.height*(3.5/6),'warnning');
+    warnning.frame = 0;
+    warnning.anchor.set(0.5);
+    warnning.scale.setTo(0.25,0.25);
+    warnning.animations.add('play',[0,1],4,true);
+    warnning.fixedToCamera = true;
+
+    boomGroup=game.add.image(game.world.width*(7/8)+90,game.world.height*(4.5/6),'boomGroup');
+    boomGroup.scale.setTo(0.6, 0.6);
+    boomGroup.animations.add('move', [0,1,2,3,4,5], 10, true);
+    boomGroup.frame = 0;
+
     kraken = game.add.image(0,game.world.height*(1/4),'kraken');
     kraken.scale.setTo(0.2,0.2);
-    sprite = this.add.sprite(game.world.width/2,game.world.height*(2/4), 'ship');
-    animJumpSprite = sprite.animations.add('jump',[2,1,0],3,true);
-    animJumpSprite.onComplete.add(startAnimationMove, this);
-    sprite.frame = 4;
-    sprite.animations.add('jump',[2,1,0],3,true);
-    sprite.animations.add('move',[8,7,6,5,4,3],24,true);
-    sprite.animations.play('move');
-    sprite.anchor.set(0.5);
-    sprite.scale.setTo(0.25, 0.25);
-    game.physics.arcade.enable(sprite);
-    sprite.body.gravity.y = 980;
-    sprite.body.maxVelocity.set(500);
-    sprite.body.collideWorldBounds = true;
-    textScore = game.add.text(20,20,"Score : "+score.toFixed(1),{fontSize : "30px",fill : "#FFFFFF"});
+    enemy.anchor.setTo(0.5);
+    enemy.fixedToCamera = true;
+    playership = this.add.sprite(game.world.width/2,game.world.height*(2/4), 'playership');
+    playershipJump = playership.animations.add('jump',[2,1,0],3,true);
+    playershipJump.onComplete.add(startAnimationMove, this);
+    playership.frame = 4;
+    playership.animations.add('jump',[2,1,0],3,true);
+    playership.animations.add('move',[8,7,6,5,4,3],24,true);
+    playership.animations.play('move');
+    playership.anchor.set(0.5);
+    playership.scale.setTo(0.25, 0.25);
+    game.physics.arcade.enable(playership);
+    playership.body.gravity.y = 980;
+    playership.body.maxVelocity.set(500);
+    playership.body.collideWorldBounds = true;
+    textScore = game.add.text(20,20,"Score : "+score,{fontSize : "30px",fill : "#FFFFFF"});
     textScore.stroke = "#BAB8B8";
     textScore.strokeThickness = 3;
     textScore.fixedToCamera = true;
+	text = game.add.text(20,50,"HighScore : "+getHighScore(),{fontSize : "24px",fill : "#FFFFFF"});
+    text.stroke = "#BAB8B8";
+    text.strokeThickness = 2;
+    text.fixedToCamera = true;
+
     cursors = this.input.keyboard.createCursorKeys();
     jump = this.input.keyboard.addKey(Phaser.KeyCode.SPACEBAR);
-    game.camera.follow(sprite);
+    game.camera.follow(playership);
     cannonGroup = game.add.group();
     cannonGroup.enableBody = true;
     cannonGroup.physicsBodyType = Phaser.Physics.ARCADE;
     cannonball = cannonGroup.create(0,0,'cannonball');
+    cannonball.scale.setTo(0.4,0.4);
     cannonball.exists = false;
     cannonball.visible = false;
     cannonball.checkWorldBounds = true;
     cannonball.events.onOutOfBounds.add(resetBullet, this);
-    cannonball.body.setCircle(20,0,-10);
+    cannonball.body.setCircle(15,0,-10);
     bombGroup = game.add.group();
     bombGroup.enableBody = true;
     bombGroup.physicsBodyType = Phaser.Physics.ARCADE;
@@ -205,44 +254,44 @@ function create() {
     sharkGroup.enableBody = true;
     sharkGroup.physicsBodyType = Phaser.Physics.ARCADE;
     for(var i = 0;i<16;i++){
-        bomb = sharkGroup.create(0,0,'shark');
-        bomb.exists = false;
-        bomb.visible = false;
-        bomb.checkWorldBounds = true;
-        bomb.body.bounce.y = 1;
-        bomb.scale.setTo(0.1, 0.1);
-        bomb.anchor.set(0.5);
-        bomb.events.onOutOfBounds.add(resetBullet, this);
-        bomb.body.setCircle(25);
+        shark = sharkGroup.create(0,0,'shark');
+        shark.exists = false;
+        shark.visible = false;
+        shark.checkWorldBounds = true;
+        shark.body.bounce.y = 1;
+        shark.scale.setTo(0.1, 0.1);
+        shark.anchor.set(0.5);
+        shark.events.onOutOfBounds.add(resetBullet, this);
+        shark.body.setCircle(25);
     }
     bottomship = game.add.image(1861,0,'bottom');
     warnSound = game.add.audio('Warn');
     krakenSound = game.add.audio('Kraken');
     warnSound.onPlay.add(function () { console.log('WarnSound') });
     krakenSound.onPlay.add(function () { console.log('KrakenSound') });
-    sharkSound = game.add.audio('Shank');
+    sharkSound = game.add.audio('Shark');
     bombAwaySound = game.add.audio('BombAway');
     bombDropSound = game.add.audio('BombDrop');
 }
-function resetBullet(bullet) {
-    bullet.kill();
-}
-function update() {
+
+//end createGameplay function
+
+// updateGameplay function
+function updateGameplay() {
     map.tilePosition.x -= 1;
-    water1.tilePosition.x -= 0.5;
-    water2.tilePosition.x += 1.5;
-    water3.tilePosition.x -= 1;
-    player.x=sprite.x-5;
-    player.y=sprite.y;
+    water_top.tilePosition.x -= 1;
+    water_mid.tilePosition.x -= 2;
+    water_bot.tilePosition.x -= 3;
+    player.x=playership.x-5;
+    player.y=playership.y;
     game.physics.arcade.overlap(player,cannonGroup, cannonHitPlayer, null , this);
     game.physics.arcade.overlap(player,bombGroup, bombHitPlayer, null , this);
-    game.physics.arcade.collide(sprite,floor);
+    game.physics.arcade.collide(playership,floor);
     game.physics.arcade.collide(sharkGroup,floor);
     game.physics.arcade.overlap(player,sharkGroup, sharkHitPlayer, null , this);
-    boom1.animations.play('move1');
-    boom2.animations.play('move2');
-    boom3.animations.play('move1');
-    boom4.animations.play('move1');
+
+    boomGroup.animations.play('move');
+ 
     if(bombTime<=0){
         bombSpawn();
     }
@@ -255,19 +304,19 @@ function update() {
     cannonTime--;
     bombTime--;
     sharkTime--;
-
     if(time%720>=480&&time%720<600){
-        wranning.animations.play('play');
+        warnning.animations.play('play');
         if(!warnSound.isPlaying) {
             warnSound.play();
         }
     }
     if(time%720<=600){
-    	wranning.frame = 0;
-    	sprite.body.velocity.x -= 0.5;
+    	warnning.frame = 0;
+    	playership.body.velocity.x -= 0.5;
      }
     else{
-    	sprite.body.velocity.x -= 1.5;
+
+    	playership.body.velocity.x -= 1.5;
         if(!krakenSound.isPlaying) {
             krakenSound.play();
         }else{
@@ -279,7 +328,7 @@ function update() {
         
     }
     time++;
-    if(sprite.body.velocity.x<=maxSpeed){
+    if(playership.body.velocity.x<=maxSpeed){
         if(cursors.right.isDown){
             ck=1;
             buttonPush=  game.add.audio('buttonPush');
@@ -295,61 +344,124 @@ function update() {
         	}
         }
         if(ck==2){
-            console.log("<<<<");
             ck=0;
-            score+=0.5;
-            sprite.body.velocity.x +=20;
+            score+=5;
+            playership.body.velocity.x +=20;
         }
     }
-    if(sprite.x<game.world.width*(1/2)){
-        console.log(">>>");
-        
-        if(sprite.x<250){
+
+    if(playership.x<game.world.width*(1/2)){    
+        if(playership.x<250){
             game.state.start('result');
             allSoundStopFx();
             death = game.add.audio('dKraken');
             death.play();
         }
     }
-    if(sprite.x>game.world.width*(6/7)){
+
+    if(playership.x>game.world.width*(6/7)){
         
         game.state.start('result');
     }
-    if (jump.isDown && sprite.body.touching.down) {
-        console.log('zzz');
-        sprite.body.velocity.y = -500;
-        animJumpSprite.play(3,false);
-    }
-    textScore.text = "Score : "+score.toFixed(1);
-}
-var buttonStart;
-var buttonHowTOPlay;
-var buttonCredit;
-var buttonScore;
-var buttonReport;
-var menuButton;
-var music;
-var bg;
-var logo;
-var rope;
-var left;
-var right;
-var spacebar;
-var sprite2;
-var animJumpSpacebar;
-var oldMap;
 
-function create1(){ // main page
+    if (jump.isDown && playership.body.touching.down) {
+        playership.body.velocity.y = -500;
+        playershipJump.play(3,false);
+    }
+    textScore.text = "Score : "+score;
+}
+
+//end updateGameplay function
+
+//Support function GameplayState
+function resetBullet(bullet) {
+    bullet.kill();
+}
+function cannonHitPlayer() {
+   allSoundStopFx();
+    death = game.add.audio('dBomb');
+    death.play();
+    console.log("hit by cannon"); 
+    game.state.start('result');
+}
+function bombHitPlayer() {
+    allSoundStopFx();
+    death = game.add.audio('dBomb');
+    death.play();
+    console.log("hit by bomb");
+    game.state.start('result');
+}
+function sharkHitPlayer() {
+    allSoundStopFx();
+    death = game.add.audio('dKraken');
+    death.play();
+    console.log("hit by shark");
+    game.state.start('result');
+    
+}
+function bombSpawn() {
+    if(bombTimer<game.time.now){
+        var output = game.rnd.integerInRange(0,20);
+        
+        if(!bombAwaySound.isPlaying){
+            bombAwaySound.play();
+        }
+        if(output == 0){
+            bombTimer = game.time.now + 5000;
+            bomby = bombGroup.getFirstExists(false);
+            bomby.reset(1700, game.world.height*(3.75/4)-50);
+            bomby.body.velocity.x = -200;
+            bombGroup.callAll('animations.play', 'animations', 'move');
+        }
+    }
+}
+function sharkSpawn() {
+    if(sharkTimer<game.time.now){
+        var output = game.rnd.integerInRange(0,20);
+        sharkSound.play();
+        if(!sharkSound.isPlaying){
+            sharkSound.play();
+        }
+        if(output == 0){
+            sharkTimer = game.time.now + 8000;
+            bomby = sharkGroup.getFirstExists(false);
+            bomby.reset(1850, game.world.height*(1/6));
+            bomby.body.gravity.y = 500;
+            bomby.body.velocity.x = -200;
+        }
+    }
+}
+function shootThem() {
+    if(cannonTimer<game.time.now){
+        var output = game.rnd.integerInRange(0,20);
+        bombDropSound.play();
+        if(bombDropSound.isPlaying){
+            bombDropSound.restart();
+        }
+        if(output == 0){
+            enemyAnimations.play(5,false);
+            cannonTimer = game.time.now + 10000;
+            var range = game.rnd.integerInRange(-200, 200);
+            bullet = cannonGroup.getFirstExists(false);
+            bullet.reset(playership.x+range, 0);
+            bullet.body.velocity.y = 100;
+        }
+    }
+}
+// end support function GameplayState
+
+// createMenu fucntion
+function createMenu(){ // menu page
     bg = game.add.image(0,0,'bgStart');
     music.stop();
     music = game.add.audio('Login');
     music.loopFull();
-    rope = game.add.image(980*(2/10),550*(2/10),'rope');
-    rope.anchor.set(0.5);
-    rope.scale.setTo(0.25,0.45);
-    logo = game.add.image(980*(2/10),550*(2/10)+20,'logo');
-    logo.anchor.set(0.5);
-    logo.scale.setTo(0.25,0.25);
+    ropeMenu = game.add.image(980*(2/10),550*(2/10),'ropeMenu');
+    ropeMenu.anchor.set(0.5);
+    ropeMenu.scale.setTo(0.25,0.45);
+    logoGame = game.add.image(980*(2/10),550*(2/10)+20,'logoGame');
+    logoGame.anchor.set(0.5);
+    logoGame.scale.setTo(0.25,0.25);
     buttonCredit = game.add.button(980*(2/10), 550*(6/10)+20, 'creditButton', toCredit, this,1,0,2);
     buttonStart = game.add.button(980*(2/10), 550*(4/10)+20, 'startButton', toGame, this,1,0,2);
     buttonCredit.anchor.set(0.5);
@@ -366,7 +478,13 @@ function create1(){ // main page
     buttonReport.anchor.set(0.5);
     buttonReport.scale.setTo(0.25,0.25);
 }
-function create2(){ //how to play
+
+// end createMenu function
+//////////////////////////////////////////////////////////////////////////////////
+
+// createHowToPlay function
+function createHowToPlay(){ //how to play
+	checkMove = 0;
 	floor = game.add.sprite(0,game.world.height/2+75,'obj');
     floor.scale.setTo(9.8,0.5);
     game.physics.arcade.enable(floor);
@@ -375,117 +493,133 @@ function create2(){ //how to play
 	oldMap = game.add.image(980/2,550/2,'oldMap');
 	oldMap.anchor.set(0.5);
 	oldMap.scale.setTo(0.22,0.22);
-	text = game.add.text(980/8,550/4,"กด spacebar เพื่อกระโดด",{fontSize : "36px",fill : "#5B3B00"});
-	logo = game.add.image(980/2,550*(1/4)-75,'howToPlayButton');
-	logo.anchor.set(0.5);
-	logo.scale.setTo(0.3,0.3);
-	left = game.add.sprite(980*(3/4)-50,550*(3/4),'left');
+	text = game.add.text(980/8+19.4,550/4+5,"กด spacebar เพื่อกระโดด",{fontSize : "24px",fill : "#5B3B00"});
+	game.add.text(980*(5/8)-29.4,550/4+5,"กดซ้ายและขวาสลับกัน",{fontSize : "24px",fill : "#5B3B00"});
+	game.add.text(980*(5/8)-5-29.4,550/4+36+5,"เพื่อเคลื่อนที่ไปด้านหน้า",{fontSize : "24px",fill : "#5B3B00"});
+	logoGame = game.add.image(980/2,550*(1/4)-55,'howToPlayButton');
+	logoGame.anchor.set(0.5);
+	logoGame.scale.setTo(0.3,0.3);
+	left = game.add.sprite(980*(3/4)-35-29.4,550*(3/4)-15,'left');
 	left.frame = 0;
 	left.animations.add('do',[0,1],4,true);
 	left.anchor.set(0.5);
-	left.scale.setTo(0.25,0.25);
-	right = game.add.image(980*(3.5/4)-50,550*(3/4),'right');
+	left.scale.setTo(0.18,0.18);
+	right = game.add.image(980*(3.5/4)-85-29.4,550*(3/4)-15,'right');
 	right.anchor.set(0.5);
-	right.scale.setTo(0.25,0.25);
+	right.scale.setTo(0.18,0.18);
 	right.frame = 0;
 	right.animations.add('do',[1,0],4,true);
-	spacebar = game.add.image(980*(1.5/4)-50,550*(3/4),'spacebar');
+	spacebar = game.add.image(980*(1/4)+29.4,550*(3/4)-15,'spacebar');
 	spacebar.frame = 0;
 	animJumpSpacebar = spacebar.animations.add('jump',[1,0],2,true);
 	animJumpSpacebar.onComplete.add(startAnimationMove, this);
 	spacebar.anchor.set(0.5);
-	spacebar.scale.setTo(0.38,0.38);
-	menuButton = game.add.button(980*(1/4), 550*(3.75/4), 'menu', toMenu, this,1,0,2);
+	spacebar.scale.setTo(0.2,0.25);
+	menuButton = game.add.button(980*(1/4)+29.4, 550*(3.75/4)-35, 'menu', toMenu, this,1,0,2);
 	menuButton.anchor.setTo(0.5);
 	menuButton.scale.setTo(0.25,0.25);
-    buttonStart = game.add.button(980*(3/4), 550*(3.75/4), 'startButton', toGame, this,1,0,2);
+    buttonStart = game.add.button(980*(3/4)-29.4, 550*(3.75/4)-35, 'startButton', toGame, this,1,0,2);
     buttonStart.anchor.set(0.5);
     buttonStart.scale.setTo(0.25,0.25);
-    sprite = game.add.sprite(980*(2/4),550/2-150,'ship');
-    sprite.anchor.set(0.5);
-    sprite.scale.setTo(0.25,0.25);
-    sprite.frame = 5;
-    sprite.animations.add('move',[8,7,6,5,4,3],24,true);
-    animJumpSprite = sprite.animations.add('jump',[2,1,0],3,true);
-    animJumpSprite.onComplete.add(startAnimationMove, this);
-    game.physics.arcade.enable(sprite);
-    sprite.body.gravity.y = 980;
-    sprite.body.maxVelocity.set(500);
-    sprite.body.collideWorldBounds = true;
-    sprite.animations.play('move');
+    playership = game.add.sprite(980*(1/4)+29.4,550/2-150,'playership');
+    playership.anchor.set(0.5);
+    playership.scale.setTo(0.25,0.25);
+    playership.frame = 5;
+    playership.animations.add('move',[8,7,6,5,4,3],24,true);
+    playershipJump = playership.animations.add('jump',[2,1,0],3,true);
+    playershipJump.onComplete.add(startAnimationMove, this);
+    game.physics.arcade.enable(playership);
+    playership.body.gravity.y = 980;
+    playership.body.maxVelocity.set(500);
+    playership.body.collideWorldBounds = true;
+    playership.animations.play('move');
     game.time.events.loop(3000, Jump, this);
-    sprite2 = game.add.sprite(980*(3/4)-90,550/2-150,'ship');
-    sprite2.anchor.set(0.5);
-    sprite2.scale.setTo(0.25,0.25);
-    sprite2.frame = 5;
-    sprite2.animations.add('move',[8,7,6,5,4,3],24,true);
-    sprite2.animations.play('move');
-    game.physics.arcade.enable(sprite2);
-    sprite2.body.gravity.y = 980;
-    sprite2.body.maxVelocity.set(500);
-    sprite2.body.collideWorldBounds = true;
+    
+
+    playershipEx = game.add.sprite(980*(3/4)-115-29.4,550/2-150,'playership');
+    playershipEx.anchor.set(0.5);
+    playershipEx.scale.setTo(0.25,0.25);
+    playershipEx.frame = 5;
+    playershipEx.animations.add('move',[8,7,6,5,4,3],24,true);
+    playershipEx.animations.play('move');
+    game.physics.arcade.enable(playershipEx);
+    playershipEx.body.gravity.y = 980;
+    playershipEx.body.maxVelocity.set(500);
+    playershipEx.body.collideWorldBounds = true;
     game.time.events.loop(3000, shipMove, this);
 }
-var checkMove = 0;
-var textName;
-var wippo;
+// end createHowtoPlay function
+
+// updateHowtoPlay function
+function updateHowToPlay() {
+	game.physics.arcade.collide(playership,floor);
+	game.physics.arcade.collide(playershipEx,floor);
+}
+//end updateHowtoPlay function
+
+//Support function howtoplay state
 function Jump() {
-	sprite.body.velocity.y = -500;
-	animJumpSprite.play(3,false);
+	playership.body.velocity.y = -500;
+	playershipJump.play(3,false);
 	animJumpSpacebar.play(2,false);
 }
 function shipMove() {
 	if(checkMove%2==0){
 		left.animations.play('do');
 		right.animations.play('do');
-		sprite2.body.velocity.x = 70;
+		playershipEx.body.velocity.x = 70;
 	}
 	else{
 		left.animations.stop('do');
 		right.animations.stop('do');
 		left.frame = 0;
 		right.frame = 0;
-		sprite2.body.velocity.x = -70;
+		playershipEx.body.velocity.x = -70;
 	}
 	checkMove++;
 }
+// end support function howtoplay state
 
-function update1() {
-	game.physics.arcade.collide(sprite,floor);
-	game.physics.arcade.collide(sprite2,floor);
-}
-function create3(){ //result
+// createResult function
+function createResult(){ //result
     allSoundStopFx();
     game.add.image(0,0,'bgEnd');
     music.stop();
     music = game.add.audio('Death');
     music.loopFull();
-    rope = game.add.image(980/2,550*(2/10),'rope2');
-    rope.anchor.set(0.5);
-    rope.scale.setTo(0.25,0.35);
-    logo = game.add.image(980/2,game.world.centerY-125,'gameOver');
-    logo.anchor.set(0.5);
-    logo.scale.setTo(0.25,0.25);
+    ropeResult = game.add.image(980/2,550*(2/10),'ropeResult');
+    ropeResult.anchor.set(0.5);
+    ropeResult.scale.setTo(0.2,0.35);
+    logoGame = game.add.image(980/2,game.world.centerY-125,'gameOver');
+    logoGame.anchor.set(0.5);
+    logoGame.scale.setTo(0.25,0.25);
     textName = game.add.text(980/2+135,550*(1/4)+25,name,{fontSize : "48px",fill : "#5B3B00"});
     textName.anchor.set(0.5);
     textName.stroke = "#221702";
     textName.strokeThickness = 7.5;
-    text = game.add.text(980/2+80+25,550*(1/4)+100,"Score : "+score.toFixed(1),{fontSize : "48px",fill : "#5B3B00"});
+    text = game.add.text(980/2+80+25,550*(1/4)+100,"Score : "+score,{fontSize : "48px",fill : "#5B3B00"});
     text.anchor.set(0.5);
     text.stroke = "#221702";
     text.strokeThickness = 7.5;
-    buttonStart = game.add.button(980/2, game.world.centerY+25+50, 'retry', toGame, this,1,0,2);
+    buttonStart = game.add.button(980/2, game.world.centerY+25+50-20, 'playagain', toGame, this,1,0,2);
     buttonStart.anchor.set(0.5);
-    buttonStart.scale.setTo(0.38,0.38);
-    menuButton = game.add.button(980/2, game.world.centerY+115+75, 'menu', toMenu, this,1,0,2);
+    buttonStart.scale.setTo(0.3,0.3);
+    menuButton = game.add.button(980/2, 550/2+115+125-55, 'menu', toMenu, this,1,0,2);
     menuButton.anchor.set(0.5);
-    menuButton.scale.setTo(0.38,0.38);
+    menuButton.scale.setTo(0.3,0.3);
+    buttonScore = game.add.button(980/2,game.world.centerY+115+25-20, 'scoreboard', toReport, this,1,0,2);
+    buttonScore.anchor.set(0.5);
+    buttonScore.scale.setTo(0.3,0.3);
     setScore();
 }
-function create4() { //login
+// end createResult function
+
+// createLogin function
+function createLogin() { //login
+	random = 0;
 	game.add.image(0,0,'bgLogin');
-    logo = game.add.image(980/2,550/4,'logoWip');
-    logo.anchor.setTo(0.5)
+    logoGame = game.add.image(980/2,550/4,'logoWip');
+    logoGame.anchor.setTo(0.5)
     music = game.add.audio('Login');
     music.loopFull();
     text = game.add.text(980/2,550*(1/4)+125,"เจ้าหนูผู้โชคร้าย เจ้าชื่ออะไร?",{font : "48px Kanit",fill : "#FFFFFF"});
@@ -508,53 +642,88 @@ function create4() { //login
     menuButton = game.add.button(980/2-20, game.world.centerY+100+50, 'enter', toMenu, this,1,0,2);
     menuButton.anchor.set(0.5);
     menuButton.scale.setTo(0.25,0.25);
+    message = game.add.text(980/2-20,game.world.centerY+100+125,"",{font : "48px Kanit",fill : "#FFFFFF"});
+    message.anchor.set(0.5);
 }
-function update2() {
+//end createLogin function
+
+// updateLogin function
+function updateLogin() {
 	if (this.input.keyboard.addKey(Phaser.KeyCode.ENTER).isDown){
-        toMenu();
+    	toMenu();
     }
 }
-function toReport() {
-    window.open("https://www.facebook.com/volk.maneechote?fref=ts");
-}
-function buttonSound(){
-    soundFx1 = game.add.audio('button');
-    soundFx1.play();
-    console.log(">>>>>>Hello2");
-}
-function create5() { //credit
+//end updateLogin function
+
+// createCredit function
+function createCredit() { //credit
 	game.add.image(0,0,'bgHowToPlay');
 	oldMap = game.add.image(980/2,550/2,'oldMap');
 	oldMap.anchor.set(0.5);
 	oldMap.scale.setTo(0.22,0.22);
-	logo = game.add.image(980/2,550*(1/4)-75,'creditButton');
-	logo.anchor.set(0.5);
-	logo.scale.setTo(0.3,0.3);
-	wippo = game.add.image(980/2+150,550/2-50,'wippo');
+	logoGame = game.add.image(980/2,550*(1/4)-65,'creditButton');
+	logoGame.anchor.set(0.5);
+	logoGame.scale.setTo(0.3,0.3);
+	wippo = game.add.image(980/2+150,550/2-55,'wippo');
 	wippo.anchor.set(0.5);
-	game.add.text(980*(0.5/4),550*(1/4)-25,"Audio Library – No Copyright Music",{fontSize : "24px",fill : "#5B3B00"});
-	game.add.text(980*(0.5/4),550*(1/4)+11,"URL : goo.gl/yReazM",{fontSize : "24px",fill : "#5B3B00"});
-	game.add.text(980*(0.5/4),550*(1/4)+47,"Ross Bugden - Music",{fontSize : "24px",fill : "#5B3B00"});
-	game.add.text(980*(0.5/4),550*(1/4)+83,"URL : goo.gl/NDMy6w",{fontSize : "24px",fill : "#5B3B00"});
-	game.add.text(980*(0.5/4),550*(1/4)+119,"Ship sailing on the sea",{fontSize : "24px",fill : "#5B3B00"});
-	game.add.text(980*(0.5/4),550*(1/4)+155,"URL : goo.gl/1YpYo3",{fontSize : "24px",fill : "#5B3B00"});
-	game.add.text(980*(0.5/4),550*(1/4)+191,"Beach party wooden sign",{fontSize : "24px",fill : "#5B3B00"});
-	game.add.text(980*(0.5/4),550*(1/4)+227,"URL : goo.gl/9kzuhy",{fontSize : "24px",fill : "#5B3B00"});
-	game.add.text(980*(0.5/4),550*(1/4)+263,"Father and son illustration",{fontSize : "24px",fill : "#5B3B00"});
-	game.add.text(980*(0.5/4),550*(1/4)+299,"URL : goo.gl/js8DkX",{fontSize : "24px",fill : "#5B3B00"});
-    buttonStart = game.add.button(980*(1/2),550*(3.75/4),'menu',toMenu,this,1,0,2);
+	game.add.text(980*(0.5/4),550*(1/4)-25+10,"Audio Library – No Copyright Music",{fontSize : "20px",fill : "#5B3B00"});
+	game.add.text(980*(0.5/4),550*(1/4)+5+10,"URL : goo.gl/yReazM",{fontSize : "20px",fill : "#5B3B00"});
+	game.add.text(980*(0.5/4),550*(1/4)+35+10,"Ross Bugden - Music",{fontSize : "20px",fill : "#5B3B00"});
+	game.add.text(980*(0.5/4),550*(1/4)+65+10,"URL : goo.gl/NDMy6w",{fontSize : "20px",fill : "#5B3B00"});
+	game.add.text(980*(0.5/4),550*(1/4)+95+10,"Ship sailing on the sea",{fontSize : "20px",fill : "#5B3B00"});
+	game.add.text(980*(0.5/4),550*(1/4)+125+10,"URL : goo.gl/1YpYo3",{fontSize : "20px",fill : "#5B3B00"});
+	game.add.text(980*(0.5/4),550*(1/4)+155+10,"Beach party wooden sign",{fontSize : "20px",fill : "#5B3B00"});
+	game.add.text(980*(0.5/4),550*(1/4)+185+10,"URL : goo.gl/9kzuhy",{fontSize : "20px",fill : "#5B3B00"});
+	game.add.text(980*(0.5/4),550*(1/4)+215+10,"Father and son illustration",{fontSize : "20px",fill : "#5B3B00"});
+	game.add.text(980*(0.5/4),550*(1/4)+245+10,"URL : goo.gl/js8DkX",{fontSize : "20px",fill : "#5B3B00"});
+    buttonStart = game.add.button(980*(1/2),550*(3.75/4)-35,'menu',toMenu,this,1,0,2);
     buttonStart.anchor.set(0.5);
     buttonStart.scale.setTo(0.25,0.25);
 }//toCredit
+
+// end createCredit function
+
+// Link state function
+function toReport() {
+    window.open("https://www.facebook.com/volk.maneechote?fref=ts");
+}
 function toGame() {
     buttonSound();
-    game.state.start('main');
+    game.state.start('gameplay');
 }
 function toMenu() {
-    buttonSound();
-    game.state.start('menu');
-    name = input.value;
-    console.log(name);
+	console.log('name : '+input.value);
+	if(input.value!=""){
+	    buttonSound();
+	    game.state.start('menu');
+	    name = input.value;
+	    console.log(name);
+	}
+	else{
+		if(random==0)
+			message.text = "บอกชื่อของเจ้ามาก่อน";
+		else if(random==1)
+			message.text = "นี่ถามไม่ตอบเรอะ !!";
+		else if(random==2)
+			message.text = "เจ้าควรตอบคำถามข้านะ";
+		else if(random==3)
+			message.text = "ยัง ยังอีก";
+		else if(random==4)
+			message.text = "เจ้าทำให้ข้าหงุดหงิดนะ";
+		else if(random == 5)
+			message.text = "ข้าไหว้ละ";
+		else if(random == 6)
+			message.text = "บอกข้าเถอะข้าขอร้อง";
+		else if(random == 7)
+			message.text = "นร้า นร้า ๆ";
+		else if(random == 8)
+			message.text = "ถ้าไม่บอกข้าจะงอนแล้วนะ -*-";
+		else if(random == 9)
+			message.text = "เชอะ!";
+		else if(random == 10)
+			window.close();
+		random++;
+	}
 }
 function toHowToPlay() {
     buttonSound();
@@ -568,46 +737,14 @@ function toCredit() {
 function toLink() {
     window.open(linkToScore);
 }
+// end link state function
 
-function shootThem() {
-    if(cannonTimer<game.time.now){
-        var output = game.rnd.integerInRange(0,20);
-        bombDropSound.play();
-        if(bombDropSound.isPlaying){
-            bombDropSound.restart();
-        }
-        if(output == 0){
-            cannonTimer = game.time.now + 10000;
-            var range = game.rnd.integerInRange(-200, 200);
-            bullet = cannonGroup.getFirstExists(false);
-            bullet.reset(sprite.x+range, 0);
-            bullet.body.velocity.y = 100;
-        }
-    }
+// sound function
+function buttonSound(){
+    soundFx1 = game.add.audio('button');
+    soundFx1.play();
 }
-function cannonHitPlayer() {
-   allSoundStopFx();
-    death = game.add.audio('dBomb');
-    death.play();
-    console.log("hit by cannon"); 
-    game.state.start('result');
-}
-function bombHitPlayer() {
-    allSoundStopFx();
-    death = game.add.audio('dBomb');
-    death.play();
-    console.log("hit by bomb");
-    game.state.start('result');
 
-}
-function sharkHitPlayer() {
-    allSoundStopFx();
-    death = game.add.audio('dKraken');
-    death.play();
-    console.log("hit by shark");
-    game.state.start('result');
-    
-}
 function allSoundStopFx(){
     if(sharkSound.isPlaying){
         sharkSound.stop();
@@ -625,48 +762,32 @@ function allSoundStopFx(){
         warnSound.stop();
     }
 }
-function bombSpawn() {
-    if(bombTimer<game.time.now){
-        var output = game.rnd.integerInRange(0,20);
-        
-        if(!bombAwaySound.isPlaying){
-            bombAwaySound.play();
-        }
-        if(output == 0){
-            bombTimer = game.time.now + 5000;
-            bomby = bombGroup.getFirstExists(false);
-            bomby.reset(1700, game.world.height*(3.75/4)-50);
-            bomby.body.velocity.x = -200;
-            bombGroup.callAll('animations.play', 'animations', 'move');
-        }
-    }
-}
 
-function sharkSpawn() {
-    if(sharkTimer<game.time.now){
-        var output = game.rnd.integerInRange(0,20);
-        sharkSound.play();
-        if(!sharkSound.isPlaying){
-            sharkSound.play();
-        }
-        if(output == 0){
-            sharkTimer = game.time.now + 8000;
-            bomby = sharkGroup.getFirstExists(false);
-            bomby.reset(1850, game.world.height*(1/6));
-            bomby.body.gravity.y = 500;
-            bomby.body.velocity.x = -200;
-        }
-    }
-}
+//end sound function
+
+// animation function
 function startAnimationMove() {
-  sprite.play('move');
+  playership.play('move');
 }
+//end animation function
 
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> database function
+// Firebase function
+var highscore;
+var dbEtk = firebase.database().ref().child("etk").child("web");
+    
+function getHighScore() {
+	var etk = dbEtk.child(name);
+    etk.on('value', function(snapshot) {
+        highscore = snapshot.val().highscore;
+    });
+    if (highscore==undefined) {
+    	highscore=0.0;
+    }
+    return highscore;
+}
 
 function setScore() {
-    var highscore;
-    console.log(name);
+	console.log(name);
     var etk = dbEtk.child(name);
     etk.on('value', function(snapshot) {
         highscore = snapshot.val().highscore;
@@ -690,5 +811,5 @@ function setScore() {
         );
     }
      console.log("set score complete");
-
 }
+// end Firebase funtion
