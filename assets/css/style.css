@@ -35,7 +35,7 @@ h1 > span, span {
 }
 
 .top {
-  margin-top: 1.5em;
+  margin-top: 15px;
 }
 
 h1, p {
@@ -513,7 +513,7 @@ div.card-heading h1 > span {
 }
 .card-content{
   position: relative;
-  margin-top: 0.5em;
+  /*background-color: rgba(0, 0, 0, 0.5);*/
   z-index: 99;
   text-shadow: 1px 1px 3px #777;
 }
@@ -767,7 +767,9 @@ h1,p,ul{
 .ship-main img{
   position: absolute;
 }
-
+.btnbtn{
+  display: inline;
+}
 /*----------------------- Location ----------------------*/
 #where-map .modal-dialog {
   height: calc(100% - 10px * 2);
@@ -1516,3 +1518,32 @@ h1,p,ul{
 #five .panel-title:hover{
   cursor: pointer;
 }
+/* ipad */
+@media only screen
+and (device-width:768px)
+and (device-height:1024px)
+and (orientation: portrait){
+
+}
+@media only screen
+and (device-width:1024px)
+and (device-height:768px)
+and (orientation: landscape){
+
+}
+/* ****************** */
+
+/* ipadpro */
+@media only screen
+and (device-width:1024px)
+and (device-height:1366px)
+and (orientation: portrait){
+
+}
+@media only screen
+and (device-width:1366px)
+and (device-height:1024px)
+and (orientation: landscape){
+
+}
+/* ****************** */
