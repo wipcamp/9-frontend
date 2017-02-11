@@ -35,12 +35,12 @@ $(document).ready(function(){
   $('.ship').addClass('transition1');
   setTimeout(function(){
     $('.ship-main').css({"left": "-1em"});
+    setTimeout(function(){
+      $('.ship-main').removeClass('transition1');
+      $('.ship-main').addClass('transitionSpecial');
+      $('.ship-main').css({left: '40%'});
+    },3000);
   },1000);
-  setTimeout(function(){
-    $('.ship-main').removeClass('transition1');
-    $('.ship-main').addClass('transitionSpecial');
-    $('.ship-main').css({left: '40%'});
-  },5000);
   $('.card-btn-back-home').click(function (event) {
     $('.con').addClass('idle');
     $('.slide').addClass('animate');
