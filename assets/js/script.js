@@ -101,7 +101,7 @@ $(document).ready(function(){
           $('.ship:eq('+(carousel.getCurrentSlide()-1)+')').addClass('transition1');
           $('.ship:eq('+(carousel.getCurrentSlide()-1)+')').css({"left": "-1em"});
         },300);
-      },500);
+      },800);
     },300);
     event.stopPropagation();
   });
