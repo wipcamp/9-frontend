@@ -189,13 +189,13 @@ function WipcampCarousel(element) {
 
   //public void showPrev()
   this.prev = function () {
-    closeModalAfterSlide();
+    self.closeModalAfterSlide();
     return this.showSlide(currentSlide - 1, true);
   };
 
   //public void showNext()
   this.next = function () {
-    closeModalAfterSlide();
+    self.closeModalAfterSlide();
     return this.showSlide(currentSlide + 1, true);
   };
 
@@ -275,10 +275,12 @@ function WipcampCarousel(element) {
 
   function slideActiveNext() {
     if(currentSlide != 6) {
-      closeModalAfterSlide();
+      self.closeModalAfterSlide();
       $('.con').addClass('idle');
       $('.slide').addClass('animate');
       if(currentSlide == 0) {
+        $('.ship-main').addClass('transition1');
+        $('.ship-main').removeClass('transitionSpecial');
         $('.ship-main').css({left: '110%'});
         $('.ship').removeClass('transition1');
         $('.ship').css({left: '-30em'});
@@ -319,7 +321,7 @@ function WipcampCarousel(element) {
 
   function slideActivePrev() {
     if(currentSlide != 0){
-      closeModalAfterSlide();
+      self.closeModalAfterSlide();
       $('.con').addClass('idle');
       $('.slide').addClass('animate');
       if(currentSlide == 0) {
@@ -365,11 +367,10 @@ function WipcampCarousel(element) {
     }
   }
 
-  function closeModalAfterSlide() {
+  this.closeModalAfterSlide = function () {
     if (self.isModalOpening()) {
       $('.modal').modal('hide');
     }
   }
-
   new Hammer(element[0], {dragLockToAxis: true}).on("swipeleft swiperight", eventDetection);
 }
