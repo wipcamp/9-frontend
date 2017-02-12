@@ -769,6 +769,112 @@ h1,p,ul{
 .btnbtn{
   display: inline;
 }
+
+/*---------------------- Requirement ---------------------*/
+ul#who-table {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+ul#who-table li.media {
+  display: block;
+  background: rgba(0, 0, 0, .23);
+  border-radius: 6px;
+  padding: 6px;
+  color: white;
+}
+
+ul#who-table li.media:not(:first-child) {
+  margin-top: 6px;
+}
+
+ul#who-table .media-left {
+  display: block;
+  width: 48px;
+  border-radius: 100%;
+  padding: 12px;
+  float: left;
+}
+
+ul#who-table li.media:nth-child(1) .media-left {
+  background: #5b2606;
+}
+
+ul#who-table li.media:nth-child(2) .media-left {
+  background: #1d3c5c;
+}
+
+ul#who-table li.media:nth-child(3) .media-left {
+  background: #016050;
+}
+
+ul#who-table li.media:nth-child(4) .media-left {
+  background: #2d214d;
+}
+
+ul#who-table .media-body {
+  display: block;
+  padding-left: 12px;
+  width: auto;
+}
+
+ul#who-table .media-body h4 {
+  line-height: 1.5;
+}
+
+ul#who-table .media-body p {
+  margin-top: 6px; 
+}
+
+ul#who-table .media-body p:last-of-type {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+
+  ul#who-table .media-body h4 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  ul#who-table {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  ul#who-table li.media {
+    border-radius: 12px;
+    float: left;
+    padding: 12px;
+    width: calc(50% - 12px / 2);
+  }
+  
+  ul#who-table li.media:not(:first-child) {
+    margin-top: 0;
+  }
+  
+  ul#who-table li.media:nth-child(even) {
+    margin-left: 12px;
+  }
+  
+  ul#who-table li.media:nth-child(n + 3) {
+    margin-top: 12px;
+  }
+  
+  ul#who-table .media-left {
+    float: none;
+    margin: 0 auto 12px;
+    width: 64px
+  }
+  
+  ul#who-table .media-body {
+    padding: 0;
+    text-align: center;
+  } 
+}
+
 /*----------------------- Location ----------------------*/
 #where-map .modal-dialog {
   height: calc(100% - 10px * 2);
@@ -1110,16 +1216,17 @@ h1,p,ul{
   #two p{
     font-size: 1.16em;
   }
-
+  .menu-contact{
+    margin-top: -1em;
+  }
   .card-menu{
     margin-top: 0.2em;
     padding: 0.60em 0.75em 0.6em 0.55em;
     font-size:1em;
   }
   .line-at{
-    height: 3.61em;
-    margin-top: -0.97em;
-    margin-left: 1em;
+    height: 2.8em;
+    margin-top: 0;
   }
   .slide h1 {
     font-size: 3em;
@@ -1216,6 +1323,19 @@ h1,p,ul{
   .slide div.card-heading {
     margin-top: 20%;
   }
+  #seven .link{
+    padding: 0.15em 0.2em 0.15em 0.15em !important;
+  }
+  #seven .hidden-xs p{
+    display: inline;
+    position: absolute;
+    left: 4.5em;
+    top: 0.4em;
+  }
+  #seven .hidden-xs p.special-icon{
+    margin-left: -15px !important;
+  }
+
 }
 
 /*###Desktops, big landscape tablets and laptops(Large, Extra large)####*/
@@ -1460,6 +1580,24 @@ h1,p,ul{
   .wave2{
     bottom: 0.3em;
   }
+
+  .line-at{
+    height: 2.8em;
+    margin-top: 0;
+    margin-left: 0.15em;
+  }
+  #seven .link{
+    padding: 0.15em 0.2em 0.15em 0.15em !important;
+  }
+  p.special-icon{
+    margin-left: -15px;
+  }
+  #seven .hidden-xs p{
+    display: inline;
+    position: absolute;
+    left: 4.5em;
+    top: 0.4em;
+  }
 }
 @media (min-width:1400px){
   body,html{
@@ -1522,12 +1660,74 @@ h1,p,ul{
 and (device-width:768px)
 and (device-height:1024px)
 and (orientation: portrait){
-
+  html,body{
+    font-size: 18px;
+  }
+  .ship-main img{
+    height: 23.5em;
+  }
+  .game-btn{
+    width: 12.5em;
+  }
+  #logo{
+    top:13%;
+  }
+  #two .cisland img{
+    height: 21.5em;
+  }
+  #three .cisland img{
+    height: 22em;
+    right: -5em;
+  }
+  #four .cisland img{
+    height: 21em;
+  }
+  #five .cisland img{
+    height: 21em;
+  }
+  #six .cisland img{
+    height: 23em;
+    bottom: 1.1em;
+  }
+  #seven .cisland img{
+    height: 21.5em;
+    bottom: -0.45em;
+  }
 }
 @media only screen
 and (device-width:1024px)
 and (device-height:768px)
 and (orientation: landscape){
+  html,body{
+    font-size: 18px;
+  }
+  .ship img{
+    height: 21em;
+  }
+  #two .cisland img{
+    height: 22em;
+  }
+  #three .cisland img{
+    height: 20em;
+    right: -1em;
+  }
+  #four .cisland img{
+    bottom: -2.5em;
+    height: 20em;
+    right: 0em;
+  }
+  #five .cisland img{
+    height: 19.5em;
+    right: 1em;
+  }
+  #six .cisland img{
+    height: 22em;
+    right: 2em;
+    bottom: 1.6em;
+  }
+  #seven .cisland img{
+    height: 19.5em;
+  }
 
 }
 /* ****************** */
@@ -1537,12 +1737,82 @@ and (orientation: landscape){
 and (device-width:1024px)
 and (device-height:1366px)
 and (orientation: portrait){
-
+  html,body{
+    font-size: 24px;
+  }
+  #logo{
+    top:14%;
+  }
+  .ship-main img{
+    height: 26em;
+  }
+  .game-btn{
+    height: 15em;
+    bottom: -0.7em;
+  }
+  #two .cisland img{
+    height: 23em;
+    right: 0em;
+  }
+  #three .cisland img{
+    height: 21em;
+    right: -3em;
+  }
+  #four .cisland img{
+    bottom: -2.5em;
+    height: 22em;
+    right: -3em;
+  }
+  #five .cisland img{
+    height: 20em;
+    right: 0;
+  }
+  #six .cisland img{
+    height: 23em;
+    right: 0;
+  }
+  #seven .cisland img{
+    height: 20.5em;
+    right: 0;
+  }
+  .line-at{
+    margin-left: 0.33em;
+  }
 }
 @media only screen
 and (device-width:1366px)
 and (device-height:1024px)
 and (orientation: landscape){
-
+  html,body{
+    font-size: 24px;
+  }
+  #two .cisland img{
+    height: 23em;
+  }
+  #three .cisland img{
+    height: 21em;
+    right: -1em;
+  }
+  #four .cisland img{
+    height: 21em;
+    bottom: -2.5em;
+    right: 0;
+  }
+  #five .cisland img{
+    height: 20em;
+    right: 1em;
+  }
+  #six .cisland img{
+    height: 22em;
+    right: 1em;
+    bottom: 1.6em;
+  }
+  #seven .cisland img{
+    height: 20.5em;
+    right: 1em;
+  }
+  .line-at{
+    margin-left: 0.33em;
+  }
 }
 /* ****************** */
