@@ -29,6 +29,8 @@ $(document).ready(function(){
     html: true
   });
 
+  toDayToNight()
+
   $('.ship-main').css({left: '-50em'});
   $('.ship-main').addClass('transition1');
   $('.ship').css({left: '-30em'});
@@ -146,8 +148,10 @@ function getTransform(el) {
     return xyz;
 }
 
+
+var d = new Date();
 function countDown() {
-  var d = new Date();
+  // For set img of WHEN card
   if(d.getMonth() == 1 && d.getDate() >= 18 || d.getMonth() == 2 && d.getDate() < 19) {
     onTime(0);
   }
@@ -179,5 +183,19 @@ function countDown() {
   function passTime(time){
     $('.status:eq('+time+') img').remove();
     $('.status:eq('+time+')').prepend('<img src="assets/img/object/shipInCircle.svg" alt="">');
+  }
+}
+function toDayToNight() {
+  if (d.getHours() < 6 || d.getHours() >= 20) {
+    $('.slide').css({background: 'linear-gradient(#141123, #1d3c5c)'});
+  }
+  else if (d.getHours() < 12) {
+    $('.slide').css({background: 'linear-gradient(#9acbd8, #ade0ee)'});
+  }
+  else if (d.getHours() < 18) {
+
+  }
+  else if (d.getHours() < 20) {
+
   }
 }

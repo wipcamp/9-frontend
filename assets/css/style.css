@@ -197,7 +197,6 @@ h1, p {
   width: 100%;
   z-index: 1;
   color: white;
-  background: linear-gradient(#141123, #1d3c5c);
 }
 .slide.animate {
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
