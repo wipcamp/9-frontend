@@ -823,7 +823,7 @@ ul#who-table .media-body h4 {
 }
 
 ul#who-table .media-body p {
-  margin-top: 6px; 
+  margin-top: 6px;
 }
 
 ul#who-table .media-body p:last-of-type {
@@ -849,29 +849,29 @@ ul#who-table .media-body p:last-of-type {
     padding: 12px;
     width: calc(50% - 12px / 2);
   }
-  
+
   ul#who-table li.media:not(:first-child) {
     margin-top: 0;
   }
-  
+
   ul#who-table li.media:nth-child(even) {
     margin-left: 12px;
   }
-  
+
   ul#who-table li.media:nth-child(n+3) {
     margin-top: 12px;
   }
-  
+
   ul#who-table .media-left {
     float: none;
     margin: 0 auto 12px;
     width: 64px
   }
-  
+
   ul#who-table .media-body {
     padding: 0;
     text-align: center;
-  } 
+  }
 }
 
 /*----------------------- Location ----------------------*/
@@ -911,6 +911,16 @@ ul#who-table .media-body p:last-of-type {
   font-weight: 100;
   line-height: 1.5em;
 }
+.mountain{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+}
+.mountain img{
+  position: absolute;
+}
 /*### Smartphones (portrait and landscape)(small)### */
 @media screen and (min-width : 0px) and (max-width : 767px){
   body,html{
@@ -926,7 +936,10 @@ ul#who-table .media-body p:last-of-type {
     height: 16.5em;
     bottom: 0.6em;
   }
-
+  .mountain img{
+    bottom: 0;
+    height: 10.5em;
+  }
   .register {
     width: 70%;
     height: 10%;
@@ -938,9 +951,9 @@ ul#who-table .media-body p:last-of-type {
     bottom: 1.5em;
   }
   #three .cisland img{
-    height: 19em;
-    right: -6em;
-    bottom: 0em;
+    height: 14em;
+    right: -0.5em;
+    bottom: 1.7em;
   }
   #four .cisland img{
     height: 19em;
@@ -970,12 +983,7 @@ ul#who-table .media-body p:last-of-type {
   .wipcamp-logo{
     height: 15em;
   }
-  .mountain{
-    position: absolute;
-    bottom: 1.6em;
-    right: -5em;
-    height: 7em;
-  }
+
   .game-btn{
     position: absolute;
     bottom: 1em;
@@ -1172,7 +1180,10 @@ ul#who-table .media-body p:last-of-type {
     height: 20em;
     bottom: 0;
   }
-
+  .mountain img{
+    bottom: 0;
+    height: 17em;
+  }
   #two .cisland img{
     height: 20.5em;
     right: 0em;
@@ -1180,7 +1191,7 @@ ul#who-table .media-body p:last-of-type {
   }
   #three .cisland img {
     height: 19em;
-    right: -2em;
+    right: -0em;
     bottom: 1.0em;
   }
   #four .cisland img {
@@ -1235,12 +1246,7 @@ ul#who-table .media-body p:last-of-type {
     font-size: 0.5em;
     text-align: left;
   }
-  .mountain{
-    position: absolute;
-    bottom: 3em;
-    right: -5em;
-    height: 10em;
-  }
+
   .game-btn{
     position: absolute;
     bottom: 1em;
@@ -1352,7 +1358,7 @@ ul#who-table .media-body p:last-of-type {
   #logo{
     position: relative;
     z-index: 99;
-    top:14%;
+    top:10%;
   }
   em{
     display: block;
@@ -1370,7 +1376,10 @@ ul#who-table .media-body p:last-of-type {
     height: 24em;
     bottom: 0em;
   }
-
+  .mountain img{
+    bottom: 1em;
+    height: 13em;
+  }
   #two p{
     font-size: 0.9em;
   }
@@ -1432,12 +1441,7 @@ ul#who-table .media-body p:last-of-type {
     position: relative;
     z-index: 99;
   }
-  .mountain{
-    position: absolute;
-    bottom: 8em;
-    right: -5em;
-    height: 10em;
-  }
+
   .game-btn{
     position: absolute;
     bottom: 1em;
@@ -1602,6 +1606,11 @@ ul#who-table .media-body p:last-of-type {
   body,html{
     font-size: 20px;
   }
+  .mountain img{
+    bottom: 1em;
+    left: 8em;
+    height: 13em;
+  }
   #two .cisland img{
     height: 22em;
     bottom: 0.8em;
@@ -1628,9 +1637,6 @@ ul#who-table .media-body p:last-of-type {
   h1 small{
     font-size: 0.5em;
     line-height: 1.9em;
-  }
-  .mountain{
-    bottom: 5em;
   }
   #two .moon img{
     height: 7.5em;
@@ -1664,6 +1670,11 @@ and (orientation: portrait){
   }
   .ship-main img{
     height: 23.5em;
+  }
+  .mountain img{
+    bottom: 1em;
+    left: 1em;
+    height: 13em;
   }
   .game-btn{
     width: 12.5em;
@@ -1702,6 +1713,11 @@ and (orientation: landscape){
   }
   .ship img{
     height: 21em;
+  }
+  .mountain img{
+    bottom: 1em;
+    left: 5em;
+    height: 13em;
   }
   #two .cisland img{
     height: 22em;
@@ -1745,6 +1761,11 @@ and (orientation: portrait){
   .ship-main img{
     height: 26em;
   }
+  .mountain img{
+    bottom: 1em;
+    left: 1em;
+    height: 16em;
+  }
   .game-btn{
     height: 15em;
     bottom: -0.7em;
@@ -1787,6 +1808,11 @@ and (orientation: landscape){
   }
   #two .cisland img{
     height: 23em;
+  }
+  .mountain img{
+    bottom: 1em;
+    left: 5em;
+    height: 14em;
   }
   #three .cisland img{
     height: 21em;
