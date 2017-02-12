@@ -29,7 +29,8 @@ $(document).ready(function(){
     html: true
   });
 
-  toDayToNight()
+  toDayToNight();
+  islandDayNight();
 
   $('.ship-main').css({left: '-50em'});
   $('.ship-main').addClass('transition1');
@@ -200,5 +201,10 @@ function toDayToNight() {
   }
 }
 function islandDayNight() {
-  
+  if (d.getHours() >= 6 && d.getHours() < 18) {
+    $('.slide:eq(4) .cisland').prepend('<img src="assets/img/object/wholecake-island-day.svg" alt="island" class="img-responsive">');
+  }
+  else {
+    $('.slide:eq(4) .cisland').prepend('<img src="assets/img/object/wholecake-island-night.svg" alt="island" class="img-responsive">');
+  }
 }
