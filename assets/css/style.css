@@ -831,7 +831,6 @@ ul#who-table .media-body p:last-of-type {
 }
 
 @media (max-width: 768px) {
-
   ul#who-table .media-body h4 {
     font-size: 16px;
   }
@@ -859,7 +858,7 @@ ul#who-table .media-body p:last-of-type {
     margin-left: 12px;
   }
   
-  ul#who-table li.media:nth-child(n + 3) {
+  ul#who-table li.media:nth-child(n+3) {
     margin-top: 12px;
   }
   
