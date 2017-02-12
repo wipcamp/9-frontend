@@ -25,10 +25,6 @@ $(document).ready(function(){
     e.preventDefault();
   });
 
-  $('[data-toggle="tooltip"]').tooltip({
-    html: true
-  });
-
   toDayToNight();
   islandDayNight();
 
@@ -119,7 +115,7 @@ $(document).ready(function(){
       $('.cloud1, .cloud2, .cloud3').removeClass('pause');
       $('.ship').removeClass('pause');
       $('.ship-main').removeClass('pause');
-      if(carousel.getCurrentSlide() == 0) {
+      if(carousel.getCurrentSlide() === 0) {
         $('.ship-main').addClass('transition1');
         $('.ship-main').css({"left": "-1em"});
       }
@@ -128,7 +124,7 @@ $(document).ready(function(){
         $('.ship:eq('+(carousel.getCurrentSlide()-1)+')').css({"left": "-1em"});
       }
     },300);
-    if(carousel.getCurrentSlide() == 0) {
+    if(carousel.getCurrentSlide() === 0) {
       setTimeout(function(){
         $('.ship-main').removeClass('transition1');
         $('.ship-main').addClass('transitionSpecial');
@@ -138,6 +134,29 @@ $(document).ready(function(){
   });
   countDown();
 
+  switch (getMobileOperatingSystem()) {
+    case "Windows Phone" :
+      $('#where-map #navigator').attr('href', 'bingmaps:?cp=13.6525851~100.49361');
+      break;
+    
+    case "Android" :
+      $('#where-map #navigator').attr('href', 'geo:13.6525851,100.49361');
+      break;
+
+    case "iOS" :
+      $('#where-map #navigator').attr('href', 'http://maps.apple.com/?ll=13.6525851,100.49361');
+      break;
+
+    default :
+      $('#where-map #navigator').attr('href', 'https://www.google.com/maps/place/WIP+Camp/@13.6525851,100.49361,19z/data=!4m8!1m2!3m1!2sWIP+Camp!3m4!1s0x0:0x5e0d31f39f400b1e!8m2!3d13.6525851!4d100.49361');
+      $('.prev-container img').attr('title', 'ก่อนหน้า<br><span id=\'carousel-accessibility-prev\'>(แป้นลูกศรซ้าย)</span>');
+      $('.next-container img').attr('title', 'ถัดไป<br><span id=\'carousel-accessibility-next\'>(แป้นลูกศรขวา)</span>');
+      break;
+  }
+
+  $('[data-toggle="tooltip"]').tooltip({
+    html: true
+  });
 });
 
 function getTransform(el) {
@@ -207,4 +226,22 @@ function islandDayNight() {
   else {
     $('.slide:eq(4) .cisland').prepend('<img src="assets/img/object/wholecake-island-night.svg" alt="island" class="img-responsive">');
   }
+}
+
+function getMobileOperatingSystem() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+  if (/windows phone/i.test(userAgent)) {
+      return "Windows Phone";
+  }
+
+  if (/android/i.test(userAgent)) {
+      return "Android";
+  }
+
+  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      return "iOS";
+  }
+
+  return "unknown";
 }
