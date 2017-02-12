@@ -29,11 +29,32 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/pace-theme-bigpercentage.css">
     <!--JavaScript: Preload-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.js"></script>
     <script type="text/javascript" src="assets/js/itim-carousel.js"></script>
     <script type="text/javascript" src="assets/js/script.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        Pace.once('start', function () {
+          var preloaderInit = setInterval(function() {
+            var percentageValue = Math.round(Pace.bar.progress);
+            $('.percentageValue').text(percentageValue);
+            console.log(percentageValue);
+            if (percentageValue === 100) {
+              $('.percentageValue').text('100');
+              $('#wipcampPreloader').fadeOut('500');
+              setTimeout(function () {
+                $('#wipcampPreloader').remove();
+              }, 500);
+              clearInterval(preloaderInit);
+            }
+          }, 100);
+        });
+      });
+    </script>
   </head>
   <body>
     <main>
@@ -43,6 +64,12 @@
           <h1 id="title" class="text-center">เหมือนจอจะเล็กไปนะ</h1>
           <p id="description" class="text-center">ลองหมุนจอเป็นแนวตั้ง ปรับขนาดหน้าต่างของเบราเซอร์ หรือใช้อุปกรณ์อื่นที่หน้าจอใหญ่กว่านี้</p>
         </div>
+      </div>
+      <div id="wipcampPreloader">
+        <div class="preloader-wrapper">
+          <img id="preloader-logo" src="assets/img/logo/wipcamp9-favicon-preloader.png" alt="WIP Camp #9 Favicon Preloader">
+        </div>
+        <p class="text-center"><big><span class="percentageValue">0</span> %</big></p>
       </div>
       <div class="con" id="con">
         <div class="slide active" id="one">
