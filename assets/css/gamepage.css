@@ -102,21 +102,8 @@ body {
 }
 .objUnder{
   position: absolute;
-  z-index: 100;
+  z-index: -1;
   width: auto;
-}
-.unwat-1{
- width: 25em;
- z-index: -1;
- bottom: 10em;
-}
-.unwat-2{
- width: 25em;
-  z-index: -2;
-}
-.kraken{
- width: 25em;
- z-index: -1;
 }
 
 
@@ -1082,6 +1069,29 @@ and (min-width: 1200px){
     .downButton{
       display: none;
     }
+    .underwater{
+     width: auto;
+     height: 50vh;
+     position: fixed;
+     z-index: -2 !important;
+     bottom: 0em;
+    }
+    .picUnderWater{
+      width: 100vw;
+    }
+    .underwater2{
+     width: 75vw;
+     height: 50vh;
+     position: fixed;
+     z-index: -3 !important;
+     bottom: 0em;
+     animation-name: wave;
+     animation-duration: 4.3s;
+     animation-delay: .1s;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+     animation-play-state: running;
+    }
 }
 
 @media only screen
@@ -1215,6 +1225,29 @@ and (min-width: 1300px){
     }
     .downButton{
       display: none;
+    }
+    .underwater{
+     width: auto;
+     height: 50vh;
+     position: fixed;
+     z-index: -2 !important;
+     bottom: 0em;
+    }
+    .picUnderWater{
+      width: 100vw;
+    }
+    .underwater2{
+     width: 75vw;
+     height: 50vh;
+     position: fixed;
+     z-index: -3 !important;
+     bottom: 0em;
+     animation-name: wave;
+     animation-duration: 4.3s;
+     animation-delay: .1s;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+     animation-play-state: running;
     }
 }
 
