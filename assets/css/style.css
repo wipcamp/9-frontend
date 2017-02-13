@@ -476,7 +476,7 @@ div.card-heading h1 > span {
 }
 
 .cloud1 {
-  background-image: url('../img/object/cloud.svg');
+  background-image: url('../img/object/cloud-night.svg');
   background-repeat: no-repeat;
   position: absolute;
   top: 10%;
@@ -493,7 +493,7 @@ div.card-heading h1 > span {
   /*animation-play-state: paused;*/
 }
 .cloud2 {
-  background-image: url('../img/object/cloud.svg');
+  background-image: url('../img/object/cloud-night.svg');
   background-repeat: no-repeat;
   position: absolute;
   top: 25%;
@@ -510,7 +510,7 @@ div.card-heading h1 > span {
   /*animation-play-state: paused;*/
 }
 .cloud3 {
-  background-image: url('../img/object/cloud.svg');
+  background-image: url('../img/object/cloud-night.svg');
   background-repeat: no-repeat;
   position: absolute;
   top: 5%;
