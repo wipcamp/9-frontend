@@ -224,16 +224,16 @@ function countDown() {
 }
 function toDayToNight() {
   if (d.getHours() < 6 || d.getHours() >= 20) {
-    $('.slide').css({background: 'linear-gradient(#141123, #1d3c5c)'});
+    $('.slide').css({'background': 'linear-gradient(#141123, #1d3c5c)'});
   }
   else if (d.getHours() < 12) {
-    $('.slide').css({background: 'linear-gradient(#9acbd8, #ade0ee)'});
+    $('.slide').css({'background': 'linear-gradient(#9acbd8, #ade0ee)'});
   }
   else if (d.getHours() < 18) {
-    $('.slide').css({background: 'linear-gradient(#9acbd8, #ade0ee)'});
+    $('.slide').css({'background': 'linear-gradient(#9acbd8, #ade0ee)'});
   }
   else if (d.getHours() < 20) {
-    $('.slide').css({background: 'linear-gradient(#9acbd8, #ade0ee)'});
+    $('.slide').css({'background': 'linear-gradient(#9acbd8, #ade0ee)'});
   }
 }
 function islandDayNight() {

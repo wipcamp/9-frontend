@@ -7,6 +7,7 @@ function WipcampCarousel(element) {
   var slideCount = slide.length;
   var currentSlide = 0;
   var pageTransform = {};
+  var readyStatus = false;
 
   this.init = function () {
     $(window).on("load resize orientationchange", function () {
@@ -34,10 +35,10 @@ function WipcampCarousel(element) {
     $(document).keydown(function(event) {
       if(event.which == 39) {
         if (element.hasClass('idle')) {
-          $('.slide:eq(' + currentSlide + ')').removeClass('hover')
+          $('.slide:eq(' + currentSlide + ')').removeClass('hover');
           self.next();
           setTimeout(function () {
-            $('.slide:eq(' + currentSlide + ')').addClass('hover')
+            $('.slide:eq(' + currentSlide + ')').addClass('hover');
           },500);
         }
         else {
@@ -46,10 +47,10 @@ function WipcampCarousel(element) {
       }
       if(event.which == 37) {
         if (element.hasClass('idle')) {
-          $('.slide:eq(' + currentSlide + ')').removeClass('hover')
+          $('.slide:eq(' + currentSlide + ')').removeClass('hover');
           self.prev();
           setTimeout(function () {
-            $('.slide:eq(' + currentSlide + ')').addClass('hover')
+            $('.slide:eq(' + currentSlide + ')').addClass('hover');
           },500);
         }
         else {
@@ -60,7 +61,7 @@ function WipcampCarousel(element) {
         if (!element.hasClass('idle')) {
           $('.con').addClass('idle');
           $('.slide').addClass('animate');
-          if(currentSlide == 0) {
+          if(currentSlide === 0) {
             $('.ship-main').css({left: '110%'});
             $('.ship').removeClass('transition1');
             $('.ship').css({left: '-30em'});
@@ -158,6 +159,8 @@ function WipcampCarousel(element) {
         $('.slide:eq(' + currentSlide + ')').addClass('hover');
       },500);
     });
+
+    readyStatus = true;
   };
 
   //public int getCurrentSlide()
@@ -201,11 +204,15 @@ function WipcampCarousel(element) {
 
   this.isIdle = function () {
     return $(self.element).hasClass(idle);
-  }
+  };
 
   this.isModalOpening = function () {
     return ($(".modal").data('bs.modal') || {}).isShown;
-  }
+  };
+
+  this.isReady = function () {
+    return readyStatus;
+  };
 
   function setSlideDemensions() {
     for (var i = - (slideCount - 1); i < slideCount; i++) {
@@ -278,7 +285,7 @@ function WipcampCarousel(element) {
       self.closeModalAfterSlide();
       $('.con').addClass('idle');
       $('.slide').addClass('animate');
-      if(currentSlide == 0) {
+      if(currentSlide === 0) {
         $('.ship-main').addClass('transition1');
         $('.ship-main').removeClass('transitionSpecial');
         $('.ship-main').css({left: '110%'});
@@ -320,11 +327,11 @@ function WipcampCarousel(element) {
   }
 
   function slideActivePrev() {
-    if(currentSlide != 0){
+    if(currentSlide !== 0){
       self.closeModalAfterSlide();
       $('.con').addClass('idle');
       $('.slide').addClass('animate');
-      if(currentSlide == 0) {
+      if(currentSlide === 0) {
         $('.ship-main').css({left: '110%'});
         $('.ship').removeClass('transition1');
         $('.ship').css({left: '-30em'});
@@ -350,7 +357,7 @@ function WipcampCarousel(element) {
           $('.slide:eq('+currentSlide+')').addClass('active');
           $('.con').removeClass('idle');
           $('.slide').removeClass('animate');
-          if(currentSlide != 0){
+          if(currentSlide !== 0){
             $('.ship').removeClass('transition1');
             $('.ship').css({left: '-30em'});
             $('.ship').addClass('transition1');
@@ -376,6 +383,7 @@ function WipcampCarousel(element) {
     if (self.isModalOpening()) {
       $('.modal').modal('hide');
     }
-  }
+  };
+
   new Hammer(element[0], {dragLockToAxis: true}).on("swipeleft swiperight", eventDetection);
 }

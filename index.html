@@ -39,12 +39,14 @@
     <script type="text/javascript">
       $(function() {
         Pace.once('start', function () {
+          $('.loadingText').remove();
+          $('.percentageValue').show();
           var preloaderInit = setInterval(function() {
             var percentageValue = Math.round(Pace.bar.progress);
-            $('.percentageValue').text(percentageValue);
+            $('.percentageValue').text(percentageValue + " %");
             console.log(percentageValue);
             if (percentageValue === 100) {
-              $('.percentageValue').text('100');
+              $('.percentageValue').text('100 %');
               $('#wipcampPreloader').fadeOut('500');
               setTimeout(function () {
                 $('#wipcampPreloader').remove();
@@ -69,7 +71,12 @@
         <div class="preloader-wrapper">
           <img id="preloader-logo" src="assets/img/logo/wipcamp9-favicon-preloader.png" alt="WIP Camp #9 Favicon Preloader">
         </div>
-        <p class="text-center"><big><span class="percentageValue">0</span> %</big></p>
+        <p class="text-center" class="preloader-status">
+          <big>
+            <span class="loadingText">การผจญภัยกำลังเริ่มขึ้น...</span>
+            <span class="percentageValue" style="display: none;">0 %</span>
+          </big>
+        </p>
       </div>
       <div class="con" id="con">
         <div class="slide active" id="one">
