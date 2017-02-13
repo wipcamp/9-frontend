@@ -210,6 +210,14 @@ function WipcampCarousel(element) {
     return ($(".modal").data('bs.modal') || {}).isShown;
   };
 
+  this.setReady = function(e) {
+    if (e === 0) {
+      readyStatus = false;
+    }
+    else if (e === 1) {
+      readyStatus = true;
+    }
+  }
   this.isReady = function () {
     return readyStatus;
   };
@@ -281,7 +289,8 @@ function WipcampCarousel(element) {
   }
 
   function slideActiveNext() {
-    if(currentSlide != 6) {
+    if(currentSlide != 6 && readyStatus) {
+      readyStatus = false;
       self.closeModalAfterSlide();
       $('.con').addClass('idle');
       $('.slide').addClass('animate');
@@ -321,13 +330,15 @@ function WipcampCarousel(element) {
           $('.ship').css({left: '-30em'});
           $('.ship').addClass('transition1');
           $('.ship').css({"left": "-1em"});
+          readyStatus = true;
         },300);
       },1000);
     }
   }
 
   function slideActivePrev() {
-    if(currentSlide !== 0){
+    if(currentSlide !== 0 && readyStatus){
+      readyStatus = false;
       self.closeModalAfterSlide();
       $('.con').addClass('idle');
       $('.slide').addClass('animate');
@@ -362,6 +373,7 @@ function WipcampCarousel(element) {
             $('.ship').css({left: '-30em'});
             $('.ship').addClass('transition1');
             $('.ship').css({"left": "-1em"});
+            readyStatus = true;
           }
           else {
             $('.ship-main').removeClass('transition1');
@@ -372,6 +384,7 @@ function WipcampCarousel(element) {
               $('.ship-main').removeClass('transition1');
               $('.ship-main').addClass('transitionSpecial');
               $('.ship-main').css({left: '40%'});
+              readyStatus = true;
             },3000);
           }
         },300);
