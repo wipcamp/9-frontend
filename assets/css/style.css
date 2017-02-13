@@ -1448,6 +1448,7 @@ ul#who-table .media-body p:last-of-type {
   .mountain img{
     bottom: 1em;
     height: 13em;
+    right: 1.5em;
   }
   #two p{
     font-size: 0.9em;
@@ -1677,7 +1678,7 @@ ul#who-table .media-body p:last-of-type {
   }
   .mountain img{
     bottom: 1em;
-    left: 8em;
+    left: 11em;
     height: 13em;
   }
   #two .cisland img{
@@ -1880,7 +1881,7 @@ and (orientation: landscape){
   }
   .mountain img{
     bottom: 1em;
-    left: 5em;
+    left: 1em;
     height: 14em;
   }
   #three .cisland img{
