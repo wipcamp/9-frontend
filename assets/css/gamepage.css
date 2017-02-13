@@ -607,7 +607,7 @@ and (orientation: portrait){
    height: 50vh;
    position: fixed;
    z-index: -2 !important;
-   bottom: 0em;
+   bottom: -1em;
   }
   .picUnderWater{
     width: 100vw;
@@ -653,7 +653,7 @@ and (orientation: landscape){
     padding: 23% 0 5% 0;
   }
   .fixBugDesktop{
-    height: 100vh !important;
+    height: 75vh !important;
   }
   .fixBugHeight{
     height: 130vh !important;
@@ -728,7 +728,7 @@ and (orientation: landscape){
    height: 50vh;
    position: absolute;
    z-index: -2 !important;
-   top: 17em;
+   top: 0em;
   }
   .picUnderWater{
     width: 100vw;
@@ -843,16 +843,18 @@ and (orientation: landscape){
     font-size: 30px;
   }
   .underwater{
-   width: auto;
+   width: 100vw;
    height: 50vh;
    position: absolute;
    z-index: -2 !important;
-   bottom: -5em;
+   bottom: 0em !important;
+   top: 0em;
   }
   .picUnderWater{
     width: 100vw;
     position: absolute;
-    top: -1em;
+    bottom: 0em !important;
+    top: 18em;
   }
   .underwater2{
    width: 75vw;
@@ -860,6 +862,7 @@ and (orientation: landscape){
    position: absolute;
    z-index: -3 !important;
    bottom:  0em ;
+   top: 20em;
    animation-name: wave;
    animation-duration: 4.3s;
    animation-delay: .1s;
@@ -1001,7 +1004,7 @@ and (min-width: 1025px){
       height: 130px;
     }
     .fixBugDesktop{
-      height: 70vh !important;
+      height:80vh !important;
     }
     .boxGameDesktop{
       padding: 0% 0 0% 0;
@@ -1116,16 +1119,21 @@ and (min-width: 1025px){
      height: 50vh;
      position: absolute;
      z-index: -2 !important;
-     top: 18em;
+     top: 0em;
+     bottom: 0em !important;
     }
     .picUnderWater{
       width: 100vw;
+      position: absolute;
+      bottom: 0 !important;
+      top: 20em;
     }
     .underwater2{
      width: 80vw;
      height: 50vh;
      position: absolute;
      z-index: -3 !important;
+     top: 20em;
      bottom: 0em;
      animation-name: wave;
      animation-duration: 4.3s;
@@ -1278,18 +1286,20 @@ and (min-width: 1200px){
      height: 50vh;
      position: absolute;
      z-index: -2 !important;
-     bottom: 0em;
+     bottom: 0em !important;
+     top: 0em;
     }
     .picUnderWater{
       width: 100vw;
-      bottom: 0;
+      position: absolute;
+      bottom: 0em !important;
     }
     .underwater2{
      width: 75vw;
      height: 50vh;
      position: absolute;
      z-index: -3 !important;
-     bottom: 0em;
+     top: 15em;
      animation-name: wave;
      animation-duration: 4.3s;
      animation-delay: .1s;
@@ -1440,7 +1450,7 @@ and (min-width: 1300px){
     }
     .picUnderWater{
       width: 100vw;
-      top: -14em;
+      top: 0em;
     }
     .underwater2{
      width: 75vw;
@@ -1594,9 +1604,9 @@ and (orientation: landscape){
     .underwater{
      width: auto;
      height: 50vh;
-     position: fixed;
+     position: absolute;
      z-index: -2 !important;
-     top: 33em;
+     bottom: 10em;
     }
     .picUnderWater{
       width: 100vw;
