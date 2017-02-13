@@ -100,13 +100,13 @@ $(function() {
       t.on( 'order.dt search.dt', function () {
         t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
           if(i===0){
-            cell.innerHTML = '<img src="../assets/img/object/moon.svg" alt="" class="prize1">' + (i+1);
+            cell.innerHTML = '<img src="../game/img/medal-gold.svg" alt="" class="prize">' + (i+1);
           }
           else if(i===1){
-            cell.innerHTML = '<img src="../assets/img/object/moon.svg" alt="" class="prize2">' + (i+1);
+            cell.innerHTML = '<img src="../game/img/medal-silver.svg" alt="" class="prize">' + (i+1);
           }
           else if(i===2){
-            cell.innerHTML = '<img src="../assets/img/object/moon.svg"  alt="" class="prize3">' + (i+1);
+            cell.innerHTML = '<img src="../game/img/medal-bronze.svg"  alt="" class="prize">' + (i+1);
           }
           else {
             cell.innerHTML = i+1;
