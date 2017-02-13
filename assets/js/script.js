@@ -138,7 +138,7 @@ $(document).ready(function(){
     case "Windows Phone" :
       $('#where-map #navigator').attr('href', 'bingmaps:?cp=13.6525851~100.49361');
       break;
-    
+
     case "Android" :
       $('#where-map #navigator').attr('href', 'geo:13.6525851,100.49361');
       break;
@@ -198,11 +198,11 @@ function countDown() {
   }
   function onTime(time){
     $('.status:eq('+time+') img').remove();
-    $('.status:eq('+time+')').prepend('<img src="assets/img/object/shipInCircle2.svg" alt="">');
+    $('.status:eq('+time+')').prepend('<img src="assets/img/object/whenNow.svg" alt="">');
   }
   function passTime(time){
     $('.status:eq('+time+') img').remove();
-    $('.status:eq('+time+')').prepend('<img src="assets/img/object/shipInCircle.svg" alt="">');
+    $('.status:eq('+time+')').prepend('<img src="assets/img/object/whenPast.svg" alt="">');
   }
 }
 function toDayToNight() {
