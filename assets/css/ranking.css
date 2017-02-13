@@ -11,21 +11,8 @@ body {
     background: linear-gradient(#141123, #2d214d, #463b6b);
 }
 
-.prize1 {
-  width: 1.8em;
-  left: 2em;
-  position: absolute;
-}
-.prize2 {
-  width: 1.5em;
-  left: 2.1em;
-  position: absolute;
-}
-.prize3 {
-  width: 1.2em;
-  left: 2.3em;
-  position: absolute;
-}
+
+
 .logo-wipcamp--full {
     margin: 0 auto;
     display: block;
@@ -58,7 +45,7 @@ table.dataTable thead th.sorting_desc:after {
 
 /*========================================================================*/
 
-@media (min-width: 320px) and (max-width:568px) {
+@media (min-width: 0px) and (max-width:568px) {
     .game-fontLeaderboard {
         margin: 50px 0 10px 0;
         text-align: center;
@@ -127,6 +114,15 @@ table.dataTable thead th.sorting_desc:after {
       color: white;
       position: absolute;*/
     }
+    .rankinglogo{
+      margin: 10vh 0 0 0;
+      width: 15em;
+    }
+    .prize {
+      width: 1.5em;
+      left: 1.2em;
+      position: absolute;
+    }
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
@@ -178,6 +174,15 @@ table.dataTable thead th.sorting_desc:after {
         margin: 0 5px 0 5px;
         color: white;
         font-size: 17px !important;
+    }
+    .rankinglogo{
+      margin: 10vh 0 0 0;
+      width: 15em;
+    }
+    .prize {
+      width: 1.8em;
+      left: 5.5%;
+      position: absolute;
     }
 }
 
@@ -231,6 +236,15 @@ table.dataTable thead th.sorting_desc:after {
         color: white;
         font-size: 20px !important;
     }
+    .rankinglogo{
+      margin: 10vh 0 0 0;
+      width: 15em;
+    }
+    .prize {
+      width: 1.8em;
+      left: 1.75em;
+      position: absolute;
+    }
 }
 
 @media (min-width: 1025px) and (max-width: 1199px) {
@@ -282,6 +296,15 @@ table.dataTable thead th.sorting_desc:after {
         margin: 0 5px 0 5px;
         color: white;
         font-size: 18px !important;
+    }
+    .rankinglogo{
+      margin: 10vh 0 0 0;
+      width: 15em;
+    }
+    .prize {
+      width: 1.8em;
+      left: 1.6em;
+      position: absolute;
     }
 }
 
@@ -340,6 +363,15 @@ table.dataTable thead th.sorting_desc:after {
         margin: 0 10px 0 10px;
         color: white;
         font-size: 20px !important;
+    }
+    .rankinglogo{
+      margin: 10vh 0 0 0;
+      width: 15em;
+    }
+    .prize {
+      width: 1.8em;
+      left: 1.9em;
+      position: absolute;
     }
 }
 
@@ -417,6 +449,11 @@ table.dataTable thead th.sorting_desc:after {
     .buttonSet{
       margin: 70px 0px 0 0px;
     }
+    .prize {
+      width: 1.8em;
+      left: 2.1em;
+      position: absolute;
+    }
 }
 
 @media (min-width: 1460px) {
@@ -430,6 +467,11 @@ table.dataTable thead th.sorting_desc:after {
         font-size: 40px !important;
         margin-bottom: 30px;
     }
+    .prize {
+      width: 1.8em;
+      left: 1.9em;
+      position: absolute;
+    }
 }
 
 @media (min-width: 1625px) {
@@ -442,6 +484,11 @@ table.dataTable thead th.sorting_desc:after {
         text-align: center;
         font-size: 40px !important;
         margin-bottom: 30px;
+    }
+    .prize {
+      width: 1.8em;
+      left: 1.7em;
+      position: absolute;
     }
 }
 
