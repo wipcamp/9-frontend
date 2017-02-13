@@ -38,7 +38,7 @@
     <script type="text/javascript">
       $(function() {
         Pace.once('start', function () {
-          $('.loadingText').remove();
+          $('.loadingText').hide();
           $('.percentageValue').show();
           var preloaderInit = setInterval(function() {
             var percentageValue = Math.round(Pace.bar.progress);
@@ -67,7 +67,7 @@
       </div>
       <div id="wipcampPreloader">
         <div class="preloader-wrapper">
-          <img id="preloader-logo" src="assets/img/logo/wipcamp9-favicon-preloader.png" alt="WIP Camp #9 Favicon Preloader">
+          <img id="preloader-logo" class="animated infinite pulse" src="assets/img/logo/wipcamp9-favicon-preloader.png" alt="WIP Camp #9 Favicon Preloader">
         </div>
         <p class="text-center" class="preloader-status">
           <big>
