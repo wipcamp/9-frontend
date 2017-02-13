@@ -124,7 +124,7 @@ and (min-width: 0px){
     margin: 10% 0 0 0;
   }
   .fixBugHeight{
-    height: 70vh;
+    height: 100vh;
   }
   .fixBugDesktop{
     height: 65vh !important;
@@ -180,7 +180,34 @@ and (min-width: 0px){
   .downButton{
     display: none;
   }
+  .underwater{
+   width: auto;
+   height: 50vh;
+   position: absolute;
+   z-index: -2 !important;
+   bottom: -32.5em;
+  }
+  .picUnderWater{
+    width: 100vw;
+    position: absolute;
+    top: 12em;
+  }
+  .underwater2{
+   width: 85vw;
+   height: 50vh;
+   position: absolute;
+   z-index: -3 !important;
+   top: 20.5em;
+   animation-name: wave;
+   animation-duration: 7.3s;
+   animation-delay: .1s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   animation-play-state: running;
+  }
+
 }
+
 
 @media only screen
 and (device-width: 320px)
@@ -370,21 +397,21 @@ and (orientation: portrait){
   .underwater{
    width: auto;
    height: 50vh;
-   position: fixed;
+   position: absolute;
    z-index: -2 !important;
-   bottom: 0em;
+   top: 5em;
   }
   .picUnderWater{
     width: 100vw;
     position: absolute;
-    bottom: 0;
+    top: 17.7em;
   }
   .underwater2{
    width: 85vw;
    height: 50vh;
    position: absolute;
    z-index: -3 !important;
-   top: 20em;
+   top: 22.5em;
    animation-name: wave;
    animation-duration: 7.3s;
    animation-delay: .1s;
@@ -458,14 +485,14 @@ and (orientation: portrait){
   .underwater{
    width: auto;
    height: 50vh;
-   position: fixed;
+   position: absolute;
    z-index: -2 !important;
-   bottom: 0em;
+   top: 8em;
   }
   .picUnderWater{
     width: 100vw;
     position: absolute;
-    bottom: 0;
+    top: 14em;
   }
   .underwater2{
    width: 85vw;
@@ -602,97 +629,6 @@ and (orientation: portrait){
   }
 }
 
-@media only screen
-and (device-width: 1024px)
-and (device-height: 768px)
-and (orientation: landscape){
-  .bg{
-    overflow-x: hidden !important;
-  }
-  .setSit{
-    height: 70px;
-  }
-  .sponsorKmutt{
-    height: 45px;
-  }
-  .gameCenter{
-    width: 70%;
-    margin: 4% 0 0 0 !important;
-  }
-  .shipCircle{
-    margin: 0% 0 0 0;
-    height: 270px;
-  }
-  .boxGameDesktop{
-    padding: 18% 0 20% 0;
-  }
-  .fixBugHeight{
-    height: 69.5vh;
-  }
-  .gameOnlyDesktop{
-    padding: 0 10px 0 10px;
-    width: 15%;
-  }
-  .textOnlyDesktop{
-    padding: 15px 0 0 0;
-    font-size:  30px;
-    color: white;
-  }
-  .returnToHome{
-    padding: 15px 0 0 0;
-    font-size:  30px;
-    color: white;
-  }
-  .gameOnDesktop{
-    width: 0px;
-  }
-  .backButton{
-    padding: 5px 0px 0 15px;
-    font-size: 90px;
-    color: white;
-    position: absolute;
-    z-index: 50;
-  }
-  .bubble{
-    width: 100%;
-    height: 4em;
-  }
-  .bubble3{
-    width: 100%;
-    animation-name: wave;
-    animation-duration: 7.3s;
-    animation-delay: .1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-play-state: running;
-  }
-
-  @keyframes wave {
-    0% {
-      transform: translate(-3px, 6.25px);
-    }
-    25% {
-      transform: translate(10px, 12.25px);
-    }
-    50% {
-      transform: translate(18px, 6.25px);
-    }
-    75% {
-      transform: translate(10px, -3.25px);
-    }
-    100% {
-      transform: translate(-3px, 6.25px);
-    }
-  }
-
-  .marginSea{
-    margin: 90px 0 0 0;
-    height: auto;
-  }
-  .downButton{
-    display: none;
-  }
-}
 
 @media only screen
 and (orientation: landscape){
@@ -790,9 +726,9 @@ and (orientation: landscape){
   .underwater{
    width: auto;
    height: 50vh;
-   position: fixed;
+   position: absolute;
    z-index: -2 !important;
-   bottom: 0em;
+   top: 17em;
   }
   .picUnderWater{
     width: 100vw;
@@ -800,9 +736,9 @@ and (orientation: landscape){
   .underwater2{
    width: 80vw;
    height: 50vh;
-   position: fixed;
+   position: absolute;
    z-index: -3 !important;
-   bottom: 0em;
+   top: 12em;
    animation-name: wave;
    animation-duration: 4.3s;
    animation-delay: .1s;
@@ -812,7 +748,126 @@ and (orientation: landscape){
   }
 }
 
+@media only screen
+and (min-width:732px)
+and (orientation: landscape){
+  .bg{
+    overflow-x: hidden !important;
+  }
+  .setSit{
+    height: 5.5vw;
+  }
+  .sponsorKmutt{
+    height: 45px;
+  }
+  .gameCenter{
+    width: 40vw;
+    margin: 4vh 0 0 0;
+  }
+  .shipCircle{
+    margin: 0% 0 0 0;
+    height: 150px;
+  }
+  .boxGameDesktop{
+    padding: 23% 0 5% 0;
+  }
+  .fixBugDesktop{
+    height: 70vh !important;
+  }
+  .fixBugHeight{
+    height: 130vh !important;
+  }
+  .gameOnlyDesktop{
+    padding: 0 2px 0 2px;
+    width: 10%;
+  }
+  .textOnlyDesktop{
+    padding: 15px 0 0 0;
+    font-size:  15px;
+    color: white;
+  }
+  .returnToHome{
+    padding: 15px 0 0 0;
+    font-size:  30px;
+    color: white;
+  }
+  .gameOnDesktop{
+    width: 0px;
+  }
+  .backButton{
+    padding: 5px 0px 0 15px;
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    z-index: 50;
+  }
+  .bubble{
+    width: 100%;
+    height: 1em;
+  }
+  .bubble3{
+    width: 100%;
+    animation-name: wave;
+    animation-duration: 7.3s;
+    animation-delay: .1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+  }
 
+  @keyframes wave {
+    0% {
+      transform: translate(-3px, 6.25px);
+    }
+    25% {
+      transform: translate(10px, 12.25px);
+    }
+    50% {
+      transform: translate(18px, 6.25px);
+    }
+    75% {
+      transform: translate(10px, -3.25px);
+    }
+    100% {
+      transform: translate(-3px, 6.25px);
+    }
+  }
+
+  .marginSea{
+    margin: 90px 0 0 0;
+    height: auto;
+  }
+  .downButton{
+    margin: 30px 0 0 0;
+    color: white;
+    font-size: 30px;
+  }
+  .underwater{
+   width: auto;
+   height: 50vh;
+   position: absolute;
+   z-index: -2 !important;
+   bottom: -5em;
+  }
+  .picUnderWater{
+    width: 100vw;
+    position: absolute;
+    top: -1em;
+  }
+  .underwater2{
+   width: 75vw;
+   height: 50vh;
+   position: absolute;
+   z-index: -3 !important;
+   bottom:  0em ;
+   animation-name: wave;
+   animation-duration: 4.3s;
+   animation-delay: .1s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   animation-play-state: running;
+  }
+}
 @media only screen
 and (device-width:568px)
 and (device-height:320px)
@@ -1059,9 +1114,9 @@ and (min-width: 1025px){
     .underwater{
      width: auto;
      height: 50vh;
-     position: fixed;
+     position: absolute;
      z-index: -2 !important;
-     bottom: 0em;
+     top: 18em;
     }
     .picUnderWater{
       width: 100vw;
@@ -1069,7 +1124,7 @@ and (min-width: 1025px){
     .underwater2{
      width: 80vw;
      height: 50vh;
-     position: fixed;
+     position: absolute;
      z-index: -3 !important;
      bottom: 0em;
      animation-name: wave;
@@ -1100,8 +1155,11 @@ and (min-width: 1200px){
       width: 25em;
       margin: 3vh 0 0vh 0;
     }
+    .fixBugHeight{
+      height: 100vh !important;
+    }
     .fixBugDesktop{
-      height: 60vh !important;
+      height: 100vh !important;
     }
     .shipCircle{
       margin: 0% 0 0 0;
@@ -1218,17 +1276,18 @@ and (min-width: 1200px){
     .underwater{
      width: auto;
      height: 50vh;
-     position: fixed;
+     position: absolute;
      z-index: -2 !important;
      bottom: 0em;
     }
     .picUnderWater{
       width: 100vw;
+      bottom: 0;
     }
     .underwater2{
      width: 75vw;
      height: 50vh;
-     position: fixed;
+     position: absolute;
      z-index: -3 !important;
      bottom: 0em;
      animation-name: wave;
@@ -1375,19 +1434,20 @@ and (min-width: 1300px){
     .underwater{
      width: auto;
      height: 50vh;
-     position: fixed;
+     position: absolute;
      z-index: -2 !important;
-     bottom: 0em;
+     bottom: -10em;
     }
     .picUnderWater{
       width: 100vw;
+      top: -14em;
     }
     .underwater2{
      width: 75vw;
      height: 50vh;
-     position: fixed;
+     position: absolute;
      z-index: -3 !important;
-     bottom: 0em;
+     top: 3em;
      animation-name: wave;
      animation-duration: 4.3s;
      animation-delay: .1s;
@@ -1531,6 +1591,29 @@ and (orientation: landscape){
     .downButton{
       display: none;
     }
+    .underwater{
+     width: auto;
+     height: 50vh;
+     position: fixed;
+     z-index: -2 !important;
+     top: 33em;
+    }
+    .picUnderWater{
+      width: 100vw;
+    }
+    .underwater2{
+     width: 75vw;
+     height: 50vh;
+     position: fixed;
+     z-index: -3 !important;
+     top: 35em;
+     animation-name: wave;
+     animation-duration: 4.3s;
+     animation-delay: .1s;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+     animation-play-state: running;
+    }
 }
 @media only screen
 and (device-width: 1024px)
@@ -1629,19 +1712,19 @@ and (orientation: portrait){
      height: 50vh;
      position: fixed;
      z-index: -2 !important;
-     bottom: 0em;
+     bottom:-5em;
     }
     .picUnderWater{
       width: 100vw;
       position: absolute;
-      bottom: 0;
+      bottom:0em;
     }
     .underwater2{
      width: 80vw;
      height: 50vh;
      position: absolute;
      z-index: -3 !important;
-     top: 30em;
+     top: 35em;
      animation-name: wave;
      animation-duration: 4.3s;
      animation-delay: .1s;
@@ -1649,4 +1732,124 @@ and (orientation: portrait){
      animation-timing-function: linear;
      animation-play-state: running;
     }
+}
+
+@media only screen
+and (device-width: 1024px)
+and (device-height: 768px)
+and (orientation: landscape){
+  .bg{
+    overflow-x: hidden !important;
+  }
+  .setSit{
+    height: 40px;
+  }
+  .sponsorKmutt{
+    height: 45px;
+  }
+  .gameCenter{
+    width: 40%;
+    margin: 4% 0 0 0 !important;
+  }
+  .shipCircle{
+    margin: 0% 0 0 0;
+    height: 180px;
+  }
+  .boxGameDesktop{
+    padding: 5% 0 5% 0;
+  }
+  .fixBugDesktop{
+    height: 65vh !important;
+  }
+  .fixBugHeight{
+    height: 70.5vh !important;
+  }
+  .gameOnlyDesktop{
+    padding: 0 10px 0 10px;
+    width: 8%;
+  }
+  .textOnlyDesktop{
+    padding: 15px 0 0 0;
+    font-size:  17px;
+    color: white;
+  }
+  .returnToHome{
+    padding: 15px 0 0 0;
+    font-size:  30px;
+    color: white;
+  }
+  .gameOnDesktop{
+    width: 0px;
+  }
+  .backButton{
+    padding: 5px 0px 0 15px;
+    font-size: 90px;
+    color: white;
+    position: absolute;
+    z-index: 50;
+  }
+  .bubble{
+    width: 100%;
+    height: 4em;
+  }
+  .bubble3{
+    width: 100%;
+    animation-name: wave;
+    animation-duration: 7.3s;
+    animation-delay: .1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+  }
+
+  @keyframes wave {
+    0% {
+      transform: translate(-3px, 6.25px);
+    }
+    25% {
+      transform: translate(10px, 12.25px);
+    }
+    50% {
+      transform: translate(18px, 6.25px);
+    }
+    75% {
+      transform: translate(10px, -3.25px);
+    }
+    100% {
+      transform: translate(-3px, 6.25px);
+    }
+  }
+
+  .marginSea{
+    margin: 90px 0 0 0;
+    height: auto;
+  }
+  .downButton{
+    display: none;
+  }
+  .underwater{
+   width: auto;
+   height: 50vh;
+   position: absolute;
+   z-index: -2 !important;
+   top: -2em;
+  }
+  .picUnderWater{
+    width: 100vw;
+    position: absolute;
+    top: 14em;
+  }
+  .underwater2{
+   width: 80vw;
+   height: 50vh;
+   position: absolute;
+   z-index: -3 !important;
+   top: 14em !important;
+   animation-name: wave;
+   animation-duration: 4.3s;
+   animation-delay: .1s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   animation-play-state: running;
+  }
 }
