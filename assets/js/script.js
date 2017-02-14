@@ -197,6 +197,9 @@ function countDown() {
   // For set img of WHEN card
   if(d.getMonth() == 1 && d.getDate() >= 18 || d.getMonth() == 2 && d.getDate() < 19) {
     onTime(0);
+    $('a#reg').on('click', function (e) {
+      e.preventDefault();
+    });
   }
   else if(d.getMonth() == 2 && d.getDate() >= 19) {
     passTime(0);
