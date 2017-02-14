@@ -431,7 +431,7 @@ div.card-heading h1 > span {
   position: absolute;
 }
 
-.wave1{
+.wave1-day {
   background-image: url('../img/object/wave1-day.svg');
   background-repeat: repeat-x;
   bottom: 1.5em;
@@ -443,9 +443,21 @@ div.card-heading h1 > span {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-play-state: running;
-  /*animation-play-state: paused;*/
 }
-.wave2{
+.wave1-night {
+  background-image: url('../img/object/wave1.svg');
+  background-repeat: repeat-x;
+  bottom: 1.5em;
+  left: -50%;
+  z-index: 1;
+  animation-name: wave;
+  animation-duration: 13s;
+  animation-delay: .1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
+}
+.wave2-day {
   background-image: url('../img/object/wave2-day.svg');
   background-repeat: repeat-x;
   background-position: -42px 0;
@@ -458,9 +470,22 @@ div.card-heading h1 > span {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-play-state: running;
-  /*animation-play-state: paused;*/
 }
-.wave3{
+.wave2-night {
+  background-image: url('../img/object/wave2.svg');
+  background-repeat: repeat-x;
+  background-position: -42px 0;
+  bottom: 0.7em;
+  left: -50%;
+  z-index: 3;
+  animation-name: wave;
+  animation-duration: 7s;
+  animation-delay: .1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
+}
+.wave3-day {
   background-image: url('../img/object/wave3-day.svg');
   background-repeat: repeat-x;
   bottom: 0;
@@ -472,10 +497,38 @@ div.card-heading h1 > span {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-play-state: running;
-  /*animation-play-state: paused;*/
+}
+.wave3-night {
+  background-image: url('../img/object/wave3.svg');
+  background-repeat: repeat-x;
+  bottom: 0;
+  left: -50%;
+  z-index: 5;
+  animation-name: wave;
+  animation-duration: 4s;
+  animation-delay: .1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
 }
 
-.cloud1 {
+.cloud1-day {
+  background-image: url('../img/object/cloud-day.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10%;
+  right: -15%;
+  width: 15%;
+  height: 10%;
+  z-index: 2;
+  animation-name: cloud1;
+  animation-duration: 60s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
+}
+.cloud1-night {
   background-image: url('../img/object/cloud-night.svg');
   background-repeat: no-repeat;
   position: absolute;
@@ -490,9 +543,24 @@ div.card-heading h1 > span {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-play-state: running;
-  /*animation-play-state: paused;*/
 }
-.cloud2 {
+.cloud2-day {
+  background-image: url('../img/object/cloud-day.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 25%;
+  right: -10%;
+  width: 10%;
+  height: 5%;
+  z-index: 2;
+  animation-name: cloud2;
+  animation-duration: 60s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
+}
+.cloud2-night {
   background-image: url('../img/object/cloud-night.svg');
   background-repeat: no-repeat;
   position: absolute;
@@ -507,9 +575,24 @@ div.card-heading h1 > span {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-play-state: running;
-  /*animation-play-state: paused;*/
 }
-.cloud3 {
+.cloud3-day {
+  background-image: url('../img/object/cloud-day.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 5%;
+  right: -17%;
+  width: 17%;
+  height: 12%;
+  z-index: 3;
+  animation-name: cloud3;
+  animation-duration: 62s;
+  animation-delay: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
+}
+.cloud3-night {
   background-image: url('../img/object/cloud-night.svg');
   background-repeat: no-repeat;
   position: absolute;
@@ -524,7 +607,6 @@ div.card-heading h1 > span {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-play-state: running;
-  /*animation-play-state: paused;*/
 }
 
 .flip-horizontal, .x-grid-cell-inner, .x-column-header-text, .x-panel-header-text {

@@ -222,25 +222,57 @@ function countDown() {
   }
 }
 function toDayToNight() {
-  if (d.getHours() < 6 || d.getHours() >= 20) {
+  if (d.getHours() < 6 || d.getHours() >= 19) {
     $('.slide').css({'background': 'linear-gradient(#141123, #1d3c5c)'});
   }
   else if (d.getHours() < 12) {
     $('.slide').css({'background': 'linear-gradient(#9acbd8, #ade0ee)'});
   }
-  else if (d.getHours() < 18) {
-    $('.slide').css({'background': 'linear-gradient(#24c0eb, #5cceee)'});
+  else if (d.getHours() < 17) {
+    $('.slide').css({'background': 'linear-gradient(#56DAE8, #5cceee)'});
   }
-  else if (d.getHours() < 20) {
+  else if (d.getHours() < 19) {
     $('.slide').css({'background': 'linear-gradient(#643047, #a23c4a, #f3603f, #fd972b)'});
   }
 }
 function islandDayNight() {
-  if (d.getHours() >= 6 && d.getHours() < 18) {
+  if (d.getHours() >= 6 && d.getHours() < 17) {
+    $('div.star').css({'display': 'none'});
+    $('div.moon').css({'display': 'none'});
+    $('.wave.wave1').addClass('wave1-day');
+    $('.wave.wave2').addClass('wave2-day');
+    $('.wave.wave3').addClass('wave3-day');
+    $('.cloud1').addClass('cloud1-day');
+    $('.cloud2').addClass('cloud2-day');
+    $('.cloud3').addClass('cloud3-day');
+    $('.mountain').prepend('<img src="assets/img/object/mountain-day.svg" class="img-responsive" alt="">');
+    $('.game-btn a').prepend('<img src="assets/img/object/lets-play-day.svg" class="letplay img-responsive" alt="">');
+    $('.ship-main').prepend('<img src="assets/img/object/ship-day.svg" alt="ship" class="img-responsive">');
+    $('.ship').prepend('<img src="assets/img/object/ship-day.svg" alt="ship" class="img-responsive">');
+    $('.slide:eq(1) .cisland').prepend('<img src="assets/img/object/canon-day.svg" alt="island" class="img-responsive">');
+    $('.slide:eq(2) .cisland').prepend('<img src="assets/img/object/fruit-island-day.svg" alt="island" class="img-responsive">');
+    $('.slide:eq(3) .cisland').prepend('<img src="assets/img/object/Kraken-day.svg" alt="island" class="img-responsive">');
     $('.slide:eq(4) .cisland').prepend('<img src="assets/img/object/wholecake-island-day.svg" alt="island" class="img-responsive">');
+    $('.slide:eq(5) .cisland').prepend('<img src="assets/img/object/castle-day.svg" alt="island" class="img-responsive">');
+    $('.slide:eq(6) .cisland').prepend('<img src="assets/img/object/ice-fire-island-day.svg" alt="island" class=" img-responsive">');
   }
   else {
+    $('.wave.wave1').addClass('wave1-night');
+    $('.wave.wave2').addClass('wave2-night');
+    $('.wave.wave3').addClass('wave3-night');
+    $('.cloud1').addClass('cloud1-night');
+    $('.cloud2').addClass('cloud2-night');
+    $('.cloud3').addClass('cloud3-night');
+    $('.mountain').prepend('<img src="assets/img/object/mountain-night.svg" class="img-responsive" alt="">');
+    $('.game-btn a').prepend('<img src="assets/img/object/lets-play-night.svg" class="letplay img-responsive" alt="">');
+    $('.ship-main').prepend('<img src="assets/img/object/ship-night.svg" alt="ship" class="img-responsive">');
+    $('.ship').prepend('<img src="assets/img/object/ship-night.svg" alt="ship" class="img-responsive">');
+    $('.slide:eq(1) .cisland').prepend('<img src="assets/img/object/canon-night.svg" alt="island" class="img-responsive">');
+    $('.slide:eq(2) .cisland').prepend('<img src="assets/img/object/fruit-island-night.svg" alt="island" class="img-responsive">');
+    $('.slide:eq(3) .cisland').prepend('<img src="assets/img/object/Kraken-night.svg" alt="island" class="img-responsive">');
     $('.slide:eq(4) .cisland').prepend('<img src="assets/img/object/wholecake-island-night.svg" alt="island" class="img-responsive">');
+    $('.slide:eq(5) .cisland').prepend('<img src="assets/img/object/castle-night.svg" alt="island" class="img-responsive">');
+    $('.slide:eq(6) .cisland').prepend('<img src="assets/img/object/ice-fire-island-night.svg" alt="island" class=" img-responsive">');
   }
 }
 
