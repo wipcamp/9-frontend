@@ -1102,7 +1102,9 @@ ul#who-table .media-body p:last-of-type {
     bottom: 0.6em;
     left: -3em;
   }
-
+  #three .top{
+    margin-top: 0;
+  }
   .ship img {
     height: 16.5em;
     bottom: 0.6em;
@@ -1110,6 +1112,9 @@ ul#who-table .media-body p:last-of-type {
   .mountain img{
     bottom: 0;
     height: 11.5em;
+  }
+  #three .card-content{
+    line-height: 1.2em;
   }
   .register {
     width: 70%;
