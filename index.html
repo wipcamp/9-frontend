@@ -37,35 +37,26 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
     <script type="text/javascript" src="assets/js/itim-carousel.js"></script>
     <script type="text/javascript" src="assets/js/script.js"></script>
-    <!-- <script type="text/javascript">
-      $(function() {
-        var ua = window.navigator.userAgent;
-        var msie = ua.indexOf("MSIE ");
-
-        if (msie > 0 || navigator.userAgent.match(/Trident.*rv\:11\./)) {
-            $('main, #where-map').remove();
-            $('.msie-prevent-overlay').show();
-        }
-        else {
-          Pace.once('start', function () {
-            $('.loadingText').hide();
-            $('.percentageValue').show();
-            var preloaderInit = setInterval(function() {
-              var percentageValue = Math.round(Pace.bar.progress);
-              $('.percentageValue').text(percentageValue + " %");
-              if (percentageValue === 100) {
-                $('.percentageValue').text('100 %');
-                $('#wipcampPreloader').fadeOut('500');
-                setTimeout(function () {
-                  $('#wipcampPreloader').remove();
-                }, 500);
-                clearInterval(preloaderInit);
-              }
-            }, 100);
-          });
-        }
+     <script type="text/javascript">
+      $(function(){
+        Pace.once('start', function () {
+          $('.loadingText').hide();
+          $('.percentageValue').show();
+          var preloaderInit = setInterval(function() {
+            var percentageValue = Math.round(Pace.bar.progress);
+            $('.percentageValue').text(percentageValue + " %");
+            if (percentageValue === 100) {
+              $('.percentageValue').text('100 %');
+              $('#wipcampPreloader').fadeOut('500');
+              setTimeout(function () {
+                $('#wipcampPreloader').remove();
+              }, 500);
+              clearInterval(preloaderInit);
+            }
+          }, 100);
+        });
       });
-    </script> -->
+    </script>
   </head>
   <body>
     <!-- <div class="msie-prevent-overlay">
