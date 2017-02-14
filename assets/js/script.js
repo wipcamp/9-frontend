@@ -66,7 +66,7 @@ $(document).ready(function(){
     }
     setTimeout(function(){
       carousel.setReady(1);
-    },5000);
+    },1000);
     event.stopPropagation();
   });
 
@@ -92,7 +92,7 @@ $(document).ready(function(){
     }
     setTimeout(function(){
       carousel.setReady(1);
-    },5000);
+    },1000);
     event.stopPropagation();
   });
 
@@ -120,7 +120,7 @@ $(document).ready(function(){
     }
     setTimeout(function(){
       carousel.setReady(1);
-    },5000);
+    },1000);
     event.stopPropagation();
   });
 
@@ -152,7 +152,7 @@ $(document).ready(function(){
       },300);
       setTimeout(function(){
         carousel.setReady(1);
-      },5000);
+      },1000);
     }
   });
   countDown();
