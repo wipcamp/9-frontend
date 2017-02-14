@@ -245,8 +245,7 @@ function toDayToNight() {
 function islandDayNight() {
   if (d.getHours() >= 6 && d.getHours() < 17) {
     $('link#timeBasedStyle').attr('href','assets/css/style-day.css');
-    $('div.star').css({'display': 'none'});
-    $('div.moon').css({'display': 'none'});
+    $('.star').css({'display': 'none'});
     $('.wave.wave1').addClass('wave1-day');
     $('.wave.wave2').addClass('wave2-day');
     $('.wave.wave3').addClass('wave3-day');
@@ -257,6 +256,7 @@ function islandDayNight() {
     $('.game-btn a').prepend('<img src="assets/img/object/lets-play-day.svg" class="letplay img-responsive" alt="">');
     $('.ship-main').prepend('<img src="assets/img/object/ship-day.svg" alt="ship" class="img-responsive">');
     $('.ship').prepend('<img src="assets/img/object/ship-day.svg" alt="ship" class="img-responsive">');
+    $('.moon').prepend('<img src="assets/img/object/moon-day.svg" class="img-responsive" alt="">');
     $('.slide:eq(1) .cisland').prepend('<img src="assets/img/object/canon-day.svg" alt="island" class="img-responsive">');
     $('.slide:eq(2) .cisland').prepend('<img src="assets/img/object/fruit-island-day.svg" alt="island" class="img-responsive">');
     $('.slide:eq(3) .cisland').prepend('<img src="assets/img/object/Kraken-day.svg" alt="island" class="img-responsive">');
@@ -276,6 +276,7 @@ function islandDayNight() {
     $('.game-btn a').prepend('<img src="assets/img/object/lets-play-night.svg" class="letplay img-responsive" alt="">');
     $('.ship-main').prepend('<img src="assets/img/object/ship-night.svg" alt="ship" class="img-responsive">');
     $('.ship').prepend('<img src="assets/img/object/ship-night.svg" alt="ship" class="img-responsive">');
+    $('.moon').prepend('<img src="assets/img/object/moon-night.svg" class="img-responsive" alt="">');
     $('.slide:eq(1) .cisland').prepend('<img src="assets/img/object/canon-night.svg" alt="island" class="img-responsive">');
     $('.slide:eq(2) .cisland').prepend('<img src="assets/img/object/fruit-island-night.svg" alt="island" class="img-responsive">');
     $('.slide:eq(3) .cisland').prepend('<img src="assets/img/object/Kraken-night.svg" alt="island" class="img-responsive">');
