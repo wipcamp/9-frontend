@@ -237,6 +237,7 @@ function toDayToNight() {
 }
 function islandDayNight() {
   if (d.getHours() >= 6 && d.getHours() < 17) {
+    $('link#timeBasedStyle').attr('href','assets/css/style-day.css');
     $('div.star').css({'display': 'none'});
     $('div.moon').css({'display': 'none'});
     $('.wave.wave1').addClass('wave1-day');
@@ -257,6 +258,7 @@ function islandDayNight() {
     $('.slide:eq(6) .cisland').prepend('<img src="assets/img/object/ice-fire-island-day.svg" alt="island" class=" img-responsive">');
   }
   else {
+    $('link#timeBasedStyle').attr('href','assets/css/style-night.css');
     $('.wave.wave1').addClass('wave1-night');
     $('.wave.wave2').addClass('wave2-night');
     $('.wave.wave3').addClass('wave3-night');
