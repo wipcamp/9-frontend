@@ -1514,7 +1514,7 @@ ul#who-table .media-body p:last-of-type {
 
   .game-btn{
     position: absolute;
-    bottom: 1em;
+    bottom: 2em;
     right: 2em;
     z-index: 2;
     width: 12em;
