@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="180.342px" height="102.229px" viewBox="0 0 180.342 102.229" enable-background="new 0 0 180.342 102.229"
-	 xml:space="preserve">
-<path fill="#188C83" d="M28.333,102.229H0V38.804c66.328,0,74.037-36.802,109.334-36.802c35.328,0,33.015,36.802,71.008,36.802l0,0
-	v10.526v52.898H28.333z"/>
-<circle fill="#09706B" cx="230.445" cy="-51.859" r="30.5"/>
-<circle fill="#188C83" cx="302.445" cy="-54.359" r="30.5"/>
-<circle fill="#29A599" cx="264.445" cy="16.141" r="30.5"/>
-<circle fill="#23BBEA" cx="340.445" cy="16.141" r="30.5"/>
+	 viewBox="0 0 841.4 469.2" style="enable-background:new 0 0 841.4 469.2;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#188C83;}
+	.st1{fill:#09706B;}
+	.st2{fill:#0B4F99;}
+	.st3{fill:#247FD1;}
+	.st4{fill:#29A599;}
+	.st5{fill:#23BBEA;}
+</style>
+<path class="st0" d="M-1.5,165c165,0,257.1-165,422.1-165s257.1,165,422.1,165c0,225,0,304.2,0,304.2H-1.5
+	C-1.5,469.2-1.5,462.8-1.5,165z"/>
+<circle class="st1" cx="-167.5" cy="-143.4" r="30.5"/>
+<circle class="st2" cx="19.5" cy="-119.4" r="30.5"/>
+<circle class="st3" cx="-117.5" cy="-65.5" r="30.5"/>
+<circle class="st0" cx="-148" cy="-143.4" r="30.5"/>
+<circle class="st4" cx="-126" cy="-149.9" r="30.5"/>
+<circle class="st5" cx="-57.5" cy="-75.4" r="30.5"/>
 </svg>
