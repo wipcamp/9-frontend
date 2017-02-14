@@ -8,6 +8,7 @@
     <meta property="og:title" content="WIP Camp #9 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที ">
     <meta property="og:type" content="company">
     <meta property="og:url" content="http://wip.camp/">
+    <meta property="og:image" content="assets/img/og/meta-facebook-01.png" />
     <meta property="og:site_name" content="WIP Camp #9 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที">
     <meta property="og:description" content="WIP Camp #9 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที">
     <meta property="fb:page_id" content="250617067968">
@@ -41,26 +42,41 @@
     </script>
     <script type="text/javascript">
       $(function() {
-        Pace.once('start', function () {
-          $('.loadingText').hide();
-          $('.percentageValue').show();
-          var preloaderInit = setInterval(function() {
-            var percentageValue = Math.round(Pace.bar.progress);
-            $('.percentageValue').text(percentageValue + " %");
-            if (percentageValue === 100) {
-              $('.percentageValue').text('100 %');
-              $('#wipcampPreloader').fadeOut('500');
-              setTimeout(function () {
-                $('#wipcampPreloader').remove();
-              }, 500);
-              clearInterval(preloaderInit);
-            }
-          }, 100);
-        });
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
+
+        if (msie > 0 || navigator.userAgent.match(/Trident.*rv\:11\./)) {
+            $('main, #where-map').remove();
+            $('.msie-prevent-overlay').show();
+        }
+        else {
+          Pace.once('start', function () {
+            $('.loadingText').hide();
+            $('.percentageValue').show();
+            var preloaderInit = setInterval(function() {
+              var percentageValue = Math.round(Pace.bar.progress);
+              $('.percentageValue').text(percentageValue + " %");
+              if (percentageValue === 100) {
+                $('.percentageValue').text('100 %');
+                $('#wipcampPreloader').fadeOut('500');
+                setTimeout(function () {
+                  $('#wipcampPreloader').remove();
+                }, 500);
+                clearInterval(preloaderInit);
+              }
+            }, 100);
+          });
+        }
       });
     </script>
   </head>
   <body>
+    <div class="msie-prevent-overlay">
+      <div class="overlay-container">
+        <h1 id="title" class="text-center">สนใจใช้เบราเซอร์ใหมไหม?</h1>
+        <p id="description" class="text-center">นอกจาก Internet Explorer ที่เราไม่รองรับแล้ว เรายังมี <a target="_blank" href="https://www.google.com/intl/th/chrome/">Chrome</a>, <a target="_blank" href="https://www.mozilla.org/th/firefox/new/">Firefox</a> และ <a target="_blank" href="https://support.apple.com/downloads/safari">Safari</a> ที่เข้าเว็บเราได้อย่างสวยงามอีกด้วย ลองเปลี่ยนหรือโหลดมาใช้ดูสิ ^-^</p>
+      </div>
+    </div>
     <main>
       <div class="orientation-prevent-overlay">
         <div class="overlay-container">
@@ -71,7 +87,7 @@
       </div>
       <div id="wipcampPreloader">
         <div class="preloader-wrapper">
-          <img id="preloader-logo" class="animated infinite pulse" src="assets/img/logo/wipcamp9-favicon-preloader.png" alt="WIP Camp #9 Favicon Preloader">
+          <img id="preloader-logo" class="animated infinite pulse" src="assets/img/logo/wipcamp9-favicon-preloader.svg" alt="WIP Camp #9 Favicon Preloader">
         </div>
         <p class="text-center" class="preloader-status">
           <big>
@@ -139,7 +155,6 @@
             </div>
           </section>
           <div class="moon">
-            <img src="assets/img/object/moon-night.svg" class="img-responsive" alt="">
           </div>
           <div class="star">
             <img src="assets/img/object/star-night.svg" class="img-responsive" alt="">
@@ -154,7 +169,7 @@
           <div class="wave wave3"></div>
         </div>
         <div class="slide" id="three">
-          <section class="container">
+          <section class="container ">
             <div class="card-heading">
               <h1>WHO <span>ค่ายนี้เหมาะกับใคร</span></h1>
             </div>
@@ -216,7 +231,6 @@
             </div>
           </section>
           <div class="moon">
-            <img src="assets/img/object/moon-night.svg" class="img-responsive" alt="">
           </div>
           <div class="star">
             <img src="assets/img/object/star-night.svg" class="img-responsive" alt="">
@@ -288,7 +302,6 @@
             </div>
           </section>
           <div class="moon">
-            <img src="assets/img/object/moon-night.svg" class="img-responsive" alt="">
           </div>
           <div class="star">
             <img src="assets/img/object/star-night.svg" class="img-responsive" alt="">
@@ -399,7 +412,6 @@
             </div>
           </section>
           <div class="moon">
-            <img src="assets/img/object/moon-night.svg" class="img-responsive" alt="">
           </div>
           <div class="star">
             <img src="assets/img/object/star-night.svg" class="img-responsive" alt="">
@@ -444,7 +456,6 @@
             </div>
           </section>
           <div class="moon">
-            <img src="assets/img/object/moon-night.svg" class="img-responsive" alt="">
           </div>
           <div class="star">
             <img src="assets/img/object/star-night.svg" class="img-responsive" alt="">
@@ -536,7 +547,6 @@
             </div>
           </section>
           <div class="moon">
-            <img src="assets/img/object/moon-night.svg" class="img-responsive" alt="">
           </div>
           <div class="star">
             <img src="assets/img/object/star-night.svg" class="img-responsive" alt="">
