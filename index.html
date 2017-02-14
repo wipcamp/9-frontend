@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
+  <!-- CI Testing for vanilla.freezer.wip.camp TT_TT-->
   <head>
     <title>WIP Camp #9 : Ways to IT Professionals Camp</title>
     <!--Metatag-->
@@ -15,21 +16,686 @@
     <meta property="fb:page_id" content="250617067968">
     <meta property="fb:app_id" content="119399881422143">
     <!--Browser Appearance-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="theme-color" content="#fcad4c">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="assets/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#463b6b">
+    <meta name="msapplication-TileImage" content="assets/img/favicon/mstile-144x144.png">
+    <meta name="theme-color" content="#463b6b">
     <!--Stylesheet-->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" id="timeBasedStyle">
     <!--JavaScript: Preload-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+    <script type="text/javascript" src="assets/js/itim-carousel.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        Pace.once('start', function () {
+          $('.loadingText').hide();
+          $('.percentageValue').show();
+          var preloaderInit = setInterval(function() {
+            var percentageValue = Math.round(Pace.bar.progress);
+            $('.percentageValue').text(percentageValue + " %");
+            if (percentageValue === 100) {
+              $('.percentageValue').text('100 %');
+              $('#wipcampPreloader').fadeOut('500');
+              setTimeout(function () {
+                $('#wipcampPreloader').remove();
+              }, 500);
+              clearInterval(preloaderInit);
+            }
+          }, 100);
+        });
+      });
+    </script>
   </head>
   <body>
-    <header>
-      
-    </header>
     <main>
-      <h1>Hello WIPPO</h1>
+      <div class="orientation-prevent-overlay">
+        <div class="overlay-container">
+          <img id="icon" src="assets/img/icon/device-orientation.svg" alt="Screen Orientation Icon" class="img-responsive">
+          <h1 id="title" class="text-center">เหมือนจอจะเล็กไปนะ</h1>
+          <p id="description" class="text-center">ลองหมุนจอเป็นแนวตั้ง ปรับขนาดหน้าต่างของเบราเซอร์ หรือใช้อุปกรณ์อื่นที่หน้าจอใหญ่กว่านี้</p>
+        </div>
+      </div>
+      <div id="wipcampPreloader">
+        <div class="preloader-wrapper">
+          <img id="preloader-logo" class="animated infinite pulse" src="assets/img/logo/wipcamp9-favicon-preloader.png" alt="WIP Camp #9 Favicon Preloader">
+        </div>
+        <p class="text-center" class="preloader-status">
+          <big>
+            <span class="loadingText">การผจญภัยกำลังเริ่มขึ้น...</span>
+            <span class="percentageValue" style="display: none;">0 %</span>
+          </big>
+        </p>
+      </div>
+      <div class="con" id="con">
+        <div class="slide active" id="one">
+          <section id="logo" class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                 <img class="logo-wipcamp--full" src="assets/img/logo/wipcamp9-full-transparent.svg" alt="โลโก้ WIP Camp #9">
+                 <img src="assets/img/logo/sponsor-academic.svg" alt="" class="logo-important-sponsor show--onActive">
+                 <span class="btn-getstarted animated infinite pulse card-btn-back-home show--onActive" id="btn-getstarted">ตะลุยกันเถอะ !</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                <!-- <img src="assets/img/logo/supporter-various-transparent.png" class="supporter-logo img-responsive show--onActive" alt=""> -->
+              </div>
+            </div>
+          </section>
+          <div class="moon"></div>
+          <div class="star">
+            <img src="assets/img/object/star-night.svg" class="img-responsive" alt="">
+          </div>
+          <div class="cloud1"></div>
+          <div class="cloud3"></div>
+          <div class="cloud2"></div>
+          <div class="ship-main"></div>
+          <div class="wave wave1"></div>
+          <div class="wave wave2"></div>
+          <div class="wave wave3"></div>
+          <div class="mountain"></div>
+          <!-- <div class="game-btn">
+            <a href="#"></a>
+          </div> -->
+        </div>
+        <div class="slide" id="two">
+          <section class="container" style="z-index:99;">
+            <div class="card-heading">
+              <h1>WHAT <span>ค่ายนี้คืออะไร</span></h1>
+            </div>
+            <div class="card-content">
+              <div class="row show--onActive">
+                <div class="col-xs-12 col-sm-offset-1 col-lg-offset-1">
+                  <h1 class="text-left">WHAT<small>ค่ายนี้คืออะไร</small></h1>
+                </div>
+                <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-lg-offset-1 col-md-9 top">
+                  <p class="show--onActive">&nbsp;&nbsp;&nbsp;&nbsp;<strong>ค่ายเส้นทางสู่ฝันนักไอที (WIP Camp)</strong> คือ ค่ายสำหรับน้องๆ ผู้มีความสนใจด้านไอที หรือผู้ต้องการค้นหาตนเอง โดยน้องๆ จะได้มีโอกาสสัมผัสชีวิตของการเป็นนักไอทีอย่างแท้จริง</p>
+                  <p class="show--onActive">&nbsp;&nbsp;&nbsp;&nbsp;ณ <strong>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</strong> เป็นระยะเวลา 5 วันเต็ม</p>
+                  <p class="show--onActive hidden-xs">&nbsp;&nbsp;&nbsp;&nbsp;<strong>WIP Camp</strong> ประกอบด้วยกิจกรรมมากมายที่จะมอบประสบการณ์ทางด้านวิชาการให้น้องๆทุกคนที่มาเข้าร่วมได้ลงมือปฏิบัติจริง พร้อมเนื้อหาการเรียนที่น้องๆจะได้พบในการศึกษาต่อทางด้านไอที และความสนุกสนานจากกิจกรรมที่พี่ๆ เตรียมไว้สำหรับน้องๆ รวมถึงมิตรภาพที่น้องๆจะได้รับหลังจากจบค่ายนี้</p>
+                  <p class="show--onActive hidden-xs">&nbsp;&nbsp;&nbsp;&nbsp;<strong>WIP Camp</strong> เป็นอีกหนทางเพื่อให้น้องๆ ได้ทำตามความฝัน ด้วยความเชื่อว่า ความฝัน ของทุกคนเป็นสิ่งล้ำค่าและเปี่ยมไปด้วยพลัง</p>
+                  <p class="show--onActive hidden-xs">&nbsp;&nbsp;&nbsp;&nbsp;ดังนั้น <strong>WIP Camp</strong> จึงขอเป็นก้าวเล็กๆ ที่จะช่วยให้น้องๆ ได้ทำตามความฝัน และค้นหาตนเองได้จากการทดลองทำตามเส้นทางของนักไอทีในครั้งนี้ !</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12 col-sm-offset-1 col-lg-offset-1">
+                  <div class="btnbtn">
+                    <span class="card-menu card-btn-back show--onActive"> <i class="fa fa-chevron-left"></i> Back</span>
+                  </div>
+                  <div class="btnbtn">
+                    <span class="card-menu card-btn-next show--onActive">Next <i class="fa fa-chevron-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="moon">
+            <img src="assets/img/object/moon-night.svg" class="img-responsive" alt="">
+          </div>
+          <div class="star">
+            <img src="assets/img/object/star-night.svg" class="img-responsive" alt="">
+          </div>
+          <div class="cisland"></div>
+          <div class="ship"></div>
+          <div class="cloud1"></div>
+          <div class="cloud3"></div>
+          <div class="cloud2"></div>
+          <div class="wave wave1"></div>
+          <div class="wave wave2"></div>
+          <div class="wave wave3"></div>
+        </div>
+        <div class="slide" id="three">
+          <section class="container">
+            <div class="card-heading">
+              <h1>WHO <span>ค่ายนี้เหมาะกับใคร</span></h1>
+            </div>
+            <div class="card-content">
+              <div class="row">
+                <div class="col-xs-12 col-sm-offset-1 col-lg-offset-1 show--onActive">
+                  <h1>WHO<small class="row col-xs-12">ค่ายนี้เหมาะกับใคร</small></h1>
+                </div>
+                <div class="col-xs-12 col-sm-offset-1 col-sm-9 col-lg-offset-1 top show--onActive">
+                  <ul id="who-table">
+                    <li class="media">
+                      <div class="media-left">
+                        <img class="media-object img-responsive" src="assets/img/icon/education-graduate_cap.svg" alt="...">
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading"><strong>น้องๆ มัธยมศึกษาตอนปลาย</strong></h4>
+                        <p><small>แผนการเรียนวิทย์-คณิต, ศิลป์-คำนวณ <span style="display:block">หรือสาขาใกล้เคียง</span></small></p>
+                      </div>
+                    </li>
+                    <li class="media">
+                      <div class="media-left">
+                        <img class="media-object img-responsive" src="assets/img/icon/device-notebook.svg" alt="...">
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading"><strong>น้องๆ ที่มีความสนใจด้านไอที</strong></h4>
+                        <p><small>หรือต้องการค้นหาตนเองเพื่อศึกษาต่อ<span style="display:block">ในระดับมหาวิทยาลัย</span></small></p>
+                      </div>
+                    </li>
+                    <li class="media">
+                      <div class="media-left">
+                        <img class="media-object img-responsive" src="assets/img/icon/people-selected.svg" alt="...">
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading"><strong>น้องๆ ที่ได้รับการอนุญาตจากผู้ปกครอง</strong></h4>
+                        <p><small>โดยมีเอกสารเป็นลายลักษณ์อักษรถูกต้อง</small></p>
+                      </div>
+                    </li>
+                    <li class="media">
+                      <div class="media-left">
+                        <img class="media-object img-responsive" src="assets/img/icon/natural-haftmoon_and_sun.svg" alt="...">
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading"><strong>น้องๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้</strong></h4>
+                        <p><small>ตลอดระยะเวลา 5 วัน</small></p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row top">
+                <div class="col-xs-12 col-sm-offset-1 col-lg-offset-1">
+                  <div class="btnbtn">
+                    <span class="card-menu card-btn-back show--onActive"> <i class="fa fa-chevron-left"></i> Back</span>
+                  </div>
+                  <div class="btnbtn">
+                    <span class="card-menu card-btn-next show--onActive">Next <i class="fa fa-chevron-right"></i></span>
+                  </div></div>
+              </div>
+            </div>
+          </section>
+          <div class="moon">
+            <img src="assets/img/object/moon-night.svg" class="img-responsive" alt="">
+          </div>
+          <div class="star">
+            <img src="assets/img/object/star-night.svg" class="img-responsive" alt="">
+          </div>
+          <div class="cisland"></div>
+          <div class="ship"></div>
+          <div class="cloud1"></div>
+          <div class="cloud3"></div>
+          <div class="cloud2"></div>
+          <div class="wave wave1"></div>
+          <div class="wave wave2"></div>
+          <div class="wave wave3"></div>
+        </div>
+        <div class="slide" id="four">
+          <div class="card-heading">
+            <h1>WHEN <span>ค่ายนี้จัดเมื่อไร</span></h1>
+          </div>
+          <section class="container card-content">
+            <div class="row">
+              <div class="col-xs-12 col-sm-offset-1 col-lg-offset-1 show--onActive">
+                <h1>WHEN<small class="row col-xs-12"> ค่ายนี้จัดเมื่อไร</small></h1>
+              </div>
+              <div class="col-xs-12 col-sm-offset-1 col-lg-offset-1 top">
+                <div class="line show--onActive"></div>
+                <div class="timeline">
+                  <div class="register-open show--onActive">
+                    <div class="status">
+                      <img src="assets/img/object/whenFuture.svg" alt="">
+                    </div>
+                    <div>
+                      <p>เปิดรับสมัครเข้าค่าย<span>18 กุมภาพันธ์ 2560</span></p>
+                    </div>
+                  </div>
+                  <div class="register-final show--onActive">
+                    <div class="status">
+                      <img src="assets/img/object/whenFuture.svg" alt="">
+                    </div>
+                    <div>
+                      <p>วันสุดท้ายของการรับสมัคร<span>19 มีนาคม 2560</span></p>
+                    </div>
+                  </div>
+                  <div class="notice show--onActive">
+                    <div class="status">
+                      <img src="assets/img/object/whenFuture.svg" alt="">
+                    </div>
+                    <div>
+                      <p>ประกาศผลผู้มีสิทธิเข้าค่าย<span>31 มีนาคม 2560</span></p>
+                    </div>
+                  </div>
+                  <div class="open-wip show--onActive">
+                    <div class="status">
+                      <img src="assets/img/object/whenFuture.svg" alt="">
+                    </div>
+                    <div>
+                      <p>เปิดค่าย<span>24-28 พฤษภาคม 2560</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-offset-1 col-lg-offset-1">
+                <div class="btnbtn">
+                  <span class="card-menu card-btn-back show--onActive"> <i class="fa fa-chevron-left"></i> Back</span>
+                </div>
+                <div class="btnbtn">
+                  <span class="card-menu card-btn-next show--onActive">Next <i class="fa fa-chevron-right"></i></span>
+                </div></div>
+            </div>
+          </section>
+          <div class="moon">
+            <img src="assets/img/object/moon-night.svg" class="img-responsive" alt="">
+          </div>
+          <div class="star">
+            <img src="assets/img/object/star-night.svg" class="img-responsive" alt="">
+          </div>
+          <div class="cisland"></div>
+          <div class="ship"></div>
+          <div class="cloud1"></div>
+          <div class="cloud3"></div>
+          <div class="cloud2"></div>
+          <div class="wave wave1"></div>
+          <div class="wave wave2"></div>
+          <div class="wave wave3"></div>
+        </div>
+        <div class="slide" id="five">
+          <div class="card-heading">
+            <h1>FAQs<span>คำถามที่พบบ่อย</span></h1>
+          </div>
+          <section class="container card-content">
+            <div class="row">
+              <div class="col-xs-12 col-sm-offset-1 col-lg-offset-1 show--onActive">
+                <h1>FAQs<small class="row col-xs-12"> คำถามที่พบบ่อย</small></h1>
+              </div>
+              <div class="col-xs-12 col-sm-offset-1 col-sm-9 col-md-7 col-lg-offset-1 show--onActive top" style="color:black;">
+                <div class="faqblock">
+                  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <h4 class="panel-title">
+                          Q: อยากเป็นส่วนหนึ่งของค่ายนี้มากๆ ต้องทำอย่างไร ?
+                        </h4>
+                      </a>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="panel-body">
+                        น้องๆ เพียงแค่ตอบคำถามในการสมัครด้วยตัวเองเพื่อแสดงถึงตัวตนของน้อง และมีความตั้งใจในการตอบคำถาม เพียงแค่น้องมีความตั้งใจ พี่เชื่อว่าน้องๆ จะได้มีส่วนร่วมในค่ายนี้อย่างแน่นอนครับ รวมถึงสิ่งสำคัญ คือ อย่าลืมอัพโหลดเอกสารให้ครบถ้วนและถูกต้องตามที่กำหนดด้วยนะครับ
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <h4 class="panel-title">
+                          Q: ไม่มีความรู้เกี่ยวกับคอมพิวเตอร์มากนัก จะเข้าค่ายนี้ได้หรือไม่ ?
+                        </h4>
+                      </a>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                      <div class="panel-body">
+                        ได้สิครับ คนเราไม่ใช่เทพทุกคนสักหน่อย ขอแค่พอมีพื้นฐานมาบ้าง ให้ฟังที่พี่พูดเกี่ยวกับไอทีรู้เรื่องก็พอแล้วครับ
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <h4 class="panel-title">
+                          Q: ค่ายนี้เป็นค่ายวิชาการ เครียดมากไหม มีกิจกรรมไหม ?
+                        </h4>
+                      </a>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                      <div class="panel-body">
+                        ค่ายนี้มีวิชาการ และกิจกรรมพอๆ กันเลยครับ ไม่ต้องห่วงว่าน้องจะเครียด เพราะแค่เห็นหน้าพวกพี่ก็ไม่เครียดแล้วครับ รับรองได้ว่าพี่ๆ มีกิจกรรมสนุกๆ เพื่อไม่ให้น้องๆ เครียด อยู่ตลอดเวลาครับ
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFour">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <h4 class="panel-title">
+                          Q: นอนที่ไหน ห้องน้ำเป็นอย่างไรบ้าง ?
+                        </h4>
+                      </a>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                      <div class="panel-body">
+                        สำหรับเรื่องการค้างคืนในค่าย จะค้างในหอพักของมหาวิทยาลัยครับ โดยจะมีพี่ๆ ดูแลตลอด 24 ชั่วโมง รวมถึงพี่พยาบาลที่ได้รับการอบรมโดยตรงจากทางมหาวิทยาลัยในกรณีที่น้องๆไม่สบาย และพร้อมจะปฐมพยาบาลเบื้องต้นให้น้องๆ ตลอดระยะเวลาค่าย บอกผู้ปกครองได้เลยครับว่าไม่ต้องกังวล
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFive">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        <h4 class="panel-title">
+                          Q: เวลาเรียน เรียนที่ไหน ?
+                        </h4>
+                      </a>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                      <div class="panel-body">
+                        น้องๆ จะได้เรียน ณ ตึกคณะเทคโนโลยีสารสนเทศ <br>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี เรียกได้ว่า ได้เรียนในสถานที่เรียนจริงเลยก็ว่าได้ โดยจะมีพี่วิชาการคอยดูแล และให้คำแนะนำแก่น้องๆ ตลอดการเรียนการสอนในค่ายครับ
+                      </div>
+                    </div>
+                  </div> -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingSix">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        <h4 class="panel-title">
+                          Q: น้องๆ จะได้รับอะไรจากการมาค่าย ?
+                        </h4>
+                      </a>
+                    </div>
+                    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                      <div class="panel-body">
+                        น้องๆ จะได้รับข้อมูลอย่างแท้จริงเกี่ยวกับการศึกษาทางด้านไอที ในหลักสูตรเทคโนโลยีสารสนเทศ คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรีครับ รวมถึงความสนุกสนานที่พี่ๆเตรียมไว้สำหรับน้องๆ ทุกคน และน้องๆ จะได้รับประกาศนียบัตรจากทางค่าย เพื่อรับรองว่า น้องๆได้มาเข้าค่ายนี้ครับ
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingSeven">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        <h4 class="panel-title">
+                          Q: วันค่ายจัดตรงกับช่วงเปิดเทอม จะทำอย่างไร ?
+                        </h4>
+                      </a>
+                    </div>
+                    <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                      <div class="panel-body">
+                        สำหรับเรื่องนี้ทางค่ายจะออกจดหมายยืนยันว่าน้องมีสิทธิ์ในการเข้าค่ายนี้ หลังจากที่น้องโอนเงินเพื่อยืนยันสิทธิ์ครับ น้องๆ สามารถนำจดหมายนี้แนบกับใบลากิจส่งให้ทางโรงเรียนของน้องๆ ได้ครับ รวมถึงหลังจากจบค่ายน้องๆ จะได้รับจดหมายยืนยันการเข้าค่าย และใบประกาศนียบัตรอีกรอบครับ
+                      </div>
+                    </div>
+                  </div> -->
+                  <!-- <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingEight">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                        <h4 class="panel-title">
+                          Q: ทำไม mascot ค่ายต้องเป็นไอติม ?
+                        </h4>
+                      </a>
+                    </div>
+                    <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                      <div class="panel-body">
+                        พี่ๆ ขอเก็บไว้ตอบในค่ายนะครับ ถ้าอยากรู้อย่าลืมมาสมัครเป็นส่วนหนึ่งของค่ายนี้ และมาร่วมสนุกกันในค่ายนะครับ :)
+                      </div>
+                    </div>
+                  </div> -->
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-offset-1 col-lg-offset-1 show--onActive">
+                <div class="btnbtn">
+                  <span class="card-menu card-btn-back show--onActive"> <i class="fa fa-chevron-left"></i> Back</span>
+                </div>
+                <div class="btnbtn">
+                  <span class="card-menu card-btn-next show--onActive">Next <i class="fa fa-chevron-right"></i></span>
+                </div></div>
+            </div>
+          </section>
+          <div class="moon">
+            <img src="assets/img/object/moon-night.svg" class="img-responsive" alt="">
+          </div>
+          <div class="star">
+            <img src="assets/img/object/star-night.svg" class="img-responsive" alt="">
+          </div>
+          <div class="cisland"></div>
+          <div class="ship"></div>
+          <div class="cloud1"></div>
+          <div class="cloud3"></div>
+          <div class="cloud2"></div>
+          <div class="wave wave1"></div>
+          <div class="wave wave2"></div>
+          <div class="wave wave3"></div>
+        </div>
+        <div class="slide" id="six">
+          <div class="card-heading">
+            <h1>WHERE <span>ค่ายนี้จัดที่ไหน</span></h1>
+          </div>
+          <section class="container card-content">
+            <div class="row show--onActive">
+              <div class="col-xs-12 col-sm-offset-1 col-lg-offset-1">
+                <h1>WHERE<small class="row col-xs-12"> ค่ายนี้จัดที่ไหน</small></h1>
+              </div>
+              <div class="col-xs-12 col-sm-offset-1 col-lg-offset-1 top">
+                <strong style="font-size:1.2em; margin-bottom:10px; display:inline-block;">คณะเทคโนโลยีสารสนเทศ</strong>
+                <p style="display:block; line-height:0.95em; letter-spacing:0.02423em;">มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</p>
+                <p>126 ถนนประชาอุทิศ แขวงบางมด เขตทุ่งครุ กรุงเทพฯ 10140</p>
+                <br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-offset-1 col-lg-offset-1 show--onActive">
+                <div class="btnbtn">
+                  <span class="card-menu card-btn-back show--onActive"> <i class="fa fa-chevron-left"></i> Back</span>
+                </div>
+                <div class="btnbtn">
+                  <span class="card-menu card-btn-next show--onActive">Next <i class="fa fa-chevron-right"></i></span>
+                </div>
+                <div class="btnbtn">
+                  <span class="card-menu" data-toggle="modal" data-target="#where-map"><i class="fa fa-map-marker"></i>&nbsp;แผนที่</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="moon">
+            <img src="assets/img/object/moon-night.svg" class="img-responsive" alt="">
+          </div>
+          <div class="star">
+            <img src="assets/img/object/star-night.svg" class="img-responsive" alt="">
+          </div>
+          <div class="cisland"></div>
+          <div class="ship"></div>
+          <div class="cloud1"></div>
+          <div class="cloud3"></div>
+          <div class="cloud2"></div>
+          <div class="wave wave1"></div>
+          <div class="wave wave2"></div>
+          <div class="wave wave3"></div>
+        </div>
+        <div class="slide" id="seven">
+          <div class="card-heading">
+            <h1>CONTACT <span>ติดต่อสอบถาม</span></h1>
+          </div>
+          <section class="container card-content">
+            <div class="row">
+              <div class="col-xs-12 col-sm-offset-1 col-lg-offset-1 show--onActive">
+                <h1>CONTACT<small class="row col-xs-12"> ติดต่อสอบถาม</small></h1>
+              </div>
+              <div class="col-xs-12 col-sm-offset-1 col-sm-5 col-lg-offset-1 col-lg-5 show--onActive top">
+                <p><strong>เบอร์โทรศัพท์ :</strong></p>
+                <p><a href="tel:0617205653">061-720-5653</a> (พี่มาย)</p>
+                <p><a href="tel:0617205457">061-720-5457</a> (พี่แสตมป์)</p>
+                <p><strong>E-mail :</strong></p>
+                <p><a href="mailto:wippo@wipcamp.com">wippo@wipcamp.com</a></p>
+                <div class="row visible-xs">
+                  <div class="col-xs-12 show--onActive">
+                    <a target="_blank" href="https://www.facebook.com/wipcamp/">
+                      <i class="link link-menu fa fa-facebook-square"></i>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/WIPCamp">
+                      <i class="link link-menu fa fa-twitter"></i>
+                    </a>
+                    <a target="_blank" href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~">
+                      <i class="">
+                        <img src="assets/img/logo/LINEat_icon_basic_RGB.svg" alt="Line@Wipcamp" class="line-at">
+                      </i>
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/wipcamp/">
+                      <i class="link link-menu fa fa-instagram"></i>
+                    </a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA">
+                      <i class="link link-menu fa fa-youtube"></i>
+                    </a>
+                  </div>
+                </div>
+                <br>
+                <span class="card-menu card-btn-back show--onActive"><i class="fa fa-chevron-left"></i> Back</span>
+              </div>
+              <div class="hidden-xs">
+                <div class="col-xs-6 col-lg-5 show--onActive">
+                  <div class="col-xs-12" style="margin-bottom:0.5em">
+                    <a target="_blank" href="https://www.facebook.com/wipcamp/">
+                      <i class="link link-menu fa fa-facebook-square"></i>
+                    </a>
+                    <p>fb.com/WIPCamp</p>
+                  </div>
+                  <div class="col-xs-12" style="margin-bottom:0.5em">
+                    <a target="_blank" href="https://twitter.com/WIPCamp">
+                      <i class="link link-menu fa fa-twitter"></i>
+                    </a>
+                    <p>@WIPCamp</p>
+                  </div>
+                  <div class="col-xs-12 " style="margin-bottom:0.5em; margin-left:15px;">
+                    <a target="_blank" href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~">
+                      <i class="">
+                        <img src="assets/img/logo/LINEat_icon_basic_RGB.svg" alt="Line@Wipcamp" class="line-at">
+                      </i>
+                    </a>
+                    <p class="special-icon">@WIPCamp</p>
+                  </div>
+                  <div class="col-xs-12" style="margin-bottom:0.5em">
+                    <a target="_blank" href="https://www.instagram.com/wipcamp/">
+                      <i class="link link-menu fa fa-instagram"></i>
+                    </a>
+                    <p>@WIPCamp</p>
+                  </div>
+                  <div class="col-xs-12">
+                    <a target="_blank" href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA">
+                      <i class="link link-menu fa fa-youtube"></i>
+                    </a>
+                    <p>WIP Camp</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row visible-xs">
+              <div class="col-xs-12 show--onActive">
+                <a target="_blank" href="https://www.facebook.com/wipcamp/">
+                  <i class="link link-menu fa fa-facebook-square"></i>
+                </a>
+                <a target="_blank" href="#">
+                  <i class="link link-menu fa fa-twitter"></i>
+                </a>
+                <a target="_blank" href="#">
+                  <i class="">
+                    <img src="assets/img/logo/LINEat_icon_basic_RGB.svg" alt="Line@Wipcamp" class="line-at">
+                  </i>
+                </a>
+                <a target="_blank" href="#">
+                  <i class="link link-menu fa fa-instagram"></i>
+                </a>
+                <a target="_blank" href="#">
+                  <i class="link link-menu fa fa-youtube"></i>
+                </a>
+              </div>
+            </div> -->
+            <!-- <div class="row">
+              <div class="col-xs-4 col-sm-4 col-md-4 show--onActive">
+                <span class="card-menu card-btn-back show--onActive"><i class="fa fa-chevron-left"></i> Back</span>
+              </div>
+            </div> -->
+          </section>
+          <div class="moon">
+            <img src="assets/img/object/moon-night.svg" class="img-responsive" alt="">
+          </div>
+          <div class="star">
+            <img src="assets/img/object/star-night.svg" class="img-responsive" alt="">
+          </div>
+          <div class="cisland"></div>
+          <div class="ship"></div>
+          <div class="cloud1"></div>
+          <div class="cloud3"></div>
+          <div class="cloud2"></div>
+          <div class="wave wave1"></div>
+          <div class="wave wave2"></div>
+          <div class="wave wave3"></div>
+        </div>
+        <div class="prev"></div>
+        <div class="next"></div>
+        <div class="slide-control">
+          <div class="prev-container">
+            <img src="assets/img/icon/arrow-left.svg" alt="prev" data-toggle="tooltip" title="ก่อนหน้า<br><span id='carousel-accessibility-prev'>(เลื่อนขวา)</span>">
+          </div>
+          <div class="bullet-container">
+            <div class="bullet-gap"></div>
+            <div class="bullet" data-toggle="tooltip" title="Home"></div>
+            <div class="bullet" data-toggle="tooltip" title="What"></div>
+            <div class="bullet" data-toggle="tooltip" title="Who"></div>
+            <div class="bullet" data-toggle="tooltip" title="When"></div>
+            <div class="bullet" data-toggle="tooltip" title="Q/A"></div>
+            <div class="bullet" data-toggle="tooltip" title="Location"></div>
+            <div class="bullet" data-toggle="tooltip" title="Contact"></div>
+            <div class="bullet-gap"></div>
+          </div>
+          <div class="next-container">
+            <img src="assets/img/icon/arrow-right.svg" alt="next" data-toggle="tooltip" title="ถัดไป<br><span id='carousel-accessibility-next'>(เลื่อนซ้าย)</span>">
+          </div>
+        </div>
+        <a href="#" id="reg">
+          <div class="register" id="register">
+            <img src="assets/img/object/register.svg" alt="">
+          </div>
+        </a>
+      </div>
     </main>
+    <!-- HTML: On-Demand Component -->
+    <div class="modal fade" id="where-map" tabindex="-1" role="dialog" aria-labelledby="whereMapTitle">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="ปิด"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="whereMapTitle">แผนที่เดินทางมายัง WIP Camp</h4>
+          </div>
+          <div class="modal-body">
+            <iframe id="where-map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.085126665765!2d100.49142161438388!3d13.652585490411745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2a251a57396f5%3A0x5e0d31f39f400b1e!2sWIP+Camp!5e0!3m2!1sth!2sth!4v1485773494599" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
+            <a class="btn btn-primary" href="geo:13.6525851,100.49361" id="navigator"><i class="fa fa-location-arrow" aria-hidden="true"></i> นำทาง</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript: Postload -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- ## Analytics Script ## -->
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    <!--JavaScript: Postload-->
+      ga('create', 'UA-28869618-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- Heatmap -->
+    <script>
+      (function(h,e,a,t,m,p) {
+      m=e.createElement(a);m.async=!0;m.src=t;
+      p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
+      })(window,document,'script','https://u.heatmap.it/log.js');
+    </script>
+
+    <!-- Facebook API -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v2.8&appId=119399881422143";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
   </body>
 </html>

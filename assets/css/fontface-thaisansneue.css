@@ -1,0 +1,83 @@
+/*100 normal: UltraLight*/
+@font-face {
+    font-family: 'Thaisans Neue for Web';
+    src: url('../fonts/thaisansneue/thaisansneue-ultralight-webfont.eot');
+    src: url('../fonts/thaisansneue/thaisansneue-ultralight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/thaisansneue/thaisansneue-ultralight-webfont.woff') format('woff'),
+         url('../fonts/thaisansneue/thaisansneue-ultralight-webfont.ttf') format('truetype'),
+         url('../fonts/thaisansneue/thaisansneue-ultralight-webfont.svg#thaisans_neueultra_light') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+/*200 normal: Light*/
+@font-face {
+    font-family: 'Thaisans Neue for Web';
+    src: url('../fonts/thaisansneue/thaisansneue-light-webfont.eot');
+    src: url('../fonts/thaisansneue/thaisansneue-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/thaisansneue/thaisansneue-light-webfont.woff') format('woff'),
+         url('../fonts/thaisansneue/thaisansneue-light-webfont.ttf') format('truetype'),
+         url('../fonts/thaisansneue/thaisansneue-light-webfont.svg#thaisans_neuelight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+/*400 normal: Regular*/
+@font-face {
+    font-family: 'Thaisans Neue for Web';
+    src: url('../fonts/thaisansneue/thaisansneue-regular-webfont.eot');
+    src: url('../fonts/thaisansneue/thaisansneue-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/thaisansneue/thaisansneue-regular-webfont.woff') format('woff'),
+         url('../fonts/thaisansneue/thaisansneue-regular-webfont.ttf') format('truetype'),
+         url('../fonts/thaisansneue/thaisansneue-regular-webfont.svg#thaisans_neueregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*600 normal: SemiBold*/
+@font-face {
+    font-family: 'thaisans_neue_sembdregular';
+    src: url('../font/thaisansneue-semibold-webfont.eot');
+    src: url('../font/thaisansneue-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/thaisansneue-semibold-webfont.woff') format('woff'),
+         url('../font/thaisansneue-semibold-webfont.ttf') format('truetype'),
+         url('../font/thaisansneue-semibold-webfont.svg#thaisans_neue_sembdregular') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/*700 normal: Bold*/
+@font-face {
+    font-family: 'Thaisans Neue for Web';
+    src: url('../fonts/thaisansneue/thaisansneue-bold-webfont.eot');
+    src: url('../fonts/thaisansneue/thaisansneue-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/thaisansneue/thaisansneue-bold-webfont.woff') format('woff'),
+         url('../fonts/thaisansneue/thaisansneue-bold-webfont.ttf') format('truetype'),
+         url('../fonts/thaisansneue/thaisansneue-bold-webfont.svg#thaisans_neuebold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*800 normal: Extra Bold*/
+@font-face {
+    font-family: 'Thaisans Neue for Web';
+    src: url('../fonts/thaisansneue/thaisansneue-extrabold-webfont.eot');
+    src: url('../fonts/thaisansneue/thaisansneue-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/thaisansneue/thaisansneue-extrabold-webfont.woff') format('woff'),
+         url('../fonts/thaisansneue/thaisansneue-extrabold-webfont.ttf') format('truetype'),
+         url('../fonts/thaisansneue/thaisansneue-extrabold-webfont.svg#thaisans_neueextra_bold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/*900 normal: Ultra Bold*/
+@font-face {
+    font-family: 'thaisans_neue_ultbdregular';
+    src: url('../font/thaisansneue-ultrabold-webfont.eot');
+    src: url('../font/thaisansneue-ultrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/thaisansneue-ultrabold-webfont.woff') format('woff'),
+         url('../font/thaisansneue-ultrabold-webfont.ttf') format('truetype'),
+         url('../font/thaisansneue-ultrabold-webfont.svg#thaisans_neue_ultbdregular') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
