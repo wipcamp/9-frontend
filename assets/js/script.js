@@ -61,10 +61,12 @@ $(document).ready(function(){
           $('.ship-main').addClass('pause');
           $('.ship-main').removeClass('transition1');
           $('.ship-main').css({left: '-30em'});
-          carousel.setReady(1);
         },1500);
       },300);
     }
+    setTimeout(function(){
+      carousel.setReady(1);
+    },5000);
     event.stopPropagation();
   });
 
@@ -85,10 +87,12 @@ $(document).ready(function(){
           $('.ship-main').addClass('pause');
           $('.ship').removeClass('transition1');
           $('.ship').css({left: '-30em'});
-          carousel.setReady(1);
         },1500);
       },300);
     }
+    setTimeout(function(){
+      carousel.setReady(1);
+    },5000);
     event.stopPropagation();
   });
 
@@ -110,11 +114,13 @@ $(document).ready(function(){
             $('.slide').removeClass('animate');
             $('.ship:eq('+(carousel.getCurrentSlide()-1)+')').addClass('transition1');
             $('.ship:eq('+(carousel.getCurrentSlide()-1)+')').css({"left": "-1em"});
-            carousel.setReady(1);
           },300);
         },800);
       },300);
     }
+    setTimeout(function(){
+      carousel.setReady(1);
+    },5000);
     event.stopPropagation();
   });
 
@@ -137,15 +143,16 @@ $(document).ready(function(){
             $('.ship-main').removeClass('transition1');
             $('.ship-main').addClass('transitionSpecial');
             $('.ship-main').css({left: '40%'});
-            carousel.setReady(1);
           },3300);
         }
         else {
           $('.ship:eq('+(carousel.getCurrentSlide()-1)+')').addClass('transition1');
           $('.ship:eq('+(carousel.getCurrentSlide()-1)+')').css({"left": "-1em"});
-          carousel.setReady(1);
         }
       },300);
+      setTimeout(function(){
+        carousel.setReady(1);
+      },5000);
     }
   });
   countDown();
