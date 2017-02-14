@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="842.168px" height="469.166px" viewBox="0.803 0.022 842.168 469.166" enable-background="new 0.803 0.022 842.168 469.166"
-	 xml:space="preserve">
-<g id="Layer_1">
-	<path fill="#3BA6D1" d="M-1.137,164.964C163.828,164.964,255.952,0,420.918,0s257.088,164.964,422.054,164.964
-		c0,224.952,0,304.224,0,304.224H-1.137C-1.137,469.188-1.137,462.761-1.137,164.964z"/>
-	<circle display="none" fill="#09706B" cx="-271.447" cy="-189.951" r="30.5"/>
-	<circle display="none" fill="#0B4F99" cx="-100.447" cy="-124.091" r="30.5"/>
-	<circle display="none" fill="#247FD1" cx="-130.947" cy="-124.091" r="30.5"/>
-	<circle display="none" fill="#188C83" cx="-251.967" cy="-189.951" r="30.5"/>
-	<circle display="none" fill="#29A599" cx="-229.947" cy="-196.451" r="30.5"/>
-	<circle display="none" fill="#23BBEA" cx="-161.447" cy="-121.95" r="30.5"/>
-</g>
-<g id="Layer_2" display="none">
-	<path display="inline" fill="#265B82" d="M-467.884-132.639c45.559,0,71.002-45.558,116.559-45.558
-		c45.559,0,71,45.558,116.559,45.558c0,62.125,0,84.018,0,84.018h-233.118C-467.884-48.622-467.884-50.396-467.884-132.639z"/>
-	<path display="inline" fill="#3185AF" d="M-397.749-124.639c45.559,0,71-45.558,116.559-45.558s71,45.558,116.559,45.558
-		c0,62.125,0,84.018,0,84.018h-233.117C-397.749-40.622-397.749-42.396-397.749-124.639z"/>
-	<path display="inline" fill="#3BA6D1" d="M-313.319-132.639c45.559,0,71-45.559,116.559-45.559s71,45.559,116.559,45.559
-		c0,62.125,0,84.018,0,84.018h-233.117C-313.319-48.622-313.319-50.397-313.319-132.639z"/>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 842 469.2" style="enable-background:new 0 0 842 469.2;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#3BA6D1;}
+</style>
+<title>wave-3_day</title>
+<g id="Layer_1-2">
+	<path class="st0" d="M-0.1,165c165,0,257.1-165,422-165S679,165,844,165v304.2H-0.1V165z"/>
 </g>
 </svg>
