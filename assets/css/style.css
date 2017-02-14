@@ -115,7 +115,7 @@ h1, p {
 
 /*------------- Landscape Device Protection -------------*/
 
-.orientation-prevent-overlay {
+.orientation-prevent-overlay, .msie-prevent-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -124,6 +124,23 @@ h1, p {
   color: #ffffff;
   display: none;
   overflow: hidden;
+}
+
+.msie-prevent-overlay {
+  display: none;
+}
+
+.msie-prevent-overlay .overlay-container {
+  max-width: 720px;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  transform: translate(50%, 50%);
+}
+
+.msie-prevent-overlay .overlay-container a {
+  color: white;
+  text-decoration: underline;
 }
 
 .orientation-prevent-overlay .overlay-container {

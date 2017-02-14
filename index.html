@@ -38,26 +38,41 @@
     <script type="text/javascript" src="assets/js/script.js"></script>
     <script type="text/javascript">
       $(function() {
-        Pace.once('start', function () {
-          $('.loadingText').hide();
-          $('.percentageValue').show();
-          var preloaderInit = setInterval(function() {
-            var percentageValue = Math.round(Pace.bar.progress);
-            $('.percentageValue').text(percentageValue + " %");
-            if (percentageValue === 100) {
-              $('.percentageValue').text('100 %');
-              $('#wipcampPreloader').fadeOut('500');
-              setTimeout(function () {
-                $('#wipcampPreloader').remove();
-              }, 500);
-              clearInterval(preloaderInit);
-            }
-          }, 100);
-        });
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
+
+        if (msie > 0 || navigator.userAgent.match(/Trident.*rv\:11\./)) {
+            $('main, #where-map').remove();
+            $('.msie-prevent-overlay').show();
+        }
+        else {
+          Pace.once('start', function () {
+            $('.loadingText').hide();
+            $('.percentageValue').show();
+            var preloaderInit = setInterval(function() {
+              var percentageValue = Math.round(Pace.bar.progress);
+              $('.percentageValue').text(percentageValue + " %");
+              if (percentageValue === 100) {
+                $('.percentageValue').text('100 %');
+                $('#wipcampPreloader').fadeOut('500');
+                setTimeout(function () {
+                  $('#wipcampPreloader').remove();
+                }, 500);
+                clearInterval(preloaderInit);
+              }
+            }, 100);
+          });
+        }
       });
     </script>
   </head>
   <body>
+    <div class="msie-prevent-overlay">
+      <div class="overlay-container">
+        <h1 id="title" class="text-center">สนใจใช้เบราเซอร์ใหมไหม?</h1>
+        <p id="description" class="text-center">นอกจาก Internet Explorer ที่เราไม่รองรับแล้ว เรายังมี <a target="_blank" href="https://www.google.com/intl/th/chrome/">Chrome</a>, <a target="_blank" href="https://www.mozilla.org/th/firefox/new/">Firefox</a> และ <a target="_blank" href="https://support.apple.com/downloads/safari">Safari</a> ที่เข้าเว็บเราได้อย่างสวยงามอีกด้วย ลองเปลี่ยนหรือโหลดมาใช้ดูสิ ^-^</p>
+      </div>
+    </div>
     <main>
       <div class="orientation-prevent-overlay">
         <div class="overlay-container">
