@@ -237,9 +237,11 @@ function toDayToNight() {
 }
 function islandDayNight() {
   if (d.getHours() >= 6 && d.getHours() < 18) {
+    $('link#timeBasedStyle').attr('href','assets/css/style-day.css');
     $('.slide:eq(4) .cisland').prepend('<img src="assets/img/object/wholecake-island-day.svg" alt="island" class="img-responsive">');
   }
   else {
+    $('link#timeBasedStyle').attr('href','assets/css/style-night.css');
     $('.slide:eq(4) .cisland').prepend('<img src="assets/img/object/wholecake-island-night.svg" alt="island" class="img-responsive">');
   }
 }
