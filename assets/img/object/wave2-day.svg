@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 841.3 469.2" style="enable-background:new 0 0 841.3 469.2;" xml:space="preserve">
+	 viewBox="0 0 836.8 469.2" style="enable-background:new 0 0 836.8 469.2;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#3185AF;}
 	.st1{display:none;fill:#09706B;}
@@ -16,21 +16,21 @@
 	.st10{display:inline;fill:#3BA6D1;}
 </style>
 <g id="Layer_1_1_">
-	<path class="st0" d="M-0.9,165c165,0,257.1-165,422.1-165s257.1,165,422.1,165c0,225,0,304.2,0,304.2H-0.9
-		C-0.9,469.2-0.9,462.8-0.9,165z"/>
-	<circle class="st1" cx="-272.3" cy="-190" r="30.5"/>
-	<circle class="st2" cx="-101.3" cy="-124.1" r="30.5"/>
-	<circle class="st3" cx="-131.8" cy="-124.1" r="30.5"/>
-	<circle class="st4" cx="-252.9" cy="-190" r="30.5"/>
-	<circle class="st5" cx="-230.8" cy="-196.5" r="30.5"/>
-	<circle class="st6" cx="-162.3" cy="-121.9" r="30.5"/>
+	<path class="st0" d="M-3.1,165C161.9,165,254,0,419,0s257.1,165,422.1,165c0,225,0,304.2,0,304.2H-3.1
+		C-3.1,469.2-3.1,462.8-3.1,165z"/>
+	<circle class="st1" cx="-274.5" cy="-190" r="30.5"/>
+	<circle class="st2" cx="-103.5" cy="-124.1" r="30.5"/>
+	<circle class="st3" cx="-134" cy="-124.1" r="30.5"/>
+	<circle class="st4" cx="-255.1" cy="-190" r="30.5"/>
+	<circle class="st5" cx="-233" cy="-196.5" r="30.5"/>
+	<circle class="st6" cx="-164.5" cy="-121.9" r="30.5"/>
 </g>
 <g id="Layer_2" class="st7">
-	<path class="st8" d="M-468.8-132.6c45.6,0,71-45.6,116.6-45.6c45.6,0,71,45.6,116.6,45.6c0,62.1,0,84,0,84h-233.1
-		C-468.8-48.6-468.8-50.4-468.8-132.6z"/>
-	<path class="st9" d="M-398.6-124.6c45.6,0,71-45.6,116.6-45.6s71,45.6,116.6,45.6c0,62.1,0,84,0,84h-233.1
-		C-398.6-40.6-398.6-42.4-398.6-124.6z"/>
-	<path class="st10" d="M-314.2-132.6c45.6,0,71-45.6,116.6-45.6s71,45.6,116.6,45.6c0,62.1,0,84,0,84h-233.1
-		C-314.2-48.6-314.2-50.4-314.2-132.6z"/>
+	<path class="st8" d="M-471-132.6c45.6,0,71-45.6,116.6-45.6s71,45.6,116.6,45.6c0,62.1,0,84,0,84h-233.1
+		C-471-48.6-471-50.4-471-132.6z"/>
+	<path class="st9" d="M-400.8-124.6c45.6,0,71-45.6,116.6-45.6s71,45.6,116.6,45.6c0,62.1,0,84,0,84h-233.1
+		C-400.8-40.6-400.8-42.4-400.8-124.6z"/>
+	<path class="st10" d="M-316.4-132.6c45.6,0,71-45.6,116.6-45.6s71,45.6,116.6,45.6c0,62.1,0,84,0,84h-233.1
+		C-316.4-48.6-316.4-50.4-316.4-132.6z"/>
 </g>
 </svg>
