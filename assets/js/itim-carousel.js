@@ -330,9 +330,11 @@ function WipcampCarousel(element) {
           $('.ship').css({left: '-30em'});
           $('.ship').addClass('transition1');
           $('.ship').css({"left": "-1em"});
-          readyStatus = true;
         },300);
       },1000);
+      setTimeout(function(){
+        readyStatus = true;
+      },5000);
     }
   }
 
@@ -389,6 +391,9 @@ function WipcampCarousel(element) {
           }
         },300);
       },1000);
+      setTimeout(function(){
+        readyStatus = true;
+      },5000);
     }
   }
 
