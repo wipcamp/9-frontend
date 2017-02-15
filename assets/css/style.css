@@ -1008,6 +1008,7 @@ ul#who-table .media-body p:last-of-type {
 @media (max-width: 768px) {
   ul#who-table .media-body h4 {
     font-size: 16px;
+    margin-bottom: 0;
   }
 }
 
@@ -1310,6 +1311,12 @@ ul#who-table .media-body p:last-of-type {
   em{
     display: block;
     margin-left: 1.55em;
+  }
+  #three h1{
+    margin-top: 10px;
+  }
+  ul#who-table .media-body p {
+    margin-top: 3px;
   }
 }
 /*###Tablet(medium)###*/
