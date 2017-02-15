@@ -1,4 +1,9 @@
 $(document).ready(function(){
+
+  console.log('%c9 I\'m Developer.', 'background: #222; color: #f3603f; font-size: 26px; font-style: italic; font-weight:700');
+  console.log('If you interest our code :) Join WIP Camp #9.');
+  console.log('%c## Powered by Alchemist ##','font-style: italic');
+
   var slideItems = $('div.slide');
   var orientationStatus, windowWidth, windowHeight;
 
