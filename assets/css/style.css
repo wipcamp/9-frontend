@@ -11,6 +11,7 @@ body {
   height: 100%;
   padding: 0;
   cursor: -webkit-grab;
+  cursor: -moz-grab;
   margin: 0;
   color: white;
 }
@@ -902,9 +903,12 @@ div.card-heading h1 > span {
 #five, #five .panel-title,
 #six, #seven {
   cursor: -webkit-grab;
+  cursor: -moz-grab;
+
 }
 h1,p,ul{
   cursor: -webkit-grab;
+  cursor: -moz-grab;
 }
 
 #two p{
