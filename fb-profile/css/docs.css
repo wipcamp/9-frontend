@@ -43,7 +43,7 @@
   width: 100%;
   height: 600px;
   display: block;
-  background: url(../../assets/img/wipcampcover.png) bottom no-repeat;
+  background: url(../img/wipcampcover.png) bottom no-repeat;
 }
 
 .preview-lg {
