@@ -1632,7 +1632,7 @@ ul#who-table .media-body p:last-of-type {
 
   .game-btn{
     position: absolute;
-    bottom: 2em;
+    bottom: 1.8em;
     right: 2em;
     z-index: 2;
     width: 12em;
@@ -1897,7 +1897,7 @@ and (orientation: portrait){
   }
   .game-btn{
     height: 15em;
-    bottom: -0.7em;
+    bottom: -1em;
   }
   #two .cisland img{
     height: 23em;
