@@ -26,6 +26,7 @@ h1 small{
   display: block;
 }
 h1 {
+  -webkit-transition: font-size .5s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: font-size .5s cubic-bezier(0.075, 0.82, 0.165, 1);
   font-family: "Thaisans Neue for Web";
   margin-bottom: 0;
@@ -43,7 +44,7 @@ h1, p {
   cursor: default;
 }
 
-.fa::before, .fa::after {
+.fa:before, .fa:after {
   font-family: 'FontAwesome';
 }
 
@@ -75,30 +76,70 @@ h1, p {
   border-radius: 7px;
 }
 
-@keyframes wave {
+@-webkit-keyframes wave {
   0% {
-    transform: translate(-3px, 6.25px);
+    -webkit-transform: translate(-3px, 6.25px);
+            transform: translate(-3px, 6.25px);
   }
   25% {
-    transform: translate(10px, 12.25px);
+    -webkit-transform: translate(10px, 12.25px);
+            transform: translate(10px, 12.25px);
   }
   50% {
-    transform: translate(18px, 6.25px);
+    -webkit-transform: translate(18px, 6.25px);
+            transform: translate(18px, 6.25px);
   }
   75% {
-    transform: translate(10px, -3.25px);
+    -webkit-transform: translate(10px, -3.25px);
+            transform: translate(10px, -3.25px);
   }
   100% {
-    transform: translate(-3px, 6.25px);
+    -webkit-transform: translate(-3px, 6.25px);
+            transform: translate(-3px, 6.25px);
   }
+}
+
+@keyframes wave {
+  0% {
+    -webkit-transform: translate(-3px, 6.25px);
+            transform: translate(-3px, 6.25px);
+  }
+  25% {
+    -webkit-transform: translate(10px, 12.25px);
+            transform: translate(10px, 12.25px);
+  }
+  50% {
+    -webkit-transform: translate(18px, 6.25px);
+            transform: translate(18px, 6.25px);
+  }
+  75% {
+    -webkit-transform: translate(10px, -3.25px);
+            transform: translate(10px, -3.25px);
+  }
+  100% {
+    -webkit-transform: translate(-3px, 6.25px);
+            transform: translate(-3px, 6.25px);
+  }
+}
+@-webkit-keyframes cloud1 {
+  0% { right: -15%; }
+  100% { right: 115%; }
 }
 @keyframes cloud1 {
   0% { right: -15%; }
   100% { right: 115%; }
 }
+@-webkit-keyframes cloud2 {
+  0% { right: -10%; }
+  100% { right: 110%; }
+}
 @keyframes cloud2 {
   0% { right: -10%; }
   100% { right: 110%; }
+}
+@-webkit-keyframes cloud3 {
+  0% { right: -17%; }
+  100% { right: 117%; }
 }
 @keyframes cloud3 {
   0% { right: -17%; }
@@ -136,7 +177,8 @@ h1, p {
   left: 50%;
   top: 50%;
   height: 100%;
-  transform: translate(50%, 50%);
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
 }
 
 .msie-prevent-overlay .overlay-container a {
@@ -146,7 +188,8 @@ h1, p {
 
 .orientation-prevent-overlay .overlay-container {
   display: block;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
   position: relative;
@@ -191,13 +234,21 @@ h1, p {
   position: absolute;
   width: 100%;
   height: 100%;
+  background: -webkit-linear-gradient(rgb(20, 17, 35), rgb(29, 60, 92));
   background: linear-gradient(rgb(20, 17, 35), rgb(29, 60, 92));
   z-index: 2000;
   color: #ffffff;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #wipcampPreloader .preloader-wrapper {
@@ -242,17 +293,37 @@ h1, p {
   color: white;
 }
 .slide.animate {
+  -webkit-transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .slide.active {
   z-index: 10;
-  transform: perspective(100px) translate3d(0, 0, 0) !important;
+  -webkit-transform: perspective(100px) translate3d(0, 0, 0) !important;
+          transform: perspective(100px) translate3d(0, 0, 0) !important;
+  -webkit-transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .idle .slide.hover  {
-  animation-name: card;
-  animation-duration: 1s;
-  animation-iteration-count: 5;
+  -webkit-animation-name: card;
+          animation-name: card;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 5;
+          animation-iteration-count: 5;
+}
+@-webkit-keyframes card {
+    0% {
+      -webkit-transform: perspective(100px) translate3d(0, -100px, -50px);
+      transform: perspective(100px) translate3d(0, -100px, -50px);
+    }
+    50% {
+      -webkit-transform: perspective(100px) translate3d(0, -100px, -47px);
+      transform: perspective(100px) translate3d(0, -100px, -47px);
+    }
+    100% {
+      -webkit-transform: perspective(100px) translate3d(0, -100px, -50px);
+      transform: perspective(100px) translate3d(0, -100px, -50px);
+    }
 }
 @keyframes card {
     0% {
@@ -276,11 +347,14 @@ h1, p {
   text-align: center !important;
   left: 0;
   opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -webkit-transition: all 0.1s;
   transition: all 0.1s;
   text-shadow: 1px 1px 3px #777;
 }
 .slide.active div.card-heading {
   opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   display: none;
 }
 div.card-heading h1 {
@@ -302,7 +376,9 @@ div.card-heading h1 > span {
 .register img {
   width: 100%;
   height: 100%;
-  filter: gray; /* IE6-9 */
+  -webkit-filter: gray;
+          filter: gray; /* IE6-9 */
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /></filter></svg>#filter');
   filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
   -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
 }
@@ -349,10 +425,13 @@ div.card-heading h1 > span {
 
 .slide.active .show--onActive {
   opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
 .slide .show--onActive {
   opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -webkit-transition: opacity .5s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: opacity .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -364,7 +443,8 @@ div.card-heading h1 > span {
   max-width: 480px;
   padding: 0px 12px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .slide-control .prev-container,
@@ -394,6 +474,7 @@ div.card-heading h1 > span {
 .bullet-container .bullet,
 .bullet-container .bullet-gap:last-child {
   background: #969696;
+  -webkit-transition: background 0.25s linear;
   transition: background 0.25s linear;
 }
 
@@ -458,12 +539,18 @@ div.card-heading h1 > span {
   bottom: 1.5em;
   left: -50%;
   z-index: 1;
-  animation-name: wave;
-  animation-duration: 13s;
-  animation-delay: .1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-play-state: running;
+  -webkit-animation-name: wave;
+          animation-name: wave;
+  -webkit-animation-duration: 13s;
+          animation-duration: 13s;
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
 }
 .wave1-night {
   background-image: url('../img/object/wave1.svg');
@@ -471,12 +558,18 @@ div.card-heading h1 > span {
   bottom: 1.5em;
   left: -50%;
   z-index: 1;
-  animation-name: wave;
-  animation-duration: 13s;
-  animation-delay: .1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-play-state: running;
+  -webkit-animation-name: wave;
+          animation-name: wave;
+  -webkit-animation-duration: 13s;
+          animation-duration: 13s;
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
 }
 .wave2-day {
   background-image: url('../img/object/wave2-day.svg');
@@ -485,12 +578,18 @@ div.card-heading h1 > span {
   bottom: 0.7em;
   left: -50%;
   z-index: 3;
-  animation-name: wave;
-  animation-duration: 7s;
-  animation-delay: .1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-play-state: running;
+  -webkit-animation-name: wave;
+          animation-name: wave;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
 }
 .wave2-night {
   background-image: url('../img/object/wave2.svg');
@@ -499,12 +598,18 @@ div.card-heading h1 > span {
   bottom: 0.7em;
   left: -50%;
   z-index: 3;
-  animation-name: wave;
-  animation-duration: 7s;
-  animation-delay: .1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-play-state: running;
+  -webkit-animation-name: wave;
+          animation-name: wave;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
 }
 .wave3-day {
   background-image: url('../img/object/wave3-day.svg');
@@ -512,12 +617,18 @@ div.card-heading h1 > span {
   bottom: 0;
   left: -50%;
   z-index: 5;
-  animation-name: wave;
-  animation-duration: 4s;
-  animation-delay: .1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-play-state: running;
+  -webkit-animation-name: wave;
+          animation-name: wave;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
 }
 .wave3-night {
   background-image: url('../img/object/wave3.svg');
@@ -525,12 +636,18 @@ div.card-heading h1 > span {
   bottom: 0;
   left: -50%;
   z-index: 5;
-  animation-name: wave;
-  animation-duration: 4s;
-  animation-delay: .1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-play-state: running;
+  -webkit-animation-name: wave;
+          animation-name: wave;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
 }
 
 .cloud1-day {
@@ -542,12 +659,18 @@ div.card-heading h1 > span {
   width: 15%;
   height: 10%;
   z-index: 2;
-  animation-name: cloud1;
-  animation-duration: 60s;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-play-state: running;
+  -webkit-animation-name: cloud1;
+          animation-name: cloud1;
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
 }
 .cloud1-night {
   background-image: url('../img/object/cloud-night.svg');
@@ -558,12 +681,18 @@ div.card-heading h1 > span {
   width: 15%;
   height: 10%;
   z-index: 2;
-  animation-name: cloud1;
-  animation-duration: 60s;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-play-state: running;
+  -webkit-animation-name: cloud1;
+          animation-name: cloud1;
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
 }
 .cloud2-day {
   background-image: url('../img/object/cloud-day.svg');
@@ -574,12 +703,18 @@ div.card-heading h1 > span {
   width: 10%;
   height: 5%;
   z-index: 2;
-  animation-name: cloud2;
-  animation-duration: 60s;
-  animation-delay: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-play-state: running;
+  -webkit-animation-name: cloud2;
+          animation-name: cloud2;
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
 }
 .cloud2-night {
   background-image: url('../img/object/cloud-night.svg');
@@ -590,12 +725,18 @@ div.card-heading h1 > span {
   width: 10%;
   height: 5%;
   z-index: 2;
-  animation-name: cloud2;
-  animation-duration: 60s;
-  animation-delay: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-play-state: running;
+  -webkit-animation-name: cloud2;
+          animation-name: cloud2;
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
 }
 .cloud3-day {
   background-image: url('../img/object/cloud-day.svg');
@@ -606,12 +747,18 @@ div.card-heading h1 > span {
   width: 17%;
   height: 12%;
   z-index: 3;
-  animation-name: cloud3;
-  animation-duration: 62s;
-  animation-delay: 8s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-play-state: running;
+  -webkit-animation-name: cloud3;
+          animation-name: cloud3;
+  -webkit-animation-duration: 62s;
+          animation-duration: 62s;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
 }
 .cloud3-night {
   background-image: url('../img/object/cloud-night.svg');
@@ -622,21 +769,26 @@ div.card-heading h1 > span {
   width: 17%;
   height: 12%;
   z-index: 3;
-  animation-name: cloud3;
-  animation-duration: 62s;
-  animation-delay: 8s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-play-state: running;
+  -webkit-animation-name: cloud3;
+          animation-name: cloud3;
+  -webkit-animation-duration: 62s;
+          animation-duration: 62s;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
 }
 
 .flip-horizontal, .x-grid-cell-inner, .x-column-header-text, .x-panel-header-text {
-  -moz-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
   transform: scaleX(-1);
   -ms-filter: fliph; /*IE*/
-  filter: fliph; /*IE*/
+  -webkit-filter: fliph;
+          filter: fliph; /*IE*/
 }
 .card-content{
   position: relative;
@@ -671,21 +823,30 @@ div.card-heading h1 > span {
   bottom: 0;
   z-index: 4;
   left: -30em;
-  animation-name: shipTraveller;
-  animation-duration: 4s;
-  animation-delay: 0.1s;
-  animation-timing-function: cubic-bezier(0.25, 0, 0.75, 1);
-  animation-iteration-count: infinite;
-  animation-play-state: running;
+  -webkit-animation-name: shipTraveller;
+          animation-name: shipTraveller;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-timing-function: cubic-bezier(0.25, 0, 0.75, 1);
+          animation-timing-function: cubic-bezier(0.25, 0, 0.75, 1);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
   /*animation-play-state: paused;*/
 }
 .ship-main.transition1 {
+  -webkit-transition: left 3s;
   transition: left 3s;
 }
 .ship-main.transitionSpecial {
+  -webkit-transition: left 5400s;
   transition: left 5400s;
 }
 .ship.transition1 {
+  -webkit-transition: left 3s;
   transition: left 3s;
 }
 .ship {
@@ -693,12 +854,18 @@ div.card-heading h1 > span {
   width: 100%;
   bottom: 0;
   z-index: 4;
-  animation-name: shipTraveller;
-  animation-duration: 4s;
-  animation-delay: 0.1s;
-  animation-timing-function: cubic-bezier(0.25, 0, 0.75, 1);
-  animation-iteration-count: infinite;
-  animation-play-state: running;
+  -webkit-animation-name: shipTraveller;
+          animation-name: shipTraveller;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-timing-function: cubic-bezier(0.25, 0, 0.75, 1);
+          animation-timing-function: cubic-bezier(0.25, 0, 0.75, 1);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
   /*animation-play-state: paused;*/
 }
 
@@ -731,7 +898,8 @@ div.card-heading h1 > span {
 .notice div p,
 .open-wip div p {
   line-height: 1.2em;
-  transform: translateY(25%);
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%);
 }
 .status {
   width: 70px;
@@ -747,25 +915,57 @@ div.card-heading h1 > span {
   height: 90%;
 }
 
-@keyframes shipTraveller {
+@-webkit-keyframes shipTraveller {
     0% {
-        transform: rotateZ(0deg) translate(0, 1.25px);
+        -webkit-transform: rotateZ(0deg) translate(0, 1.25px);
+                transform: rotateZ(0deg) translate(0, 1.25px);
     }
 
     25% {
-        transform: rotateZ(1deg) translate(10px, 1.25px);
+        -webkit-transform: rotateZ(1deg) translate(10px, 1.25px);
+                transform: rotateZ(1deg) translate(10px, 1.25px);
     }
 
     50% {
-        transform: rotateZ(0deg) translate(20px, 2.5px);
+        -webkit-transform: rotateZ(0deg) translate(20px, 2.5px);
+                transform: rotateZ(0deg) translate(20px, 2.5px);
     }
 
     75% {
-        transform: rotateZ(-1deg) translate(10px, 1.25px);
+        -webkit-transform: rotateZ(-1deg) translate(10px, 1.25px);
+                transform: rotateZ(-1deg) translate(10px, 1.25px);
     }
 
     100% {
-        transform: rotateZ(0deg) translate(0, 1.25px);
+        -webkit-transform: rotateZ(0deg) translate(0, 1.25px);
+                transform: rotateZ(0deg) translate(0, 1.25px);
+    }
+}
+
+@keyframes shipTraveller {
+    0% {
+        -webkit-transform: rotateZ(0deg) translate(0, 1.25px);
+                transform: rotateZ(0deg) translate(0, 1.25px);
+    }
+
+    25% {
+        -webkit-transform: rotateZ(1deg) translate(10px, 1.25px);
+                transform: rotateZ(1deg) translate(10px, 1.25px);
+    }
+
+    50% {
+        -webkit-transform: rotateZ(0deg) translate(20px, 2.5px);
+                transform: rotateZ(0deg) translate(20px, 2.5px);
+    }
+
+    75% {
+        -webkit-transform: rotateZ(-1deg) translate(10px, 1.25px);
+                transform: rotateZ(-1deg) translate(10px, 1.25px);
+    }
+
+    100% {
+        -webkit-transform: rotateZ(0deg) translate(0, 1.25px);
+                transform: rotateZ(0deg) translate(0, 1.25px);
     }
 }
 @keyframes move-twink-back {
@@ -776,14 +976,6 @@ div.card-heading h1 > span {
     from {background-position:0 0;}
     to {background-position:-10000px 5000px;}
 }
-@-moz-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-@-ms-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
 
 @keyframes move-clouds-back {
     from {background-position:0 0;}
@@ -791,14 +983,6 @@ div.card-heading h1 > span {
 }
 @-webkit-keyframes move-clouds-back {
     from {background-position:0 0;}
-    to {background-position:10000px 0;}
-}
-@-moz-keyframes move-clouds-back {
-    from {background-position:0 0;}
-    to {background-position:10000px 0;}
-}
-@-ms-keyframes move-clouds-back {
-    from {background-position: 0;}
     to {background-position:10000px 0;}
 }
 .cisland{
@@ -1014,9 +1198,15 @@ ul#who-table .media-body p:last-of-type {
 
 @media (min-width: 768px) {
   ul#who-table {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 
   ul#who-table li.media {
@@ -1632,7 +1822,7 @@ ul#who-table .media-body p:last-of-type {
 
   .game-btn{
     position: absolute;
-    bottom: 2em;
+    bottom: 1.8em;
     right: 2em;
     z-index: 2;
     width: 12em;
@@ -1897,7 +2087,7 @@ and (orientation: portrait){
   }
   .game-btn{
     height: 15em;
-    bottom: -0.7em;
+    bottom: -1em;
   }
   #two .cisland img{
     height: 23em;
