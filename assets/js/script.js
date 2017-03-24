@@ -219,13 +219,13 @@ function getTransform(el) {
 var d = new Date();
 function countDown() {
   // For set img of WHEN card
-  if(d.getMonth() == 1 && d.getDate() >= 18 || d.getMonth() == 2 && d.getDate() < 19) {
+  if(d.getMonth() == 1 && d.getDate() >= 18 || d.getMonth() == 2 && d.getDate() < 26) {
     onTime(0);
     $('a#reg').on('click', function (e) {
       e.preventDefault();
     });
   }
-  else if(d.getMonth() == 2 && d.getDate() >= 19) {
+  else if(d.getMonth() == 2 && d.getDate() >= 26) {
     passTime(0);
     onTime(1);
   }
