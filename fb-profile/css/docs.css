@@ -1,0 +1,231 @@
+.eg-container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.eg-main {
+  max-height: 480px;
+  margin-bottom: 30px;
+}
+
+.eg-wrapper {
+  background-color: #f7f7f7;
+  border: 1px solid #eee;
+  box-shadow: inset 0 0 3px #f7f7f7;
+  height: 480px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.eg-wrapper img {
+  width: 100%;
+}
+
+.eg-preview {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.preview {
+  margin: 0px auto;
+  overflow: hidden;
+  background: #f7f7f7;
+  position: relative;
+}
+
+#get_preview {
+  position: relative;
+}
+#get_preview .ywc {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 600px;
+  display: block;
+  background: url(../img/wipcampcover.png) bottom no-repeat;
+}
+
+.preview-lg {
+  width: 600px;
+  height: 600px;
+}
+.preview-md {
+  width: 145px;
+  height: 90px;
+}
+
+.preview-sm {
+  width: 72.5px;
+  height: 45px;
+}
+
+.preview-xs {
+  width: 36.25px;
+  height: 22.5px;
+}
+
+.eg-data {
+  padding-right: 15px;
+}
+
+.eg-data .input-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.eg-data .input-group-addon {
+  min-width: 65px;
+}
+
+.eg-button > .btn {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.eg-input .input-group {
+  margin-bottom: 15px;
+}
+
+.eg-output .btn {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.eg-output img {
+  max-height: 214px;
+}
+
+.bg {
+  position: fixed;
+  z-index: -1;
+}
+
+.cloud1 {
+  background-image: url('../../assets/img/object/cloud-night.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10%;
+  right: -15%;
+  width: 15%;
+  height: 10%;
+  z-index: 2;
+  animation-name: cloud1;
+  animation-duration: 60s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
+}
+
+.cloud2 {
+  background-image: url('../../assets/img/object/cloud-night.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 25%;
+  right: -10%;
+  width: 10%;
+  height: 5%;
+  z-index: 2;
+  animation-name: cloud2;
+  animation-duration: 60s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
+}
+.cloud3 {
+  background-image: url('../../assets/img/object/cloud-night.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 5%;
+  right: -17%;
+  width: 17%;
+  height: 12%;
+  z-index: 3;
+  animation-name: cloud3;
+  animation-duration: 62s;
+  animation-delay: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
+}
+
+.wave {
+  height: 3em;
+  width: 200%;
+  position: absolute;
+}
+
+.wave1 {
+  background-image: url('../../assets/img/object/wave1.svg');
+  background-repeat: repeat-x;
+  bottom: 1.5em;
+  left: -50%;
+  z-index: 1;
+  animation-name: wave;
+  animation-duration: 13s;
+  animation-delay: .1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
+}
+
+.wave2 {
+  background-image: url('../../assets/img/object/wave2.svg');
+  background-repeat: repeat-x;
+  background-position: -42px 0;
+  bottom: 0.7em;
+  left: -50%;
+  z-index: 3;
+  animation-name: wave;
+  animation-duration: 7s;
+  animation-delay: .1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
+}
+.wave3 {
+  background-image: url('../../assets/img/object/wave3.svg');
+  background-repeat: repeat-x;
+  bottom: 0;
+  left: -50%;
+  z-index: 5;
+  animation-name: wave;
+  animation-duration: 4s;
+  animation-delay: .1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
+}
+
+@keyframes cloud1 {
+  0% { right: -15%; }
+  100% { right: 115%; }
+}
+@keyframes cloud2 {
+  0% { right: -10%; }
+  100% { right: 110%; }
+}
+@keyframes cloud3 {
+  0% { right: -17%; }
+  100% { right: 117%; }
+}
+
+@keyframes wave {
+  0% {
+    transform: translate(-3px, 6.25px);
+  }
+  25% {
+    transform: translate(10px, 12.25px);
+  }
+  50% {
+    transform: translate(18px, 6.25px);
+  }
+  75% {
+    transform: translate(10px, -3.25px);
+  }
+  100% {
+    transform: translate(-3px, 6.25px);
+  }
+}

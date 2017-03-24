@@ -1,4 +1,28 @@
+$(function() {
+  Pace.once('start', function () {
+    $('.loadingText').hide();
+    $('.percentageValue').show();
+    var preloaderInit = setInterval(function() {
+      var percentageValue = Math.round(Pace.bar.progress);
+      $('.percentageValue').text(percentageValue + " %");
+      if (percentageValue === 100) {
+        $('.percentageValue').text('100 %');
+        $('#wipcampPreloader').fadeOut('500');
+        setTimeout(function () {
+          $('#wipcampPreloader').remove();
+        }, 500);
+        clearInterval(preloaderInit);
+      }
+    }, 100);
+  });
+});
+
 $(document).ready(function(){
+
+  console.log('%c9 I\'m Developer.', 'background: #222; color: #f3603f; font-size: 26px; font-style: italic; font-weight:700');
+  console.log('If you interest our code :) Join WIP Camp #9.');
+  console.log('%c## Powered by Alchemist ##','font-style: italic');
+
   var slideItems = $('div.slide');
   var orientationStatus, windowWidth, windowHeight;
 
@@ -66,7 +90,7 @@ $(document).ready(function(){
     }
     setTimeout(function(){
       carousel.setReady(1);
-    },5000);
+    },1000);
     event.stopPropagation();
   });
 
@@ -92,7 +116,7 @@ $(document).ready(function(){
     }
     setTimeout(function(){
       carousel.setReady(1);
-    },5000);
+    },1000);
     event.stopPropagation();
   });
 
@@ -120,7 +144,7 @@ $(document).ready(function(){
     }
     setTimeout(function(){
       carousel.setReady(1);
-    },5000);
+    },1000);
     event.stopPropagation();
   });
 
@@ -152,7 +176,7 @@ $(document).ready(function(){
       },300);
       setTimeout(function(){
         carousel.setReady(1);
-      },5000);
+      },1000);
     }
   });
   countDown();
@@ -306,3 +330,11 @@ function getMobileOperatingSystem() {
 
   return "unknown";
 }
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-28869618-1', 'auto');
+ga('send', 'pageview');
