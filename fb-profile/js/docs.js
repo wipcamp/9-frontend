@@ -9,6 +9,17 @@ $(function () {
 			$dataWidth = $("#dataWidth"),
 			console = window.console || { log: function () {} },
 			cropper;
+	
+	window.url_images = 'img/cover/DEV.png';
+
+
+	$('.choose .btn').click(function(){
+		var role = $(this).data('role').toUpperCase();
+
+		window.url_images = 'img/cover/' + role + '.png';
+
+		$('.ywc').css("background","url(./img/cover/" + role + ".png) bottom no-repeat")
+	});
 
 	$image.cropper({
 		aspectRatio: 8 / 8,

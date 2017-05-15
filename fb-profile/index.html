@@ -46,7 +46,7 @@
             <h3>Step 1 : เลือกไฟล์</h3>
           </div>
           <div class="panel-body text-center">
-            <label class="btn btn-lg btn-primary" for="inputImage" title="Upload image file">
+            <label class="btn  btn-primary" for="inputImage" title="Upload image file">
               <input class="hide" id="inputImage" name="file" type="file" accept="image/*">
               Upload
             </label>
@@ -69,13 +69,30 @@
       <div class="row">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3>Step 3 : ดูตัวอย่าง</h3>
+            <h3>Step 3 : เลือกตำแหน่ง</h3>
+          </div>
+          <div class="panel-body text-center choose">
+            <button class="btn btn-primary" data-role="dev">DEV</button>
+            <button class="btn btn-primary" data-role="itim">ITIM</button>
+            <button class="btn btn-primary" data-role="lecturer">LECTURER</button>
+            <button class="btn btn-primary" data-role="medic">MEDIC</button>
+            <button class="btn btn-primary" data-role="photographer">PHOTOGRAPHER</button>
+            <button class="btn btn-primary" data-role="swat">SWAT</button>
+            <button class="btn btn-primary" data-role="wipper">WIPPER</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3>Step 4 : ดูตัวอย่าง</h3>
           </div>
           <div class="panel-body">
             <div class="eg-preview clearfix">
               <div id="get_preview">
                 <div class="preview preview-lg"></div>
-                <div class="ywc"></div>
+                <div class="ywc" style="background: url(./img/cover/ITIM.png) bottom no-repeat;"></div>
               </div>
             </div>
           </div>
@@ -85,10 +102,10 @@
       <div class="row">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3>Step : 4 บันทึกรูป</h3>
+            <h3>Step : 5 บันทึกรูป</h3>
           </div>
           <div class="panel-body  text-center">
-            <a class="btn btn-lg btn-primary" id="btnsuccess" type="button">เสร็จสิ้น</a>
+            <a class="btn  btn-primary" id="btnsuccess" type="button">เสร็จสิ้น</a>
           </div>
         </div>
       </div>
