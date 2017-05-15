@@ -36,7 +36,7 @@
 #get_preview {
   position: relative;
 }
-#get_preview .ywc {
+#get_preview .wipcamp {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -95,3 +95,4 @@
 .eg-output img {
   max-height: 214px;
 }
+
