@@ -15,10 +15,12 @@ $(function () {
 
 	$('.choose .btn').click(function(){
 		var role = $(this).data('role').toUpperCase();
-
+		$(".choose .btn").removeClass('active');
+		$(this).addClass('active');
+		
 		window.url_images = 'img/cover/' + role + '.png';
 
-		$('.ywc').css("background","url(./img/cover/" + role + ".png) bottom no-repeat")
+		$('.wipcamp').css("background","url(./img/cover/" + role + ".png) bottom no-repeat")
 	});
 
 	$image.cropper({
