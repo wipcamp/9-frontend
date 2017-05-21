@@ -58,7 +58,7 @@ h1, p {
   display: inline-block;
   color: #fff;
   font-size: 1.2em;
-  margin-top: 2.3em;
+  margin-top: 3em;
   padding: 0.8em 1.7em 0.8em 1.7em;
   text-decoration: none !important;
   border-radius: 7px;
@@ -1508,11 +1508,19 @@ ul#who-table .media-body p:last-of-type {
   ul#who-table .media-body p {
     margin-top: 3px;
   }
+  .logo-sponn{
+    height: 3.4em;
+    margin-top: 2.5em;
+  }
 }
 /*###Tablet(medium)###*/
 @media screen and (min-width : 768px) and (max-width : 991px){
   body,html{
     font-size: 15px;
+  }
+  .logo-sponn{
+    height: 6em;
+    margin-top: 2.7em;
   }
   .register {
     width: 60%;
@@ -1727,6 +1735,10 @@ ul#who-table .media-body p:last-of-type {
   }
   .wave{
     height: 4em;
+  }
+  .logo-sponn{
+    height: 5em;
+    margin-top: 2.6em;
   }
   .logo-important-sponsor{
     margin-top: -1em;
